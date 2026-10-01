@@ -1,0 +1,2246 @@
+{
+  "captured": "2026-10-01",
+  "snapshots": {
+    "snapshot-01": {
+      "commit": "d3d9c7c75c476ef8d1f16b0ab13b4838a0007e35"
+    },
+    "snapshot-02": {
+      "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+      "derived_inputs": [
+        {
+          "path": "hardware/reference/nix/hosts/zen/home.nix",
+          "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+          "source_sha256": "30f902e81d0ce47765725334fa833bfe52ead8f6cd94b574f2b4861f99f9daba",
+          "changes": [
+            "Rename collection path to describe its platform or function.",
+            "Remove source-project branding; update comments and dependent identifiers/paths together."
+          ],
+          "sha256": "8774724093c58f20d36f3fff539bdcbaf0eae18ec34880427ad14fa1f8edddc0",
+          "snapshot": "snapshot-02"
+        },
+        {
+          "path": "hyprland/nix/home/przvl/hyprland.nix",
+          "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+          "source_sha256": "76064d8c8ca3950752b479720e8fc7c5da24f9b6be78b8bfd21cc627f9be3a42",
+          "changes": [
+            "Rename collection path to describe its platform or function.",
+            "Remove source-project branding; update comments and dependent identifiers/paths together.",
+            "Standardize Bash and interactive ble.sh initialization across terminal choices."
+          ],
+          "sha256": "22671ab06a2c90e41283fce2d6ced62f7bbf82a0dcf03d017aaf26b37952a454",
+          "snapshot": "snapshot-02"
+        },
+        {
+          "path": "hyprland/nix/home/przvl/host.nix",
+          "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+          "source_sha256": "3d1327069be139f1a536ff4a6ebbc57250eff3ad7bcc2848d205199d4e27a3fd",
+          "changes": [
+            "Rename collection path to describe its platform or function.",
+            "Remove source-project branding; update comments and dependent identifiers/paths together."
+          ],
+          "sha256": "256aa0f4321ddb09b06702962e64a9ceea374f4ca55e5c7fa013d2ac6457ad32",
+          "snapshot": "snapshot-02"
+        },
+        {
+          "path": "hyprland/nix/home/przvl/scripts/hyprland.nix",
+          "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+          "source_sha256": "b9e6f111c1683af2886698133dfe65c08f84f75a6abbe5994edeb6d4823bdee1",
+          "changes": [
+            "Rename collection path to describe its platform or function.",
+            "Remove source-project branding; update comments and dependent identifiers/paths together."
+          ],
+          "sha256": "67d220cd919fc087bc9183726d61130193a90c6d6aadb766c651c9cb675fe6b6",
+          "snapshot": "snapshot-02"
+        },
+        {
+          "path": "hyprland/nix/home/przvl/config/hypr/hyprland.lua",
+          "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+          "source_sha256": "7be22128699e3b0380ca0a3f5a4c22c08937618b878b04e8bf21f2a36f30a42c",
+          "changes": [
+            "Rename collection path to describe its platform or function.",
+            "Remove source-project branding; update comments and dependent identifiers/paths together."
+          ],
+          "sha256": "34bb4f4d1b9c9e2ccfbc09034b3715fc22b3e4aa7101759c33811e12831f229a",
+          "snapshot": "snapshot-02"
+        },
+        {
+          "path": "hyprland/nix/modules/common/hyprland.nix",
+          "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+          "source_sha256": "7dbe1c57561c005e4ab753ee06c315ec845043d2e59b376e2e06bca46925b4b7",
+          "changes": [
+            "Rename collection path to describe its platform or function."
+          ],
+          "sha256": "7dbe1c57561c005e4ab753ee06c315ec845043d2e59b376e2e06bca46925b4b7",
+          "snapshot": "snapshot-02"
+        },
+        {
+          "path": "hyprland/nix/flake.lock",
+          "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+          "source_sha256": "496a63a423a6cf0373560748c4bd00183eb3e38b2dbe0738a3064279332e930d",
+          "changes": [
+            "Rename collection path to describe its platform or function."
+          ],
+          "sha256": "496a63a423a6cf0373560748c4bd00183eb3e38b2dbe0738a3064279332e930d",
+          "snapshot": "snapshot-02"
+        }
+      ]
+    },
+    "snapshot-03": {
+      "commit": "45b449ca890407964a708cdd52554eef356e9282"
+    },
+    "snapshot-04": {
+      "commit": "e295d5c4aa5f19bad15598262fc51df51711238d"
+    },
+    "collection-01": {
+      "captured": "2026-10-01",
+      "description": "Collection organization and supporting documentation",
+      "commit": null
+    },
+    "collection-02": {
+      "captured": "2026-10-01",
+      "commit": null,
+      "description": "Shared configuration with narrow session, power and activation alternatives"
+    }
+  },
+  "files": [
+    {
+      "path": "walls/cityview.webp",
+      "commit": null,
+      "source_sha256": "b649b9082dd4b75ab232c2d4981b4ee6f42df2b822785dbc9e3a939e6e8e2894",
+      "changes": [],
+      "sha256": "b649b9082dd4b75ab232c2d4981b4ee6f42df2b822785dbc9e3a939e6e8e2894",
+      "source": "/home/przvl/Pictures/cityview.webp"
+    },
+    {
+      "path": "walls/sunset.png",
+      "commit": null,
+      "source_sha256": "6d19b4607ec23f153d69501c15286f61e8c458bfc9b0923b7ee546aa975f0310",
+      "changes": [],
+      "sha256": "6d19b4607ec23f153d69501c15286f61e8c458bfc9b0923b7ee546aa975f0310",
+      "source": "/home/przvl/Pictures/sunset.png"
+    },
+    {
+      "path": "walls/horizon.png",
+      "commit": null,
+      "source_sha256": "ba7eebcd6a38de15852bfae473c2cbc9d6b23b5b742e9a1590e8a28762e8f13e",
+      "changes": [],
+      "sha256": "ba7eebcd6a38de15852bfae473c2cbc9d6b23b5b742e9a1590e8a28762e8f13e",
+      "source": "/home/przvl/Pictures/horizon.png"
+    },
+    {
+      "path": "walls/night.png",
+      "commit": null,
+      "source_sha256": "0940dbb5460c0e3d6d3d6896c24d46056dc0547f56b8b5267df8b76660871eb3",
+      "changes": [],
+      "sha256": "0940dbb5460c0e3d6d3d6896c24d46056dc0547f56b8b5267df8b76660871eb3",
+      "source": "/home/przvl/Pictures/night.png"
+    },
+    {
+      "path": "nvim/config/.neoconf.json",
+      "commit": null,
+      "source_sha256": "1819a5b64b71521f214b374bdb3b4dd7531a2b91b881c0803e0029811da7f3e4",
+      "changes": [],
+      "sha256": "1819a5b64b71521f214b374bdb3b4dd7531a2b91b881c0803e0029811da7f3e4",
+      "source": "/home/przvl/.config/nvim/.neoconf.json"
+    },
+    {
+      "path": "nvim/config/SOURCE.txt",
+      "commit": null,
+      "source_sha256": "90fa0f5ec1b2ac33546add14acbe7d20ae4e4b614d33cbd25c7a6a22152dd1d5",
+      "changes": [
+        "Remove source-project branding; update comments and dependent identifiers/paths together.",
+        "Clarify functional comments and snapshot metadata."
+      ],
+      "sha256": "ab08a26f29781ea98dba172b3ecf9ee47b929078aaacc669c7967b7937b96ede",
+      "source": "/home/przvl/.config/nvim/SOURCE.txt"
+    },
+    {
+      "path": "nvim/config/colors/minimal.lua",
+      "commit": null,
+      "source_sha256": "e8e2e4bb83288e55c61114e8d9106ffa3963747475ccdee90d61518cc8afadef",
+      "changes": [],
+      "sha256": "e8e2e4bb83288e55c61114e8d9106ffa3963747475ccdee90d61518cc8afadef",
+      "source": "/home/przvl/.config/nvim/colors/minimal.lua"
+    },
+    {
+      "path": "nvim/config/init.lua",
+      "commit": null,
+      "source_sha256": "a1ccbd95d2622155ea092db554b6cebbc6174282de82c6d3ac8fdfc039a7e020",
+      "changes": [],
+      "sha256": "a1ccbd95d2622155ea092db554b6cebbc6174282de82c6d3ac8fdfc039a7e020",
+      "source": "/home/przvl/.config/nvim/init.lua"
+    },
+    {
+      "path": "nvim/config/lazy-lock.json",
+      "commit": null,
+      "source_sha256": "3b943d844a1855fc2c16658bc445dd6023876923d8bcdebc8b4018e90a430d5f",
+      "changes": [],
+      "sha256": "3b943d844a1855fc2c16658bc445dd6023876923d8bcdebc8b4018e90a430d5f",
+      "source": "/home/przvl/.config/nvim/lazy-lock.json"
+    },
+    {
+      "path": "nvim/config/lazyvim.json",
+      "commit": null,
+      "source_sha256": "16a90464cce57de314247213e1dbe97edfb07f7aae5b23860e964507d766a517",
+      "changes": [],
+      "sha256": "16a90464cce57de314247213e1dbe97edfb07f7aae5b23860e964507d766a517",
+      "source": "/home/przvl/.config/nvim/lazyvim.json"
+    },
+    {
+      "path": "nvim/config/lua/config/ide.lua",
+      "commit": null,
+      "source_sha256": "aaac23a100f7cf29c9b9535409d34c623938fc4714ad37a1244c1e4de713c0bc",
+      "changes": [
+        "Copy user-confirmed local fix on 2026-10-01: reuse the explorer, wait for initial search before opening terminals, and serialize overlapping finder/matcher refreshes to prevent duplicate folder entries. No additional validation performed at user request."
+      ],
+      "sha256": "266157e60bf4720ca0cd0c8493efce0d9db265fb82fd3414737e2780fac652ee",
+      "source": "/home/przvl/.config/nvim/lua/config/ide.lua"
+    },
+    {
+      "path": "nvim/config/lua/config/lazy.lua",
+      "commit": null,
+      "source_sha256": "77abe8177c1e67565bfa96955480086b994bad695482787624de2254c172fcd6",
+      "changes": [
+        "Remove source-project branding; update comments and dependent identifiers/paths together.",
+        "Clarify functional comments and snapshot metadata."
+      ],
+      "sha256": "3cccb98b1c873734ae2a55d39fe11e5c90a52e34149a2b3df0c0251403875b04",
+      "source": "/home/przvl/.config/nvim/lua/config/lazy.lua"
+    },
+    {
+      "path": "nvim/config/lua/config/options.lua",
+      "commit": null,
+      "source_sha256": "1632ba001a2138f48e035405d44422a9b46a404fed4df3e0965a30a7d1d4e2d7",
+      "changes": [],
+      "sha256": "1632ba001a2138f48e035405d44422a9b46a404fed4df3e0965a30a7d1d4e2d7",
+      "source": "/home/przvl/.config/nvim/lua/config/options.lua"
+    },
+    {
+      "path": "nvim/config/lua/config/treesitter.lua",
+      "commit": null,
+      "source_sha256": "7a66944386c674f8e9108c4e955c256d7418ca7f57fdd77f90a693ec402b1321",
+      "changes": [
+        "Remove source-project branding; update comments and dependent identifiers/paths together.",
+        "Clarify functional comments and snapshot metadata."
+      ],
+      "sha256": "e2d745a2dc9983bb6707cb645720e4de8dfb0c99851169037311538877a21c9e",
+      "source": "/home/przvl/.config/nvim/lua/config/treesitter.lua"
+    },
+    {
+      "path": "nvim/config/lua/plugins/gentoo.lua",
+      "commit": null,
+      "source_sha256": "b6763386efbbf7eb268bc18e1410338e570855a12dfda1325200249597fcc7b4",
+      "changes": [],
+      "sha256": "b6763386efbbf7eb268bc18e1410338e570855a12dfda1325200249597fcc7b4",
+      "source": "/home/przvl/.config/nvim/lua/plugins/gentoo.lua"
+    },
+    {
+      "path": "nvim/config/lua/plugins/snacks.lua",
+      "commit": null,
+      "source_sha256": "6d144f4a8a802c63cf03a51b4af0323a72a9dba95980b225c85ac6818ff74213",
+      "changes": [],
+      "sha256": "6d144f4a8a802c63cf03a51b4af0323a72a9dba95980b225c85ac6818ff74213",
+      "source": "/home/przvl/.config/nvim/lua/plugins/snacks.lua"
+    },
+    {
+      "path": "nvim/config/lua/plugins/theme.lua",
+      "commit": null,
+      "source_sha256": "41b6aaaf01d433f08136c78dcb68fa0886abbdff5a8ea9fdd8287f2d00e7cb62",
+      "changes": [],
+      "sha256": "41b6aaaf01d433f08136c78dcb68fa0886abbdff5a8ea9fdd8287f2d00e7cb62",
+      "source": "/home/przvl/.config/nvim/lua/plugins/theme.lua"
+    },
+    {
+      "path": "nvim/config/stylua.toml",
+      "commit": null,
+      "source_sha256": "b45819d91dbd677859da156bd6c2856ab61d5aac944a4b56f3e75fb35e2eb476",
+      "changes": [],
+      "sha256": "b45819d91dbd677859da156bd6c2856ab61d5aac944a4b56f3e75fb35e2eb476",
+      "source": "/home/przvl/.config/nvim/stylua.toml"
+    },
+    {
+      "path": "nvim/bin/nvimide",
+      "commit": null,
+      "source_sha256": "55c70350b2597d755a07a363e9e79aab922d5f06369aaa9dd1dbfdb12329a185",
+      "changes": [],
+      "sha256": "55c70350b2597d755a07a363e9e79aab922d5f06369aaa9dd1dbfdb12329a185",
+      "source": "/home/przvl/.local/bin/nvimide"
+    },
+    {
+      "path": "desktop/kde/config/kwinrc",
+      "commit": null,
+      "source_sha256": "952c236803cce1a50337616de159e95c84107246411c984b7d8c68693dcf8c8d",
+      "changes": [
+        "Reorganize collection by application and function; moved from kde/config/kwinrc."
+      ],
+      "sha256": "952c236803cce1a50337616de159e95c84107246411c984b7d8c68693dcf8c8d",
+      "source": "/home/przvl/.config/kwinrc"
+    },
+    {
+      "path": "desktop/kde/config/kdeglobals",
+      "commit": null,
+      "source_sha256": "5a20e07006b05be7ad9d645e0c328c001d3e8536a0d3303b23399946bacfb93d",
+      "changes": [
+        "Reorganize collection by application and function; moved from kde/config/kdeglobals."
+      ],
+      "sha256": "5a20e07006b05be7ad9d645e0c328c001d3e8536a0d3303b23399946bacfb93d",
+      "source": "/home/przvl/.config/kdeglobals"
+    },
+    {
+      "path": "desktop/kde/config/kcminputrc",
+      "commit": null,
+      "source_sha256": "69467767a427b4d3f1ae3373c20030ef6a52d1becc9b26a3670d959bf4637c25",
+      "changes": [
+        "Reorganize collection by application and function; moved from kde/config/kcminputrc."
+      ],
+      "sha256": "69467767a427b4d3f1ae3373c20030ef6a52d1becc9b26a3670d959bf4637c25",
+      "source": "/home/przvl/.config/kcminputrc"
+    },
+    {
+      "path": "desktop/kde/config/kxkbrc",
+      "commit": null,
+      "source_sha256": "2acd0c9e1f33c0887e470de1660bb58f653911dc8c653d1d3e2ff059db73e9a6",
+      "changes": [
+        "Reorganize collection by application and function; moved from kde/config/kxkbrc."
+      ],
+      "sha256": "2acd0c9e1f33c0887e470de1660bb58f653911dc8c653d1d3e2ff059db73e9a6",
+      "source": "/home/przvl/.config/kxkbrc"
+    },
+    {
+      "path": "desktop/kde/config/kglobalshortcutsrc",
+      "commit": null,
+      "source_sha256": "3136f1e07ce76d59d543d755de3a8a38f609278b731798c50a03a8c8727d19a8",
+      "changes": [
+        "Reorganize collection by application and function; moved from kde/config/kglobalshortcutsrc."
+      ],
+      "sha256": "3136f1e07ce76d59d543d755de3a8a38f609278b731798c50a03a8c8727d19a8",
+      "source": "/home/przvl/.config/kglobalshortcutsrc"
+    },
+    {
+      "path": "desktop/kde/config/kscreenlockerrc",
+      "commit": null,
+      "source_sha256": "9f200f83253bc541416d1b0bccb993a5b2d7f98583b981b52ceeae71532e1d6f",
+      "changes": [
+        "Reorganize collection by application and function; moved from kde/config/kscreenlockerrc."
+      ],
+      "sha256": "9f200f83253bc541416d1b0bccb993a5b2d7f98583b981b52ceeae71532e1d6f",
+      "source": "/home/przvl/.config/kscreenlockerrc"
+    },
+    {
+      "path": "desktop/kde/config/ksmserverrc",
+      "commit": null,
+      "source_sha256": "20fa11b7c9cb6c62f1824a3d36f8fd170dfe9a615533ec1ceb10bc131217dcb0",
+      "changes": [
+        "Reorganize collection by application and function; moved from kde/config/ksmserverrc."
+      ],
+      "sha256": "20fa11b7c9cb6c62f1824a3d36f8fd170dfe9a615533ec1ceb10bc131217dcb0",
+      "source": "/home/przvl/.config/ksmserverrc"
+    },
+    {
+      "path": "desktop/kde/config/plasmarc",
+      "commit": null,
+      "source_sha256": "311fd452e540a3e7a8c5fddcf87e211448af44fd740839c5f5b66ca674da82c4",
+      "changes": [
+        "Reorganize collection by application and function; moved from kde/config/plasmarc."
+      ],
+      "sha256": "311fd452e540a3e7a8c5fddcf87e211448af44fd740839c5f5b66ca674da82c4",
+      "source": "/home/przvl/.config/plasmarc"
+    },
+    {
+      "path": "desktop/kde/config/plasmanotifyrc",
+      "commit": null,
+      "source_sha256": "a3633a7bef79002415befb7e4cfb06798c7954245a164b08c17b60d90ab8658d",
+      "changes": [
+        "Reorganize collection by application and function; moved from kde/config/plasmanotifyrc."
+      ],
+      "sha256": "a3633a7bef79002415befb7e4cfb06798c7954245a164b08c17b60d90ab8658d",
+      "source": "/home/przvl/.config/plasmanotifyrc"
+    },
+    {
+      "path": "desktop/kde/config/powerdevilrc",
+      "commit": null,
+      "source_sha256": "736ad6e2945b27e467b1a8b2a95700c3f236d16f1c2cd97a9b9b6d2194acc40c",
+      "changes": [
+        "Reorganize collection by application and function; moved from kde/config/powerdevilrc."
+      ],
+      "sha256": "736ad6e2945b27e467b1a8b2a95700c3f236d16f1c2cd97a9b9b6d2194acc40c",
+      "source": "/home/przvl/.config/powerdevilrc"
+    },
+    {
+      "path": "desktop/kde/config/powermanagementprofilesrc",
+      "commit": null,
+      "source_sha256": "30884238529f74c5d48b754296d20b87176733db31aa01a272e0ee99654d2e93",
+      "changes": [
+        "Reorganize collection by application and function; moved from kde/config/powermanagementprofilesrc."
+      ],
+      "sha256": "30884238529f74c5d48b754296d20b87176733db31aa01a272e0ee99654d2e93",
+      "source": "/home/przvl/.config/powermanagementprofilesrc"
+    },
+    {
+      "path": "desktop/kde/config/plasma-org.kde.plasma.desktop-appletsrc",
+      "commit": null,
+      "source_sha256": "8c0e024d8058e437527f5ecf03038fa53295944ed38dc51ce2c7821db0b25c52",
+      "changes": [
+        "Reorganize collection by application and function; moved from kde/config/plasma-org.kde.plasma.desktop-appletsrc."
+      ],
+      "sha256": "8c0e024d8058e437527f5ecf03038fa53295944ed38dc51ce2c7821db0b25c52",
+      "source": "/home/przvl/.config/plasma-org.kde.plasma.desktop-appletsrc"
+    },
+    {
+      "path": "desktop/kde/config/plasmashellrc",
+      "commit": null,
+      "source_sha256": "6df6c6997dcabcd9179c51da311cf7e47c088470902f0edf5119a1250ca75bec",
+      "changes": [
+        "Reorganize collection by application and function; moved from kde/config/plasmashellrc."
+      ],
+      "sha256": "6df6c6997dcabcd9179c51da311cf7e47c088470902f0edf5119a1250ca75bec",
+      "source": "/home/przvl/.config/plasmashellrc"
+    },
+    {
+      "path": "desktop/kde/config/plasma-localerc",
+      "commit": null,
+      "source_sha256": "cb4d40553bb82f9b174581580f1d427289e52c51643be0a5dfd2caaabebe009f",
+      "changes": [
+        "Reorganize collection by application and function; moved from kde/config/plasma-localerc."
+      ],
+      "sha256": "cb4d40553bb82f9b174581580f1d427289e52c51643be0a5dfd2caaabebe009f",
+      "source": "/home/przvl/.config/plasma-localerc"
+    },
+    {
+      "path": "desktop/kde/share/kwin/scripts/gentoo-focus-border/contents/ui/main.qml",
+      "commit": null,
+      "source_sha256": "f654f529829b3ee7694907232975f93de2f0ec7d0a449e38fbd7c5d6513b4f43",
+      "changes": [
+        "Reorganize collection by application and function; moved from kde/share/kwin/scripts/gentoo-focus-border/contents/ui/main.qml."
+      ],
+      "sha256": "f654f529829b3ee7694907232975f93de2f0ec7d0a449e38fbd7c5d6513b4f43",
+      "source": "/home/przvl/.local/share/kwin/scripts/gentoo-focus-border/contents/ui/main.qml"
+    },
+    {
+      "path": "desktop/kde/share/kwin/scripts/gentoo-focus-border/metadata.json",
+      "commit": null,
+      "source_sha256": "db17d5fa28bf8f28e4ef7713dfb4ce31c074991a3deebca0255c77fb40be9fc2",
+      "changes": [
+        "Reorganize collection by application and function; moved from kde/share/kwin/scripts/gentoo-focus-border/metadata.json."
+      ],
+      "sha256": "db17d5fa28bf8f28e4ef7713dfb4ce31c074991a3deebca0255c77fb40be9fc2",
+      "source": "/home/przvl/.local/share/kwin/scripts/gentoo-focus-border/metadata.json"
+    },
+    {
+      "path": "desktop/kde/share/kwin/scripts/gentoo-screenshot/contents/code/main.js",
+      "commit": null,
+      "source_sha256": "a6fdab5ea1e508475c8da14806a6f3b3b4afdc9166bede94b95d8408aefec894",
+      "changes": [
+        "Reorganize collection by application and function; moved from kde/share/kwin/scripts/gentoo-screenshot/contents/code/main.js."
+      ],
+      "sha256": "a6fdab5ea1e508475c8da14806a6f3b3b4afdc9166bede94b95d8408aefec894",
+      "source": "/home/przvl/.local/share/kwin/scripts/gentoo-screenshot/contents/code/main.js"
+    },
+    {
+      "path": "desktop/kde/share/kwin/scripts/gentoo-screenshot/metadata.json",
+      "commit": null,
+      "source_sha256": "74d3eebc5311ec1657514210906e96652063217b5dc02589423587c721b0bcda",
+      "changes": [
+        "Reorganize collection by application and function; moved from kde/share/kwin/scripts/gentoo-screenshot/metadata.json."
+      ],
+      "sha256": "74d3eebc5311ec1657514210906e96652063217b5dc02589423587c721b0bcda",
+      "source": "/home/przvl/.local/share/kwin/scripts/gentoo-screenshot/metadata.json"
+    },
+    {
+      "path": "desktop/kde/share/kwin/scripts/gentoo-tiling/contents/code/main.js",
+      "commit": null,
+      "source_sha256": "202ee27cbd26a643cd0c55737b7137ff863dbf4acd7c5bbf9e9975517d822958",
+      "changes": [
+        "Reorganize collection by application and function; moved from kde/share/kwin/scripts/gentoo-tiling/contents/code/main.js."
+      ],
+      "sha256": "202ee27cbd26a643cd0c55737b7137ff863dbf4acd7c5bbf9e9975517d822958",
+      "source": "/home/przvl/.local/share/kwin/scripts/gentoo-tiling/contents/code/main.js"
+    },
+    {
+      "path": "desktop/kde/share/kwin/scripts/gentoo-tiling/metadata.json",
+      "commit": null,
+      "source_sha256": "51b3c16bd13360c513e28f4f7e399a770a75b975347179413d84336a1d94034e",
+      "changes": [
+        "Reorganize collection by application and function; moved from kde/share/kwin/scripts/gentoo-tiling/metadata.json."
+      ],
+      "sha256": "51b3c16bd13360c513e28f4f7e399a770a75b975347179413d84336a1d94034e",
+      "source": "/home/przvl/.local/share/kwin/scripts/gentoo-tiling/metadata.json"
+    },
+    {
+      "path": "desktop/kde/share/plasma/desktoptheme/gentoo-transparent/metadata.json",
+      "commit": null,
+      "source_sha256": "bcca8d8a4cdd9a18c863e77cc41fbe99b5048f3007676faa85c3672dc708c85a",
+      "changes": [
+        "Reorganize collection by application and function; moved from kde/share/plasma/desktoptheme/gentoo-transparent/metadata.json."
+      ],
+      "sha256": "bcca8d8a4cdd9a18c863e77cc41fbe99b5048f3007676faa85c3672dc708c85a",
+      "source": "/home/przvl/.local/share/plasma/desktoptheme/gentoo-transparent/metadata.json"
+    },
+    {
+      "path": "desktop/kde/share/plasma/desktoptheme/gentoo-transparent/opaque/widgets/panel-background.svg",
+      "commit": null,
+      "source_sha256": "2e38bd37219e349e3e82ad2972d0b4ddbe13f66f1b75272bb8c7f1959424d8de",
+      "changes": [
+        "Reorganize collection by application and function; moved from kde/share/plasma/desktoptheme/gentoo-transparent/opaque/widgets/panel-background.svg."
+      ],
+      "sha256": "2e38bd37219e349e3e82ad2972d0b4ddbe13f66f1b75272bb8c7f1959424d8de",
+      "source": "/home/przvl/.local/share/plasma/desktoptheme/gentoo-transparent/opaque/widgets/panel-background.svg"
+    },
+    {
+      "path": "desktop/kde/share/plasma/desktoptheme/gentoo-transparent/plasmarc",
+      "commit": null,
+      "source_sha256": "0cb5406b4853cec2d4d8787fbfd471edfe3701c91d502521a01e729da3adf235",
+      "changes": [
+        "Reorganize collection by application and function; moved from kde/share/plasma/desktoptheme/gentoo-transparent/plasmarc."
+      ],
+      "sha256": "0cb5406b4853cec2d4d8787fbfd471edfe3701c91d502521a01e729da3adf235",
+      "source": "/home/przvl/.local/share/plasma/desktoptheme/gentoo-transparent/plasmarc"
+    },
+    {
+      "path": "desktop/kde/share/plasma/desktoptheme/gentoo-transparent/translucent/widgets/panel-background.svg",
+      "commit": null,
+      "source_sha256": "2e38bd37219e349e3e82ad2972d0b4ddbe13f66f1b75272bb8c7f1959424d8de",
+      "changes": [
+        "Reorganize collection by application and function; moved from kde/share/plasma/desktoptheme/gentoo-transparent/translucent/widgets/panel-background.svg."
+      ],
+      "sha256": "2e38bd37219e349e3e82ad2972d0b4ddbe13f66f1b75272bb8c7f1959424d8de",
+      "source": "/home/przvl/.local/share/plasma/desktoptheme/gentoo-transparent/translucent/widgets/panel-background.svg"
+    },
+    {
+      "path": "desktop/kde/share/plasma/desktoptheme/gentoo-transparent/widgets/panel-background.svg",
+      "commit": null,
+      "source_sha256": "2e38bd37219e349e3e82ad2972d0b4ddbe13f66f1b75272bb8c7f1959424d8de",
+      "changes": [
+        "Reorganize collection by application and function; moved from kde/share/plasma/desktoptheme/gentoo-transparent/widgets/panel-background.svg."
+      ],
+      "sha256": "2e38bd37219e349e3e82ad2972d0b4ddbe13f66f1b75272bb8c7f1959424d8de",
+      "source": "/home/przvl/.local/share/plasma/desktoptheme/gentoo-transparent/widgets/panel-background.svg"
+    },
+    {
+      "path": "desktop/kde/share/plasma/plasmoids/local.gentoo.cpu/contents/ui/main.qml",
+      "commit": null,
+      "source_sha256": "3443c5ad572d68afd249339857e66a482a2c1df47c1edf846602ab5ced9db477",
+      "changes": [
+        "Reorganize collection by application and function; moved from kde/share/plasma/plasmoids/local.gentoo.cpu/contents/ui/main.qml."
+      ],
+      "sha256": "3443c5ad572d68afd249339857e66a482a2c1df47c1edf846602ab5ced9db477",
+      "source": "/home/przvl/.local/share/plasma/plasmoids/local.gentoo.cpu/contents/ui/main.qml"
+    },
+    {
+      "path": "desktop/kde/share/plasma/plasmoids/local.gentoo.cpu/metadata.json",
+      "commit": null,
+      "source_sha256": "c4644ab8bca504e54f58cb66c04856b9bd207e2d4ba4037bbc73d5c6a5f83ad5",
+      "changes": [
+        "Reorganize collection by application and function; moved from kde/share/plasma/plasmoids/local.gentoo.cpu/metadata.json."
+      ],
+      "sha256": "c4644ab8bca504e54f58cb66c04856b9bd207e2d4ba4037bbc73d5c6a5f83ad5",
+      "source": "/home/przvl/.local/share/plasma/plasmoids/local.gentoo.cpu/metadata.json"
+    },
+    {
+      "path": "desktop/kde/share/plasma/plasmoids/local.gentoo.ram/contents/ui/main.qml",
+      "commit": null,
+      "source_sha256": "e267c96b94b1e06249f47298a91db9f66848a5cb1864276667a21d37d1f7bda4",
+      "changes": [
+        "Reorganize collection by application and function; moved from kde/share/plasma/plasmoids/local.gentoo.ram/contents/ui/main.qml."
+      ],
+      "sha256": "e267c96b94b1e06249f47298a91db9f66848a5cb1864276667a21d37d1f7bda4",
+      "source": "/home/przvl/.local/share/plasma/plasmoids/local.gentoo.ram/contents/ui/main.qml"
+    },
+    {
+      "path": "desktop/kde/share/plasma/plasmoids/local.gentoo.ram/metadata.json",
+      "commit": null,
+      "source_sha256": "f7fda94d712d34d9e7eb79038c54b02741e2d66322f773bbdcc1daf74394569c",
+      "changes": [
+        "Reorganize collection by application and function; moved from kde/share/plasma/plasmoids/local.gentoo.ram/metadata.json."
+      ],
+      "sha256": "f7fda94d712d34d9e7eb79038c54b02741e2d66322f773bbdcc1daf74394569c",
+      "source": "/home/przvl/.local/share/plasma/plasmoids/local.gentoo.ram/metadata.json"
+    },
+    {
+      "path": "desktop/kde/share/icons/gentoo-rice.png",
+      "commit": null,
+      "source_sha256": "7664915763c56521d7eec32911500b3bc080bdaaac3c2a89d47cedaa1dfa1066",
+      "changes": [
+        "Reorganize collection by application and function; moved from kde/share/icons/gentoo-rice.png."
+      ],
+      "sha256": "7664915763c56521d7eec32911500b3bc080bdaaac3c2a89d47cedaa1dfa1066",
+      "source": "/home/przvl/.local/share/icons/gentoo-rice.png"
+    },
+    {
+      "path": "desktop/kde/share/dbus-1/services/org.przvl.Screenshot.service",
+      "commit": null,
+      "source_sha256": "ab1ede18282799253977b38245e9c8c9038d0aba486eea82b315aab94aa6b4c5",
+      "changes": [
+        "Reorganize collection by application and function; moved from kde/share/dbus-1/services/org.przvl.Screenshot.service."
+      ],
+      "sha256": "ab1ede18282799253977b38245e9c8c9038d0aba486eea82b315aab94aa6b4c5",
+      "source": "/home/przvl/.local/share/dbus-1/services/org.przvl.Screenshot.service"
+    },
+    {
+      "path": "desktop/kde/bin/screenshot-region",
+      "commit": null,
+      "source_sha256": "259bba052f08aad7925a6a63e5136e4201a6572698ffca6a60def7ba5e5c661b",
+      "changes": [
+        "Reorganize collection by application and function; moved from kde/bin/screenshot-region."
+      ],
+      "sha256": "259bba052f08aad7925a6a63e5136e4201a6572698ffca6a60def7ba5e5c661b",
+      "source": "/home/przvl/.local/bin/screenshot-region"
+    },
+    {
+      "path": "desktop/kde/bin/screenshot-shortcut-service",
+      "commit": null,
+      "source_sha256": "95e806aab1a1a599d1c3364478592471c5a05888e8c016a5ddac9403c2261949",
+      "changes": [
+        "Resolve screenshot-region relative to the target user home instead of /home/przvl.",
+        "Reorganize collection by application and function; moved from kde/bin/screenshot-shortcut-service."
+      ],
+      "sha256": "6bc475d64f13e092e96b9d4f4b5b7df40b9192ea96056e4f6cf75d7151adb825",
+      "source": "/home/przvl/.local/bin/screenshot-shortcut-service"
+    },
+    {
+      "path": "desktop/kde/config/flameshot/flameshot.ini",
+      "commit": null,
+      "source_sha256": "39a74e80690d149341618711f60f8e7c897df5351a1c6dafc4dcafff22f77d7f",
+      "changes": [
+        "Reorganize collection by application and function; moved from kde/config/flameshot/flameshot.ini."
+      ],
+      "sha256": "39a74e80690d149341618711f60f8e7c897df5351a1c6dafc4dcafff22f77d7f",
+      "source": "/home/przvl/.config/flameshot/flameshot.ini"
+    },
+    {
+      "path": "desktop/sddm/etc/sddm.conf.d/01gentoo.conf",
+      "commit": null,
+      "source_sha256": "9906c8724ad5a9f5c7fa3e3eacb28bfeb8e7caa100f3b59b577e37d5b1a20b2e",
+      "changes": [
+        "Reorganize collection by application and function; moved from sddm/etc/sddm.conf.d/01gentoo.conf."
+      ],
+      "sha256": "9906c8724ad5a9f5c7fa3e3eacb28bfeb8e7caa100f3b59b577e37d5b1a20b2e",
+      "source": "/etc/sddm.conf.d/01gentoo.conf"
+    },
+    {
+      "path": "desktop/sddm/etc/sddm.conf.d/90-gentoo-minimal.conf",
+      "commit": null,
+      "source_sha256": "9a68e2f9d86980da95a5cd93709ec655fbc3c6848f40edf941f4edaba715f553",
+      "changes": [
+        "Reorganize collection by application and function; moved from sddm/etc/sddm.conf.d/90-gentoo-minimal.conf."
+      ],
+      "sha256": "9a68e2f9d86980da95a5cd93709ec655fbc3c6848f40edf941f4edaba715f553",
+      "source": "/etc/sddm.conf.d/90-gentoo-minimal.conf"
+    },
+    {
+      "path": "desktop/sddm/themes/gentoo-minimal/Main.qml",
+      "commit": null,
+      "source_sha256": "7d088fa55eafbdccd7fdeddfbc184175f67d7c00caadb0837dfb521b241b5d18",
+      "changes": [
+        "Reorganize collection by application and function; moved from sddm/themes/gentoo-minimal/Main.qml."
+      ],
+      "sha256": "7d088fa55eafbdccd7fdeddfbc184175f67d7c00caadb0837dfb521b241b5d18",
+      "source": "/usr/share/sddm/themes/gentoo-minimal/Main.qml"
+    },
+    {
+      "path": "desktop/sddm/themes/gentoo-minimal/metadata.desktop",
+      "commit": null,
+      "source_sha256": "387b8daf61b34e442281735caa68f05747e99ad227df06b33969797f51ab3f1f",
+      "changes": [
+        "Reorganize collection by application and function; moved from sddm/themes/gentoo-minimal/metadata.desktop."
+      ],
+      "sha256": "387b8daf61b34e442281735caa68f05747e99ad227df06b33969797f51ab3f1f",
+      "source": "/usr/share/sddm/themes/gentoo-minimal/metadata.desktop"
+    },
+    {
+      "path": "desktop/sddm/themes/gentoo-minimal/theme.conf",
+      "commit": null,
+      "source_sha256": "a48ed5b00be15f61f8daf69b8c0a09ea4530111407d14f86905bd612ca71a375",
+      "changes": [
+        "Reorganize collection by application and function; moved from sddm/themes/gentoo-minimal/theme.conf."
+      ],
+      "sha256": "a48ed5b00be15f61f8daf69b8c0a09ea4530111407d14f86905bd612ca71a375",
+      "source": "/usr/share/sddm/themes/gentoo-minimal/theme.conf"
+    },
+    {
+      "path": "desktop/sddm/themes/gentoo-minimal/wallpaper.png",
+      "commit": null,
+      "source_sha256": "ba7eebcd6a38de15852bfae473c2cbc9d6b23b5b742e9a1590e8a28762e8f13e",
+      "changes": [
+        "Reorganize collection by application and function; moved from sddm/themes/gentoo-minimal/wallpaper.png."
+      ],
+      "sha256": "ba7eebcd6a38de15852bfae473c2cbc9d6b23b5b742e9a1590e8a28762e8f13e",
+      "source": "/usr/share/sddm/themes/gentoo-minimal/wallpaper.png"
+    },
+    {
+      "path": "hardware/keyboard/udev/hwdb.d/90-gentoo-external-keyboard.hwdb",
+      "commit": null,
+      "source_sha256": "e113b07bff14d1b363983cd1ea4fedbab7717f183572724728ff8b19556cb317",
+      "changes": [],
+      "sha256": "e113b07bff14d1b363983cd1ea4fedbab7717f183572724728ff8b19556cb317",
+      "source": "/etc/udev/hwdb.d/90-gentoo-external-keyboard.hwdb"
+    },
+    {
+      "path": "hardware/monitor/kde/kwinoutputconfig.json",
+      "commit": null,
+      "source_sha256": "d34a73b3a4508e4490bb93b1b33215fc27532b3822c6e933ac75be54c44bac97",
+      "changes": [],
+      "sha256": "d34a73b3a4508e4490bb93b1b33215fc27532b3822c6e933ac75be54c44bac97",
+      "source": "/home/przvl/.config/kwinoutputconfig.json"
+    },
+    {
+      "path": "hardware/x11/bin/workstation-monitors",
+      "commit": "d3d9c7c75c476ef8d1f16b0ab13b4838a0007e35",
+      "source_sha256": "6311554891c69879d12b5f023ad0edad17edd1e9efef7bd7d383552115fbf97f",
+      "changes": [],
+      "sha256": "6311554891c69879d12b5f023ad0edad17edd1e9efef7bd7d383552115fbf97f",
+      "snapshot": "snapshot-01"
+    },
+    {
+      "path": "hardware/x11/bin/workstation-keyboards",
+      "commit": "d3d9c7c75c476ef8d1f16b0ab13b4838a0007e35",
+      "source_sha256": "60df600be2d6665e2e594972b747cdbe76261b785cf5eff39b9b6127ba564630",
+      "changes": [],
+      "sha256": "60df600be2d6665e2e594972b747cdbe76261b785cf5eff39b9b6127ba564630",
+      "snapshot": "snapshot-01"
+    },
+    {
+      "path": "hardware/x11/bin/workstation-pointers",
+      "commit": "d3d9c7c75c476ef8d1f16b0ab13b4838a0007e35",
+      "source_sha256": "6e3f8e34f12c9ff1285434944a17cf2713d979ea93d766df112ed16341a63fd4",
+      "changes": [],
+      "sha256": "6e3f8e34f12c9ff1285434944a17cf2713d979ea93d766df112ed16341a63fd4",
+      "snapshot": "snapshot-01"
+    },
+    {
+      "path": "hardware/x11/bin/workstation-hotplug",
+      "commit": "d3d9c7c75c476ef8d1f16b0ab13b4838a0007e35",
+      "source_sha256": "bd2c5dab8bf0041631b7c3053db57354c183586a8c0b63247a619b037bdce7c8",
+      "changes": [],
+      "sha256": "bd2c5dab8bf0041631b7c3053db57354c183586a8c0b63247a619b037bdce7c8",
+      "snapshot": "snapshot-01"
+    },
+    {
+      "path": "hardware/x11/bin/workstation-brightness",
+      "commit": "d3d9c7c75c476ef8d1f16b0ab13b4838a0007e35",
+      "source_sha256": "1fbddfbe24f2170b88e94a6ec1ecc1583b2866a514c1e7a06b2f66180bc51db6",
+      "changes": [],
+      "sha256": "1fbddfbe24f2170b88e94a6ec1ecc1583b2866a514c1e7a06b2f66180bc51db6",
+      "snapshot": "snapshot-01"
+    },
+    {
+      "path": "hardware/reference/x11/hardware.conf",
+      "commit": "45b449ca890407964a708cdd52554eef356e9282",
+      "source_sha256": "0f96a15f85ee58ddfcf2b31b6cefc21a284daf8e06df8caf5c81b0f58acc35f8",
+      "changes": [
+        "Rename collection path to describe its platform or function.",
+        "Remove source-project branding; update comments and dependent identifiers/paths together."
+      ],
+      "sha256": "9b709ef96ae3a253215364efe3b867d09493680856dfafe64adde371294f6614",
+      "snapshot": "snapshot-03"
+    },
+    {
+      "path": "hardware/reference/x11/bin/x11-hardware-hotplug",
+      "commit": "45b449ca890407964a708cdd52554eef356e9282",
+      "source_sha256": "6cd5abf85e7768409ecb577ae12ee581edf4a173e2cec1d43998189100ddea7b",
+      "changes": [
+        "Rename collection path to describe its platform or function.",
+        "Remove source-project branding; update comments and dependent identifiers/paths together."
+      ],
+      "sha256": "23703ec581ef3d6b1555b91986f302ed53433a6d3808d9fcad459aafd4603b29",
+      "snapshot": "snapshot-03"
+    },
+    {
+      "path": "hardware/reference/x11/etc/X11/xorg.conf.d/30-x11-input.conf",
+      "commit": "45b449ca890407964a708cdd52554eef356e9282",
+      "source_sha256": "b4dff667e1bf64296e1288c4a467799729ccf3d62f475d13de9ad10a30efcdf6",
+      "changes": [
+        "Rename collection path to describe its platform or function.",
+        "Remove source-project branding; update comments and dependent identifiers/paths together."
+      ],
+      "sha256": "8a12f4d2cfc4aaf0db83ee09f4418a8d78a3d71ed0a67e6046986724d72147f2",
+      "snapshot": "snapshot-03"
+    },
+    {
+      "path": "hardware/power/activation/udev/rules.d/99-battery-charge-limit.rules",
+      "commit": null,
+      "source_sha256": "7a8038018d82f95b2144fd6969e49a9f5ae371f3d6b420b0e968445a46c1e1cb",
+      "changes": [
+        "Isolate platform integration; moved from hardware/power/udev/rules.d/99-battery-charge-limit.rules.",
+        "Separate platform integration from shared behavior; retain documented alternatives."
+      ],
+      "sha256": "41b5d4a3af91889d551fede19d49e7a36e5074254f64e4a883d64e8f0182bdf3",
+      "source": "/etc/udev/rules.d/99-battery-charge-limit.rules"
+    },
+    {
+      "path": "hardware/power/activation/openrc/local.d/battery-charge-limit.start",
+      "commit": null,
+      "source_sha256": "c05be4bbff975dfa4acb24fa4a78dfa9a4ff90ae658940f7159e756ca0cc3660",
+      "changes": [
+        "Isolate platform integration; moved from hardware/power/local.d/battery-charge-limit.start.",
+        "Separate platform integration from shared behavior; retain documented alternatives."
+      ],
+      "sha256": "8bcb840b2779eec47e325b76eea5d76ad7982c03a42ac6bfb78cea776cd80ebd",
+      "source": "/etc/local.d/battery-charge-limit.start"
+    },
+    {
+      "path": "desktop/oxwm/config.lua",
+      "commit": "d3d9c7c75c476ef8d1f16b0ab13b4838a0007e35",
+      "source_sha256": "d2a8e3e94998c8ce84921677333582e3531f4f01bfae9e977d100fea1a1284a5",
+      "changes": [
+        "Reorganize collection by application and function; moved from oxwm/config.lua."
+      ],
+      "sha256": "d2a8e3e94998c8ce84921677333582e3531f4f01bfae9e977d100fea1a1284a5",
+      "snapshot": "snapshot-01"
+    },
+    {
+      "path": "desktop/oxwm/patches/0001-microphone-keysym.patch",
+      "commit": "d3d9c7c75c476ef8d1f16b0ab13b4838a0007e35",
+      "source_sha256": "10ce72e38a22fadd3c27a956f02f7062182c0eddbc12a1cb49d695d89eaa3911",
+      "changes": [
+        "Reorganize collection by application and function; moved from oxwm/patches/0001-microphone-keysym.patch."
+      ],
+      "sha256": "10ce72e38a22fadd3c27a956f02f7062182c0eddbc12a1cb49d695d89eaa3911",
+      "snapshot": "snapshot-01"
+    },
+    {
+      "path": "desktop/oxwm/patches/0002-unique-mirrored-screens.patch",
+      "commit": "d3d9c7c75c476ef8d1f16b0ab13b4838a0007e35",
+      "source_sha256": "2535670e34155c30edfe0c7271e26bb409b2288b2006139f0927389be30eac6c",
+      "changes": [
+        "Reorganize collection by application and function; moved from oxwm/patches/0002-unique-mirrored-screens.patch."
+      ],
+      "sha256": "2535670e34155c30edfe0c7271e26bb409b2288b2006139f0927389be30eac6c",
+      "snapshot": "snapshot-01"
+    },
+    {
+      "path": "desktop/oxwm/patches/0003-equal-split.patch",
+      "commit": "d3d9c7c75c476ef8d1f16b0ab13b4838a0007e35",
+      "source_sha256": "830afa72c4b484179df525824c467fddf5456d39b25f7302064cd4a4f2842f38",
+      "changes": [
+        "Reorganize collection by application and function; moved from oxwm/patches/0003-equal-split.patch."
+      ],
+      "sha256": "830afa72c4b484179df525824c467fddf5456d39b25f7302064cd4a4f2842f38",
+      "snapshot": "snapshot-01"
+    },
+    {
+      "path": "desktop/oxwm/bin/oxwm-battery",
+      "commit": "d3d9c7c75c476ef8d1f16b0ab13b4838a0007e35",
+      "source_sha256": "115f621fa5767036dda041b6d0e9e4fd400304a252ffb73f3a67141477b0eb63",
+      "changes": [
+        "Reorganize collection by application and function; moved from oxwm/bin/oxwm-battery."
+      ],
+      "sha256": "115f621fa5767036dda041b6d0e9e4fd400304a252ffb73f3a67141477b0eb63",
+      "snapshot": "snapshot-01"
+    },
+    {
+      "path": "desktop/oxwm/bin/oxwm-cpu",
+      "commit": "d3d9c7c75c476ef8d1f16b0ab13b4838a0007e35",
+      "source_sha256": "913776940808194fd6b38a41c1820af667e651d6c9a0ff8381207f9d9a112fd4",
+      "changes": [
+        "Reorganize collection by application and function; moved from oxwm/bin/oxwm-cpu."
+      ],
+      "sha256": "913776940808194fd6b38a41c1820af667e651d6c9a0ff8381207f9d9a112fd4",
+      "snapshot": "snapshot-01"
+    },
+    {
+      "path": "desktop/x11/bin/control-menu",
+      "commit": "d3d9c7c75c476ef8d1f16b0ab13b4838a0007e35",
+      "source_sha256": "b063f0c0d83843d71812bb62548b8f3e74e6249b9dc4e19ab4680a42b8a91c27",
+      "changes": [
+        "Separate platform integration from shared behavior; retain documented alternatives."
+      ],
+      "sha256": "432f5fc03d683bc66e777ff3b0f30c69a5cffb34f83974ff975542d1e4955f94",
+      "snapshot": "snapshot-01"
+    },
+    {
+      "path": "desktop/x11/bin/clipboard-history",
+      "commit": "d3d9c7c75c476ef8d1f16b0ab13b4838a0007e35",
+      "source_sha256": "ff46d3fff41e6f9e967b3eab9a65bae1e268787f6137f781bdc41b3dbb8935bc",
+      "changes": [],
+      "sha256": "ff46d3fff41e6f9e967b3eab9a65bae1e268787f6137f781bdc41b3dbb8935bc",
+      "snapshot": "snapshot-01"
+    },
+    {
+      "path": "desktop/x11/bin/screenshot-region",
+      "commit": "d3d9c7c75c476ef8d1f16b0ab13b4838a0007e35",
+      "source_sha256": "dae818cc0cb60af1a94579a8ab7ce3b5ba593ac7b94431a6eb1d9e10e354faa1",
+      "changes": [],
+      "sha256": "dae818cc0cb60af1a94579a8ab7ce3b5ba593ac7b94431a6eb1d9e10e354faa1",
+      "snapshot": "snapshot-01"
+    },
+    {
+      "path": "desktop/x11/bin/workstation-lock",
+      "commit": "d3d9c7c75c476ef8d1f16b0ab13b4838a0007e35",
+      "source_sha256": "616b058c80666a88beb71930c99d36887ba01a49f9afbd8966f4049828f08d48",
+      "changes": [],
+      "sha256": "616b058c80666a88beb71930c99d36887ba01a49f9afbd8966f4049828f08d48",
+      "snapshot": "snapshot-01"
+    },
+    {
+      "path": "desktop/x11/bin/workstation-lock-screen",
+      "commit": "d3d9c7c75c476ef8d1f16b0ab13b4838a0007e35",
+      "source_sha256": "9e60a2964fa821863f4fdfdb4fcc91d2b9f44ed20609032d4f9d9c41aebbf0e3",
+      "changes": [
+        "Remove source-project branding; update comments and dependent identifiers/paths together.",
+        "Clarify functional comments and snapshot metadata.",
+        "Separate platform integration from shared behavior; retain documented alternatives."
+      ],
+      "sha256": "dc1768912cec725d83b63e79a24d1acb3ff9f490f63f133ff47f68418825b366",
+      "snapshot": "snapshot-01"
+    },
+    {
+      "path": "desktop/x11/bin/workstation-lock-diagnostics",
+      "commit": "d3d9c7c75c476ef8d1f16b0ab13b4838a0007e35",
+      "source_sha256": "2560e4f87639b22b52374f291a0ca5472b05c1b1f24e21770e15af486fd35cfb",
+      "changes": [],
+      "sha256": "2560e4f87639b22b52374f291a0ca5472b05c1b1f24e21770e15af486fd35cfb",
+      "snapshot": "snapshot-01"
+    },
+    {
+      "path": "desktop/x11/xinitrc",
+      "commit": "d3d9c7c75c476ef8d1f16b0ab13b4838a0007e35",
+      "source_sha256": "3e61646775e0164b0b45cebd5bf2ccf22ae4dfee5765eb2b9621633505305eee",
+      "changes": [
+        "Remove source-project branding; update comments and dependent identifiers/paths together.",
+        "Clarify functional comments and snapshot metadata.",
+        "Separate platform integration from shared behavior; retain documented alternatives."
+      ],
+      "sha256": "b8b3bec758da2e890a655e2696d48d7fca2f6288a2b13820b922f8eb28030d4d",
+      "snapshot": "snapshot-01"
+    },
+    {
+      "path": "desktop/x11/config/picom/picom.conf",
+      "commit": "d3d9c7c75c476ef8d1f16b0ab13b4838a0007e35",
+      "source_sha256": "20f53e7f415ddddae06808253d5a4216d2efb9c01fb00d50d9b5a3d7191e14c7",
+      "changes": [],
+      "sha256": "20f53e7f415ddddae06808253d5a4216d2efb9c01fb00d50d9b5a3d7191e14c7",
+      "snapshot": "snapshot-01"
+    },
+    {
+      "path": "desktop/x11/config/gammastep/config.ini",
+      "commit": "d3d9c7c75c476ef8d1f16b0ab13b4838a0007e35",
+      "source_sha256": "5473bc953bec6b3cf8573e2a960c1d66af0b26150b2634d555f21a6350f0e7a0",
+      "changes": [],
+      "sha256": "5473bc953bec6b3cf8573e2a960c1d66af0b26150b2634d555f21a6350f0e7a0",
+      "snapshot": "snapshot-01"
+    },
+    {
+      "path": "desktop/x11/src/clipwatch.c",
+      "commit": "d3d9c7c75c476ef8d1f16b0ab13b4838a0007e35",
+      "source_sha256": "a61330743d8e05380ffb24dd6b9729ad698914f9ce5009f6ab9f5b12664f5a2c",
+      "changes": [],
+      "sha256": "a61330743d8e05380ffb24dd6b9729ad698914f9ce5009f6ab9f5b12664f5a2c",
+      "snapshot": "snapshot-01"
+    },
+    {
+      "path": "terminal/konsole/GentooClassic.profile",
+      "commit": null,
+      "source_sha256": "6995f9a6c6f03c8ba85fcd45a615f7fb7393bd473bde3edecda78f0795f60420",
+      "changes": [],
+      "sha256": "6995f9a6c6f03c8ba85fcd45a615f7fb7393bd473bde3edecda78f0795f60420",
+      "source": "/home/przvl/.local/share/konsole/GentooClassic.profile"
+    },
+    {
+      "path": "terminal/konsole/GentooClassic.colorscheme",
+      "commit": null,
+      "source_sha256": "31b5def0f5420a16a4b0b0219e8d81dac025457d95cd61fd25f192b282a0d552",
+      "changes": [],
+      "sha256": "31b5def0f5420a16a4b0b0219e8d81dac025457d95cd61fd25f192b282a0d552",
+      "source": "/home/przvl/.local/share/konsole/GentooClassic.colorscheme"
+    },
+    {
+      "path": "terminal/konsole/konsolerc",
+      "commit": null,
+      "source_sha256": "ce66f02e2b46ade8f194177142b8ad3dec5dd74cf2244a2ab9228c41c06341ea",
+      "changes": [],
+      "sha256": "ce66f02e2b46ade8f194177142b8ad3dec5dd74cf2244a2ab9228c41c06341ea",
+      "source": "/home/przvl/.config/konsolerc"
+    },
+    {
+      "path": "terminal/st/config.h",
+      "commit": "45b449ca890407964a708cdd52554eef356e9282",
+      "source_sha256": "c0025cf3920d66a44dacd7fa242735b03cf6db53c6490e580cb9fe131dfd2e66",
+      "changes": [
+        "Remove source-project branding; update comments and dependent identifiers/paths together.",
+        "Standardize Bash and interactive ble.sh initialization across terminal choices."
+      ],
+      "sha256": "a4d945d7d8246066ced8cb82536c48a2bbb38e1b3220adfaf3b0eefdd86d3677",
+      "snapshot": "snapshot-03"
+    },
+    {
+      "path": "terminal/st/0001-scrollback-and-urls.patch",
+      "commit": "45b449ca890407964a708cdd52554eef356e9282",
+      "source_sha256": "411da20234340406badf4e9ecad10ac5e309f400402cd455587e231706967564",
+      "changes": [],
+      "sha256": "411da20234340406badf4e9ecad10ac5e309f400402cd455587e231706967564",
+      "snapshot": "snapshot-03"
+    },
+    {
+      "path": "terminal/st/LICENSE",
+      "commit": "45b449ca890407964a708cdd52554eef356e9282",
+      "source_sha256": "5c25b701b4482ccc8d5ea0770e553ad8a8c5c87650df07543b3b3f9456726d54",
+      "changes": [],
+      "sha256": "5c25b701b4482ccc8d5ea0770e553ad8a8c5c87650df07543b3b3f9456726d54",
+      "snapshot": "snapshot-03"
+    },
+    {
+      "path": "terminal/tmux/platform/nix/package.nix",
+      "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+      "source_sha256": "ce50ddf596a156870acfeb19dc453d56c4bb0d4ddf96f5acdb751451d40feb06",
+      "changes": [
+        "Isolate platform integration; moved from terminal/tmux/tmux.nix.",
+        "Separate platform integration from shared behavior; retain documented alternatives."
+      ],
+      "sha256": "2d2ff95cc2632617d4af7e00f069a95da0c84cf47f037b7f446b6cc4130a38fd",
+      "snapshot": "snapshot-02"
+    },
+    {
+      "path": "terminal/neofetch/config.conf",
+      "commit": null,
+      "source_sha256": "2b16c1d7e3e6885cdf06ae2d9e70f56d9175b194d06c949503dfadda8e23b274",
+      "changes": [],
+      "sha256": "2b16c1d7e3e6885cdf06ae2d9e70f56d9175b194d06c949503dfadda8e23b274",
+      "source": "/home/przvl/.config/neofetch/config.conf"
+    },
+    {
+      "path": "terminal/tmux/tmux.conf",
+      "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+      "source_sha256": "dcfed912737ee63406f98565ad6b635f385d4c2f9a0aa110b76b9bbf11d06e27",
+      "changes": [],
+      "sha256": "dcfed912737ee63406f98565ad6b635f385d4c2f9a0aa110b76b9bbf11d06e27",
+      "snapshot": "snapshot-02"
+    },
+    {
+      "path": "browser/firefox/policies.json",
+      "commit": "d3d9c7c75c476ef8d1f16b0ab13b4838a0007e35",
+      "source_sha256": "40d2eceb8342a6e6af7c736c1c4cf0fd6f521c9c1433c8a8d63058daaf509f5e",
+      "changes": [],
+      "sha256": "40d2eceb8342a6e6af7c736c1c4cf0fd6f521c9c1433c8a8d63058daaf509f5e",
+      "snapshot": "snapshot-01"
+    },
+    {
+      "path": "desktop/x11/reference/scrot/0001-composited-selection-borders.patch",
+      "commit": "d3d9c7c75c476ef8d1f16b0ab13b4838a0007e35",
+      "source_sha256": "af724cee74d4ffd31c96b52e4fcb0b1bd6311c2396306eb028395768752a98a3",
+      "changes": [],
+      "sha256": "af724cee74d4ffd31c96b52e4fcb0b1bd6311c2396306eb028395768752a98a3",
+      "snapshot": "snapshot-01"
+    },
+    {
+      "path": "shell/bash/bashrc",
+      "commit": null,
+      "source_sha256": "c5cc789c75bc3994e14f733a63df434b2a1c4150b959a7d19ffaaab2915867b0",
+      "sha256": "3dd2ce8011f8491928b96eec6f14a86834b5f37257c969bc31a7a45c21e17763",
+      "changes": [
+        "Extract interactive settings; omit duplicate absolute Codex PATH and distro boilerplate.",
+        "Move shared terminal shell configuration under terminal/bash; require Bash with ble.sh as the documented setup.",
+        "Standardize Bash and interactive ble.sh initialization across terminal choices.",
+        "Reorganize collection by application and function; moved from terminal/bash/bashrc."
+      ],
+      "source": "/home/przvl/.bashrc"
+    },
+    {
+      "path": "hardware/x11/config/workstation/display.conf",
+      "commit": "d3d9c7c75c476ef8d1f16b0ab13b4838a0007e35",
+      "source_sha256": "c46ee64f420c79dcf628c25bb832e756b4f38a6908798ff0da1c9e92466c4618",
+      "sha256": "09ede070c840cde09824b06cbcded75c796d5a7a65bd4c50d89f67eb498539d0",
+      "changes": [
+        "Extract corresponding shell configuration string into a standalone example.",
+        "Remove source-project branding; update comments and dependent identifiers/paths together.",
+        "Clarify functional comments and snapshot metadata."
+      ],
+      "snapshot": "snapshot-01"
+    },
+    {
+      "path": "hardware/x11/config/workstation/keyboard.conf",
+      "commit": "d3d9c7c75c476ef8d1f16b0ab13b4838a0007e35",
+      "source_sha256": "c46ee64f420c79dcf628c25bb832e756b4f38a6908798ff0da1c9e92466c4618",
+      "sha256": "02cdb1576ad9bb7f27cc5f4bb892ff3bdc9ede3838e89bf61f88ea259fad0513",
+      "changes": [
+        "Extract corresponding shell configuration string into a standalone example.",
+        "Remove source-project branding; update comments and dependent identifiers/paths together.",
+        "Clarify functional comments and snapshot metadata."
+      ],
+      "snapshot": "snapshot-01"
+    },
+    {
+      "path": "hardware/x11/config/workstation/pointer.conf",
+      "commit": "d3d9c7c75c476ef8d1f16b0ab13b4838a0007e35",
+      "source_sha256": "c46ee64f420c79dcf628c25bb832e756b4f38a6908798ff0da1c9e92466c4618",
+      "sha256": "c8b226776b8bc1d0090e53db7e06d331b87e9264494e0e0ed167c3065f2c1f28",
+      "changes": [
+        "Extract corresponding shell configuration string into a standalone example.",
+        "Remove source-project branding; update comments and dependent identifiers/paths together.",
+        "Clarify functional comments and snapshot metadata."
+      ],
+      "snapshot": "snapshot-01"
+    },
+    {
+      "path": "hardware/reference/x11/etc/udev/rules.d/99-x11-mouse.rules",
+      "commit": "45b449ca890407964a708cdd52554eef356e9282",
+      "source_sha256": "6c9f69bde8b7dc55c8cdc19e8d75f50925f223f2eb1ac79d494c145a4e2ee65f",
+      "sha256": "4c67d5bba5f8152ef598d926540f71d3d27428da869ddb979e6987119061e54f",
+      "changes": [
+        "Rename collection path to describe its platform or function.",
+        "Remove source-project branding; update comments and dependent identifiers/paths together."
+      ],
+      "snapshot": "snapshot-03"
+    },
+    {
+      "path": "terminal/st/st-shell",
+      "commit": "45b449ca890407964a708cdd52554eef356e9282",
+      "source_sha256": "3553b03ada04e78f08a5d16d7ab11e4af2cf3c8b4f5ba91ea84f2282cac84c4c",
+      "sha256": "d51c970316f97ed703b89ea7af750b7a9aaddef4442417338b79664f528c5b44",
+      "changes": [
+        "Rename collection path to describe its platform or function.",
+        "Remove source-project branding; update comments and dependent identifiers/paths together."
+      ],
+      "snapshot": "snapshot-03"
+    },
+    {
+      "path": "terminal/st/bashrc",
+      "commit": "45b449ca890407964a708cdd52554eef356e9282",
+      "source_sha256": "3e5186dfa053b05a39561a8a2c9bf8115005ef1e114d3801994c4e362aa18734",
+      "sha256": "aa990be62aed16f2a0d6f4f61b31f1cd5f02dd256e72a559a889af8c58e974d1",
+      "changes": [
+        "Standardize Bash and interactive ble.sh initialization across terminal choices."
+      ],
+      "snapshot": "snapshot-03"
+    },
+    {
+      "path": "desktop/niri/config/niri/config.kdl",
+      "commit": "e295d5c4aa5f19bad15598262fc51df51711238d",
+      "source_sha256": "584c02da80a4c6da593aca2840b14c3eaa455b2c2472201bdd685cfb07c5f24c",
+      "sha256": "07b614885f62ad1d0448606eca77f25c98e18ef348bb8bc68a8141fb3b8ba681",
+      "changes": [
+        "Remove source-project branding; update comments and dependent identifiers/paths together.",
+        "Reorganize collection by application and function; moved from niri/config/niri/config.kdl.",
+        "Update shared/platform integration and associated documentation."
+      ],
+      "snapshot": "snapshot-04"
+    },
+    {
+      "path": "desktop/niri/config/waybar/config.jsonc",
+      "commit": "e295d5c4aa5f19bad15598262fc51df51711238d",
+      "source_sha256": "94d6e25176a67cd7bd4dd93e6cf372e6904998406bf21f16ded21521ddbc9408",
+      "sha256": "94d6e25176a67cd7bd4dd93e6cf372e6904998406bf21f16ded21521ddbc9408",
+      "changes": [
+        "Reorganize collection by application and function; moved from niri/config/waybar/config.jsonc."
+      ],
+      "snapshot": "snapshot-04"
+    },
+    {
+      "path": "desktop/niri/config/waybar/style.css",
+      "commit": "e295d5c4aa5f19bad15598262fc51df51711238d",
+      "source_sha256": "711445484d2e11bc978e4293dbd76c1a73862ddf099d022a77b4884a8d67c2af",
+      "sha256": "711445484d2e11bc978e4293dbd76c1a73862ddf099d022a77b4884a8d67c2af",
+      "changes": [
+        "Reorganize collection by application and function; moved from niri/config/waybar/style.css."
+      ],
+      "snapshot": "snapshot-04"
+    },
+    {
+      "path": "desktop/niri/config/fuzzel/fuzzel.ini",
+      "commit": "e295d5c4aa5f19bad15598262fc51df51711238d",
+      "source_sha256": "d8de46be26e561076c3a4c466d3a479d9328c6cc40949012710e5a3029d2290c",
+      "sha256": "d8de46be26e561076c3a4c466d3a479d9328c6cc40949012710e5a3029d2290c",
+      "changes": [
+        "Reorganize collection by application and function; moved from niri/config/fuzzel/fuzzel.ini."
+      ],
+      "snapshot": "snapshot-04"
+    },
+    {
+      "path": "desktop/niri/config/mako/config",
+      "commit": "e295d5c4aa5f19bad15598262fc51df51711238d",
+      "source_sha256": "19d693ef3ae125536fdfd6ec390efe12463c397404beeff0758b78585cbaa960",
+      "sha256": "19d693ef3ae125536fdfd6ec390efe12463c397404beeff0758b78585cbaa960",
+      "changes": [
+        "Reorganize collection by application and function; moved from niri/config/mako/config."
+      ],
+      "snapshot": "snapshot-04"
+    },
+    {
+      "path": "desktop/niri/config/hypr/hyprlock.conf",
+      "commit": "e295d5c4aa5f19bad15598262fc51df51711238d",
+      "source_sha256": "ccb1e440f30eaf5916413d87adac9254dd02a563c314f8c27e20cfad2ed3afb9",
+      "sha256": "ccb1e440f30eaf5916413d87adac9254dd02a563c314f8c27e20cfad2ed3afb9",
+      "changes": [
+        "Reorganize collection by application and function; moved from niri/config/hypr/hyprlock.conf."
+      ],
+      "snapshot": "snapshot-04"
+    },
+    {
+      "path": "desktop/niri/session/systemd/user/keep-awake.service",
+      "commit": "e295d5c4aa5f19bad15598262fc51df51711238d",
+      "source_sha256": "bdb1a2203214efb32c9ac029f7b8c61c4e933b7707e2c902f3c5b54798fd1958",
+      "sha256": "bdb1a2203214efb32c9ac029f7b8c61c4e933b7707e2c902f3c5b54798fd1958",
+      "changes": [
+        "Reorganize collection by application and function; moved from niri/config/systemd/user/keep-awake.service.",
+        "Isolate platform integration; moved from desktop/niri/config/systemd/user/keep-awake.service."
+      ],
+      "snapshot": "snapshot-04"
+    },
+    {
+      "path": "desktop/niri/bin/displays",
+      "commit": "e295d5c4aa5f19bad15598262fc51df51711238d",
+      "source_sha256": "eb49d183ebd71d264a6faaabd288c1742092303f9c98debd569d48fdd55b5509",
+      "sha256": "eb49d183ebd71d264a6faaabd288c1742092303f9c98debd569d48fdd55b5509",
+      "changes": [
+        "Reorganize collection by application and function; moved from niri/bin/displays."
+      ],
+      "snapshot": "snapshot-04"
+    },
+    {
+      "path": "desktop/niri/bin/night-mode",
+      "commit": "e295d5c4aa5f19bad15598262fc51df51711238d",
+      "source_sha256": "ae70219fe7717a0a9e96d5b0fd0d09c56169e71c9daa06ca646db08b6c277080",
+      "sha256": "b913384649d724b8bb6bb090c6fce235483755a4929efc64a3b40d2d243463b1",
+      "changes": [
+        "Remove source-project branding; update comments and dependent identifiers/paths together.",
+        "Reorganize collection by application and function; moved from niri/bin/night-mode."
+      ],
+      "snapshot": "snapshot-04"
+    },
+    {
+      "path": "desktop/niri/bin/control-menu",
+      "commit": "e295d5c4aa5f19bad15598262fc51df51711238d",
+      "source_sha256": "22905d3a5380de0492ef62e0951249a5fcfc45c31db7c4dc8860b3a84c9ada31",
+      "sha256": "52d0995d004211009abd1f821f15de0f9b54c818635196559f9df4e06fa2786f",
+      "changes": [
+        "Reorganize collection by application and function; moved from niri/bin/control-menu.",
+        "Separate platform integration from shared behavior; retain documented alternatives.",
+        "Finish platform-specific environment cleanup and adoption documentation."
+      ],
+      "snapshot": "snapshot-04"
+    },
+    {
+      "path": "desktop/niri/bin/keep-awake",
+      "commit": "e295d5c4aa5f19bad15598262fc51df51711238d",
+      "source_sha256": "08486d76f9bef595cead86b65669ea08895ec1c0a5a1fc20a2762931360f4b8f",
+      "sha256": "4ab066cccf77f1840ef332fbc8e31eeba4c303dfd14893fb631e8f87fa2ca021",
+      "changes": [
+        "Reorganize collection by application and function; moved from niri/bin/keep-awake.",
+        "Separate platform integration from shared behavior; retain documented alternatives."
+      ],
+      "snapshot": "snapshot-04"
+    },
+    {
+      "path": "desktop/niri/bin/clipboard-history",
+      "commit": "e295d5c4aa5f19bad15598262fc51df51711238d",
+      "source_sha256": "7364053dffab9b683e1e8ad519694c4c63170ea68e9647d7555423d9c522c964",
+      "sha256": "7364053dffab9b683e1e8ad519694c4c63170ea68e9647d7555423d9c522c964",
+      "changes": [
+        "Reorganize collection by application and function; moved from niri/bin/clipboard-history."
+      ],
+      "snapshot": "snapshot-04"
+    },
+    {
+      "path": "desktop/niri/bin/topbar-panel",
+      "commit": "e295d5c4aa5f19bad15598262fc51df51711238d",
+      "source_sha256": "a5d9dd30f9f5361244cbba75aa0dd3ec329a7652d505968ef21a6c4c1a3aae39",
+      "sha256": "61e4f7ddf1bdce695db98b93af3048e5d92db4a0640e57df7c979eb019033229",
+      "changes": [
+        "Remove source-project branding; update comments and dependent identifiers/paths together.",
+        "Reorganize collection by application and function; moved from niri/bin/topbar-panel.",
+        "Separate platform integration from shared behavior; retain documented alternatives."
+      ],
+      "snapshot": "snapshot-04"
+    },
+    {
+      "path": "desktop/niri/bin/network-settings",
+      "commit": "e295d5c4aa5f19bad15598262fc51df51711238d",
+      "source_sha256": "17628a1acc34dfeab8a8bc9a8cdf7026b92bde134bd607a018856d11d687eb6f",
+      "sha256": "17628a1acc34dfeab8a8bc9a8cdf7026b92bde134bd607a018856d11d687eb6f",
+      "changes": [
+        "Reorganize collection by application and function; moved from niri/bin/network-settings."
+      ],
+      "snapshot": "snapshot-04"
+    },
+    {
+      "path": "desktop/niri/bin/battery-status",
+      "commit": "e295d5c4aa5f19bad15598262fc51df51711238d",
+      "source_sha256": "e1fe7f4fbf454dcf4f3d343ba8f78c9de873a17799051a30096e8bb636da9458",
+      "sha256": "51366fe90744a61718cd26d850a6b901af5861a073e55d412fffcbe4e5fb1b0c",
+      "changes": [
+        "Remove source-project branding; update comments and dependent identifiers/paths together.",
+        "Reorganize collection by application and function; moved from niri/bin/battery-status."
+      ],
+      "snapshot": "snapshot-04"
+    },
+    {
+      "path": "desktop/niri/bin/power-profile",
+      "commit": "e295d5c4aa5f19bad15598262fc51df51711238d",
+      "source_sha256": "fac30b9fd85ae163ed6960a2703e9a6cb1d743e8c9346b02960095ec55c2a00b",
+      "sha256": "fac30b9fd85ae163ed6960a2703e9a6cb1d743e8c9346b02960095ec55c2a00b",
+      "changes": [
+        "Reorganize collection by application and function; moved from niri/bin/power-profile."
+      ],
+      "snapshot": "snapshot-04"
+    },
+    {
+      "path": "desktop/niri/bin/ai-usage",
+      "commit": "e295d5c4aa5f19bad15598262fc51df51711238d",
+      "source_sha256": "153c9f4c38bd37856632591329ddb80e7cf2a66769ba145e971e771563030f55",
+      "sha256": "1373c6cf49d541de9eaa25e273ac3df8b0ccecfeb59f152ea663ca9476abc4e8",
+      "changes": [
+        "Remove source-project branding; update comments and dependent identifiers/paths together.",
+        "Reorganize collection by application and function; moved from niri/bin/ai-usage."
+      ],
+      "snapshot": "snapshot-04"
+    },
+    {
+      "path": "desktop/niri/bin/ai-usage-scanners/claude_usage_scanner.py",
+      "commit": "e295d5c4aa5f19bad15598262fc51df51711238d",
+      "source_sha256": "5591062b595e6af292bf597b3ff74b0595d1b4fd8401ef96339ff04513c5cc31",
+      "sha256": "5591062b595e6af292bf597b3ff74b0595d1b4fd8401ef96339ff04513c5cc31",
+      "changes": [
+        "Reorganize collection by application and function; moved from niri/bin/ai-usage-scanners/claude_usage_scanner.py."
+      ],
+      "snapshot": "snapshot-04"
+    },
+    {
+      "path": "desktop/niri/bin/ai-usage-scanners/codex_usage_scanner.py",
+      "commit": "e295d5c4aa5f19bad15598262fc51df51711238d",
+      "source_sha256": "d11974e2ca8fcb76f1d9642d62767b0d00da89435f62957d4d17c38e9db55210",
+      "sha256": "264a18334f0c83a3885ee48ace7bd2cdc0ff2ee69b4f305dfd34e43c1f48ed2c",
+      "changes": [
+        "Remove source-project branding; update comments and dependent identifiers/paths together.",
+        "Reorganize collection by application and function; moved from niri/bin/ai-usage-scanners/codex_usage_scanner.py."
+      ],
+      "snapshot": "snapshot-04"
+    },
+    {
+      "path": "desktop/niri/bin/ai-usage-scanners/opencode_go_usage_scanner.py",
+      "commit": "e295d5c4aa5f19bad15598262fc51df51711238d",
+      "source_sha256": "4c621a801aad49bf33a63cd12c28d451e7c74f1e35aa5ee1e000199d1bdbb5be",
+      "sha256": "dbc4e2aaf4d0333be9b6c6ffcebee8c1f11c5dd967d921d69a915ed072048867",
+      "changes": [
+        "Remove source-project branding; update comments and dependent identifiers/paths together.",
+        "Reorganize collection by application and function; moved from niri/bin/ai-usage-scanners/opencode_go_usage_scanner.py."
+      ],
+      "snapshot": "snapshot-04"
+    },
+    {
+      "path": "desktop/niri/LICENSE",
+      "commit": "e295d5c4aa5f19bad15598262fc51df51711238d",
+      "source_sha256": "2a602c77c532712ed299fb2086da33a1a2d3d1a48922e37920066c0915a98ac0",
+      "sha256": "2a602c77c532712ed299fb2086da33a1a2d3d1a48922e37920066c0915a98ac0",
+      "changes": [
+        "Reorganize collection by application and function; moved from niri/LICENSE."
+      ],
+      "snapshot": "snapshot-04"
+    },
+    {
+      "path": "desktop/niri/reference/TOPBAR-DESIGN.md",
+      "commit": "e295d5c4aa5f19bad15598262fc51df51711238d",
+      "source_sha256": "35382db0f1ee9a08761bdcc913bdcf4891a1978197afc11bd052b2b331680dba",
+      "sha256": "0833ce211087e2f280ed23ad930ada81b2e44bfc71b172e7f22b763aa71791f8",
+      "changes": [
+        "Clarify functional comments and snapshot metadata.",
+        "Reorganize collection by application and function; moved from niri/reference/TOPBAR-DESIGN.md."
+      ],
+      "snapshot": "snapshot-04"
+    },
+    {
+      "path": "terminal/kitty/kitty.conf",
+      "commit": "e295d5c4aa5f19bad15598262fc51df51711238d",
+      "source_sha256": "330395b3c4c47721721e5ec1e4df61c045492f13e26099ac6001f0adb0c3ca9a",
+      "sha256": "330395b3c4c47721721e5ec1e4df61c045492f13e26099ac6001f0adb0c3ca9a",
+      "changes": [],
+      "snapshot": "snapshot-04"
+    },
+    {
+      "path": "walls/mountain.png",
+      "commit": "e295d5c4aa5f19bad15598262fc51df51711238d",
+      "source_sha256": "5c70ca5eaa76260046c80e883949590bac97e11ab8d62bda106d4099d97acc66",
+      "sha256": "5c70ca5eaa76260046c80e883949590bac97e11ab8d62bda106d4099d97acc66",
+      "changes": [],
+      "snapshot": "snapshot-04"
+    },
+    {
+      "path": "hardware/keyboard/keyd/external-keyboard.conf",
+      "commit": "e295d5c4aa5f19bad15598262fc51df51711238d",
+      "source_sha256": "abc0810350a0f48e89fa2a744ee5d2c6c5159e6fe889cda197873502b5e44e32",
+      "sha256": "abc0810350a0f48e89fa2a744ee5d2c6c5159e6fe889cda197873502b5e44e32",
+      "changes": [],
+      "snapshot": "snapshot-04"
+    },
+    {
+      "path": "desktop/hyprland/README.md",
+      "snapshot": "snapshot-02",
+      "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+      "captured": "2026-10-01",
+      "source_sha256": null,
+      "changes": [
+        "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies.",
+        "Update paths and documentation for desktop/shell organization and standalone Hyprland.",
+        "Update shared/platform integration and associated documentation."
+      ],
+      "sha256": "2bef80e51ab8029492747d8c8ea001f343354e10235e01c7e464f00bef019c69",
+      "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+    },
+    {
+      "path": "desktop/hyprland/bin/hyprland-session",
+      "snapshot": "snapshot-02",
+      "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+      "captured": "2026-10-01",
+      "source_sha256": null,
+      "changes": [
+        "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies.",
+        "Separate platform integration from shared behavior; retain documented alternatives."
+      ],
+      "sha256": "ee8b7e0545ed94f1881b5c8087115d68ff6fa0014742cd3b21f8f910e8d8e187",
+      "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+    },
+    {
+      "path": "desktop/hyprland/bin/workstation-hyprland-clipboard",
+      "snapshot": "snapshot-02",
+      "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+      "captured": "2026-10-01",
+      "source_sha256": null,
+      "changes": [
+        "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies."
+      ],
+      "sha256": "8b6262def883bed2bcd5305fb9df26ee3ac74ec48c5e7d6122fc26d076674c3f",
+      "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+    },
+    {
+      "path": "desktop/hyprland/bin/workstation-hyprland-control",
+      "snapshot": "snapshot-02",
+      "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+      "captured": "2026-10-01",
+      "source_sha256": null,
+      "changes": [
+        "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies.",
+        "Separate platform integration from shared behavior; retain documented alternatives."
+      ],
+      "sha256": "9f33acad206c7c495475b173e880ae33ecc8b80b9381a55138c5b839e1b431b4",
+      "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+    },
+    {
+      "path": "desktop/hyprland/bin/workstation-hyprland-lock",
+      "snapshot": "snapshot-02",
+      "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+      "captured": "2026-10-01",
+      "source_sha256": null,
+      "changes": [
+        "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies."
+      ],
+      "sha256": "fc847d87c04776b39980cf5dc51fb944f15c569d2a292ffa6e0850da256e97c2",
+      "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+    },
+    {
+      "path": "desktop/hyprland/bin/workstation-hyprland-screenshot",
+      "snapshot": "snapshot-02",
+      "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+      "captured": "2026-10-01",
+      "source_sha256": null,
+      "changes": [
+        "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies."
+      ],
+      "sha256": "5b84525d994e5e23d7b45fb13d00a6805b4fdaea531c8c8ee603eef67f3aca42",
+      "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+    },
+    {
+      "path": "desktop/hyprland/bin/workstation-hyprland-session",
+      "snapshot": "snapshot-02",
+      "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+      "captured": "2026-10-01",
+      "source_sha256": null,
+      "changes": [
+        "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies.",
+        "Separate platform integration from shared behavior; retain documented alternatives."
+      ],
+      "sha256": "3def4958b4baaa771167f69c6c8d03c7a592c63f1be12b6ef4e304f4afdc9370",
+      "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+    },
+    {
+      "path": "desktop/hyprland/bin/workstation-hyprland-wallpaper",
+      "snapshot": "snapshot-02",
+      "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+      "captured": "2026-10-01",
+      "source_sha256": null,
+      "changes": [
+        "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies."
+      ],
+      "sha256": "a84746ad5d2d086c02ca22ccf22f0d9e2fa67c3f6cc2588852f3b6ba05c67852",
+      "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+    },
+    {
+      "path": "desktop/hyprland/bin/workstation-hyprland-workspace",
+      "snapshot": "snapshot-02",
+      "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+      "captured": "2026-10-01",
+      "source_sha256": null,
+      "changes": [
+        "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies."
+      ],
+      "sha256": "1ae7313c0d781192b64630058c26ee84c85b7d9194d06e1a177d9ca85c527d18",
+      "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+    },
+    {
+      "path": "desktop/hyprland/config/fuzzel/fuzzel.ini",
+      "snapshot": "snapshot-02",
+      "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+      "captured": "2026-10-01",
+      "source_sha256": null,
+      "changes": [
+        "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies."
+      ],
+      "sha256": "2fb73073f971edd212caa2644c24c81f8447e03e743880917a46cceff5e0fb83",
+      "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+    },
+    {
+      "path": "desktop/hyprland/config/hypr/hypridle.conf",
+      "snapshot": "snapshot-02",
+      "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+      "captured": "2026-10-01",
+      "source_sha256": null,
+      "changes": [
+        "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies."
+      ],
+      "sha256": "c705ae95a5c49a95ed4f9735c2cddbf1a5d3e9603a77ea66b58598090540c704",
+      "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+    },
+    {
+      "path": "desktop/hyprland/config/hypr/hyprland.lua",
+      "snapshot": "snapshot-02",
+      "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+      "captured": "2026-10-01",
+      "source_sha256": null,
+      "changes": [
+        "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies."
+      ],
+      "sha256": "e1e5e0d91704edd466803b005864eb401896cde5dee2024d50c8b596589af1f3",
+      "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+    },
+    {
+      "path": "desktop/hyprland/config/hypr/hyprlock.conf",
+      "snapshot": "snapshot-02",
+      "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+      "captured": "2026-10-01",
+      "source_sha256": null,
+      "changes": [
+        "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies."
+      ],
+      "sha256": "cb6fac0471a63b101e94e927e86f328f02db479d85b326720c42f53bb6396fbe",
+      "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+    },
+    {
+      "path": "desktop/hyprland/session/systemd/user/workstation-hyprland-bar.service",
+      "snapshot": "snapshot-02",
+      "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+      "captured": "2026-10-01",
+      "source_sha256": null,
+      "changes": [
+        "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies.",
+        "Isolate platform integration; moved from desktop/hyprland/config/systemd/user/workstation-hyprland-bar.service.",
+        "Update shared/platform integration and associated documentation."
+      ],
+      "sha256": "ffcdad2164219f06f697befaaaeab48cdf25ace982abbbd7fc7eeaef65f70577",
+      "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+    },
+    {
+      "path": "desktop/hyprland/session/systemd/user/workstation-hyprland-clipboard.service",
+      "snapshot": "snapshot-02",
+      "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+      "captured": "2026-10-01",
+      "source_sha256": null,
+      "changes": [
+        "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies.",
+        "Isolate platform integration; moved from desktop/hyprland/config/systemd/user/workstation-hyprland-clipboard.service.",
+        "Update shared/platform integration and associated documentation."
+      ],
+      "sha256": "52ec3678d014dbdd529009d29d3a18da23c5642d28a814b878f2289a83e8970a",
+      "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+    },
+    {
+      "path": "desktop/hyprland/session/systemd/user/workstation-hyprland-idle.service",
+      "snapshot": "snapshot-02",
+      "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+      "captured": "2026-10-01",
+      "source_sha256": null,
+      "changes": [
+        "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies.",
+        "Isolate platform integration; moved from desktop/hyprland/config/systemd/user/workstation-hyprland-idle.service.",
+        "Update shared/platform integration and associated documentation."
+      ],
+      "sha256": "e794efa0609ddeddbff32ed92ea403ef2f8e9dd9e64e40e16d4fe71e1f052879",
+      "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+    },
+    {
+      "path": "desktop/hyprland/session/systemd/user/workstation-hyprland-session.target",
+      "snapshot": "snapshot-02",
+      "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+      "captured": "2026-10-01",
+      "source_sha256": null,
+      "changes": [
+        "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies.",
+        "Isolate platform integration; moved from desktop/hyprland/config/systemd/user/workstation-hyprland-session.target."
+      ],
+      "sha256": "225e5e90d2e0293391abc3c02b3fc7e53868a0debda48df4660e814702f37428",
+      "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+    },
+    {
+      "path": "desktop/hyprland/session/systemd/user/workstation-hyprland-wallpaper.service",
+      "snapshot": "snapshot-02",
+      "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+      "captured": "2026-10-01",
+      "source_sha256": null,
+      "changes": [
+        "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies.",
+        "Isolate platform integration; moved from desktop/hyprland/config/systemd/user/workstation-hyprland-wallpaper.service.",
+        "Update shared/platform integration and associated documentation."
+      ],
+      "sha256": "cdb88876f3a25c04faf4e226f7187d930ae751e48656513ea3d9cd43fe93229c",
+      "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+    },
+    {
+      "path": "desktop/hyprland/config/waybar/config.json",
+      "snapshot": "snapshot-02",
+      "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+      "captured": "2026-10-01",
+      "source_sha256": null,
+      "changes": [
+        "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies."
+      ],
+      "sha256": "d6a88cc9862a9a9ec28dd6aee7e0c18818cc0fc6ee294c3412d48b5bc36940fe",
+      "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+    },
+    {
+      "path": "desktop/hyprland/config/waybar/style.css",
+      "snapshot": "snapshot-02",
+      "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+      "captured": "2026-10-01",
+      "source_sha256": null,
+      "changes": [
+        "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies."
+      ],
+      "sha256": "b7382989f1d0cb6ca75c725c93cc73cd9aad4b5cb41ad4397444daba13950318",
+      "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+    },
+    {
+      "path": "desktop/kde/README.md",
+      "snapshot": "collection-01",
+      "commit": null,
+      "captured": "2026-10-01",
+      "source_sha256": null,
+      "changes": [
+        "Collection organization documentation.",
+        "Update paths and documentation for desktop/shell organization and standalone Hyprland."
+      ],
+      "sha256": "6e26d1fbeb88ef7f5251703445f45428f3a06234017fb3acc6b19bf197e614c8"
+    },
+    {
+      "path": "desktop/niri/README.md",
+      "snapshot": "collection-01",
+      "commit": null,
+      "captured": "2026-10-01",
+      "source_sha256": null,
+      "changes": [
+        "Collection organization documentation.",
+        "Update paths and documentation for desktop/shell organization and standalone Hyprland.",
+        "Update shared/platform integration and associated documentation."
+      ],
+      "sha256": "bb4f9b153cbc99862e00234d80d4b7bfc85bfe72a6271c72259e56895d4bfdf4"
+    },
+    {
+      "path": "desktop/oxwm/README.md",
+      "snapshot": "collection-01",
+      "commit": null,
+      "captured": "2026-10-01",
+      "source_sha256": null,
+      "changes": [
+        "Collection organization documentation.",
+        "Update paths and documentation for desktop/shell organization and standalone Hyprland."
+      ],
+      "sha256": "e63a0be2fa8ce5305213ceaa0baedccc21948a94acfc235a4c83f4f0e5b49b44"
+    },
+    {
+      "path": "desktop/oxwm/reference/build.md",
+      "snapshot": "collection-01",
+      "commit": null,
+      "captured": "2026-10-01",
+      "source_sha256": null,
+      "changes": [
+        "Collection organization documentation."
+      ],
+      "sha256": "10f421111ac9f45f7db09915d3f3c40e56ae079c9b4d4d2356e58afd3cb14f68"
+    },
+    {
+      "path": "desktop/sddm/README.md",
+      "snapshot": "collection-01",
+      "commit": null,
+      "captured": "2026-10-01",
+      "source_sha256": null,
+      "changes": [
+        "Collection organization documentation.",
+        "Update paths and documentation for desktop/shell organization and standalone Hyprland."
+      ],
+      "sha256": "979066d8768d618a11983d44ad7d0fc4576192594d3843de02f989e36c93efc7"
+    },
+    {
+      "path": "hardware/hyprland/config/workstation/hyprland-display.lua",
+      "snapshot": "snapshot-02",
+      "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+      "captured": "2026-10-01",
+      "source_sha256": null,
+      "changes": [
+        "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies."
+      ],
+      "sha256": "f110c13ea2f6253adb50c903029f5193ed89e1cf55e8d383fff54ff245475a1c",
+      "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+    },
+    {
+      "path": "shell/bash/README.md",
+      "snapshot": "collection-01",
+      "commit": null,
+      "captured": "2026-10-01",
+      "source_sha256": null,
+      "changes": [
+        "Collection organization documentation.",
+        "Update paths and documentation for desktop/shell organization and standalone Hyprland."
+      ],
+      "sha256": "f3e907ca7bfe4c6a7e2e35007a9c583f6df6423c54723ecf6fbf5c3a2bcf74b1"
+    },
+    {
+      "path": "terminal/foot/foot.ini",
+      "snapshot": "snapshot-02",
+      "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+      "captured": "2026-10-01",
+      "source_sha256": null,
+      "changes": [
+        "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies."
+      ],
+      "sha256": "53bfef158645fe9251046215b67dbbc17628687579fe79f66f850e05a2a7f7ba",
+      "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+    },
+    {
+      "path": "desktop/README.md",
+      "snapshot": "collection-01",
+      "commit": null,
+      "captured": "2026-10-01",
+      "source_sha256": null,
+      "changes": [
+        "Document desktop collection taxonomy and helper composition.",
+        "Update shared/platform integration and associated documentation."
+      ],
+      "sha256": "13172b3410dbefa45bdb0acc06451feb38b75b8a1f878305dbb0ed693e9c0666"
+    },
+    {
+      "path": ".gitignore",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection platform integration derived from documented shared settings.",
+      "changes": [
+        "Add narrow platform integration without duplicating application settings."
+      ],
+      "sha256": "06a98901d2354dabfbde93095a26477568d147e958be035da16193390f110867"
+    },
+    {
+      "path": ".gitattributes",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection platform integration derived from documented shared settings.",
+      "changes": [
+        "Add narrow platform integration without duplicating application settings."
+      ],
+      "sha256": "f088b640e45a039e2ae0630da7809bce0c277c984d0955752a942c604bd06d85"
+    },
+    {
+      "path": "README.md",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection platform integration derived from documented shared settings.",
+      "changes": [
+        "Add narrow platform integration without duplicating application settings.",
+        "Update shared/platform integration and associated documentation."
+      ],
+      "sha256": "d405d47564e6d2e71c2d419fbd3874ca61b5be4f57473f4e0ce850ad3b846153"
+    },
+    {
+      "path": "AGENTS.md",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection platform integration derived from documented shared settings.",
+      "changes": [
+        "Add narrow platform integration without duplicating application settings.",
+        "Update shared/platform integration and associated documentation."
+      ],
+      "sha256": "0cc77b5158177b62515b2a0eefaece65795312e2bc2a577f1151d7299a01ac82"
+    },
+    {
+      "path": "keybinds/README.md",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection platform integration derived from documented shared settings.",
+      "changes": [
+        "Add narrow platform integration without duplicating application settings."
+      ],
+      "sha256": "a4596049c550d189e1b52f6daa0341d7f68c3aee6dd6ff26e7fb2520ab3c43da"
+    },
+    {
+      "path": "walls/README.md",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection platform integration derived from documented shared settings.",
+      "changes": [
+        "Add narrow platform integration without duplicating application settings."
+      ],
+      "sha256": "e2a2da057e731e5c9516c452c141c159bfb7beaf116202948ea447151d81b036"
+    },
+    {
+      "path": "shell/README.md",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection platform integration derived from documented shared settings.",
+      "changes": [
+        "Add narrow platform integration without duplicating application settings."
+      ],
+      "sha256": "a2820eaba0a6b6157e693bc172c2b08ae7a993ab487698fbfcbcabed0aa6866b"
+    },
+    {
+      "path": "terminal/README.md",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection platform integration derived from documented shared settings.",
+      "changes": [
+        "Add narrow platform integration without duplicating application settings.",
+        "Update shared/platform integration and associated documentation.",
+        "Correct Kitty source license reference after desktop directory reorganization."
+      ],
+      "sha256": "4662c4706d5b45d081c5679df649c5e3c3fbc7f54ac4a598991e3532b2b7a299"
+    },
+    {
+      "path": "docs/validation.md",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection platform integration derived from documented shared settings.",
+      "changes": [
+        "Add narrow platform integration without duplicating application settings.",
+        "Update shared/platform integration and associated documentation."
+      ],
+      "sha256": "62f4536443b55190c2c58e12971f2821f7afbc873d5d97714e3d4aa314b3142f"
+    },
+    {
+      "path": "docs/sources.md",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection platform integration derived from documented shared settings.",
+      "changes": [
+        "Add narrow platform integration without duplicating application settings.",
+        "Update shared/platform integration and associated documentation."
+      ],
+      "sha256": "06278781a9a1ec0538382d060aac29f735e2528c198f8aef1a1fdbb10f090a2e"
+    },
+    {
+      "path": "docs/adapting.md",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection platform integration derived from documented shared settings.",
+      "changes": [
+        "Add narrow platform integration without duplicating application settings.",
+        "Update shared/platform integration and associated documentation."
+      ],
+      "sha256": "193c3d0a2500d9d4eefec7cbac46a4158525c8d137f179df1155ffe88d8b6536"
+    },
+    {
+      "path": "hardware/README.md",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection platform integration derived from documented shared settings.",
+      "changes": [
+        "Add narrow platform integration without duplicating application settings.",
+        "Update shared/platform integration and associated documentation."
+      ],
+      "sha256": "3c3a140fdce3db143f3fbad7ccd0bb85de97be4293aafffaaeb0acd17c6dafc8"
+    },
+    {
+      "path": "browser/README.md",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection platform integration derived from documented shared settings.",
+      "changes": [
+        "Add narrow platform integration without duplicating application settings."
+      ],
+      "sha256": "b43a448d850367fd2a64f906ac02db6ec8ba482002adab9e004ac2a619fcf6c4"
+    },
+    {
+      "path": "nvim/README.md",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection platform integration derived from documented shared settings.",
+      "changes": [
+        "Add narrow platform integration without duplicating application settings.",
+        "Document the user-confirmed explorer refresh fix and its local interactive confirmation on 2026-10-01; no tests or CI added."
+      ],
+      "sha256": "26cb63a8a9ee5709bb75bfeabd70412c3a287a50df122632b5afabd39bc7ea47"
+    },
+    {
+      "path": "desktop/x11/README.md",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection platform integration derived from documented shared settings.",
+      "changes": [
+        "Add narrow platform integration without duplicating application settings.",
+        "Update shared/platform integration and associated documentation."
+      ],
+      "sha256": "50bb0da2527aa9e56131b7d1e29d912ba58c44a655522c357e985de4cbf5b2e2"
+    },
+    {
+      "path": "desktop/common/bin/desktop-power",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection platform integration derived from documented shared settings.",
+      "changes": [
+        "Add narrow platform integration without duplicating application settings."
+      ],
+      "sha256": "1e15bc1eff2c72c23420d59836d988e68f31fa3e7f8f63aa297e33b90e802c51"
+    },
+    {
+      "path": "desktop/common/power/systemd/power.conf",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection platform integration derived from documented shared settings.",
+      "changes": [
+        "Add narrow platform integration without duplicating application settings."
+      ],
+      "sha256": "c79d775b4593476ba94e7904108cd8eb7b85dd2d70fe4c05b3ea602f8eca704f"
+    },
+    {
+      "path": "desktop/common/power/portable/power.conf",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection platform integration derived from documented shared settings.",
+      "changes": [
+        "Add narrow platform integration without duplicating application settings."
+      ],
+      "sha256": "314b68955af7b51f9001b12c973f8ec166a9e208e16ba6be67896fb52f7c64d4"
+    },
+    {
+      "path": "desktop/common/power/elogind/power.conf",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection platform integration derived from documented shared settings.",
+      "changes": [
+        "Add narrow platform integration without duplicating application settings."
+      ],
+      "sha256": "e24d4a4c9b5714bd9f2ba8b13d2add06966083ec5a4eeb0c4cbddec38847f586"
+    },
+    {
+      "path": "desktop/hyprland/session/systemd/backend.sh",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection platform integration derived from documented shared settings.",
+      "changes": [
+        "Add narrow platform integration without duplicating application settings."
+      ],
+      "sha256": "84b1c8d98ca2cf3c91d7403a672b71e6be4682ae972ac493d9eafd195e792bb2"
+    },
+    {
+      "path": "desktop/hyprland/session/portable/backend.sh",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection platform integration derived from documented shared settings.",
+      "changes": [
+        "Add narrow platform integration without duplicating application settings."
+      ],
+      "sha256": "4d6f1a4e3d48f66611705e132d04b142c44736516a3e19ac4ba5b0b18d2d7ae2"
+    },
+    {
+      "path": "desktop/x11/session/privileged/x11-session.conf",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection platform integration derived from documented shared settings.",
+      "changes": [
+        "Add narrow platform integration without duplicating application settings."
+      ],
+      "sha256": "40ae2180ffbe024d7b5a29f9363393dd1f1720deea5893646e263a012bb9daf4"
+    },
+    {
+      "path": "desktop/x11/session/portable/x11-session.conf",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection platform integration derived from documented shared settings.",
+      "changes": [
+        "Add narrow platform integration without duplicating application settings."
+      ],
+      "sha256": "ddf6b1c14cb38e61fc3e47377eb4a91af6d9f82ef570aefa38fc6ec63f1d674c"
+    },
+    {
+      "path": "desktop/niri/bin/niri-session",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection platform integration derived from documented shared settings.",
+      "changes": [
+        "Add narrow platform integration without duplicating application settings.",
+        "Finish platform-specific environment cleanup and adoption documentation."
+      ],
+      "sha256": "133f6831a993839a39806aa64fbc43d097ec7c94a39e485054197f85d4d30e35"
+    },
+    {
+      "path": "desktop/niri/session/systemd/awake",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection platform integration derived from documented shared settings.",
+      "changes": [
+        "Add narrow platform integration without duplicating application settings."
+      ],
+      "sha256": "b3183863fada5c101646da908d1d503724281e6ae1710cdbddf59d3decba773e"
+    },
+    {
+      "path": "desktop/niri/session/portable/awake",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection platform integration derived from documented shared settings.",
+      "changes": [
+        "Add narrow platform integration without duplicating application settings.",
+        "Wait for supervisor lock release on toggle-off so subsequent toggle-on cannot race inhibitor cleanup; validation skipped at user request."
+      ],
+      "sha256": "a38e6f29c118e63c50a481380beb8ac7b0181b39a119486a6734e9a775fc1ed3"
+    },
+    {
+      "path": "hardware/monitor/README.md",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection platform integration derived from documented shared settings.",
+      "changes": [
+        "Add narrow platform integration without duplicating application settings."
+      ],
+      "sha256": "8915501e0d38a3f65c517676f04edf2379fd8b984f7943293077d771d746dceb"
+    },
+    {
+      "path": "hardware/dock/README.md",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection platform integration derived from documented shared settings.",
+      "changes": [
+        "Add narrow platform integration without duplicating application settings."
+      ],
+      "sha256": "bba59a1bc1e7363ce41b282d66587901c90e84530a6f7dd03e0017140df2e6bd"
+    },
+    {
+      "path": "hardware/keyboard/README.md",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection platform integration derived from documented shared settings.",
+      "changes": [
+        "Add narrow platform integration without duplicating application settings."
+      ],
+      "sha256": "956144f22e3eca2e0790dab509033d8d1d4b01665852d24779ed84568f02c7fc"
+    },
+    {
+      "path": "hardware/power/bin/battery-charge-limit",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection platform integration derived from documented shared settings.",
+      "changes": [
+        "Add narrow platform integration without duplicating application settings."
+      ],
+      "sha256": "3d1fc9be500cb70b5e91990e8b6170aff219fd246e681f271f14b64406632e07"
+    },
+    {
+      "path": "hardware/power/activation/systemd/battery-charge-limit.service",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection platform integration derived from documented shared settings.",
+      "changes": [
+        "Add narrow platform integration without duplicating application settings."
+      ],
+      "sha256": "4d859c1250f54927403fcdc5978beaf4fb40073ff54ee83d8325ff685bba0e12"
+    },
+    {
+      "path": "docs/platforms.md",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection integration and documentation.",
+      "changes": [
+        "Document or adapt platform boundaries while sharing application settings."
+      ],
+      "sha256": "7e08c154f47972c3aef7d47d2c54c6b7222c803f57c3b8d3c6a1cd07c00814fd"
+    },
+    {
+      "path": "desktop/common/README.md",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection integration and documentation.",
+      "changes": [
+        "Document or adapt platform boundaries while sharing application settings."
+      ],
+      "sha256": "71c9a113c64eff34e464bb78ab961b700aea59ce5bf4c1dda04883475d7ca898"
+    },
+    {
+      "path": "desktop/common/bin/desktop-polkit-agent",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection integration and documentation.",
+      "changes": [
+        "Document or adapt platform boundaries while sharing application settings."
+      ],
+      "sha256": "8b2eae375e0b72f6fe0beae194d6d0a293169d0f23f1aae407b81d47061a8a12"
+    },
+    {
+      "path": "desktop/hyprland/session/README.md",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection integration and documentation.",
+      "changes": [
+        "Document or adapt platform boundaries while sharing application settings."
+      ],
+      "sha256": "12d8f3789770e82f505548415550e737912fb15cb08e3d0eb409634ed6ae5e1a"
+    },
+    {
+      "path": "desktop/x11/session/README.md",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection integration and documentation.",
+      "changes": [
+        "Document or adapt platform boundaries while sharing application settings."
+      ],
+      "sha256": "35bddfc79a7117696d981930715eb07ecc6d96000c10026d1bef40a0df9b3613"
+    },
+    {
+      "path": "desktop/niri/session/README.md",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection integration and documentation.",
+      "changes": [
+        "Document or adapt platform boundaries while sharing application settings.",
+        "Finish platform-specific environment cleanup and adoption documentation.",
+        "Document portable Awake shutdown synchronization and skipped validation on 2026-10-01."
+      ],
+      "sha256": "b5c36e717c7f5106da57f042c669331d8ca9feb3a541e1cd9e475521e29e098b"
+    },
+    {
+      "path": "desktop/niri/bin/workstation-niri-session",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection integration and documentation.",
+      "changes": [
+        "Document or adapt platform boundaries while sharing application settings.",
+        "Finish platform-specific environment cleanup and adoption documentation."
+      ],
+      "sha256": "50f2fc03b32b0a4279b364f4f15e5396c20947d544ec4a45d6051add179a801a"
+    },
+    {
+      "path": "hardware/power/README.md",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection integration and documentation.",
+      "changes": [
+        "Document or adapt platform boundaries while sharing application settings."
+      ],
+      "sha256": "1aa0f9c64568cd4b24d9cfec7ceac8c1a8ee257146ea37d59a280cecd3527335"
+    },
+    {
+      "path": "terminal/tmux/README.md",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection integration and documentation.",
+      "changes": [
+        "Document or adapt platform boundaries while sharing application settings."
+      ],
+      "sha256": "94450d62da80ae9542e394fb6446dc44bc2497b14d3d7cf3fa7d839ee3036f26"
+    },
+    {
+      "path": "desktop/niri/session/systemd/environment",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Shared collection platform integration.",
+      "changes": [
+        "Isolate environment handling in the selected Niri backend."
+      ],
+      "sha256": "6a31a5c3a88b111a26131fa5f60bc032abb2fbe1d4d0b804f8e3cbfa830417ba"
+    },
+    {
+      "path": "desktop/niri/session/portable/environment",
+      "snapshot": "collection-02",
+      "captured": "2026-10-01",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Shared collection platform integration.",
+      "changes": [
+        "Isolate environment handling in the selected Niri backend."
+      ],
+      "sha256": "1d9ecd5847e27265bace94e1deaf54d8ac99b6c8e8bc20561175091ddbd8c89c"
+    }
+  ]
+}

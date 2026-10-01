@@ -1,0 +1,10 @@
+[Unit]
+Description=Hyprland bar
+PartOf=workstation-hyprland-session.target
+ConditionEnvironment=WAYLAND_DISPLAY
+[Service]
+ExecStart=/usr/bin/env waybar
+Restart=on-failure
+RestartSec=2
+[Install]
+WantedBy=workstation-hyprland-session.target

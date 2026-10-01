@@ -1,0 +1,12 @@
+{
+  "KPlugin": {
+    "Id": "gentoo-focus-border",
+    "Name": "Focused window border",
+    "Description": "Thin blue outline around the focused window",
+    "Version": "1.0",
+    "License": "MIT"
+  },
+  "X-Plasma-API": "declarativescript",
+  "X-Plasma-MainScript": "ui/main.qml",
+  "KPackageStructure": "KWin/Script"
+}

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -euo pipefail
+backend=${NIRI_SESSION_BACKEND:-portable}
+case $backend in systemd|portable) ;; *) exit 2 ;; esac
+exec "${XDG_CONFIG_HOME:-$HOME/.config}/niri/session/$backend/environment" "${1:-start}"

@@ -1,0 +1,10 @@
+[Unit]
+Description=Hyprland wallpaper
+PartOf=workstation-hyprland-session.target
+ConditionEnvironment=WAYLAND_DISPLAY
+[Service]
+ExecStart=%h/.local/bin/workstation-hyprland-wallpaper
+Restart=on-failure
+RestartSec=2
+[Install]
+WantedBy=workstation-hyprland-session.target

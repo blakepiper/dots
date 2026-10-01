@@ -1,0 +1,20 @@
+# Merge into ~/.bashrc; keep the ble.sh section after other shell setup.
+if [[ $- != *i* ]]; then
+    return
+fi
+export PATH="$HOME/.local/bin:$PATH"
+if [[ -n ${KONSOLE_VERSION:-} ]]; then
+    PS1='\[\e[1;31m\]\h\[\e[0m\] \[\e[1;34m\]\w\[\e[0m\] \$ '
+fi
+
+# ble.sh is part of the preferred setup. Load it once in interactive terminals.
+# Set BLESH_INIT to the target's absolute ble.sh path if installed elsewhere.
+if [[ -t 0 && -t 1 && ! ${BLE_VERSION-} ]]; then
+    for blesh_init in "${BLESH_INIT:-}" "$HOME/.local/share/blesh/ble.sh" /usr/share/blesh/ble.sh; do
+        [[ -n $blesh_init && -r $blesh_init ]] || continue
+        source -- "$blesh_init" --attach=none
+        [[ ! ${BLE_VERSION-} ]] || ble-attach
+        break
+    done
+    unset blesh_init
+fi

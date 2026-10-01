@@ -1,0 +1,16 @@
+[Keyboard]
+KeyRepeat=repeat
+RepeatDelay=600
+RepeatRate=25
+
+[Libinput][10248][536][ASUF1208:00 2808:0218 Mouse]
+NaturalScroll=true
+
+[Libinput][10248][536][ASUF1208:00 2808:0218 Touchpad]
+NaturalScroll=true
+
+[Libinput][1133][49291][Logitech G502 HERO Gaming Mouse]
+NaturalScroll=true
+
+[Mouse]
+cursorTheme=breeze_cursors

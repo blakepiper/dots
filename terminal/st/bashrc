@@ -1,0 +1,15 @@
+# shellcheck shell=bash
+[[ $- == *i* ]] || return 0
+# Preserve the user's shared Bash setup, prompt, aliases and completion.
+# shellcheck disable=SC1090
+[[ ! -r ~/.bashrc ]] || source ~/.bashrc
+# Fallback for a target whose user rcfile has not yet loaded ble.sh.
+if [[ -t 0 && -t 1 && ! ${BLE_VERSION-} ]]; then
+  for blesh_init in "${BLESH_INIT:-}" "$HOME/.local/share/blesh/ble.sh" /usr/share/blesh/ble.sh; do
+    [[ -n $blesh_init && -r $blesh_init ]] || continue
+    source -- "$blesh_init" --attach=none
+    [[ ! ${BLE_VERSION-} ]] || ble-attach
+    break
+  done
+  unset blesh_init
+fi

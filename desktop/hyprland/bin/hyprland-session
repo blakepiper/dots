@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+set -euo pipefail
+export PATH="$HOME/.local/bin:$PATH"
+export HYPRLAND_SESSION_BACKEND=${HYPRLAND_SESSION_BACKEND:-portable}
+case $HYPRLAND_SESSION_BACKEND in systemd|portable) ;; *) echo 'Choose systemd or portable for HYPRLAND_SESSION_BACKEND.' >&2; exit 2 ;; esac
+backend="${XDG_CONFIG_HOME:-$HOME/.config}/hypr/session/$HYPRLAND_SESSION_BACKEND/backend.sh"
+if [[ -n ${DISPLAY:-} || -n ${WAYLAND_DISPLAY:-} ]]; then
+    echo 'Exit the current desktop before starting Hyprland.' >&2
+    exit 1
+fi
+[[ -r $backend ]] || { echo "Missing session backend: $backend" >&2; exit 1; }
+bash "$backend" prepare
+export XDG_CURRENT_DESKTOP=Hyprland XDG_SESSION_DESKTOP=Hyprland XDG_SESSION_TYPE=wayland
+export TERMINAL=foot MOZ_ENABLE_WAYLAND=1
+cleanup() {
+    bash "$backend" stop || true
+    dbus-update-activation-environment DISPLAY= WAYLAND_DISPLAY= HYPRLAND_INSTANCE_SIGNATURE= XDG_CURRENT_DESKTOP= XDG_SESSION_DESKTOP= XDG_SESSION_TYPE= TERMINAL= MOZ_ENABLE_WAYLAND= || true
+}
+trap cleanup EXIT
+Hyprland --config "${XDG_CONFIG_HOME:-$HOME/.config}/hypr/hyprland.lua" "$@" &
+compositor=$!
+trap 'kill -TERM "$compositor" 2>/dev/null || true' HUP INT TERM
+status=0
+wait "$compositor" || status=$?
+# A signal may interrupt wait before the compositor exits.
+if kill -0 "$compositor" 2>/dev/null; then wait "$compositor" || true; fi
+exit "$status"

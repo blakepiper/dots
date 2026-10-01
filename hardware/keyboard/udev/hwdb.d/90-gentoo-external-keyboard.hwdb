@@ -1,0 +1,7 @@
+# External Gaming Keyboard only: Cmd position acts as Super.
+# Keep the laptop keyboard mapping unchanged.
+evdev:input:b0003v1FC9pE8C7*
+ KEYBOARD_KEY_700e2=leftmeta
+ KEYBOARD_KEY_700e3=leftalt
+ KEYBOARD_KEY_700e6=rightmeta
+ KEYBOARD_KEY_700e7=rightalt

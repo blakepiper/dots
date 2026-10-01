@@ -1,0 +1,35 @@
+#!/bin/sh
+# Configure only the host-selected mouse and touchpad.
+set -eu
+[ -n "${DISPLAY:-}" ] || exit 0
+config=${XDG_CONFIG_HOME:-$HOME/.config}/workstation/pointer.conf
+# shellcheck disable=SC1090
+[ ! -r "$config" ] || . "$config"
+mouse=${WORKSTATION_NATURAL_SCROLL_USB_ID:-}
+touchpad=${WORKSTATION_NATURAL_SCROLL_TOUCHPAD_ID:-}
+[ -n "$mouse$touchpad" ] || exit 0
+xinput list --short | sed -n '/slave  pointer/s/.*id=\([0-9]*\).*/\1/p' |
+while IFS= read -r device; do
+    properties=$(xinput list-props "$device" 2>/dev/null) || continue
+    product=$(printf '%s\n' "$properties" |
+        sed -n 's/.*Device Product ID ([0-9]*):[[:space:]]*//p')
+    [ -n "$product" ] || continue
+    case "$product" in "$mouse"|"$touchpad") ;; *) continue ;; esac
+    # Composite USB devices can expose pointer interfaces without scrolling.
+    case "$properties" in
+        *'libinput Natural Scrolling Enabled ('*)
+            xinput set-prop "$device" 'libinput Natural Scrolling Enabled' 1 ;;
+    esac
+    if [ "$product" = "$touchpad" ] &&
+        [ "${WORKSTATION_TOUCHPAD_TWO_FINGER_CLICK:-0}" = 1 ]; then
+        # The composite mouse interface shares the ID but lacks tapping.
+        case "$properties" in
+            *'libinput Tapping Enabled ('*)
+                xinput set-prop "$device" 'libinput Tapping Enabled' 1
+                # One/two/three fingers map to left/right/middle.
+                xinput set-prop "$device" 'libinput Tapping Button Mapping Enabled' 1 0
+                xinput set-prop "$device" 'libinput Click Method Enabled' 0 1
+                xinput set-prop "$device" 'libinput Clickfinger Button Mapping Enabled' 1 0 ;;
+        esac
+    fi
+done

@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -euo pipefail
+confirm() {
+  local answer
+  answer=$(printf 'No\nYes\n' | fuzzel --dmenu --prompt "$1 ") || return 1
+  [[ $answer == Yes ]]
+}
+choice=$(printf 'Lock\nSuspend\nReboot\nLog Out\nMonitors Off\nPower Off\n' |
+  fuzzel --dmenu --prompt 'Control: ') || exit 0
+case $choice in
+  Lock) workstation-hyprland-lock ;;
+  Suspend) desktop-power suspend ;;
+  Reboot) if confirm 'Reboot?'; then desktop-power reboot; fi ;;
+  'Log Out') if confirm 'Log out? Unsaved work may be lost.'; then hyprctl dispatch 'hl.dsp.exit()'; fi ;;
+  'Monitors Off') sleep 0.2; hyprctl dispatch 'hl.dsp.dpms({action="off"})' ;;
+  'Power Off') if confirm 'Power off?'; then desktop-power poweroff; fi ;;
+esac

@@ -1,0 +1,9 @@
+#!/bin/sh
+# Open the optional project directory and enable the editor IDE layout.
+set -eu
+if [ "$#" -gt 0 ] && [ -d "$1" ]; then
+    cd -- "$1"
+    shift
+fi
+export NVIM_IDE=1
+exec nvim "$@"

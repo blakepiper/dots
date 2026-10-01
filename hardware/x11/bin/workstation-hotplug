@@ -1,0 +1,36 @@
+#!/bin/sh
+# Block on kernel-device events; never poll xrandr at idle.
+set -eu
+[ -n "${DISPLAY:-}" ] && [ -n "${XDG_RUNTIME_DIR:-}" ] || exit 1
+work=$(mktemp -d "$XDG_RUNTIME_DIR/workstation-hotplug.XXXXXX")
+pid=''
+cleanup() {
+    trap - EXIT
+    [ -z "$pid" ] || kill "$pid" 2>/dev/null || :
+    [ -z "$pid" ] || wait "$pid" 2>/dev/null || :
+    rm -rf "$work"
+}
+trap cleanup EXIT
+trap 'exit 0' INT TERM HUP
+mkfifo "$work/events"
+udevadm monitor --udev --property --subsystem-match=drm --subsystem-match=input > "$work/events" & pid=$!
+action='' hotplug='' subsystem=''
+while IFS= read -r line; do
+    case "$line" in
+        ACTION=*) action=${line#ACTION=} ;;
+        SUBSYSTEM=*) subsystem=${line#SUBSYSTEM=} ;;
+        HOTPLUG=*) hotplug=${line#HOTPLUG=} ;;
+        '')
+            if [ "$action" = change ] && [ "$hotplug" = 1 ]; then
+                sleep 0.2
+                workstation-monitors || :
+            fi
+            if [ "$subsystem" = input ] && [ "$action" = add ]; then
+                # Let Xorg create the slave devices before configuring them.
+                sleep 1
+                workstation-keyboards || :
+                workstation-pointers || :
+            fi
+            action='' hotplug='' subsystem='' ;;
+    esac
+done < "$work/events"

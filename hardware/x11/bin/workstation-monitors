@@ -1,0 +1,63 @@
+#!/bin/sh
+set -eu
+[ -n "${DISPLAY:-}" ] || exit 0
+config=${XDG_CONFIG_HOME:-$HOME/.config}/workstation/display.conf
+# shellcheck disable=SC1090
+[ ! -r "$config" ] || . "$config"
+internal=${WORKSTATION_INTERNAL_OUTPUT:-eDP-1}
+external=${WORKSTATION_EXTERNAL_OUTPUT:-HDMI-2}
+mode=${WORKSTATION_MIRROR_MODE:-1920x1080}
+rate=${WORKSTATION_MIRROR_RATE:-60}
+outputs=$(xrandr --query)
+connected() { printf '%s\n' "$outputs" | awk -v o="$1" '$1==o && $2=="connected" {ok=1} END {exit !ok}'; }
+has_mode() {
+    printf '%s\n' "$outputs" | awk -v o="$1" -v m="$mode" '
+      /^[^[:space:]]/ {active=($1==o && $2=="connected")}
+      active && $1==m {ok=1} END {exit !ok}'
+}
+if ! connected "$internal"; then
+    internal=$(printf '%s\n' "$outputs" | awk '$2=="connected" && $1~/^eDP/ {print $1; exit}')
+fi
+[ -n "$internal" ] || { echo 'No internal panel detected; leaving displays unchanged.' >&2; exit 0; }
+refresh_wallpaper() {
+    wallpaper=${XDG_CONFIG_HOME:-$HOME/.config}/wallpaper/horizon.png
+    if [ -r "$wallpaper" ] && command -v feh >/dev/null 2>&1; then
+        # The root pixmap does not resize itself when RandR changes geometry.
+        feh --no-fehbg --bg-fill "$wallpaper" ||
+            echo 'Could not refresh wallpaper after display change.' >&2
+    fi
+}
+restore_panel() {
+    # Clear stale outputs and restore the host-specific standalone mode.
+    for output in $(printf '%s\n' "$outputs" | awk '$2=="disconnected" {print $1}'); do
+        xrandr --output "$output" --off
+    done
+    if [ -n "${WORKSTATION_INTERNAL_MODE:-}" ] && [ -n "${WORKSTATION_INTERNAL_RATE:-}" ]; then
+        if xrandr --output "$internal" --mode "$WORKSTATION_INTERNAL_MODE" \
+            --rate "$WORKSTATION_INTERNAL_RATE" --scale 1x1 --primary; then
+            return 0
+        fi
+        echo 'Requested panel mode unavailable; using its preferred mode.' >&2
+    fi
+    xrandr --output "$internal" --auto --scale 1x1 --primary
+}
+if [ "${WORKSTATION_DISPLAY_POLICY:-mirror}" = native ]; then
+    restore_panel
+    refresh_wallpaper
+    exit 0
+fi
+if ! connected "$external"; then
+    external=$(printf '%s\n' "$outputs" | awk '$2=="connected" && $1~/^(HDMI|DP)-/ {print $1; exit}')
+fi
+if [ -n "$external" ]; then
+    if has_mode "$internal" && has_mode "$external"; then
+        xrandr --output "$internal" --mode "$mode" --rate "$rate" --scale 1x1 --primary \
+            --output "$external" --mode "$mode" --rate "${WORKSTATION_EXTERNAL_RATE:-$rate}" --scale 1x1 --same-as "$internal"
+    else
+        echo "Both panels must support $mode to mirror; leaving external layout unchanged." >&2
+        xrandr --output "$internal" --auto --scale 1x1 --primary
+    fi
+else
+    restore_panel
+fi
+refresh_wallpaper

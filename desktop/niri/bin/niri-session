@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+set -euo pipefail
+export PATH="$HOME/.local/bin:$PATH"
+export NIRI_SESSION_BACKEND=${NIRI_SESSION_BACKEND:-portable}
+case $NIRI_SESSION_BACKEND in systemd|portable) ;; *) exit 2 ;; esac
+if [[ -n ${DISPLAY:-} || -n ${WAYLAND_DISPLAY:-} ]]; then
+    echo 'Exit the current desktop before starting Niri.' >&2; exit 1
+fi
+export XDG_CURRENT_DESKTOP=niri XDG_SESSION_DESKTOP=niri XDG_SESSION_TYPE=wayland
+export MOZ_ENABLE_WAYLAND=1
+cleanup() {
+    keep-awake off || true
+    workstation-niri-session stop || true
+}
+trap cleanup EXIT
+niri --config "${XDG_CONFIG_HOME:-$HOME/.config}/niri/config.kdl" "$@" &
+compositor=$!
+trap 'kill -TERM "$compositor" 2>/dev/null || true' HUP INT TERM
+status=0
+wait "$compositor" || status=$?
+if kill -0 "$compositor" 2>/dev/null; then wait "$compositor" || true; fi
+exit "$status"

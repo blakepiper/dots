@@ -1,0 +1,15 @@
+#!/usr/bin/python3
+import subprocess
+from pathlib import Path
+import dbus
+import dbus.service
+from dbus.mainloop.glib import DBusGMainLoop
+from gi.repository import GLib
+DBusGMainLoop(set_as_default=True)
+class Screenshot(dbus.service.Object):
+    @dbus.service.method('org.przvl.Screenshot', in_signature='', out_signature='')
+    def Capture(self):
+        subprocess.Popen([str(Path.home() / '.local/bin/screenshot-region')], start_new_session=True)
+name = dbus.service.BusName('org.przvl.Screenshot', bus=dbus.SessionBus())
+service = Screenshot(name, '/Screenshot')
+GLib.MainLoop().run()

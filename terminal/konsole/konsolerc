@@ -1,0 +1,23 @@
+MenuBar=Disabled
+
+[General]
+ConfigVersion=1
+
+[UiSettings]
+ColorScheme=
+
+[Desktop Entry]
+DefaultProfile=GentooClassic.profile
+
+[MainWindow]
+MenuBar=Disabled
+
+[MainWindow][Toolbar mainToolBar]
+Hidden=true
+
+[MainWindow][Toolbar sessionToolbar]
+Hidden=true
+
+[Notification Messages]
+CloseAllTabs=true
+

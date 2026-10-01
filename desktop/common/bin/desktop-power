@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -euo pipefail
+profile=${DESKTOP_POWER_CONFIG:-${XDG_CONFIG_HOME:-$HOME/.config}/workstation/power.conf}
+[[ -r $profile ]] || { echo "Choose a power profile and place it at $profile" >&2; exit 1; }
+# Trusted, user-owned shell configuration containing command arrays.
+source "$profile"
+case ${1:-} in
+    suspend) exec "${suspend_command[@]}" ;;
+    reboot) exec "${reboot_command[@]}" ;;
+    poweroff) exec "${poweroff_command[@]}" ;;
+    *) echo 'Usage: desktop-power suspend|reboot|poweroff' >&2; exit 2 ;;
+esac

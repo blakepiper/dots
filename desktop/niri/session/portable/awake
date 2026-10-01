@@ -1,0 +1,137 @@
+#!/usr/bin/env python3
+"""Keep-awake control using elogind inhibition, without a service manager."""
+import fcntl
+import os
+from pathlib import Path
+import select
+import signal
+import socket
+import subprocess
+import sys
+import time
+
+runtime = Path(os.environ["XDG_RUNTIME_DIR"])
+endpoint = str(runtime / "workstation-niri-awake.sock")
+lock_path = runtime / "workstation-niri-awake.lock"
+
+def request(action):
+    try:
+        with socket.socket(socket.AF_UNIX) as client:
+            client.settimeout(2)
+            client.connect(endpoint)
+            client.sendall(action.encode())
+            return client.recv(32) == b"active"
+    except (OSError, TimeoutError):
+        return False
+
+def serve():
+    os.umask(0o077)
+    with open(lock_path, "a") as lock:
+        try:
+            fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except BlockingIOError:
+            return
+        inhibitor = None
+        listening = None
+        def stop(_signal, _frame):
+            raise SystemExit(0)
+        signal.signal(signal.SIGTERM, stop)
+        signal.signal(signal.SIGHUP, stop)
+        try:
+            # The child prints readiness only after the inhibitor is acquired.
+            inhibitor = subprocess.Popen([
+                os.environ.get("NIRI_INHIBIT_COMMAND", "elogind-inhibit"),
+                "--what=idle:sleep:handle-lid-switch", "--who=Awake",
+                "--why=Top-bar-Awake-is-enabled", "--mode=block",
+                "sh", "-c", "printf 'ready\n'; exec sleep infinity",
+            ], stdout=subprocess.PIPE, start_new_session=True)
+            if not select.select([inhibitor.stdout], [], [], 5)[0]:
+                raise RuntimeError("Timed out acquiring the sleep inhibitor")
+            if inhibitor.stdout.readline() != b"ready\n":
+                raise RuntimeError("Could not acquire the sleep inhibitor")
+            Path(endpoint).unlink(missing_ok=True)
+            listening = socket.socket(socket.AF_UNIX)
+            listening.bind(endpoint)
+            listening.listen(4)
+            listening.settimeout(1)
+            while inhibitor.poll() is None:
+                # Niri exports its IPC socket. End inhibition on session exit.
+                ipc = os.environ.get("NIRI_SOCKET")
+                if ipc and not Path(ipc).exists():
+                    break
+                try:
+                    client, _ = listening.accept()
+                except socket.timeout:
+                    continue
+                with client:
+                    client.settimeout(2)
+                    try:
+                        action = client.recv(32)
+                        client.sendall(b"active")
+                    except OSError:
+                        continue
+                if action == b"off":
+                    break
+        finally:
+            if listening is not None:
+                listening.close()
+                Path(endpoint).unlink(missing_ok=True)
+            if inhibitor is not None:
+                try:
+                    os.killpg(inhibitor.pid, signal.SIGTERM)
+                except ProcessLookupError:
+                    pass
+                try:
+                    inhibitor.wait(timeout=3)
+                except subprocess.TimeoutExpired:
+                    try:
+                        os.killpg(inhibitor.pid, signal.SIGKILL)
+                    except ProcessLookupError:
+                        pass
+                    inhibitor.wait()
+
+def main():
+    action = sys.argv[1] if len(sys.argv) > 1 else "active"
+    if action == "serve":
+        serve()
+    elif action == "active":
+        return 0 if request("active") else 1
+    elif action == "off":
+        request("off")
+        # The socket closes before inhibitor cleanup finishes. Wait for the
+        # supervisor lock to be released before allowing another toggle.
+        with open(lock_path, "a") as lock:
+            for _ in range(50):
+                try:
+                    fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+                except BlockingIOError:
+                    time.sleep(0.1)
+                else:
+                    return 0
+        return 1
+    elif action == "on":
+        if request("active"):
+            return 0
+        log = runtime / "workstation-niri-awake.log"
+        fd = os.open(log, os.O_WRONLY | os.O_CREAT | os.O_TRUNC, 0o600)
+        with os.fdopen(fd, "w") as output:
+            child = subprocess.Popen([sys.executable, __file__, "serve"],
+                stdin=subprocess.DEVNULL, stdout=output, stderr=output,
+                start_new_session=True)
+        for _ in range(70):
+            if request("active"):
+                return 0
+            if child.poll() is not None:
+                break
+            time.sleep(0.1)
+        if child.poll() is None:
+            child.terminate()
+            child.wait()
+        print(f"Keep-awake could not start; see {log}", file=sys.stderr)
+        return 1
+    else:
+        return 2
+    return 0
+
+if __name__ == "__main__":
+    sys.exit(main())

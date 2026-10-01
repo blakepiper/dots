@@ -1,0 +1,8 @@
+# Generated artifacts and machine-local overrides
+__pycache__/
+*.py[cod]
+.DS_Store
+*.swp
+*.swo
+*.bak
+local/

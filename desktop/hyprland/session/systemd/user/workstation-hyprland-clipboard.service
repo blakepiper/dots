@@ -1,0 +1,11 @@
+[Unit]
+Description=Hyprland clipboard
+PartOf=workstation-hyprland-session.target
+ConditionEnvironment=WAYLAND_DISPLAY
+[Service]
+ExecStart=/usr/bin/env wl-paste --type text --watch cliphist --max-items 100 store
+Restart=on-failure
+RestartSec=2
+UMask=0077
+[Install]
+WantedBy=workstation-hyprland-session.target

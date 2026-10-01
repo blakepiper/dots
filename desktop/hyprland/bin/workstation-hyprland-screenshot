@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+set -euo pipefail
+umask 077
+args=()
+case ${1:-} in
+  "") geometry=$(slurp) || exit 0; args=(-g "$geometry") ;;
+  --full) ;;
+  --window)
+    geometry=$(hyprctl -j activewindow | jq -er '
+      select(.mapped == true) | "\(.at[0]),\(.at[1]) \(.size[0])x\(.size[1])"')
+    args=(-g "$geometry") ;;
+  *) echo 'Usage: workstation-hyprland-screenshot [--full|--window]' >&2; exit 2 ;;
+esac
+directory="$HOME/Pictures/Screenshots"
+mkdir -p "$directory"
+staging=$(mktemp "$directory/.capture.XXXXXXXX")
+trap 'rm -f -- "$staging"' EXIT
+grim "${args[@]}" "$staging"
+file=$(mktemp --suffix=.png "$directory/$(date +%Y-%m-%d_%H-%M-%S)-XXXXXXXX")
+mv -T -- "$staging" "$file"
+wl-copy --type image/png < "$file"
+printf '%s\n' "$file"

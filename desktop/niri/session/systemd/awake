@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+case ${1:-} in
+    active) systemctl --user is-active --quiet keep-awake.service ;;
+    on) systemctl --user start keep-awake.service ;;
+    off) systemctl --user stop keep-awake.service ;;
+    *) exit 2 ;;
+esac

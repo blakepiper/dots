@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -euo pipefail
+# Multiple key presses and suspend requests must share one locker.
+exec 9>"$XDG_RUNTIME_DIR/workstation-hyprland-lock.lock"
+flock -n 9 || exit 0
+hyprlock

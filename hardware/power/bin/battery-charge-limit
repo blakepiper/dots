@@ -1,0 +1,11 @@
+#!/bin/sh
+# Run with the privilege to write the target's battery threshold sysfs files.
+set -eu
+limit=${1:-80}
+case $limit in ''|*[!0-9]*) echo 'Expected a percentage from 0 to 100.' >&2; exit 2 ;; esac
+[ "$limit" -le 100 ] || { echo 'Expected a percentage from 0 to 100.' >&2; exit 2; }
+for threshold in /sys/class/power_supply/BAT*/charge_control_end_threshold; do
+    [ -f "$threshold" ] || continue
+    # Avoid unnecessary writes and repeated udev change events.
+    [ "$(cat "$threshold")" = "$limit" ] || printf '%s\n' "$limit" > "$threshold"
+done

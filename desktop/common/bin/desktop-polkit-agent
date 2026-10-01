@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -euo pipefail
+if [[ -n ${POLKIT_AGENT:-} ]]; then exec "$POLKIT_AGENT"; fi
+for agent in /usr/lib/polkit-kde-authentication-agent-1 \
+    /usr/libexec/polkit-kde-authentication-agent-1 \
+    /usr/lib64/libexec/polkit-kde-authentication-agent-1 \
+    /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1; do
+    [[ ! -x $agent ]] || exec "$agent"
+done
+echo 'Set POLKIT_AGENT to the target authentication agent executable.' >&2
+exit 1

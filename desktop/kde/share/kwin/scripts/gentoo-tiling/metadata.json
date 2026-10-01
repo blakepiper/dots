@@ -1,0 +1,12 @@
+{
+  "KPlugin": {
+    "Id": "gentoo-tiling",
+    "Name": "Gentoo keyboard tiling",
+    "Description": "Gapless recursive splits and keyboard window ordering",
+    "Version": "1.0",
+    "License": "MIT"
+  },
+  "X-Plasma-API": "javascript",
+  "X-Plasma-MainScript": "code/main.js",
+  "KPackageStructure": "KWin/Script"
+}

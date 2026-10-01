@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -euo pipefail
+backend=${HYPRLAND_SESSION_BACKEND:-portable}
+case $backend in systemd|portable) ;; *) exit 2 ;; esac
+exec bash "${XDG_CONFIG_HOME:-$HOME/.config}/hypr/session/$backend/backend.sh" start

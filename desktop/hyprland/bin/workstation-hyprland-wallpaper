@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+wallpaper=${HYPRLAND_WALLPAPER:-$HOME/Pictures/horizon.png}
+if [[ -r $wallpaper ]]; then
+    exec swaybg --image "$wallpaper" --mode fill --color '#1a1b26'
+fi
+exec swaybg --color '#1a1b26'

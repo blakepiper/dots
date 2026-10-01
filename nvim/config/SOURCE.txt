@@ -1,0 +1,4 @@
+Snapshot: local Neovim configuration, 2026-10-01.
+Dependencies: Mason-managed language servers and formatters.
+LuaRocks integration is disabled; no configured plugins require it.
+Capture hashes and edits are recorded in docs/sources.json at the repository root.

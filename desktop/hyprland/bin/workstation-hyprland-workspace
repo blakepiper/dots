@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -euo pipefail
+workspace=$1
+hyprctl -j activeworkspace | jq -c --argjson workspace "$workspace" '{text: ($workspace|tostring), class: (if .id == $workspace then "active" else "inactive" end)}'

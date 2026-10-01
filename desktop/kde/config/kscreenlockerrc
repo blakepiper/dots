@@ -1,0 +1,10 @@
+[Daemon]
+Autolock=false
+Timeout=0
+
+[Greeter]
+WallpaperPlugin=org.kde.image
+
+[Greeter][Wallpaper][org.kde.image][General]
+Image=/home/przvl/Pictures/cityview.webp
+PreviewImage=/home/przvl/Pictures/cityview.webp
