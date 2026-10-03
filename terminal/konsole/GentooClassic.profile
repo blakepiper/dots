@@ -1,6 +1,6 @@
 [Appearance]
 ColorScheme=GentooClassic
-Font=Hack Nerd Font Mono,9,-1,5,50,0,0,0,0,0
+Font=JetBrainsMono Nerd Font Mono,9,-1,0,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
 
 [General]
 Command=/bin/bash

@@ -6,7 +6,7 @@ Personal configuration raw material for people and agents to inspect, borrow, an
 | --- | --- |
 | [walls](walls/README.md) | Cityview, sunset, horizon, and night wallpapers |
 | [nvim](nvim/README.md) | Current LazyVim config, plugin lock, minimal theme, and `nvimide` |
-| [kde](desktop/kde/README.md) | Plasma/KWin settings, custom tiling and focus border, panel widgets, screenshot integration |
+| [kde](desktop/kde/README.md) | Plasma/KWin and Dolphin settings, custom tiling and focus border, panel widgets, screenshot integration |
 | [sddm](desktop/sddm/README.md) | Current greeter config and custom minimal theme |
 | [oxwm](desktop/oxwm/README.md) | Lua config, status helpers, and three source patches |
 | [hyprland](desktop/hyprland/README.md) | Lua config, shared helpers and systemd/portable session backends |
@@ -15,6 +15,7 @@ Personal configuration raw material for people and agents to inspect, borrow, an
 | [keybinds](keybinds/README.md) | Preferred keyboard vocabulary and actual differences between desktops |
 | [terminal](terminal/README.md) | Konsole, Kitty, Foot, st customization, tmux and neofetch |
 | [shell](shell/README.md) | Shared Bash startup with ble.sh |
+| [desktop/common](desktop/common/README.md) | Shared GTK/Fontconfig settings, power-command profiles and polkit helper |
 | [desktop/x11](desktop/x11/README.md) | Session, compositor, clipboard, screenshots, locking, and control menu |
 | [browser](browser/README.md) | Firefox interface styling, profile preferences, and policy reference |
 

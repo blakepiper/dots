@@ -113,6 +113,20 @@
       "commit": null,
       "base_commit": "f1cc77e59269b717ff31bf4bc0c0016b2f383f02",
       "firefox_version": "157.0"
+    },
+    "snapshot-07": {
+      "captured": "2026-10-03",
+      "commit": null,
+      "base_commit": "df728977f23971cfcd9e37fe38615d47a55b0dff",
+      "description": "Refresh local Konsole, Plasma launcher and display snapshots; capture shared GTK/Fontconfig and Dolphin settings.",
+      "versions": {
+        "plasma": "6.7.5",
+        "konsole": "26.04.3",
+        "dolphin": "26.04.3",
+        "gtk3": "3.24.52",
+        "gtk4": "4.20.4",
+        "fontconfig": "2.18.3"
+      }
     }
   },
   "files": [
@@ -394,13 +408,25 @@
     },
     {
       "path": "desktop/kde/config/plasma-org.kde.plasma.desktop-appletsrc",
+      "snapshot": "snapshot-07",
+      "captured": "2026-10-03",
       "commit": null,
-      "source_sha256": "8c0e024d8058e437527f5ecf03038fa53295944ed38dc51ce2c7821db0b25c52",
-      "changes": [
-        "Reorganize collection by application and function; moved from kde/config/plasma-org.kde.plasma.desktop-appletsrc."
-      ],
-      "sha256": "8c0e024d8058e437527f5ecf03038fa53295944ed38dc51ce2c7821db0b25c52",
-      "source": "/home/przvl/.config/plasma-org.kde.plasma.desktop-appletsrc"
+      "source": "/home/przvl/.config/plasma-org.kde.plasma.desktop-appletsrc",
+      "source_sha256": "4b4bf339adab54b7f264b5d27e9f3df72e8d9cfca75fbcbb7dd8eb7d717b537b",
+      "sha256": "4b4bf339adab54b7f264b5d27e9f3df72e8d9cfca75fbcbb7dd8eb7d717b537b",
+      "changes": [],
+      "previous_captures": [
+        {
+          "path": "desktop/kde/config/plasma-org.kde.plasma.desktop-appletsrc",
+          "commit": null,
+          "source_sha256": "8c0e024d8058e437527f5ecf03038fa53295944ed38dc51ce2c7821db0b25c52",
+          "changes": [
+            "Reorganize collection by application and function; moved from kde/config/plasma-org.kde.plasma.desktop-appletsrc."
+          ],
+          "sha256": "8c0e024d8058e437527f5ecf03038fa53295944ed38dc51ce2c7821db0b25c52",
+          "source": "/home/przvl/.config/plasma-org.kde.plasma.desktop-appletsrc"
+        }
+      ]
     },
     {
       "path": "desktop/kde/config/plasmashellrc",
@@ -693,11 +719,23 @@
     },
     {
       "path": "hardware/monitor/kde/kwinoutputconfig.json",
+      "snapshot": "snapshot-07",
+      "captured": "2026-10-03",
       "commit": null,
-      "source_sha256": "d34a73b3a4508e4490bb93b1b33215fc27532b3822c6e933ac75be54c44bac97",
+      "source": "/home/przvl/.config/kwinoutputconfig.json",
+      "source_sha256": "1a46d2fd28039952fe54193d28faa8440293a63c3e998d19c8ffc16c2c0dc99b",
+      "sha256": "1a46d2fd28039952fe54193d28faa8440293a63c3e998d19c8ffc16c2c0dc99b",
       "changes": [],
-      "sha256": "d34a73b3a4508e4490bb93b1b33215fc27532b3822c6e933ac75be54c44bac97",
-      "source": "/home/przvl/.config/kwinoutputconfig.json"
+      "previous_captures": [
+        {
+          "path": "hardware/monitor/kde/kwinoutputconfig.json",
+          "commit": null,
+          "source_sha256": "d34a73b3a4508e4490bb93b1b33215fc27532b3822c6e933ac75be54c44bac97",
+          "changes": [],
+          "sha256": "d34a73b3a4508e4490bb93b1b33215fc27532b3822c6e933ac75be54c44bac97",
+          "source": "/home/przvl/.config/kwinoutputconfig.json"
+        }
+      ]
     },
     {
       "path": "hardware/x11/bin/workstation-monitors",
@@ -946,11 +984,23 @@
     },
     {
       "path": "terminal/konsole/GentooClassic.profile",
+      "snapshot": "snapshot-07",
+      "captured": "2026-10-03",
       "commit": null,
-      "source_sha256": "6995f9a6c6f03c8ba85fcd45a615f7fb7393bd473bde3edecda78f0795f60420",
+      "source": "/home/przvl/.local/share/konsole/GentooClassic.profile",
+      "source_sha256": "6c1399bd1498dbfd99113bdd21a0da8d064aeb767ac8a8f8b29726450e0c6adf",
+      "sha256": "6c1399bd1498dbfd99113bdd21a0da8d064aeb767ac8a8f8b29726450e0c6adf",
       "changes": [],
-      "sha256": "6995f9a6c6f03c8ba85fcd45a615f7fb7393bd473bde3edecda78f0795f60420",
-      "source": "/home/przvl/.local/share/konsole/GentooClassic.profile"
+      "previous_captures": [
+        {
+          "path": "terminal/konsole/GentooClassic.profile",
+          "commit": null,
+          "source_sha256": "6995f9a6c6f03c8ba85fcd45a615f7fb7393bd473bde3edecda78f0795f60420",
+          "changes": [],
+          "sha256": "6995f9a6c6f03c8ba85fcd45a615f7fb7393bd473bde3edecda78f0795f60420",
+          "source": "/home/przvl/.local/share/konsole/GentooClassic.profile"
+        }
+      ]
     },
     {
       "path": "terminal/konsole/GentooClassic.colorscheme",
@@ -1640,9 +1690,10 @@
       "changes": [
         "Collection organization documentation.",
         "Update paths and documentation for desktop/shell organization and standalone Hyprland.",
-        "Document captured KDE font defaults and JetBrainsMono Nerd Font dependency."
+        "Document captured KDE font defaults and JetBrainsMono Nerd Font dependency.",
+        "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation."
       ],
-      "sha256": "eb2ebc17555eef2ac2dfcc024dd067bbaeb3cb59d58c72d3ae4304d38fb1da0e"
+      "sha256": "9409c198a50e40bbce8b7affad2972a811173e57af7abe45cec6160cd3976e0d"
     },
     {
       "path": "desktop/niri/README.md",
@@ -1736,9 +1787,10 @@
       "source_sha256": null,
       "changes": [
         "Document desktop collection taxonomy and helper composition.",
-        "Update shared/platform integration and associated documentation."
+        "Update shared/platform integration and associated documentation.",
+        "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation."
       ],
-      "sha256": "13172b3410dbefa45bdb0acc06451feb38b75b8a1f878305dbb0ed693e9c0666"
+      "sha256": "6db1964cbba0e1bdc51c7a02d409fa682d05705296cc0527df44314caf25d32c"
     },
     {
       "path": ".gitignore",
@@ -1774,9 +1826,10 @@
       "changes": [
         "Add narrow platform integration without duplicating application settings.",
         "Update shared/platform integration and associated documentation.",
-        "Document local Firefox CSS and preferences capture (snapshot-06) on 2026-10-03, including destinations, dependencies and validation."
+        "Document local Firefox CSS and preferences capture (snapshot-06) on 2026-10-03, including destinations, dependencies and validation.",
+        "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation."
       ],
-      "sha256": "0d5759c03320df14d541654a4e652d8ef4f7a08b8e707dc2a992e56aacdb44ff"
+      "sha256": "b434a6345498b52fbae9da24c9a0e081d1c125f4fb47880b84db9ad98a7a3323"
     },
     {
       "path": "AGENTS.md",
@@ -1837,9 +1890,10 @@
       "changes": [
         "Add narrow platform integration without duplicating application settings.",
         "Update shared/platform integration and associated documentation.",
-        "Correct Kitty source license reference after desktop directory reorganization."
+        "Correct Kitty source license reference after desktop directory reorganization.",
+        "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation."
       ],
-      "sha256": "4662c4706d5b45d081c5679df649c5e3c3fbc7f54ac4a598991e3532b2b7a299"
+      "sha256": "00e07e08a761e2688399abe689bf4cbc9b45ca873538cf75d02244d1a12bf12f"
     },
     {
       "path": "docs/validation.md",
@@ -1864,9 +1918,10 @@
       "changes": [
         "Add narrow platform integration without duplicating application settings.",
         "Update shared/platform integration and associated documentation.",
-        "Document local Firefox CSS and preferences capture (snapshot-06) on 2026-10-03, including destinations, dependencies and validation."
+        "Document local Firefox CSS and preferences capture (snapshot-06) on 2026-10-03, including destinations, dependencies and validation.",
+        "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation."
       ],
-      "sha256": "5423be0ee24b1a3e5bc3fb628fdcb31e33562960b5126d9107648fb87afa184d"
+      "sha256": "9a4ceb5785d11ac967d5d422918edb48969228b470551be2df5125b6922bd7cb"
     },
     {
       "path": "docs/adapting.md",
@@ -1878,9 +1933,10 @@
       "changes": [
         "Add narrow platform integration without duplicating application settings.",
         "Update shared/platform integration and associated documentation.",
-        "Document local Firefox CSS and preferences capture (snapshot-06) on 2026-10-03, including destinations, dependencies and validation."
+        "Document local Firefox CSS and preferences capture (snapshot-06) on 2026-10-03, including destinations, dependencies and validation.",
+        "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation."
       ],
-      "sha256": "366f46026d05499416a5ec3c0046ce24665d6e1bdaa2843d00fa31352b013517"
+      "sha256": "f6cb120fcfa82f833cf4817236e3ad52a8d3b9f69e759713196916e21616718d"
     },
     {
       "path": "hardware/README.md",
@@ -2076,9 +2132,10 @@
       "source_sha256": null,
       "source": "Collection platform integration derived from documented shared settings.",
       "changes": [
-        "Add narrow platform integration without duplicating application settings."
+        "Add narrow platform integration without duplicating application settings.",
+        "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation."
       ],
-      "sha256": "8915501e0d38a3f65c517676f04edf2379fd8b984f7943293077d771d746dceb"
+      "sha256": "2781fabe7b4a46478f9a320fae20c4d3a13c7932a708aca5a1df2d34bf2ff972"
     },
     {
       "path": "hardware/dock/README.md",
@@ -2148,9 +2205,10 @@
       "source_sha256": null,
       "source": "Collection integration and documentation.",
       "changes": [
-        "Document or adapt platform boundaries while sharing application settings."
+        "Document or adapt platform boundaries while sharing application settings.",
+        "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation."
       ],
-      "sha256": "71c9a113c64eff34e464bb78ab961b700aea59ce5bf4c1dda04883475d7ca898"
+      "sha256": "5ecb99e6ed162a8ff7258b72a0749a84aec244c2c8fa82a5d49d46d624e9a43c"
     },
     {
       "path": "desktop/common/bin/desktop-polkit-agent",
@@ -2298,6 +2356,62 @@
             "Extract only four appearance preferences; exclude the generated preferences file and all other values."
           ]
         }
+      ]
+    },
+    {
+      "path": "desktop/common/config/gtk/settings.ini",
+      "snapshot": "snapshot-07",
+      "captured": "2026-10-03",
+      "commit": null,
+      "source": "/home/przvl/.config/gtk-3.0/settings.ini",
+      "source_sha256": "4dda398dae5bb172660e188137877b6e7205a97f765f856217f929ea467c013e",
+      "sha256": "e63b5fe0e20b6a0915e151e2d9efb409b8f9a4d8795b81988266f2cbde4b97cb",
+      "changes": [
+        "Use one shared settings file for the identical GTK 3 and GTK 4 font settings.",
+        "Remove the extra trailing blank line."
+      ],
+      "derived_inputs": [
+        {
+          "source": "/home/przvl/.config/gtk-4.0/settings.ini",
+          "source_sha256": "4dda398dae5bb172660e188137877b6e7205a97f765f856217f929ea467c013e",
+          "changes": [
+            "Identical to the GTK 3 source; represented by the shared settings file."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "desktop/common/config/fontconfig/conf.d/99-jetbrains-mono.conf",
+      "snapshot": "snapshot-07",
+      "captured": "2026-10-03",
+      "commit": null,
+      "source": "/home/przvl/.config/fontconfig/conf.d/99-jetbrains-mono.conf",
+      "source_sha256": "3e677f2312d66603952ec91b194f84a119c3745ed16973b959667012df788463",
+      "sha256": "3e677f2312d66603952ec91b194f84a119c3745ed16973b959667012df788463",
+      "changes": []
+    },
+    {
+      "path": "desktop/common/config/fontconfig/fonts.conf",
+      "snapshot": "snapshot-07",
+      "captured": "2026-10-03",
+      "commit": null,
+      "source": "/home/przvl/.config/fontconfig/fonts.conf",
+      "source_sha256": "c907b349d7e75d08ee2fdca57fa036378a9c1429afb9dbdf2846e84bff4f634a",
+      "sha256": "432e2ec71bccf2e27889eb1511763ede5b93a8d7b4df65874e84449163d7ff68",
+      "changes": [
+        "Trim trailing whitespace; retain all font rules and comments."
+      ]
+    },
+    {
+      "path": "desktop/kde/config/dolphinrc",
+      "snapshot": "snapshot-07",
+      "captured": "2026-10-03",
+      "commit": null,
+      "source": "/home/przvl/.config/dolphinrc",
+      "source_sha256": "cbc9ec98bdb50d1b6ad0d1a058d27245a0b6f440318f66be190d12163d1652bc",
+      "sha256": "a4787f79f8a9fef5bdd1643482af2257c5feb0a3f25302ba8e9947fac35da054",
+      "changes": [
+        "Extract fixed 22px Places icons and hidden menu bar; omit generated Version and ViewPropsTimestamp fields."
       ]
     }
   ]

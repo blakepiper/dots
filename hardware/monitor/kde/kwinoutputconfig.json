@@ -89,7 +89,7 @@
                 "mode": {
                     "flags": 0,
                     "height": 1080,
-                    "refreshRate": 60000,
+                    "refreshRate": 120000,
                     "width": 1920
                 },
                 "mstPath": "-4-4\u0000",

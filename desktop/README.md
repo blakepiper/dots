@@ -11,4 +11,4 @@ Device settings live under [hardware](../hardware/README.md), terminal emulators
 
 Choose helper commands per session: KDE and X11 both supply `screenshot-region`; Niri and X11 both supply `clipboard-history` and `control-menu`. Merging all their `bin/` directories into one destination overwrites those commands. Shared application configs such as Waybar/Fuzzel likewise need an explicit choice or merge.
 
-[Shared desktop integration](common/README.md) holds selectable power-command profiles and polkit agent discovery. Session-manager alternatives live under the affected desktop's `session/` directory rather than duplicating its application configs.
+[Shared desktop integration](common/README.md) holds shared GTK/Fontconfig preferences, selectable power-command profiles and polkit agent discovery. Session-manager alternatives live under the affected desktop's `session/` directory rather than duplicating its application configs.
