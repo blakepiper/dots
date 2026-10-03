@@ -100,6 +100,12 @@
       "captured": "2026-10-01",
       "commit": null,
       "description": "Shared configuration with narrow session, power and activation alternatives"
+    },
+    "snapshot-05": {
+      "captured": "2026-10-03",
+      "description": "Capture current KDE JetBrainsMono Nerd Font defaults.",
+      "commit": null,
+      "base_commit": "d98e1b4880ffb7cfbaa29163d7b107b01adb013f"
     }
   },
   "files": [
@@ -279,12 +285,15 @@
     {
       "path": "desktop/kde/config/kdeglobals",
       "commit": null,
-      "source_sha256": "5a20e07006b05be7ad9d645e0c328c001d3e8536a0d3303b23399946bacfb93d",
+      "source_sha256": "de93adcf4e497cdf7d3c4d3753befbb21abc0c1085927b9befc42338b94afde2",
       "changes": [
-        "Reorganize collection by application and function; moved from kde/config/kdeglobals."
+        "Reorganize collection by application and function; moved from kde/config/kdeglobals.",
+        "Capture current general, fixed-width, menu, small, toolbar and window-title font settings from KDE; preserve other collected settings."
       ],
-      "sha256": "5a20e07006b05be7ad9d645e0c328c001d3e8536a0d3303b23399946bacfb93d",
-      "source": "/home/przvl/.config/kdeglobals"
+      "sha256": "d6c6dfcf098c5d25818d494050a27f1c08bd051d1f3fa591bd7e8d983c2a9a0d",
+      "source": "/home/przvl/.config/kdeglobals",
+      "snapshot": "snapshot-05",
+      "captured": "2026-10-03"
     },
     {
       "path": "desktop/kde/config/kcminputrc",
@@ -1617,15 +1626,16 @@
     },
     {
       "path": "desktop/kde/README.md",
-      "snapshot": "collection-01",
+      "snapshot": "snapshot-05",
       "commit": null,
-      "captured": "2026-10-01",
+      "captured": "2026-10-03",
       "source_sha256": null,
       "changes": [
         "Collection organization documentation.",
-        "Update paths and documentation for desktop/shell organization and standalone Hyprland."
+        "Update paths and documentation for desktop/shell organization and standalone Hyprland.",
+        "Document captured KDE font defaults and JetBrainsMono Nerd Font dependency."
       ],
-      "sha256": "6e26d1fbeb88ef7f5251703445f45428f3a06234017fb3acc6b19bf197e614c8"
+      "sha256": "eb2ebc17555eef2ac2dfcc024dd067bbaeb3cb59d58c72d3ae4304d38fb1da0e"
     },
     {
       "path": "desktop/niri/README.md",

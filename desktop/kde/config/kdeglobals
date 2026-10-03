@@ -133,6 +133,11 @@ ForegroundPositive=39,174,96
 ForegroundVisited=155,89,182
 
 [General]
+fixed=JetBrainsMono Nerd Font Mono,10,-1,0,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
+font=JetBrainsMono Nerd Font,10,-1,0,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
+menuFont=JetBrainsMono Nerd Font,10,-1,0,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
+smallestReadableFont=JetBrainsMono Nerd Font,8,-1,0,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
+toolBarFont=JetBrainsMono Nerd Font,10,-1,0,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
 ColorSchemeHash=0efb452114ece4d3338057cb89f434aff85d80d0
 
 [KDE]
@@ -159,6 +164,7 @@ Speedbar Width=140
 View Style=DetailTree
 
 [WM]
+activeFont=JetBrainsMono Nerd Font,10,-1,0,700,0,0,0,0,0,0,0,0,0,0,1,,0,0
 activeBackground=39,44,49
 activeBlend=252,252,252
 activeForeground=252,252,252
