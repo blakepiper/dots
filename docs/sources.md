@@ -9,6 +9,7 @@ Collected on 2026-10-01 from the current machine and four source snapshots. Orig
 | snapshot-03 | Alternate X11 keyboard/display hotplug examples and st customization |
 | snapshot-04 | Niri, bar/panel helpers, Kitty, mountain wallpaper and keyd mapping |
 | Local machine | KDE/SDDM/Neovim, wallpapers, Konsole, input and power rules, shell fragment |
+| snapshot-06 | Local Firefox interface CSS and explicit preferences, captured 2026-10-03 |
 
 Names in the collection describe the application, platform or function. Hyprland's helper and service names use `workstation`; Niri helpers use `desktop` for cache and application identifiers. The st shell wrapper is `st-shell`. Alternate X11 hardware files use `x11` names. References and dependent command paths were updated together.
 
@@ -21,3 +22,5 @@ No credentials, browser accounts, usage caches, shell histories, restored sessio
 Collection reorganization on 2026-10-01 groups desktops and SDDM under `desktop/` and moves shared Bash to `shell/bash/`. Hyprland Nix modules and their lock were replaced with plain Lua, Bash, application configs and systemd user units derived from snapshot-02. Hardware display values are in `hardware/hyprland/`; Foot settings are in `terminal/foot/`. The custom workspace buttons replace the Waybar source patch. Validation was skipped at the user's request.
 
 A subsequent platform pass on 2026-10-01 isolates Hyprland user units from shared configs, adds a portable session supervisor, separates Niri Awake inhibition backends, introduces shared configurable power commands, factors battery activation into shared behavior plus OpenRC/systemd/udev adapters, makes the X11 locker path configurable, and relocates optional tmux Nix packaging. Niri network detection now queries NetworkManager directly rather than systemctl. Captured implementations remain where they are meaningful alternatives. No account/service/hardware helpers were run and validation was skipped.
+
+Firefox capture on 2026-10-03 (`snapshot-06`) preserves the local `userChrome.css` unchanged and the reviewed `user.js` with four appearance preferences extracted from saved settings. The generated `prefs.js`, extension packages and browser data are excluded. Firefox 157.0 and target profile adaptation are documented in [browser](../browser/README.md). JavaScript syntax/literal settings, JSON records and hashes were checked; no Firefox runtime or visual check was performed.

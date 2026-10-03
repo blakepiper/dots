@@ -106,6 +106,13 @@
       "description": "Capture current KDE JetBrainsMono Nerd Font defaults.",
       "commit": null,
       "base_commit": "d98e1b4880ffb7cfbaa29163d7b107b01adb013f"
+    },
+    "snapshot-06": {
+      "captured": "2026-10-03",
+      "description": "Capture local Firefox interface CSS and explicit profile preferences.",
+      "commit": null,
+      "base_commit": "f1cc77e59269b717ff31bf4bc0c0016b2f383f02",
+      "firefox_version": "157.0"
     }
   },
   "files": [
@@ -1766,9 +1773,10 @@
       "source": "Collection platform integration derived from documented shared settings.",
       "changes": [
         "Add narrow platform integration without duplicating application settings.",
-        "Update shared/platform integration and associated documentation."
+        "Update shared/platform integration and associated documentation.",
+        "Document local Firefox CSS and preferences capture (snapshot-06) on 2026-10-03, including destinations, dependencies and validation."
       ],
-      "sha256": "d405d47564e6d2e71c2d419fbd3874ca61b5be4f57473f4e0ce850ad3b846153"
+      "sha256": "0d5759c03320df14d541654a4e652d8ef4f7a08b8e707dc2a992e56aacdb44ff"
     },
     {
       "path": "AGENTS.md",
@@ -1855,9 +1863,10 @@
       "source": "Collection platform integration derived from documented shared settings.",
       "changes": [
         "Add narrow platform integration without duplicating application settings.",
-        "Update shared/platform integration and associated documentation."
+        "Update shared/platform integration and associated documentation.",
+        "Document local Firefox CSS and preferences capture (snapshot-06) on 2026-10-03, including destinations, dependencies and validation."
       ],
-      "sha256": "06278781a9a1ec0538382d060aac29f735e2528c198f8aef1a1fdbb10f090a2e"
+      "sha256": "5423be0ee24b1a3e5bc3fb628fdcb31e33562960b5126d9107648fb87afa184d"
     },
     {
       "path": "docs/adapting.md",
@@ -1868,9 +1877,10 @@
       "source": "Collection platform integration derived from documented shared settings.",
       "changes": [
         "Add narrow platform integration without duplicating application settings.",
-        "Update shared/platform integration and associated documentation."
+        "Update shared/platform integration and associated documentation.",
+        "Document local Firefox CSS and preferences capture (snapshot-06) on 2026-10-03, including destinations, dependencies and validation."
       ],
-      "sha256": "193c3d0a2500d9d4eefec7cbac46a4158525c8d137f179df1155ffe88d8b6536"
+      "sha256": "366f46026d05499416a5ec3c0046ce24665d6e1bdaa2843d00fa31352b013517"
     },
     {
       "path": "hardware/README.md",
@@ -1893,9 +1903,10 @@
       "source_sha256": null,
       "source": "Collection platform integration derived from documented shared settings.",
       "changes": [
-        "Add narrow platform integration without duplicating application settings."
+        "Add narrow platform integration without duplicating application settings.",
+        "Document local Firefox CSS and preferences capture (snapshot-06) on 2026-10-03, including destinations, dependencies and validation."
       ],
-      "sha256": "b43a448d850367fd2a64f906ac02db6ec8ba482002adab9e004ac2a619fcf6c4"
+      "sha256": "5b958c649763df719007f247926bfa620d2b03e0d691b4baa9b495f617c80351"
     },
     {
       "path": "nvim/README.md",
@@ -2251,6 +2262,43 @@
         "Isolate environment handling in the selected Niri backend."
       ],
       "sha256": "1d9ecd5847e27265bace94e1deaf54d8ac99b6c8e8bc20561175091ddbd8c89c"
+    },
+    {
+      "path": "browser/firefox/chrome/userChrome.css",
+      "snapshot": "snapshot-06",
+      "captured": "2026-10-03",
+      "commit": null,
+      "source_sha256": "8dab8666e987fb8f59ecd0edb6e35165434b504e571b053d05e11451b0bba6b0",
+      "source": "/home/przvl/.config/mozilla/firefox/uck3f97t.default-release/chrome/userChrome.css",
+      "changes": [],
+      "sha256": "8dab8666e987fb8f59ecd0edb6e35165434b504e571b053d05e11451b0bba6b0"
+    },
+    {
+      "path": "browser/firefox/user.js",
+      "snapshot": "snapshot-06",
+      "captured": "2026-10-03",
+      "commit": null,
+      "source_sha256": "67c760a876113ebb4418aad148ce59de2c3d153c29c71a54645538a9d20bc95e",
+      "source": "/home/przvl/.config/mozilla/firefox/uck3f97t.default-release/user.js",
+      "changes": [
+        "Append built-in theme, toolbar theme, vertical tabs and disabled new-tab-page preferences extracted from local prefs.js."
+      ],
+      "sha256": "d1499ba8bbabb23b9baf2e679e8fe51adaee8d1c56ad217d461c5ca9821635c4",
+      "derived_inputs": [
+        {
+          "source": "/home/przvl/.config/mozilla/firefox/uck3f97t.default-release/prefs.js",
+          "source_sha256": "03eeafefbd453fed30f7eda3e8590d01960a4ec4db38a80b70490251e08ee218",
+          "preferences": [
+            "extensions.activeThemeID",
+            "browser.theme.toolbar-theme",
+            "sidebar.verticalTabs",
+            "browser.newtabpage.enabled"
+          ],
+          "changes": [
+            "Extract only four appearance preferences; exclude the generated preferences file and all other values."
+          ]
+        }
+      ]
     }
   ]
 }

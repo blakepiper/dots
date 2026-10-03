@@ -16,7 +16,7 @@ Personal configuration raw material for people and agents to inspect, borrow, an
 | [terminal](terminal/README.md) | Konsole, Kitty, Foot, st customization, tmux and neofetch |
 | [shell](shell/README.md) | Shared Bash startup with ble.sh |
 | [desktop/x11](desktop/x11/README.md) | Session, compositor, clipboard, screenshots, locking, and control menu |
-| [browser](browser/README.md) | Firefox policy reference |
+| [browser](browser/README.md) | Firefox interface styling, profile preferences, and policy reference |
 
 Start with [keybinds](keybinds/README.md) for behavior, then the application or desktop you want. Hardware choices are independent of desktop preferences. Desktop sessions and the greeter live under `desktop/`; terminal emulators live under `terminal/`, and interactive Bash under `shell/`. Hyprland uses plain configs and scripts. See [desktop composition](desktop/README.md) for dependencies and overlapping helper names.
 

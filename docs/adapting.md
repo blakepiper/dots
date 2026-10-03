@@ -18,3 +18,5 @@ For [Niri](../desktop/niri/README.md), merge the KDL and companion configs indep
 All terminal choices share [Bash with ble.sh](../shell/bash/README.md). Install ble.sh and merge the common rcfile fragment on every adopting machine; an absent ble.sh installation leaves that preference incomplete.
 
 Choose platform adapters at the [documented boundaries](platforms.md). Shared desktop power menus require a selected trusted Bash profile; copying all alternative service trees together is not an adoption procedure.
+
+For [Firefox](../browser/README.md), merge `browser/firefox/user.js` and `browser/firefox/chrome/userChrome.css` into the target profile root and its `chrome/` directory. Obtain that root from `about:profiles`; the captured username and generated profile name are machine-specific. The profile preferences include behavioral privacy choices as well as appearance, and the enterprise policy file has a separate installation-wide destination.
