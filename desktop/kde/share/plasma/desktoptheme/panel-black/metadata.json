@@ -1,0 +1,8 @@
+{
+  "KPlugin": {
+    "Id": "panel-black",
+    "Name": "Black panel",
+    "Version": "1.0",
+    "Description": "Breeze with a solid black panel"
+  }
+}

@@ -167,6 +167,16 @@
           "reason": "Replace captured launcher icon with selected blue Arch SVG; prior bytes retained in Git history."
         }
       ]
+    },
+    "snapshot-09": {
+      "captured": "2026-10-03",
+      "commit": null,
+      "base_commit": "958a649cf8d44c0ad7e17e1b3124a3555f3768bc",
+      "description": "Capture the user-confirmed solid black KDE topbar preference and adapt the panel theme to the collection functional ID.",
+      "validation": {
+        "live": "plasma-black selected through plasma-apply-desktoptheme; user confirmed the appearance.",
+        "collection": "JSON, INI, SVG surface opacity, geometry, source hashes and references checked without activating machine settings."
+      }
     }
   },
   "files": [
@@ -439,14 +449,13 @@
     {
       "path": "desktop/kde/config/plasmarc",
       "commit": null,
-      "source_sha256": "311fd452e540a3e7a8c5fddcf87e211448af44fd740839c5f5b66ca674da82c4",
+      "source_sha256": "244fa327225767304691e0ca17b43784b424014b89d1b19c4da1d0325ba16a16",
       "changes": [
-        "Reorganize collection by application and function; moved from kde/config/plasmarc.",
-        "Use functional runtime/package names and update dependent references; retain content and required notices."
+        "Select the black panel theme using the functional collection ID panel-black; preserve the existing wallpaper reference."
       ],
-      "sha256": "c21dc103f88171c794fdad1f24f5e70d1dfb4dacdd73081b24e8c2e9dcfb0c96",
+      "sha256": "666f8fbd9f0925173b032b3c53aed5ecfa4652812a75847f6c00689e5ede5917",
       "source": "/home/przvl/.config/plasmarc",
-      "snapshot": "collection-03",
+      "snapshot": "snapshot-09",
       "captured": "2026-10-03",
       "previous_captures": [
         {
@@ -458,6 +467,19 @@
           ],
           "sha256": "311fd452e540a3e7a8c5fddcf87e211448af44fd740839c5f5b66ca674da82c4",
           "source": "/home/przvl/.config/plasmarc"
+        },
+        {
+          "path": "desktop/kde/config/plasmarc",
+          "commit": null,
+          "source_sha256": "311fd452e540a3e7a8c5fddcf87e211448af44fd740839c5f5b66ca674da82c4",
+          "changes": [
+            "Reorganize collection by application and function; moved from kde/config/plasmarc.",
+            "Use functional runtime/package names and update dependent references; retain content and required notices."
+          ],
+          "sha256": "c21dc103f88171c794fdad1f24f5e70d1dfb4dacdd73081b24e8c2e9dcfb0c96",
+          "source": "/home/przvl/.config/plasmarc",
+          "snapshot": "collection-03",
+          "captured": "2026-10-03"
         }
       ]
     },
@@ -696,16 +718,16 @@
       ]
     },
     {
-      "path": "desktop/kde/share/plasma/desktoptheme/panel-transparent/metadata.json",
+      "path": "desktop/kde/share/plasma/desktoptheme/panel-black/metadata.json",
       "commit": null,
-      "source_sha256": "bcca8d8a4cdd9a18c863e77cc41fbe99b5048f3007676faa85c3672dc708c85a",
+      "source_sha256": "b0a199c6a10ce870dabf552f9466511f8c9bb3286faa11f58ba7de5b9feb1138",
       "changes": [
-        "Reorganize collection by application and function; moved from kde/share/plasma/desktoptheme/gentoo-transparent/metadata.json.",
-        "Use functional runtime/package names and update dependent references; retain content and required notices."
+        "Replace the transparent panel theme with the user-confirmed solid black variant; retain the upstream theme layout.",
+        "Adapt the local plasma-black theme ID and display name to the functional collection ID panel-black."
       ],
-      "sha256": "9b572df55b3cb1047b516f87728d9fb1b1e82c090bc7c2509fbd11baa9a46b7b",
-      "source": "/home/przvl/.local/share/plasma/desktoptheme/gentoo-transparent/metadata.json",
-      "snapshot": "collection-03",
+      "sha256": "ab206c2151b6435b356c988251b9fef9f4a4cf2667613092434a986df8756a6b",
+      "source": "/home/przvl/.local/share/plasma/desktoptheme/plasma-black/metadata.json",
+      "snapshot": "snapshot-09",
       "captured": "2026-10-03",
       "previous_captures": [
         {
@@ -717,20 +739,33 @@
           ],
           "sha256": "bcca8d8a4cdd9a18c863e77cc41fbe99b5048f3007676faa85c3672dc708c85a",
           "source": "/home/przvl/.local/share/plasma/desktoptheme/gentoo-transparent/metadata.json"
+        },
+        {
+          "path": "desktop/kde/share/plasma/desktoptheme/panel-transparent/metadata.json",
+          "commit": null,
+          "source_sha256": "bcca8d8a4cdd9a18c863e77cc41fbe99b5048f3007676faa85c3672dc708c85a",
+          "changes": [
+            "Reorganize collection by application and function; moved from kde/share/plasma/desktoptheme/gentoo-transparent/metadata.json.",
+            "Use functional runtime/package names and update dependent references; retain content and required notices."
+          ],
+          "sha256": "9b572df55b3cb1047b516f87728d9fb1b1e82c090bc7c2509fbd11baa9a46b7b",
+          "source": "/home/przvl/.local/share/plasma/desktoptheme/gentoo-transparent/metadata.json",
+          "snapshot": "collection-03",
+          "captured": "2026-10-03"
         }
       ]
     },
     {
-      "path": "desktop/kde/share/plasma/desktoptheme/panel-transparent/opaque/widgets/panel-background.svg",
+      "path": "desktop/kde/share/plasma/desktoptheme/panel-black/opaque/widgets/panel-background.svg",
       "commit": null,
-      "source_sha256": "2e38bd37219e349e3e82ad2972d0b4ddbe13f66f1b75272bb8c7f1959424d8de",
+      "source_sha256": "6637e3db857b7b2326c7a296017bac949d208bc548a3b9f44edadb19c0ca864c",
       "changes": [
-        "Reorganize collection by application and function; moved from kde/share/plasma/desktoptheme/gentoo-transparent/opaque/widgets/panel-background.svg.",
-        "Use functional runtime/package names and update dependent references; retain content and required notices."
+        "Replace the transparent panel theme with the user-confirmed solid black variant; retain the upstream theme layout.",
+        "Capture opaque #000000 panel surfaces and masks; retain original geometry, margins and shadow settings."
       ],
-      "sha256": "2e38bd37219e349e3e82ad2972d0b4ddbe13f66f1b75272bb8c7f1959424d8de",
-      "source": "/home/przvl/.local/share/plasma/desktoptheme/gentoo-transparent/opaque/widgets/panel-background.svg",
-      "snapshot": "collection-03",
+      "sha256": "6637e3db857b7b2326c7a296017bac949d208bc548a3b9f44edadb19c0ca864c",
+      "source": "/home/przvl/.local/share/plasma/desktoptheme/plasma-black/opaque/widgets/panel-background.svg",
+      "snapshot": "snapshot-09",
       "captured": "2026-10-03",
       "previous_captures": [
         {
@@ -742,20 +777,33 @@
           ],
           "sha256": "2e38bd37219e349e3e82ad2972d0b4ddbe13f66f1b75272bb8c7f1959424d8de",
           "source": "/home/przvl/.local/share/plasma/desktoptheme/gentoo-transparent/opaque/widgets/panel-background.svg"
+        },
+        {
+          "path": "desktop/kde/share/plasma/desktoptheme/panel-transparent/opaque/widgets/panel-background.svg",
+          "commit": null,
+          "source_sha256": "2e38bd37219e349e3e82ad2972d0b4ddbe13f66f1b75272bb8c7f1959424d8de",
+          "changes": [
+            "Reorganize collection by application and function; moved from kde/share/plasma/desktoptheme/gentoo-transparent/opaque/widgets/panel-background.svg.",
+            "Use functional runtime/package names and update dependent references; retain content and required notices."
+          ],
+          "sha256": "2e38bd37219e349e3e82ad2972d0b4ddbe13f66f1b75272bb8c7f1959424d8de",
+          "source": "/home/przvl/.local/share/plasma/desktoptheme/gentoo-transparent/opaque/widgets/panel-background.svg",
+          "snapshot": "collection-03",
+          "captured": "2026-10-03"
         }
       ]
     },
     {
-      "path": "desktop/kde/share/plasma/desktoptheme/panel-transparent/plasmarc",
+      "path": "desktop/kde/share/plasma/desktoptheme/panel-black/plasmarc",
       "commit": null,
       "source_sha256": "0cb5406b4853cec2d4d8787fbfd471edfe3701c91d502521a01e729da3adf235",
       "changes": [
-        "Reorganize collection by application and function; moved from kde/share/plasma/desktoptheme/gentoo-transparent/plasmarc.",
-        "Use functional runtime/package names and update dependent references; retain content and required notices."
+        "Replace the transparent panel theme with the user-confirmed solid black variant; retain the upstream theme layout.",
+        "Retain the Breeze fallback and disabled adaptive transparency settings unchanged."
       ],
       "sha256": "0cb5406b4853cec2d4d8787fbfd471edfe3701c91d502521a01e729da3adf235",
-      "source": "/home/przvl/.local/share/plasma/desktoptheme/gentoo-transparent/plasmarc",
-      "snapshot": "collection-03",
+      "source": "/home/przvl/.local/share/plasma/desktoptheme/plasma-black/plasmarc",
+      "snapshot": "snapshot-09",
       "captured": "2026-10-03",
       "previous_captures": [
         {
@@ -767,20 +815,33 @@
           ],
           "sha256": "0cb5406b4853cec2d4d8787fbfd471edfe3701c91d502521a01e729da3adf235",
           "source": "/home/przvl/.local/share/plasma/desktoptheme/gentoo-transparent/plasmarc"
+        },
+        {
+          "path": "desktop/kde/share/plasma/desktoptheme/panel-transparent/plasmarc",
+          "commit": null,
+          "source_sha256": "0cb5406b4853cec2d4d8787fbfd471edfe3701c91d502521a01e729da3adf235",
+          "changes": [
+            "Reorganize collection by application and function; moved from kde/share/plasma/desktoptheme/gentoo-transparent/plasmarc.",
+            "Use functional runtime/package names and update dependent references; retain content and required notices."
+          ],
+          "sha256": "0cb5406b4853cec2d4d8787fbfd471edfe3701c91d502521a01e729da3adf235",
+          "source": "/home/przvl/.local/share/plasma/desktoptheme/gentoo-transparent/plasmarc",
+          "snapshot": "collection-03",
+          "captured": "2026-10-03"
         }
       ]
     },
     {
-      "path": "desktop/kde/share/plasma/desktoptheme/panel-transparent/translucent/widgets/panel-background.svg",
+      "path": "desktop/kde/share/plasma/desktoptheme/panel-black/translucent/widgets/panel-background.svg",
       "commit": null,
-      "source_sha256": "2e38bd37219e349e3e82ad2972d0b4ddbe13f66f1b75272bb8c7f1959424d8de",
+      "source_sha256": "6637e3db857b7b2326c7a296017bac949d208bc548a3b9f44edadb19c0ca864c",
       "changes": [
-        "Reorganize collection by application and function; moved from kde/share/plasma/desktoptheme/gentoo-transparent/translucent/widgets/panel-background.svg.",
-        "Use functional runtime/package names and update dependent references; retain content and required notices."
+        "Replace the transparent panel theme with the user-confirmed solid black variant; retain the upstream theme layout.",
+        "Capture opaque #000000 panel surfaces and masks; retain original geometry, margins and shadow settings."
       ],
-      "sha256": "2e38bd37219e349e3e82ad2972d0b4ddbe13f66f1b75272bb8c7f1959424d8de",
-      "source": "/home/przvl/.local/share/plasma/desktoptheme/gentoo-transparent/translucent/widgets/panel-background.svg",
-      "snapshot": "collection-03",
+      "sha256": "6637e3db857b7b2326c7a296017bac949d208bc548a3b9f44edadb19c0ca864c",
+      "source": "/home/przvl/.local/share/plasma/desktoptheme/plasma-black/translucent/widgets/panel-background.svg",
+      "snapshot": "snapshot-09",
       "captured": "2026-10-03",
       "previous_captures": [
         {
@@ -792,20 +853,33 @@
           ],
           "sha256": "2e38bd37219e349e3e82ad2972d0b4ddbe13f66f1b75272bb8c7f1959424d8de",
           "source": "/home/przvl/.local/share/plasma/desktoptheme/gentoo-transparent/translucent/widgets/panel-background.svg"
+        },
+        {
+          "path": "desktop/kde/share/plasma/desktoptheme/panel-transparent/translucent/widgets/panel-background.svg",
+          "commit": null,
+          "source_sha256": "2e38bd37219e349e3e82ad2972d0b4ddbe13f66f1b75272bb8c7f1959424d8de",
+          "changes": [
+            "Reorganize collection by application and function; moved from kde/share/plasma/desktoptheme/gentoo-transparent/translucent/widgets/panel-background.svg.",
+            "Use functional runtime/package names and update dependent references; retain content and required notices."
+          ],
+          "sha256": "2e38bd37219e349e3e82ad2972d0b4ddbe13f66f1b75272bb8c7f1959424d8de",
+          "source": "/home/przvl/.local/share/plasma/desktoptheme/gentoo-transparent/translucent/widgets/panel-background.svg",
+          "snapshot": "collection-03",
+          "captured": "2026-10-03"
         }
       ]
     },
     {
-      "path": "desktop/kde/share/plasma/desktoptheme/panel-transparent/widgets/panel-background.svg",
+      "path": "desktop/kde/share/plasma/desktoptheme/panel-black/widgets/panel-background.svg",
       "commit": null,
-      "source_sha256": "2e38bd37219e349e3e82ad2972d0b4ddbe13f66f1b75272bb8c7f1959424d8de",
+      "source_sha256": "6637e3db857b7b2326c7a296017bac949d208bc548a3b9f44edadb19c0ca864c",
       "changes": [
-        "Reorganize collection by application and function; moved from kde/share/plasma/desktoptheme/gentoo-transparent/widgets/panel-background.svg.",
-        "Use functional runtime/package names and update dependent references; retain content and required notices."
+        "Replace the transparent panel theme with the user-confirmed solid black variant; retain the upstream theme layout.",
+        "Capture opaque #000000 panel surfaces and masks; retain original geometry, margins and shadow settings."
       ],
-      "sha256": "2e38bd37219e349e3e82ad2972d0b4ddbe13f66f1b75272bb8c7f1959424d8de",
-      "source": "/home/przvl/.local/share/plasma/desktoptheme/gentoo-transparent/widgets/panel-background.svg",
-      "snapshot": "collection-03",
+      "sha256": "6637e3db857b7b2326c7a296017bac949d208bc548a3b9f44edadb19c0ca864c",
+      "source": "/home/przvl/.local/share/plasma/desktoptheme/plasma-black/widgets/panel-background.svg",
+      "snapshot": "snapshot-09",
       "captured": "2026-10-03",
       "previous_captures": [
         {
@@ -817,6 +891,19 @@
           ],
           "sha256": "2e38bd37219e349e3e82ad2972d0b4ddbe13f66f1b75272bb8c7f1959424d8de",
           "source": "/home/przvl/.local/share/plasma/desktoptheme/gentoo-transparent/widgets/panel-background.svg"
+        },
+        {
+          "path": "desktop/kde/share/plasma/desktoptheme/panel-transparent/widgets/panel-background.svg",
+          "commit": null,
+          "source_sha256": "2e38bd37219e349e3e82ad2972d0b4ddbe13f66f1b75272bb8c7f1959424d8de",
+          "changes": [
+            "Reorganize collection by application and function; moved from kde/share/plasma/desktoptheme/gentoo-transparent/widgets/panel-background.svg.",
+            "Use functional runtime/package names and update dependent references; retain content and required notices."
+          ],
+          "sha256": "2e38bd37219e349e3e82ad2972d0b4ddbe13f66f1b75272bb8c7f1959424d8de",
+          "source": "/home/przvl/.local/share/plasma/desktoptheme/gentoo-transparent/widgets/panel-background.svg",
+          "snapshot": "collection-03",
+          "captured": "2026-10-03"
         }
       ]
     },
@@ -2199,18 +2286,14 @@
     },
     {
       "path": "desktop/kde/README.md",
-      "snapshot": "collection-03",
+      "snapshot": "snapshot-09",
       "commit": null,
       "captured": "2026-10-03",
       "source_sha256": null,
       "changes": [
-        "Collection organization documentation.",
-        "Update paths and documentation for desktop/shell organization and standalone Hyprland.",
-        "Document captured KDE font defaults and JetBrainsMono Nerd Font dependency.",
-        "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation.",
-        "Document reviewed deployment findings, preferences, dependencies and validation."
+        "Document the user-confirmed solid black topbar preference, functional panel-black theme, deployment mapping and validation."
       ],
-      "sha256": "c820fb7adf25dbac8531da52dee977b180c2871835acc58ec5b242c5d9d25b97",
+      "sha256": "96f78e16f2453bea80ecd703e42fa35ab442a7f53781c5ac9d1c725880aa663b",
       "previous_captures": [
         {
           "path": "desktop/kde/README.md",
@@ -2225,8 +2308,24 @@
             "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation."
           ],
           "sha256": "9409c198a50e40bbce8b7affad2972a811173e57af7abe45cec6160cd3976e0d"
+        },
+        {
+          "path": "desktop/kde/README.md",
+          "snapshot": "collection-03",
+          "commit": null,
+          "captured": "2026-10-03",
+          "source_sha256": null,
+          "changes": [
+            "Collection organization documentation.",
+            "Update paths and documentation for desktop/shell organization and standalone Hyprland.",
+            "Document captured KDE font defaults and JetBrainsMono Nerd Font dependency.",
+            "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation.",
+            "Document reviewed deployment findings, preferences, dependencies and validation."
+          ],
+          "sha256": "c820fb7adf25dbac8531da52dee977b180c2871835acc58ec5b242c5d9d25b97"
         }
-      ]
+      ],
+      "source": "Collection documentation of user-confirmed topbar preference (snapshot-09)."
     },
     {
       "path": "desktop/niri/README.md",
@@ -2555,19 +2654,15 @@
     },
     {
       "path": "docs/sources.md",
-      "snapshot": "collection-03",
+      "snapshot": "snapshot-09",
       "captured": "2026-10-03",
       "commit": null,
       "source_sha256": null,
-      "source": "Collection platform integration derived from documented shared settings.",
+      "source": "Collection documentation of user-confirmed topbar preference (snapshot-09).",
       "changes": [
-        "Add narrow platform integration without duplicating application settings.",
-        "Update shared/platform integration and associated documentation.",
-        "Document local Firefox CSS and preferences capture (snapshot-06) on 2026-10-03, including destinations, dependencies and validation.",
-        "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation.",
-        "Document reviewed deployment findings, preferences, dependencies and validation."
+        "Document the user-confirmed solid black topbar preference, functional panel-black theme, deployment mapping and validation."
       ],
-      "sha256": "a863bba1fde75f934f9a83feeba392c86a9a888be1dd912f84446aa8e0405bc8",
+      "sha256": "87e283e112880e4bf68937ef7d41a577d9021c589bc332f59a9e7c6cd9849047",
       "previous_captures": [
         {
           "path": "docs/sources.md",
@@ -2583,6 +2678,22 @@
             "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation."
           ],
           "sha256": "9a4ceb5785d11ac967d5d422918edb48969228b470551be2df5125b6922bd7cb"
+        },
+        {
+          "path": "docs/sources.md",
+          "snapshot": "collection-03",
+          "captured": "2026-10-03",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection platform integration derived from documented shared settings.",
+          "changes": [
+            "Add narrow platform integration without duplicating application settings.",
+            "Update shared/platform integration and associated documentation.",
+            "Document local Firefox CSS and preferences capture (snapshot-06) on 2026-10-03, including destinations, dependencies and validation.",
+            "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation.",
+            "Document reviewed deployment findings, preferences, dependencies and validation."
+          ],
+          "sha256": "a863bba1fde75f934f9a83feeba392c86a9a888be1dd912f84446aa8e0405bc8"
         }
       ]
     },
@@ -3250,14 +3361,28 @@
     },
     {
       "path": "desktop/kde/activation.md",
-      "snapshot": "collection-03",
+      "snapshot": "snapshot-09",
       "captured": "2026-10-03",
       "commit": null,
-      "source": "Collection adaptation of reviewed deployment findings (snapshot-08).",
+      "source": "Collection documentation of user-confirmed topbar preference (snapshot-09).",
       "source_sha256": null,
-      "sha256": "a7eff5fa28b580419e745a809cd77f80727fffd4f65f192a6ee476d0ea749be5",
+      "sha256": "a1d14c703bb19c2c4c2f09e61d3ddb1b8d7fe3bc07bf18c3e32b6f5ce086c9eb",
       "changes": [
-        "Document preferences, dependencies, target adaptation and evidence."
+        "Document the user-confirmed solid black topbar preference, functional panel-black theme, deployment mapping and validation."
+      ],
+      "previous_captures": [
+        {
+          "path": "desktop/kde/activation.md",
+          "snapshot": "collection-03",
+          "captured": "2026-10-03",
+          "commit": null,
+          "source": "Collection adaptation of reviewed deployment findings (snapshot-08).",
+          "source_sha256": null,
+          "sha256": "a7eff5fa28b580419e745a809cd77f80727fffd4f65f192a6ee476d0ea749be5",
+          "changes": [
+            "Document preferences, dependencies, target adaptation and evidence."
+          ]
+        }
       ]
     },
     {
@@ -3377,14 +3502,28 @@
     },
     {
       "path": "docs/preferences.md",
-      "snapshot": "collection-03",
+      "snapshot": "snapshot-09",
       "captured": "2026-10-03",
       "commit": null,
-      "source": "Collection adaptation of reviewed deployment findings (snapshot-08).",
+      "source": "Collection documentation of user-confirmed topbar preference (snapshot-09).",
       "source_sha256": null,
-      "sha256": "d9c3b186968cdaebca935b400c578f2b1ba826dd68ea93cff698a334d61d95eb",
+      "sha256": "4f04a273d323e4526b90129529cfa50c9795b0dbd82b829c411a24542a9b464e",
       "changes": [
-        "Document preferences, dependencies, target adaptation and evidence."
+        "Document the user-confirmed solid black topbar preference, functional panel-black theme, deployment mapping and validation."
+      ],
+      "previous_captures": [
+        {
+          "path": "docs/preferences.md",
+          "snapshot": "collection-03",
+          "captured": "2026-10-03",
+          "commit": null,
+          "source": "Collection adaptation of reviewed deployment findings (snapshot-08).",
+          "source_sha256": null,
+          "sha256": "d9c3b186968cdaebca935b400c578f2b1ba826dd68ea93cff698a334d61d95eb",
+          "changes": [
+            "Document preferences, dependencies, target adaptation and evidence."
+          ]
+        }
       ]
     },
     {

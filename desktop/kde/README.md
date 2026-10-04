@@ -6,7 +6,7 @@ Current-machine snapshot: `config/` contains selected `~/.config` settings, `sha
 - `share/kwin/scripts/kde-tiling`: automatic recursive splits or master/stack, window cycling/swapping, floating toggle, adjustable first split. It removes decorations on tiled windows and uses its own layout state.
 - `kde-focus-border`: the companion focused-window border. `kde-screenshot`: region screenshot shortcut via a session D-Bus service.
 - `kdeglobals`: JetBrainsMono Nerd Font at 10 pt for general, menu and toolbar text, 8 pt for small text, and 10 pt bold for window titles; fixed-width text uses JetBrainsMono Nerd Font Mono at 10 pt. Font settings captured in `snapshot-05` on 2026-10-03.
-- `plasmarc`, desktop applets and shell settings: dark appearance, wallpaper, transparent panel theme, panel layout, CPU/RAM widgets, and launcher icon. The custom theme and widgets are included under `share/plasma/`.
+- `plasmarc`, desktop applets and shell settings: dark appearance, wallpaper, solid black panel theme, panel layout, CPU/RAM widgets, and launcher icon. The custom theme and widgets are included under `share/plasma/`.
 - `kglobalshortcutsrc`: actual captured assignments; compare the portable intent in `../../keybinds/README.md` before merging.
 - `kcminputrc`, `kxkbrc`: cursor/input settings; device mappings are host-specific. Current KDE repeat delay/rate are 600 ms / 25 Hz.
 - Lock-screen, session, notification, locale, and power files preserve the selected current preferences.
@@ -39,3 +39,14 @@ The selected local wrapper, Flameshot activation override, cursor index and laun
 | `desktop/kde/share/dbus-1/services/org.local.Screenshot.service` | `8db3b2283c4868722df0d222b9040fc7d1cadab11a559c97849a931ce728f7c5` |
 | `desktop/kde/share/icons/archlinux-launcher.svg` | `db71ef7ee868dc2127c936252f55691b0f7db0ac997737c356fc91d93fcb670f` |
 | `desktop/kde/share/icons/screenshot-crosshair/index.theme` | `b81b2c879ad1353aa22d7a56b632cb21555d2dd522adb105fa094f784c9cbaa2` |
+
+## Black topbar preference
+
+`snapshot-09`, 2026-10-03, captures the user-confirmed solid black (`#000000`) topbar. The active local `plasma-black` theme is collected as `share/plasma/desktoptheme/panel-black/`, with matching metadata and `config/plasmarc`. This replaces the earlier transparent theme. The regular, opaque and translucent SVG variants use full-opacity black surfaces and masks, preserving geometry, margins, shadows and the existing panel layout. The theme retains its Breeze fallback and disabled adaptive transparency setting.
+
+Install under the target user’s `~/.local/share/plasma/desktoptheme/panel-black/` and select `panel-black` as described in [activation.md](activation.md). Adapt the existing wallpaper path in `config/plasmarc` to the target. No local source commit is available; source/current hashes and previous captures are retained in [sources.json](../../docs/sources.json). JSON, INI, SVG geometry/opacity and manifest integrity were checked. The user confirmed the earlier live appearance; this collection update did not activate desktop settings.
+
+| Collection file | SHA-256 |
+| --- | --- |
+| `desktop/kde/share/plasma/desktoptheme/panel-black/metadata.json` | `ab206c2151b6435b356c988251b9fef9f4a4cf2667613092434a986df8756a6b` |
+| `desktop/kde/share/plasma/desktoptheme/panel-black/widgets/panel-background.svg` (also identical in `opaque/` and `translucent/`) | `6637e3db857b7b2326c7a296017bac949d208bc548a3b9f44edadb19c0ca864c` |

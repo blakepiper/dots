@@ -1,11 +1,11 @@
 # Preferred behavior
 
-These choices were clarified during the 2026-10-03 KDE deployment. They describe intended behavior separately from older captures and target-specific IDs. The deployment findings are recorded as `snapshot-08` in [sources.json](sources.json); the collection adaptation uses `collection-03`. [Keybindings](../keybinds/README.md) remain the authoritative shortcut intent and difference matrix.
+These choices were clarified during the 2026-10-03 KDE deployment. They describe intended behavior separately from older captures and target-specific IDs. The deployment findings are recorded as `snapshot-08` in [sources.json](sources.json); the collection adaptation uses `collection-03`. The later user-confirmed solid black topbar preference and theme are recorded in `snapshot-09`. [Keybindings](../keybinds/README.md) remain the authoritative shortcut intent and difference matrix.
 
 | Area | Preference |
 | --- | --- |
 | Desktop | Plasma Wayland, retaining the target's existing init/session setup; dinit on the documented Artix machine. |
-| Appearance | Dark colors, compact 20px top panel, transparent panel theme, tiling/focus border and CPU/RAM readouts. Blue Arch launcher logo (`#1793d1`), regardless of the actual OS label. |
+| Appearance | Dark colors, compact 20px top panel, solid black (`#000000`) panel background, tiling/focus border and CPU/RAM readouts. Blue Arch launcher logo (`#1793d1`), regardless of the actual OS label. |
 | Panel | Launcher with 685px popup, numeric pager 1–5, margins separator, expanding spacer, RAM, CPU, battery, system tray and clock. Roles/order are portable; containment/activity/output IDs are not. |
 | Desktops | Five desktops named 1–5. Show their indexes, without window icons/outlines or truncated names. No slide, scale, zoom or similar switching transition. |
 | Overview | No top-left hover activation. Keep keyboard Overview, Grid and tile editor. |

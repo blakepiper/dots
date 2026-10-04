@@ -28,7 +28,9 @@ Here `6` is `SetPresent | NoAutoloading` (`2 | 4`) on the observed build. Verify
 
 ## Panel, effects and wallpaper
 
-Recreate the panel through Plasma's target API, associating discovered activity/output IDs. The snapshot's nine roles are launcher, numeric pager, separator, spacer, RAM, CPU, battery, system tray and clock. Use 20px height and 685px launcher popup width. Install the included packages under their functional IDs: `kde-tiling`, `kde-focus-border`, `kde-screenshot`, `panel-transparent`, `local.plasma.cpu`, `local.plasma.ram`. When migrating an older deployment, remove its old registrations rather than enabling duplicate scripts/widgets; shortcut names now use `KDE`.
+Recreate the panel through Plasma's target API, associating discovered activity/output IDs. The snapshot's nine roles are launcher, numeric pager, separator, spacer, RAM, CPU, battery, system tray and clock. Use 20px height and 685px launcher popup width. Install the included packages under their functional IDs: `kde-tiling`, `kde-focus-border`, `kde-screenshot`, `panel-black`, `local.plasma.cpu`, `local.plasma.ram`. When migrating an older deployment, remove its old registrations rather than enabling duplicate scripts/widgets; shortcut names now use `KDE`.
+
+The preferred topbar background is solid black (`#000000`) with full opacity, captured in `snapshot-09`. Install `share/plasma/desktoptheme/panel-black/` under `~/.local/share/plasma/desktoptheme/panel-black/`, then select it with `plasma-apply-desktoptheme panel-black` during an authorized deployment. The local confirmed theme was named `plasma-black`; the collection uses `panel-black` consistently in metadata and `config/plasmarc`. All three panel SVG variants render black so the panel opacity mode does not restore transparency. Other surfaces fall back to Breeze; panel geometry and widget order are retained.
 
 On Plasma 6.7.5, pager `displayedText=0` selected indexes; `showWindowIcons=false` and `showWindowOutlines=false` retained plain numbers. Preserve five desktops named 1–5 and the target UUIDs. Enum meanings must be checked on other versions.
 
