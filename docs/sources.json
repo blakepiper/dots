@@ -201,6 +201,69 @@
       "base_commit": "01c1635b5f875d1c4eb5e2e2657e72e2c88f80bd",
       "description": "Capture 70% opacity for active and inactive KDE windows with Firefox forced fully opaque.",
       "validation": "Collection INI, Firefox-first rule order/count, JSON and manifest hashes checked without activating desktop settings during collection maintenance. The earlier live change was reconfigured and saved opacity values read back as 70/70 and 100/100 for Firefox."
+    },
+    "snapshot-13": {
+      "captured": "2026-10-04",
+      "commit": null,
+      "base_commit": "6c5522b48d5ce11e7ecb5e4d7d8e11c05756f976",
+      "description": "Capture 30% transparency for all KDE windows including Firefox, and a topbar tray without Bluetooth or the hidden-icons chevron.",
+      "versions": {
+        "plasma": "6.7.5"
+      },
+      "validation": "Collection INI, single catch-all rule list/count, selected tray settings, JSON and manifest hashes checked without activating machine settings during collection maintenance. Earlier live KWin reconfiguration and saved-config readback confirmed 70/70 opacity with no Firefox exception; before/after topbar screenshots confirmed Bluetooth and the chevron were removed."
+    },
+    "snapshot-14": {
+      "captured": "2026-10-04",
+      "commit": null,
+      "base_commit": "6c5522b48d5ce11e7ecb5e4d7d8e11c05756f976",
+      "description": "Disable Firefox Resist Fingerprinting for canvas-based image upload compatibility and restore fully opaque Firefox windows while retaining 30% transparency elsewhere.",
+      "versions": {
+        "firefox": "157.0",
+        "plasma": "6.7.5"
+      },
+      "validation": "JavaScript syntax and literal preferences, INI, Firefox-first opacity rule list/count, JSON and updated manifest hashes checked. Authorized live KWin rule reconfigured and saved opacity values verified as 100/100 for Firefox and 70/70 for other windows. Browser user.js saved for next startup; active Firefox was not restarted. Earlier isolated canvas test: 0/1024 altered background pixels with Resist Fingerprinting disabled, 1024/1024 with it enabled. Actual ChatGPT upload retry remains unverified.",
+      "follow_up": {
+        "date": "2026-10-04",
+        "snapshot": "snapshot-15",
+        "firefox_images": "User confirmed the image fix worked; the earlier upload confirmation is no longer pending."
+      }
+    },
+    "snapshot-15": {
+      "captured": "2026-10-04",
+      "commit": null,
+      "base_commit": "6c5522b48d5ce11e7ecb5e4d7d8e11c05756f976",
+      "description": "Record the user-confirmed Firefox image fix and collect 20 new Pictures images without copying three existing duplicates.",
+      "derived_from": "snapshot-14",
+      "follow_up": {
+        "date": "2026-10-04",
+        "firefox_images": "User confirmed the image upload/paste fix worked after disabling Resist Fingerprinting."
+      },
+      "image_inventory": {
+        "source_directory": "/home/przvl/Pictures",
+        "reviewed": 23,
+        "added": 20,
+        "skipped_duplicates": [
+          {
+            "source": "/home/przvl/Pictures/cityview.webp",
+            "duplicate_of": "walls/cityview.webp",
+            "match": "bytes",
+            "source_sha256": "b649b9082dd4b75ab232c2d4981b4ee6f42df2b822785dbc9e3a939e6e8e2894"
+          },
+          {
+            "source": "/home/przvl/Pictures/mountain.png",
+            "duplicate_of": "walls/mountain.png",
+            "match": "bytes",
+            "source_sha256": "5c70ca5eaa76260046c80e883949590bac97e11ab8d62bda106d4099d97acc66"
+          },
+          {
+            "source": "/home/przvl/Pictures/sunset.png",
+            "duplicate_of": "walls/sunset.png",
+            "match": "bytes",
+            "source_sha256": "6d19b4607ec23f153d69501c15286f61e8c458bfc9b0923b7ee546aa975f0310"
+          }
+        ]
+      },
+      "validation": "All source images decoded and were reviewed in a contact sheet. SHA-256 and auto-oriented decoded RGBA pixel comparisons found three duplicates; new files were copied unchanged. Image copy hashes, collection uniqueness, existing Firefox preference/opacity synchronization, JSON and refreshed documentation hashes verified without activating browser, desktop or wallpaper settings."
     }
   },
   "files": [
@@ -552,14 +615,15 @@
     },
     {
       "path": "desktop/kde/config/plasma-org.kde.plasma.desktop-appletsrc",
-      "snapshot": "collection-03",
-      "captured": "2026-10-03",
+      "snapshot": "snapshot-13",
+      "captured": "2026-10-04",
       "commit": null,
       "source": "/home/przvl/.config/plasma-org.kde.plasma.desktop-appletsrc",
-      "source_sha256": "4b4bf339adab54b7f264b5d27e9f3df72e8d9cfca75fbcbb7dd8eb7d717b537b",
-      "sha256": "f49d35341d6997b284ef3cf069a23eca04c511cb7ea8d0337296d584b9dff846",
+      "source_sha256": "c1efe5f0364e68e27be561c540966a58fb6c4b5e7d2255b1bd302e327fcb1e8c",
+      "sha256": "26fa6b0c23be951022c68eed387cba5977a572c2ec6cf91b9d8e4a4d4e72de84",
       "changes": [
-        "Use Arch launcher SVG, explicit numeric pager without window icons/outlines, functional widget IDs and absolute wallpaper URIs; retain captured containment/activity/output identities."
+        "Merge only the live system-tray General settings into collection containment 22/applet 27; preserve existing layout identities, widget order, functional IDs and adapted wallpaper/icon paths.",
+        "Enable only network, brightness and volume; disable Bluetooth and unused widgets, preserve the known-items inventory, clear hidden/shown lists and show all remaining items to remove the hidden-icons chevron."
       ],
       "previous_captures": [
         {
@@ -581,6 +645,18 @@
           "source_sha256": "4b4bf339adab54b7f264b5d27e9f3df72e8d9cfca75fbcbb7dd8eb7d717b537b",
           "sha256": "4b4bf339adab54b7f264b5d27e9f3df72e8d9cfca75fbcbb7dd8eb7d717b537b",
           "changes": []
+        },
+        {
+          "path": "desktop/kde/config/plasma-org.kde.plasma.desktop-appletsrc",
+          "snapshot": "collection-03",
+          "captured": "2026-10-03",
+          "commit": null,
+          "source": "/home/przvl/.config/plasma-org.kde.plasma.desktop-appletsrc",
+          "source_sha256": "4b4bf339adab54b7f264b5d27e9f3df72e8d9cfca75fbcbb7dd8eb7d717b537b",
+          "sha256": "f49d35341d6997b284ef3cf069a23eca04c511cb7ea8d0337296d584b9dff846",
+          "changes": [
+            "Use Arch launcher SVG, explicit numeric pager without window icons/outlines, functional widget IDs and absolute wallpaper URIs; retain captured containment/activity/output identities."
+          ]
         }
       ]
     },
@@ -2339,14 +2415,14 @@
     },
     {
       "path": "desktop/kde/README.md",
-      "snapshot": "snapshot-12",
+      "snapshot": "snapshot-14",
       "commit": null,
       "captured": "2026-10-04",
       "source_sha256": null,
       "changes": [
-        "Document 70% active/inactive window opacity, the fully opaque Firefox exception, target rule adaptation and collection validation."
+        "Document the restored fully opaque Firefox exception, retained 30% transparency elsewhere, precedence, capture hash and validation."
       ],
-      "sha256": "ade1d9a8d3e74eb1edf63f3ba762bad73351c0b729aff2980761c2a651d8a20a",
+      "sha256": "2356bd65cff4d2be15d1b84438c99fb420b9e8546907c3dfeb682a21b0d5fdfb",
       "previous_captures": [
         {
           "path": "desktop/kde/README.md",
@@ -2400,9 +2476,33 @@
           ],
           "sha256": "70c05e54cf99a121c785439c5caf6dbf54e7fdcd6416e9f5001f5389c4e96acc",
           "source": "Collection documentation of the standalone Super preference (snapshot-11)."
+        },
+        {
+          "path": "desktop/kde/README.md",
+          "snapshot": "snapshot-12",
+          "commit": null,
+          "captured": "2026-10-04",
+          "source_sha256": null,
+          "changes": [
+            "Document 70% active/inactive window opacity, the fully opaque Firefox exception, target rule adaptation and collection validation."
+          ],
+          "sha256": "ade1d9a8d3e74eb1edf63f3ba762bad73351c0b729aff2980761c2a651d8a20a",
+          "source": "Collection documentation of the window opacity preference (snapshot-12)."
+        },
+        {
+          "path": "desktop/kde/README.md",
+          "snapshot": "snapshot-13",
+          "commit": null,
+          "captured": "2026-10-04",
+          "source_sha256": null,
+          "changes": [
+            "Document 30% transparency including Firefox, removal of Bluetooth and the tray chevron, target adaptation, capture hashes and validation."
+          ],
+          "sha256": "2a4a6f3ad2258f4ab111c30b96638bab993e4a226494882bec6aba460733306b",
+          "source": "Collection documentation of the window opacity and topbar tray preferences (snapshot-13)."
         }
       ],
-      "source": "Collection documentation of the window opacity preference (snapshot-12)."
+      "source": "Collection documentation of Firefox image compatibility and opacity preferences (snapshot-14)."
     },
     {
       "path": "desktop/niri/README.md",
@@ -2669,15 +2769,29 @@
     },
     {
       "path": "walls/README.md",
-      "snapshot": "collection-02",
-      "captured": "2026-10-01",
+      "snapshot": "snapshot-15",
+      "captured": "2026-10-04",
       "commit": null,
       "source_sha256": null,
-      "source": "Collection platform integration derived from documented shared settings.",
+      "source": "Collection documentation of the confirmed Firefox image fix and Pictures refresh (snapshot-15).",
       "changes": [
-        "Add narrow platform integration without duplicating application settings."
+        "Document the Pictures refresh, unchanged image capture, duplicate checks, skipped matches, target path adaptation and validation; correct the existing Niri license reference."
       ],
-      "sha256": "e2a2da057e731e5c9516c452c141c159bfb7beaf116202948ea447151d81b036"
+      "sha256": "b27f6cb36783c7d63e2cbbbe777ce34a3224a0a7609af88800ad5e42e8c9b1da",
+      "previous_captures": [
+        {
+          "path": "walls/README.md",
+          "snapshot": "collection-02",
+          "captured": "2026-10-01",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection platform integration derived from documented shared settings.",
+          "changes": [
+            "Add narrow platform integration without duplicating application settings."
+          ],
+          "sha256": "e2a2da057e731e5c9516c452c141c159bfb7beaf116202948ea447151d81b036"
+        }
+      ]
     },
     {
       "path": "shell/README.md",
@@ -2755,15 +2869,15 @@
     },
     {
       "path": "docs/sources.md",
-      "snapshot": "snapshot-12",
+      "snapshot": "snapshot-15",
       "captured": "2026-10-04",
       "commit": null,
       "source_sha256": null,
-      "source": "Collection documentation of the window opacity preference (snapshot-12).",
+      "source": "Collection documentation of the confirmed Firefox image fix and Pictures refresh (snapshot-15).",
       "changes": [
-        "Document 70% active/inactive window opacity, the fully opaque Firefox exception, target rule adaptation and collection validation."
+        "Record snapshot-15 Firefox image confirmation and deduplicated Pictures collection with provenance and validation."
       ],
-      "sha256": "676a7f97c0dbf14cf3f912321be301971b65e361ff729e0cb39774f2e7e81ee7",
+      "sha256": "d95165c9be56dae0fc201ae849fe8514d10f6a80936386d3e91a7ec997cc5b4f",
       "previous_captures": [
         {
           "path": "docs/sources.md",
@@ -2831,6 +2945,42 @@
             "Document the preference that Super alone does not open the KDE application menu; retain Alt+F1 and Super+Space for launchers."
           ],
           "sha256": "3239e78cd907595dcc8af4a5ebebd1dec394ae04692d551fdefa8b44d1dd5622"
+        },
+        {
+          "path": "docs/sources.md",
+          "snapshot": "snapshot-12",
+          "captured": "2026-10-04",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection documentation of the window opacity preference (snapshot-12).",
+          "changes": [
+            "Document 70% active/inactive window opacity, the fully opaque Firefox exception, target rule adaptation and collection validation."
+          ],
+          "sha256": "676a7f97c0dbf14cf3f912321be301971b65e361ff729e0cb39774f2e7e81ee7"
+        },
+        {
+          "path": "docs/sources.md",
+          "snapshot": "snapshot-13",
+          "captured": "2026-10-04",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection documentation of the window opacity and topbar tray preferences (snapshot-13).",
+          "changes": [
+            "Record snapshot-13 and the selected opacity/tray changes, prior capture retention, target layout preservation and collection validation."
+          ],
+          "sha256": "f7de33af666204594b742ddbdf56647274f9fa80ada20d1fcffc1a55575cb8eb"
+        },
+        {
+          "path": "docs/sources.md",
+          "snapshot": "snapshot-14",
+          "captured": "2026-10-04",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection documentation of Firefox image compatibility and opacity preferences (snapshot-14).",
+          "changes": [
+            "Record snapshot-14 Firefox image compatibility and opacity preferences, source provenance, validation and pending browser activation/upload confirmation."
+          ],
+          "sha256": "6c61c4b2f99276d889c28c754d83804497fb3ed3884f555510e94efb0335a261"
         }
       ]
     },
@@ -2898,17 +3048,15 @@
     },
     {
       "path": "browser/README.md",
-      "snapshot": "collection-03",
-      "captured": "2026-10-03",
+      "snapshot": "snapshot-15",
+      "captured": "2026-10-04",
       "commit": null,
       "source_sha256": null,
-      "source": "Collection platform integration derived from documented shared settings.",
+      "source": "Collection documentation of the confirmed Firefox image fix and Pictures refresh (snapshot-15).",
       "changes": [
-        "Add narrow platform integration without duplicating application settings.",
-        "Document local Firefox CSS and preferences capture (snapshot-06) on 2026-10-03, including destinations, dependencies and validation.",
-        "Document reviewed deployment findings, preferences, dependencies and validation."
+        "Record the user-confirmed success of the Firefox image fix following snapshot-14."
       ],
-      "sha256": "dd3f816529100d01f6c13c75931e05073f781acdeeba7b462943b6ef3bbe687f",
+      "sha256": "66c87089ab181dfc504b98a4d6a3c074fe7073ea789d34b2c6db66ef7aea08f6",
       "previous_captures": [
         {
           "path": "browser/README.md",
@@ -2922,6 +3070,32 @@
             "Document local Firefox CSS and preferences capture (snapshot-06) on 2026-10-03, including destinations, dependencies and validation."
           ],
           "sha256": "5b958c649763df719007f247926bfa620d2b03e0d691b4baa9b495f617c80351"
+        },
+        {
+          "path": "browser/README.md",
+          "snapshot": "collection-03",
+          "captured": "2026-10-03",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection platform integration derived from documented shared settings.",
+          "changes": [
+            "Add narrow platform integration without duplicating application settings.",
+            "Document local Firefox CSS and preferences capture (snapshot-06) on 2026-10-03, including destinations, dependencies and validation.",
+            "Document reviewed deployment findings, preferences, dependencies and validation."
+          ],
+          "sha256": "dd3f816529100d01f6c13c75931e05073f781acdeeba7b462943b6ef3bbe687f"
+        },
+        {
+          "path": "browser/README.md",
+          "snapshot": "snapshot-14",
+          "captured": "2026-10-04",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection documentation of Firefox image compatibility and opacity preferences (snapshot-14).",
+          "changes": [
+            "Document explicit Resist Fingerprinting disablement, isolated canvas reproduction, active-profile adaptation and required browser restart."
+          ],
+          "sha256": "59aadf0aafa210777647d8c1e15a62de8e40733a9199264a074bcdcd2c202654"
         }
       ]
     },
@@ -3385,31 +3559,15 @@
     },
     {
       "path": "browser/firefox/user.js",
-      "snapshot": "collection-03",
-      "captured": "2026-10-03",
+      "snapshot": "snapshot-14",
+      "captured": "2026-10-04",
       "commit": null,
-      "source_sha256": "67c760a876113ebb4418aad148ce59de2c3d153c29c71a54645538a9d20bc95e",
-      "source": "/home/przvl/.config/mozilla/firefox/uck3f97t.default-release/user.js",
+      "source_sha256": "0ebec7de1ea7f004abe64cbe78d06344ca867e9724bd4100260049a10cce0357",
+      "source": "/home/przvl/.config/mozilla/firefox/cworvt8v.default-release/user.js",
       "changes": [
-        "Append built-in theme, toolbar theme, vertical tabs and disabled new-tab-page preferences extracted from local prefs.js.",
-        "Append deliberate JetBrains western/Unicode content-font preferences and document-font override from deployment findings."
+        "Merge only the live Resist Fingerprinting changes into the existing collection: set privacy.resistFingerprinting and privacy.resistFingerprinting.pbMode to false and update the adjacent comments; retain other collection preferences."
       ],
-      "sha256": "67d1276eef3f324ecc99deff297d610acdc429d2e5bb60d1761227453092857e",
-      "derived_inputs": [
-        {
-          "source": "/home/przvl/.config/mozilla/firefox/uck3f97t.default-release/prefs.js",
-          "source_sha256": "03eeafefbd453fed30f7eda3e8590d01960a4ec4db38a80b70490251e08ee218",
-          "preferences": [
-            "extensions.activeThemeID",
-            "browser.theme.toolbar-theme",
-            "sidebar.verticalTabs",
-            "browser.newtabpage.enabled"
-          ],
-          "changes": [
-            "Extract only four appearance preferences; exclude the generated preferences file and all other values."
-          ]
-        }
-      ],
+      "sha256": "a7123db09232ae572e8dfed868e0d9825fcf70f4ea8e556dcccf7861f85452dd",
       "previous_captures": [
         {
           "path": "browser/firefox/user.js",
@@ -3422,6 +3580,34 @@
             "Append built-in theme, toolbar theme, vertical tabs and disabled new-tab-page preferences extracted from local prefs.js."
           ],
           "sha256": "d1499ba8bbabb23b9baf2e679e8fe51adaee8d1c56ad217d461c5ca9821635c4",
+          "derived_inputs": [
+            {
+              "source": "/home/przvl/.config/mozilla/firefox/uck3f97t.default-release/prefs.js",
+              "source_sha256": "03eeafefbd453fed30f7eda3e8590d01960a4ec4db38a80b70490251e08ee218",
+              "preferences": [
+                "extensions.activeThemeID",
+                "browser.theme.toolbar-theme",
+                "sidebar.verticalTabs",
+                "browser.newtabpage.enabled"
+              ],
+              "changes": [
+                "Extract only four appearance preferences; exclude the generated preferences file and all other values."
+              ]
+            }
+          ]
+        },
+        {
+          "path": "browser/firefox/user.js",
+          "snapshot": "collection-03",
+          "captured": "2026-10-03",
+          "commit": null,
+          "source_sha256": "67c760a876113ebb4418aad148ce59de2c3d153c29c71a54645538a9d20bc95e",
+          "source": "/home/przvl/.config/mozilla/firefox/uck3f97t.default-release/user.js",
+          "changes": [
+            "Append built-in theme, toolbar theme, vertical tabs and disabled new-tab-page preferences extracted from local prefs.js.",
+            "Append deliberate JetBrains western/Unicode content-font preferences and document-font override from deployment findings."
+          ],
+          "sha256": "67d1276eef3f324ecc99deff297d610acdc429d2e5bb60d1761227453092857e",
           "derived_inputs": [
             {
               "source": "/home/przvl/.config/mozilla/firefox/uck3f97t.default-release/prefs.js",
@@ -3733,12 +3919,258 @@
     },
     {
       "path": "desktop/kde/config/kwinrulesrc",
-      "snapshot": "snapshot-12",
+      "snapshot": "snapshot-14",
       "captured": "2026-10-04",
       "commit": null,
       "source": "/home/przvl/.config/kwinrulesrc",
-      "source_sha256": "e6feb0f07e4d800b83396dbd0b8c7a0610518d31ce8ef39cb0902410d6d70fb0",
-      "sha256": "e6feb0f07e4d800b83396dbd0b8c7a0610518d31ce8ef39cb0902410d6d70fb0",
+      "source_sha256": "dfba7c78adc2691b4413b97e350a8f2c7af157eed088fab6360549a7ce35face",
+      "sha256": "7f93f77f83e56b394ff283e19d2760957fb9b9decd86125a7df28d4526a83987",
+      "changes": [
+        "Remove trailing blank lines from the captured KWin rule file."
+      ],
+      "previous_captures": [
+        {
+          "path": "desktop/kde/config/kwinrulesrc",
+          "snapshot": "snapshot-12",
+          "captured": "2026-10-04",
+          "commit": null,
+          "source": "/home/przvl/.config/kwinrulesrc",
+          "source_sha256": "e6feb0f07e4d800b83396dbd0b8c7a0610518d31ce8ef39cb0902410d6d70fb0",
+          "sha256": "e6feb0f07e4d800b83396dbd0b8c7a0610518d31ce8ef39cb0902410d6d70fb0",
+          "changes": []
+        },
+        {
+          "path": "desktop/kde/config/kwinrulesrc",
+          "snapshot": "snapshot-13",
+          "captured": "2026-10-04",
+          "commit": null,
+          "source": "/home/przvl/.config/kwinrulesrc",
+          "source_sha256": "cd02ad53c5564d7215bbf41629e2aba89b213ecd64f8cadd15cc5160d6e029d6",
+          "sha256": "3959dc0006a8f567730c523a71dc7427431f6c6ffc17958f01e631859b99ec61",
+          "changes": [
+            "Remove trailing blank lines from the captured KWin rule file."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "walls/arch.png",
+      "snapshot": "snapshot-15",
+      "captured": "2026-10-04",
+      "commit": null,
+      "source": "/home/przvl/Pictures/arch.png",
+      "source_sha256": "af28e7d78d8332a441f8d5dcb5d284588604023610a7d6ec0db25c2a0fcfed96",
+      "sha256": "af28e7d78d8332a441f8d5dcb5d284588604023610a7d6ec0db25c2a0fcfed96",
+      "dimensions": "3440x1440",
+      "changes": []
+    },
+    {
+      "path": "walls/archocean.png",
+      "snapshot": "snapshot-15",
+      "captured": "2026-10-04",
+      "commit": null,
+      "source": "/home/przvl/Pictures/archocean.png",
+      "source_sha256": "9d54246ca13c12e1b2f22033e7ae4c380429312d417b5087cbcd6d9d845b4a19",
+      "sha256": "9d54246ca13c12e1b2f22033e7ae4c380429312d417b5087cbcd6d9d845b4a19",
+      "dimensions": "1672x941",
+      "changes": []
+    },
+    {
+      "path": "walls/archorizon.png",
+      "snapshot": "snapshot-15",
+      "captured": "2026-10-04",
+      "commit": null,
+      "source": "/home/przvl/Pictures/archorizon.png",
+      "source_sha256": "4b04712f24843e9929e17d25883f14ac7eaebd219fd15d1f9c3fd15e96db403e",
+      "sha256": "4b04712f24843e9929e17d25883f14ac7eaebd219fd15d1f9c3fd15e96db403e",
+      "dimensions": "1671x941",
+      "changes": []
+    },
+    {
+      "path": "walls/archorizondistort.png",
+      "snapshot": "snapshot-15",
+      "captured": "2026-10-04",
+      "commit": null,
+      "source": "/home/przvl/Pictures/archorizondistort.png",
+      "source_sha256": "0664affbc7eb6b38c9c7ab4cb54d84adf1ad0acc0ff98485e126b397c727ff4c",
+      "sha256": "0664affbc7eb6b38c9c7ab4cb54d84adf1ad0acc0ff98485e126b397c727ff4c",
+      "dimensions": "1670x941",
+      "changes": []
+    },
+    {
+      "path": "walls/archspace.jpg",
+      "snapshot": "snapshot-15",
+      "captured": "2026-10-04",
+      "commit": null,
+      "source": "/home/przvl/Pictures/archspace.jpg",
+      "source_sha256": "142834bb82ab1dcef448bd52f4f173403b0d83d2bba66bff6508d1db0e6f93d9",
+      "sha256": "142834bb82ab1dcef448bd52f4f173403b0d83d2bba66bff6508d1db0e6f93d9",
+      "dimensions": "2400x1410",
+      "changes": []
+    },
+    {
+      "path": "walls/archwindows.png",
+      "snapshot": "snapshot-15",
+      "captured": "2026-10-04",
+      "commit": null,
+      "source": "/home/przvl/Pictures/archwindows.png",
+      "source_sha256": "0895ae4011566bbe14da95b951bd1094652ea022b20f02536cd23df782edd851",
+      "sha256": "0895ae4011566bbe14da95b951bd1094652ea022b20f02536cd23df782edd851",
+      "dimensions": "1920x1080",
+      "changes": []
+    },
+    {
+      "path": "walls/cloudhorizon.png",
+      "snapshot": "snapshot-15",
+      "captured": "2026-10-04",
+      "commit": null,
+      "source": "/home/przvl/Pictures/cloudhorizon.png",
+      "source_sha256": "528605001e216c20f2a748b8977b3f8f8ba74f517e268181aa248d7824fda29a",
+      "sha256": "528605001e216c20f2a748b8977b3f8f8ba74f517e268181aa248d7824fda29a",
+      "dimensions": "1671x941",
+      "changes": []
+    },
+    {
+      "path": "walls/clouds.jpg",
+      "snapshot": "snapshot-15",
+      "captured": "2026-10-04",
+      "commit": null,
+      "source": "/home/przvl/Pictures/clouds.jpg",
+      "source_sha256": "11c61e2a9f1352360d5622339b01ffa67c4db7f175e6139606c051513e5aed0e",
+      "sha256": "11c61e2a9f1352360d5622339b01ffa67c4db7f175e6139606c051513e5aed0e",
+      "dimensions": "1920x1080",
+      "changes": []
+    },
+    {
+      "path": "walls/darkmountains.png",
+      "snapshot": "snapshot-15",
+      "captured": "2026-10-04",
+      "commit": null,
+      "source": "/home/przvl/Pictures/darkmountains.png",
+      "source_sha256": "4dae1e5f74237e2fe6dcf93118094d9a7524f77a4d59575b2a57c15c085f3d65",
+      "sha256": "4dae1e5f74237e2fe6dcf93118094d9a7524f77a4d59575b2a57c15c085f3d65",
+      "dimensions": "3840x2160",
+      "changes": []
+    },
+    {
+      "path": "walls/errorarch.png",
+      "snapshot": "snapshot-15",
+      "captured": "2026-10-04",
+      "commit": null,
+      "source": "/home/przvl/Pictures/errorarch.png",
+      "source_sha256": "bccd4f0bd579f400d80e3592ac9cb2fe593ef1fffc13b265ee7fa5b1bf0c5abc",
+      "sha256": "bccd4f0bd579f400d80e3592ac9cb2fe593ef1fffc13b265ee7fa5b1bf0c5abc",
+      "dimensions": "1671x941",
+      "changes": []
+    },
+    {
+      "path": "walls/fall.png",
+      "snapshot": "snapshot-15",
+      "captured": "2026-10-04",
+      "commit": null,
+      "source": "/home/przvl/Pictures/fall.png",
+      "source_sha256": "516db20e65a5944e9f4ed7bde82a6b2360aa8dcf926f0070fd590f108e3f0709",
+      "sha256": "516db20e65a5944e9f4ed7bde82a6b2360aa8dcf926f0070fd590f108e3f0709",
+      "dimensions": "1920x1080",
+      "changes": []
+    },
+    {
+      "path": "walls/fallbranch.jpeg",
+      "snapshot": "snapshot-15",
+      "captured": "2026-10-04",
+      "commit": null,
+      "source": "/home/przvl/Pictures/fallbranch.jpeg",
+      "source_sha256": "04e6f11de8633b411732215cba574e32ebdf66b91fc8c88c77717a50f69760ee",
+      "sha256": "04e6f11de8633b411732215cba574e32ebdf66b91fc8c88c77717a50f69760ee",
+      "dimensions": "2752x1536",
+      "changes": []
+    },
+    {
+      "path": "walls/forest.jpg",
+      "snapshot": "snapshot-15",
+      "captured": "2026-10-04",
+      "commit": null,
+      "source": "/home/przvl/Pictures/forest.jpg",
+      "source_sha256": "24a75478e6433aee5b9655d92bb1ba7d53e12206a3c2c6ce6999e60653a48ff2",
+      "sha256": "24a75478e6433aee5b9655d92bb1ba7d53e12206a3c2c6ce6999e60653a48ff2",
+      "dimensions": "2560x1440",
+      "changes": []
+    },
+    {
+      "path": "walls/greenleaf.jpg",
+      "snapshot": "snapshot-15",
+      "captured": "2026-10-04",
+      "commit": null,
+      "source": "/home/przvl/Pictures/greenleaf.jpg",
+      "source_sha256": "316800f27e9a42f79103799851633a718e83b1eeaabb47a8c00719c36f5fc1f3",
+      "sha256": "316800f27e9a42f79103799851633a718e83b1eeaabb47a8c00719c36f5fc1f3",
+      "dimensions": "2560x1600",
+      "changes": []
+    },
+    {
+      "path": "walls/infiniteplains.jpg",
+      "snapshot": "snapshot-15",
+      "captured": "2026-10-04",
+      "commit": null,
+      "source": "/home/przvl/Pictures/infiniteplains.jpg",
+      "source_sha256": "8ab87659d1378ebffd5060eb1363c1b4e06a6e74d43c130373da3c4344807b21",
+      "sha256": "8ab87659d1378ebffd5060eb1363c1b4e06a6e74d43c130373da3c4344807b21",
+      "dimensions": "4096x2160",
+      "changes": []
+    },
+    {
+      "path": "walls/infiniteplainscartoon.png",
+      "snapshot": "snapshot-15",
+      "captured": "2026-10-04",
+      "commit": null,
+      "source": "/home/przvl/Pictures/infiniteplainscartoon.png",
+      "source_sha256": "ce3c4b5c79b646e5a101e5598f693a0010a63a4f0ba09ee8893fc40e04ca8c25",
+      "sha256": "ce3c4b5c79b646e5a101e5598f693a0010a63a4f0ba09ee8893fc40e04ca8c25",
+      "dimensions": "1672x941",
+      "changes": []
+    },
+    {
+      "path": "walls/jungleriver.jpg",
+      "snapshot": "snapshot-15",
+      "captured": "2026-10-04",
+      "commit": null,
+      "source": "/home/przvl/Pictures/jungleriver.jpg",
+      "source_sha256": "673a7b345c793d83d9c15e77613a1664f8c86204ef4d34dc385e9f39949faaf0",
+      "sha256": "673a7b345c793d83d9c15e77613a1664f8c86204ef4d34dc385e9f39949faaf0",
+      "dimensions": "1920x1080",
+      "changes": []
+    },
+    {
+      "path": "walls/mojavedark.jpg",
+      "snapshot": "snapshot-15",
+      "captured": "2026-10-04",
+      "commit": null,
+      "source": "/home/przvl/Pictures/mojavedark.jpg",
+      "source_sha256": "fbc36dc11eb5ea147a8f51be004f8fe6d1a504520c8243f1dac49d8210221443",
+      "sha256": "fbc36dc11eb5ea147a8f51be004f8fe6d1a504520c8243f1dac49d8210221443",
+      "dimensions": "5120x2880",
+      "changes": []
+    },
+    {
+      "path": "walls/tile.png",
+      "snapshot": "snapshot-15",
+      "captured": "2026-10-04",
+      "commit": null,
+      "source": "/home/przvl/Pictures/tile.png",
+      "source_sha256": "160f8ae27e3e91c7e2d606e8e7ed03ca861ada008ce6b819a404e8a095d0ddf6",
+      "sha256": "160f8ae27e3e91c7e2d606e8e7ed03ca861ada008ce6b819a404e8a095d0ddf6",
+      "dimensions": "7680x4320",
+      "changes": []
+    },
+    {
+      "path": "walls/windowsxpfall.jpg",
+      "snapshot": "snapshot-15",
+      "captured": "2026-10-04",
+      "commit": null,
+      "source": "/home/przvl/Pictures/windowsxpfall.jpg",
+      "source_sha256": "e5018d82c22d8d733f0b432b0aab6aff989fe925379d55d92bb643a4a7880de2",
+      "sha256": "e5018d82c22d8d733f0b432b0aab6aff989fe925379d55d92bb643a4a7880de2",
+      "dimensions": "1600x900",
       "changes": []
     }
   ]

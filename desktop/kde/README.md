@@ -63,12 +63,22 @@ Observed KWin version: 6.7.5. No local source commit is available; the source ha
 
 ## Window opacity preference
 
-`snapshot-12`, 2026-10-04, captures `config/kwinrulesrc`: active and inactive windows use 70% opacity (30% transparency), while Firefox stays fully opaque. The Firefox rule precedes the catch-all rule in `[General] rules` so its exception takes priority. Both rules force their opacity values.
+`snapshot-14`, 2026-10-04, refreshes `config/kwinrulesrc`: Firefox is fully opaque (100% opacity), while other active and inactive windows use 70% opacity (30% transparency). The Firefox rule precedes the catch-all rule in `[General] rules`, and both rules force their active/inactive values. This supersedes the all-window transparency preference from `snapshot-13`.
 
 Merge these rules into the target user's `~/.config/kwinrulesrc`, preserving the Firefox-first order and adapting the `firefox` window class if the installed browser uses a different class. Retain unrelated target rules and update the rule list/count when merging. KWin on the target must support these KConfig rule fields; the current collection records the observed Plasma 6 environment. During an authorized deployment, reload with `qdbus6 org.kde.KWin /KWin org.kde.KWin.reconfigure`.
 
-No local source commit is available; source and collection hashes are in [sources.json](../../docs/sources.json). The earlier live change was reconfigured and saved values read back as 70% for active/inactive windows and 100% for Firefox. Collection INI, rule order/count, JSON and hashes were checked; this collection update did not activate desktop settings.
+No local source commit is available; source and collection hashes are in [sources.json](../../docs/sources.json). The authorized live change was reconfigured and saved values read back as 100% for Firefox and 70% for other active/inactive windows. Collection INI, Firefox-first rule list/count, JSON and hashes were checked separately.
 
 | Collection file | SHA-256 |
 | --- | --- |
-| `desktop/kde/config/kwinrulesrc` | `e6feb0f07e4d800b83396dbd0b8c7a0610518d31ce8ef39cb0902410d6d70fb0` |
+| `desktop/kde/config/kwinrulesrc` | `7f93f77f83e56b394ff283e19d2760957fb9b9decd86125a7df28d4526a83987` |
+
+## Topbar tray preference
+
+`snapshot-13` also carries the tray settings into `config/plasma-org.kde.plasma.desktop-appletsrc`. Only network, brightness and volume widgets are enabled; Bluetooth and other unused tray widgets are disabled. `showAllItems=true` and empty hidden/shown lists keep the remaining controls visible and remove the hidden-icons chevron. The separate battery widget remains in the panel. Future application tray icons can also appear directly in the bar.
+
+Only the tray's `General` settings were copied from the live configuration. The collection retains its containment/applet IDs, widget order, functional widget IDs and wallpaper/icon paths. When merging, find the target system-tray applet rather than assuming containment `22` and applet `27`. The known-items list records disabled widgets so they are not automatically treated as new additions. Observed Plasma version: 6.7.5. Live before/after screenshots confirmed the Bluetooth icon and chevron were removed while the other visible controls remained.
+
+| Collection file | SHA-256 |
+| --- | --- |
+| `desktop/kde/config/plasma-org.kde.plasma.desktop-appletsrc` | `26fa6b0c23be951022c68eed387cba5977a572c2ec6cf91b9d8e4a4d4e72de84` |

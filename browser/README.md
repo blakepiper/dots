@@ -8,7 +8,7 @@ The stylesheet makes interface corners square, hides account/Sync buttons and si
 
 `user.js` enables custom stylesheets, keeps the sidebar visible, selects vertical tabs and the built-in System theme — auto, retains the local toolbar theme preference (`browser.theme.toolbar-theme = 0`), and disables Firefox's new-tab page. The built-in PDF viewer uses a dark theme and forced page colors (`#181818` background, `#eeeeee` foreground).
 
-The reviewed local `user.js` also includes strict tracking protection, Global Privacy Control, fingerprint resistance, HTTPS-Only, disabled telemetry/studies/sponsored content/search suggestions, and reduced speculative networking. Mozilla Accounts remain enabled for the local built-in VPN use case; pairing and promotions are disabled and the CSS hides sign-in entry points. Review these behavioral choices when adapting the appearance: fingerprint resistance, HTTPS-Only, WebRTC and account settings can affect websites and features.
+The reviewed local `user.js` also includes strict tracking protection, Global Privacy Control, HTTPS-Only, disabled telemetry/studies/sponsored content/search suggestions, and reduced speculative networking. Resist Fingerprinting is explicitly disabled in regular and private windows so canvas-based image uploads and pastes work. Mozilla Accounts remain enabled for the local built-in VPN use case; pairing and promotions are disabled and the CSS hides sign-in entry points. Review these behavioral choices when adapting the appearance: HTTPS-Only, WebRTC and account settings can affect websites and features.
 
 ## Destinations and dependencies
 
@@ -25,7 +25,7 @@ Snapshot `snapshot-06`, captured 2026-10-03 from the local machine; source commi
 | File | Original capture edit (later font changes below) | Current SHA-256 |
 | --- | --- | --- |
 | `firefox/chrome/userChrome.css` | Copied unchanged, including comments. | `253229cc49ee5b2db74e0ade6da99c4b3ca665b937ce07c7b54edcac5a9c092f` |
-| `firefox/user.js` | Preserve the reviewed local file; append four appearance preferences extracted from `prefs.js`. The full generated `prefs.js` is excluded. | `67d1276eef3f324ecc99deff297d610acdc429d2e5bb60d1761227453092857e` |
+| `firefox/user.js` | Preserve the reviewed local file; append four appearance preferences extracted from `prefs.js`. The full generated `prefs.js` is excluded. | `a7123db09232ae572e8dfed868e0d9825fcf70f4ea8e556dcccf7861f85452dd` |
 
 Validation: the new `user.js` parses with Node and was evaluated with a stub `user_pref` to verify literal values and unique keys; source/current hashes and JSON source records were checked. The stylesheet was compared byte-for-byte with the local source. No Firefox runtime or visual check was performed and no machine settings were activated.
 
@@ -36,3 +36,9 @@ Validation: the new `user.js` parses with Node and was evaluated with a stub `us
 Discover the installation-wide policy destination. The observed Artix package used `/usr/lib/firefox/distribution/policies.json` rather than the captured `/opt` path. Check `about:policies` for acceptance and verify forced extensions actually installed. If the package does not protect that file and an authorized deployment chooses pacman protection, merge the exact relative `NoUpgrade = usr/lib/firefox/distribution/policies.json` entry after backup. This creates ownership of update review: inspect `.pacnew` policies and current schema/extensions after package updates rather than assuming compatibility forever. The repo contains no pacman configuration or browser profile tree.
 
 Report-derived changes and previous capture hashes are preserved in [sources.json](../docs/sources.json). JavaScript parsing does not establish Firefox UI or policy behavior; follow [validation](../docs/validation.md).
+
+## Image upload compatibility preference
+
+`snapshot-14`, 2026-10-04, sets `privacy.resistFingerprinting=false` and `privacy.resistFingerprinting.pbMode=false` in the reviewed local profile and collection `user.js`. An isolated canvas test with Firefox 157.0 returned correct data for all 1,024 sampled background pixels with Resist Fingerprinting disabled, while all 1,024 were altered with it enabled. This reproduced the image-corruption mechanism without KDE compositing. The user subsequently confirmed that the fix worked; this follow-up is recorded in `snapshot-15` on 2026-10-04.
+
+Restart Firefox after merging these startup preferences. An `about:config` change alone would otherwise be overwritten by the previous `user.js` on restart. Strict tracking protection, Global Privacy Control and the existing extension policy remain enabled. The current local source profile is `/home/przvl/.config/mozilla/firefox/cworvt8v.default-release`; adapt the generated name and account path to the target. Only these reviewed settings were merged into the collection, preserving its other preferences. Source hashes, collection hashes and earlier captures are recorded in [sources.json](../docs/sources.json); JavaScript and JSON validation did not restart the active browser.

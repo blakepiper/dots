@@ -16,7 +16,7 @@ user_pref("identity.fxaccounts.telemetry.clientAssociationPing.enabled", false);
 user_pref("identity.fxaccounts.telemetry.clientInfoPing.enabled", false);
 user_pref("browser.promo.relay.enabled", false);
 
-// Privacy hardening: tracking isolation, fingerprint resistance, no speculative traffic.
+// Privacy hardening: tracking isolation and no speculative traffic.
 user_pref("browser.contentblocking.category", "strict");
 user_pref("privacy.trackingprotection.enabled", true);
 user_pref("privacy.trackingprotection.pbmode.enabled", true);
@@ -24,7 +24,9 @@ user_pref("privacy.trackingprotection.socialtracking.enabled", true);
 user_pref("privacy.trackingprotection.fingerprinting.enabled", true);
 user_pref("privacy.trackingprotection.cryptomining.enabled", true);
 user_pref("network.cookie.cookieBehavior", 5);
-user_pref("privacy.resistFingerprinting", true);
+// Keep canvas-based image uploads and pastes working. Tracking protection stays enabled.
+user_pref("privacy.resistFingerprinting", false);
+user_pref("privacy.resistFingerprinting.pbMode", false);
 user_pref("privacy.globalprivacycontrol.enabled", true);
 user_pref("dom.security.https_only_mode", true);
 user_pref("dom.security.https_only_mode_pbm", true);
