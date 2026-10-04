@@ -14,6 +14,7 @@ Collected on 2026-10-01 from the current machine and four source snapshots. Orig
 | snapshot-09 | User-confirmed solid black KDE topbar theme and preference, captured 2026-10-03 |
 | snapshot-10 | User-confirmed Bash prompt without a hostname prefix, captured 2026-10-03 |
 | snapshot-11 | KDE application menu disabled on Super alone, retaining Alt+F1, captured 2026-10-04 |
+| snapshot-12 | KDE windows at 70% opacity, with Firefox fully opaque, captured 2026-10-04 |
 
 Names in the collection describe the application, platform or function. Hyprland's helper and service names use `workstation`; Niri helpers use `desktop` for cache and application identifiers. The st shell wrapper is `st-shell`. Alternate X11 hardware files use `x11` names. References and dependent command paths were updated together.
 
@@ -36,3 +37,5 @@ Desktop appearance capture on 2026-10-03 (`snapshot-07`) updates Konsole to JetB
 `snapshot-09`, captured 2026-10-03 against base commit `958a649cf8d44c0ad7e17e1b3124a3555f3768bc`, replaces the KDE transparent panel theme with the user-confirmed solid black topbar. Selected local `plasma-black` assets are adapted to the functional `panel-black` ID, with matching metadata and theme selection. SVG variants preserve geometry and margins while making panel surfaces and masks opaque black. The existing collected wallpaper reference and panel layout are retained. Previous captures and source/current hashes remain in `sources.json`. JSON, INI, SVG geometry/opacity and hashes were checked; no machine settings were activated during collection maintenance.
 
 `snapshot-10`, captured 2026-10-03, updates the shared `shell/bash/bashrc` fragment to match the user-confirmed Konsole Bash prompt: blue current directory followed by `$` (`#` for root), without the hostname prefix. The remaining shared shell initialization and ble.sh loader are unchanged. The local `.bashrc` is recorded as a source hash; only the reviewed shared fragment is collected. Shell syntax, interactive prompt value, quiet noninteractive sourcing and manifest hashes were checked. Previous captures remain in `sources.json`; no live shell settings were activated during collection maintenance.
+
+`snapshot-12`, captured 2026-10-04, adds the reviewed local KWin window rules: 70% opacity for active and inactive windows, with a preceding Firefox exception forcing 100%. The file is captured unchanged. INI, rule order/count, JSON and manifest hashes were checked. The earlier live change was reconfigured and its saved values read back; this collection update did not activate desktop settings.

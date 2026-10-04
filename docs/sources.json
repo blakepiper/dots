@@ -194,6 +194,13 @@
         "kwin": "6.7.5"
       },
       "validation": "Live KGlobalAccel readback and saved local configuration contain only Alt+F1 for the application launcher. Collection INI, JSON and manifest hashes checked without activating desktop settings during collection maintenance."
+    },
+    "snapshot-12": {
+      "captured": "2026-10-04",
+      "commit": null,
+      "base_commit": "01c1635b5f875d1c4eb5e2e2657e72e2c88f80bd",
+      "description": "Capture 70% opacity for active and inactive KDE windows with Firefox forced fully opaque.",
+      "validation": "Collection INI, Firefox-first rule order/count, JSON and manifest hashes checked without activating desktop settings during collection maintenance. The earlier live change was reconfigured and saved opacity values read back as 70/70 and 100/100 for Firefox."
     }
   },
   "files": [
@@ -2332,14 +2339,14 @@
     },
     {
       "path": "desktop/kde/README.md",
-      "snapshot": "snapshot-11",
+      "snapshot": "snapshot-12",
       "commit": null,
       "captured": "2026-10-04",
       "source_sha256": null,
       "changes": [
-        "Document the preference that Super alone does not open the KDE application menu; retain Alt+F1 and Super+Space for launchers."
+        "Document 70% active/inactive window opacity, the fully opaque Firefox exception, target rule adaptation and collection validation."
       ],
-      "sha256": "70c05e54cf99a121c785439c5caf6dbf54e7fdcd6416e9f5001f5389c4e96acc",
+      "sha256": "ade1d9a8d3e74eb1edf63f3ba762bad73351c0b729aff2980761c2a651d8a20a",
       "previous_captures": [
         {
           "path": "desktop/kde/README.md",
@@ -2381,9 +2388,21 @@
           ],
           "sha256": "96f78e16f2453bea80ecd703e42fa35ab442a7f53781c5ac9d1c725880aa663b",
           "source": "Collection documentation of user-confirmed topbar preference (snapshot-09)."
+        },
+        {
+          "path": "desktop/kde/README.md",
+          "snapshot": "snapshot-11",
+          "commit": null,
+          "captured": "2026-10-04",
+          "source_sha256": null,
+          "changes": [
+            "Document the preference that Super alone does not open the KDE application menu; retain Alt+F1 and Super+Space for launchers."
+          ],
+          "sha256": "70c05e54cf99a121c785439c5caf6dbf54e7fdcd6416e9f5001f5389c4e96acc",
+          "source": "Collection documentation of the standalone Super preference (snapshot-11)."
         }
       ],
-      "source": "Collection documentation of the standalone Super preference (snapshot-11)."
+      "source": "Collection documentation of the window opacity preference (snapshot-12)."
     },
     {
       "path": "desktop/niri/README.md",
@@ -2736,15 +2755,15 @@
     },
     {
       "path": "docs/sources.md",
-      "snapshot": "snapshot-11",
+      "snapshot": "snapshot-12",
       "captured": "2026-10-04",
       "commit": null,
       "source_sha256": null,
-      "source": "Collection documentation of the standalone Super preference (snapshot-11).",
+      "source": "Collection documentation of the window opacity preference (snapshot-12).",
       "changes": [
-        "Document the preference that Super alone does not open the KDE application menu; retain Alt+F1 and Super+Space for launchers."
+        "Document 70% active/inactive window opacity, the fully opaque Firefox exception, target rule adaptation and collection validation."
       ],
-      "sha256": "3239e78cd907595dcc8af4a5ebebd1dec394ae04692d551fdefa8b44d1dd5622",
+      "sha256": "676a7f97c0dbf14cf3f912321be301971b65e361ff729e0cb39774f2e7e81ee7",
       "previous_captures": [
         {
           "path": "docs/sources.md",
@@ -2800,6 +2819,18 @@
             "Document the Bash prompt without a hostname prefix, shared configuration location, activation and validation."
           ],
           "sha256": "8c00093407c17e48b674e4fc660c975fc5133623b4c0c40b9cb6ceedd8c0d025"
+        },
+        {
+          "path": "docs/sources.md",
+          "snapshot": "snapshot-11",
+          "captured": "2026-10-04",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection documentation of the standalone Super preference (snapshot-11).",
+          "changes": [
+            "Document the preference that Super alone does not open the KDE application menu; retain Alt+F1 and Super+Space for launchers."
+          ],
+          "sha256": "3239e78cd907595dcc8af4a5ebebd1dec394ae04692d551fdefa8b44d1dd5622"
         }
       ]
     },
@@ -3698,6 +3729,16 @@
       "source": "/etc/dinit.d/battery-charge-limit",
       "source_sha256": "300d604eec69817f5d2a793af45b0ae7c5832ca9f42c1339d7b7ad391b070379",
       "sha256": "300d604eec69817f5d2a793af45b0ae7c5832ca9f42c1339d7b7ad391b070379",
+      "changes": []
+    },
+    {
+      "path": "desktop/kde/config/kwinrulesrc",
+      "snapshot": "snapshot-12",
+      "captured": "2026-10-04",
+      "commit": null,
+      "source": "/home/przvl/.config/kwinrulesrc",
+      "source_sha256": "e6feb0f07e4d800b83396dbd0b8c7a0610518d31ce8ef39cb0902410d6d70fb0",
+      "sha256": "e6feb0f07e4d800b83396dbd0b8c7a0610518d31ce8ef39cb0902410d6d70fb0",
       "changes": []
     }
   ]

@@ -60,3 +60,15 @@ Observed KWin version: 6.7.5. No local source commit is available; the source ha
 | Collection file | SHA-256 |
 | --- | --- |
 | `desktop/kde/config/kglobalshortcutsrc` | `6663bf08257153259cba678928c1724400baafb8231d6281a00eadf378dee629` |
+
+## Window opacity preference
+
+`snapshot-12`, 2026-10-04, captures `config/kwinrulesrc`: active and inactive windows use 70% opacity (30% transparency), while Firefox stays fully opaque. The Firefox rule precedes the catch-all rule in `[General] rules` so its exception takes priority. Both rules force their opacity values.
+
+Merge these rules into the target user's `~/.config/kwinrulesrc`, preserving the Firefox-first order and adapting the `firefox` window class if the installed browser uses a different class. Retain unrelated target rules and update the rule list/count when merging. KWin on the target must support these KConfig rule fields; the current collection records the observed Plasma 6 environment. During an authorized deployment, reload with `qdbus6 org.kde.KWin /KWin org.kde.KWin.reconfigure`.
+
+No local source commit is available; source and collection hashes are in [sources.json](../../docs/sources.json). The earlier live change was reconfigured and saved values read back as 70% for active/inactive windows and 100% for Firefox. Collection INI, rule order/count, JSON and hashes were checked; this collection update did not activate desktop settings.
+
+| Collection file | SHA-256 |
+| --- | --- |
+| `desktop/kde/config/kwinrulesrc` | `e6feb0f07e4d800b83396dbd0b8c7a0610518d31ce8ef39cb0902410d6d70fb0` |
