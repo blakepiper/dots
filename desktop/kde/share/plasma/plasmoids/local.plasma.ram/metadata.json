@@ -1,0 +1,1 @@
+{"KPlugin":{"Id":"local.plasma.ram","Name":"RAM fraction","Description":"Physical RAM usage as a single used/total readout","Version":"1.0","License":"MIT","Icon":"memory","Category":"System Information"},"KPackageStructure":"Plasma/Applet","X-Plasma-API-Minimum-Version":"6.0"}

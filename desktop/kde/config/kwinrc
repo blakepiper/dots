@@ -21,9 +21,9 @@ cubeslideEnabled=false
 fadeEnabled=false
 fadedesktopEnabled=false
 fadingpopupsEnabled=false
-gentoo-focus-borderEnabled=true
-gentoo-screenshotEnabled=true
-gentoo-tilingEnabled=true
+kde-focus-borderEnabled=true
+kde-screenshotEnabled=true
+kde-tilingEnabled=true
 glideEnabled=false
 scaleEnabled=false
 sheetEnabled=false
@@ -73,3 +73,10 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 
 [Xwayland]
 Scale=1.5
+
+# Plasma 6.7.5: ElectricNone; verify the enum on another version.
+[Effect-overview]
+BorderActivate=9
+
+[ElectricBorders]
+TopLeft=None

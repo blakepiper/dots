@@ -127,6 +127,46 @@
         "gtk4": "4.20.4",
         "fontconfig": "2.18.3"
       }
+    },
+    "snapshot-08": {
+      "captured": "2026-10-03",
+      "commit": null,
+      "base_commit": "8018235c39e01d686b9c1050ff6448ed78040075",
+      "description": "Reviewed KDE deployment lessons and selected functional adapters; user confirmed audio works.",
+      "report": {
+        "source": "/home/przvl/lessonslearned.md",
+        "source_sha256": "0587da767f9d8af1eaf8b4f729d7e03c033952dcd8312cc47e752b9c00183edb",
+        "deployment_capture_commit": "8018235c39e01d686b9c1050ff6448ed78040075",
+        "changes": [
+          "Extract preferences, dependencies, activation/evidence lessons and narrow adapters; exclude full inventories, logs, generated trees and temporary scripts."
+        ]
+      },
+      "follow_up": {
+        "date": "2026-10-03",
+        "audio": "User confirmed audio works now; microphone and other pending checks not separately confirmed."
+      }
+    },
+    "collection-03": {
+      "captured": "2026-10-03",
+      "commit": null,
+      "base_commit": "8018235c39e01d686b9c1050ff6448ed78040075",
+      "description": "Apply reviewed deployment preferences, functional names, minimal adapters and preflight/activation/rollback documentation without activating the machine.",
+      "derived_from": "snapshot-08",
+      "removed_files": [
+        {
+          "record": {
+            "path": "desktop/kde/share/icons/gentoo-rice.png",
+            "commit": null,
+            "source_sha256": "7664915763c56521d7eec32911500b3bc080bdaaac3c2a89d47cedaa1dfa1066",
+            "changes": [
+              "Reorganize collection by application and function; moved from kde/share/icons/gentoo-rice.png."
+            ],
+            "sha256": "7664915763c56521d7eec32911500b3bc080bdaaac3c2a89d47cedaa1dfa1066",
+            "source": "/home/przvl/.local/share/icons/gentoo-rice.png"
+          },
+          "reason": "Replace captured launcher icon with selected blue Arch SVG; prior bytes retained in Git history."
+        }
+      ]
     }
   },
   "files": [
@@ -298,10 +338,25 @@
       "commit": null,
       "source_sha256": "952c236803cce1a50337616de159e95c84107246411c984b7d8c68693dcf8c8d",
       "changes": [
-        "Reorganize collection by application and function; moved from kde/config/kwinrc."
+        "Reorganize collection by application and function; moved from kde/config/kwinrc.",
+        "Rename enabled script IDs and add explicit top-left Overview edge settings; retain disabled Slide/Scale flags and captured tiling identities."
       ],
-      "sha256": "952c236803cce1a50337616de159e95c84107246411c984b7d8c68693dcf8c8d",
-      "source": "/home/przvl/.config/kwinrc"
+      "sha256": "2f19ca77aae89ea63b30f11384e07d71dabbdb2b9dcbdf695ac86629112b0702",
+      "source": "/home/przvl/.config/kwinrc",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "previous_captures": [
+        {
+          "path": "desktop/kde/config/kwinrc",
+          "commit": null,
+          "source_sha256": "952c236803cce1a50337616de159e95c84107246411c984b7d8c68693dcf8c8d",
+          "changes": [
+            "Reorganize collection by application and function; moved from kde/config/kwinrc."
+          ],
+          "sha256": "952c236803cce1a50337616de159e95c84107246411c984b7d8c68693dcf8c8d",
+          "source": "/home/przvl/.config/kwinrc"
+        }
+      ]
     },
     {
       "path": "desktop/kde/config/kdeglobals",
@@ -341,10 +396,25 @@
       "commit": null,
       "source_sha256": "3136f1e07ce76d59d543d755de3a8a38f609278b731798c50a03a8c8727d19a8",
       "changes": [
-        "Reorganize collection by application and function; moved from kde/config/kglobalshortcutsrc."
+        "Reorganize collection by application and function; moved from kde/config/kglobalshortcutsrc.",
+        "Update custom action IDs with script registrations and select firefox.desktop as an adaptable package example; preserve KDE chord differences."
       ],
-      "sha256": "3136f1e07ce76d59d543d755de3a8a38f609278b731798c50a03a8c8727d19a8",
-      "source": "/home/przvl/.config/kglobalshortcutsrc"
+      "sha256": "60f08e57899e72fa3ffff2ace76840627f078453d5e0545d3a2cd0869db3b25f",
+      "source": "/home/przvl/.config/kglobalshortcutsrc",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "previous_captures": [
+        {
+          "path": "desktop/kde/config/kglobalshortcutsrc",
+          "commit": null,
+          "source_sha256": "3136f1e07ce76d59d543d755de3a8a38f609278b731798c50a03a8c8727d19a8",
+          "changes": [
+            "Reorganize collection by application and function; moved from kde/config/kglobalshortcutsrc."
+          ],
+          "sha256": "3136f1e07ce76d59d543d755de3a8a38f609278b731798c50a03a8c8727d19a8",
+          "source": "/home/przvl/.config/kglobalshortcutsrc"
+        }
+      ]
     },
     {
       "path": "desktop/kde/config/kscreenlockerrc",
@@ -371,10 +441,25 @@
       "commit": null,
       "source_sha256": "311fd452e540a3e7a8c5fddcf87e211448af44fd740839c5f5b66ca674da82c4",
       "changes": [
-        "Reorganize collection by application and function; moved from kde/config/plasmarc."
+        "Reorganize collection by application and function; moved from kde/config/plasmarc.",
+        "Use functional runtime/package names and update dependent references; retain content and required notices."
       ],
-      "sha256": "311fd452e540a3e7a8c5fddcf87e211448af44fd740839c5f5b66ca674da82c4",
-      "source": "/home/przvl/.config/plasmarc"
+      "sha256": "c21dc103f88171c794fdad1f24f5e70d1dfb4dacdd73081b24e8c2e9dcfb0c96",
+      "source": "/home/przvl/.config/plasmarc",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "previous_captures": [
+        {
+          "path": "desktop/kde/config/plasmarc",
+          "commit": null,
+          "source_sha256": "311fd452e540a3e7a8c5fddcf87e211448af44fd740839c5f5b66ca674da82c4",
+          "changes": [
+            "Reorganize collection by application and function; moved from kde/config/plasmarc."
+          ],
+          "sha256": "311fd452e540a3e7a8c5fddcf87e211448af44fd740839c5f5b66ca674da82c4",
+          "source": "/home/przvl/.config/plasmarc"
+        }
+      ]
     },
     {
       "path": "desktop/kde/config/plasmanotifyrc",
@@ -408,13 +493,15 @@
     },
     {
       "path": "desktop/kde/config/plasma-org.kde.plasma.desktop-appletsrc",
-      "snapshot": "snapshot-07",
+      "snapshot": "collection-03",
       "captured": "2026-10-03",
       "commit": null,
       "source": "/home/przvl/.config/plasma-org.kde.plasma.desktop-appletsrc",
       "source_sha256": "4b4bf339adab54b7f264b5d27e9f3df72e8d9cfca75fbcbb7dd8eb7d717b537b",
-      "sha256": "4b4bf339adab54b7f264b5d27e9f3df72e8d9cfca75fbcbb7dd8eb7d717b537b",
-      "changes": [],
+      "sha256": "f49d35341d6997b284ef3cf069a23eca04c511cb7ea8d0337296d584b9dff846",
+      "changes": [
+        "Use Arch launcher SVG, explicit numeric pager without window icons/outlines, functional widget IDs and absolute wallpaper URIs; retain captured containment/activity/output identities."
+      ],
       "previous_captures": [
         {
           "path": "desktop/kde/config/plasma-org.kde.plasma.desktop-appletsrc",
@@ -425,6 +512,16 @@
           ],
           "sha256": "8c0e024d8058e437527f5ecf03038fa53295944ed38dc51ce2c7821db0b25c52",
           "source": "/home/przvl/.config/plasma-org.kde.plasma.desktop-appletsrc"
+        },
+        {
+          "path": "desktop/kde/config/plasma-org.kde.plasma.desktop-appletsrc",
+          "snapshot": "snapshot-07",
+          "captured": "2026-10-03",
+          "commit": null,
+          "source": "/home/przvl/.config/plasma-org.kde.plasma.desktop-appletsrc",
+          "source_sha256": "4b4bf339adab54b7f264b5d27e9f3df72e8d9cfca75fbcbb7dd8eb7d717b537b",
+          "sha256": "4b4bf339adab54b7f264b5d27e9f3df72e8d9cfca75fbcbb7dd8eb7d717b537b",
+          "changes": []
         }
       ]
     },
@@ -449,184 +546,429 @@
       "source": "/home/przvl/.config/plasma-localerc"
     },
     {
-      "path": "desktop/kde/share/kwin/scripts/gentoo-focus-border/contents/ui/main.qml",
+      "path": "desktop/kde/share/kwin/scripts/kde-focus-border/contents/ui/main.qml",
       "commit": null,
       "source_sha256": "f654f529829b3ee7694907232975f93de2f0ec7d0a449e38fbd7c5d6513b4f43",
       "changes": [
-        "Reorganize collection by application and function; moved from kde/share/kwin/scripts/gentoo-focus-border/contents/ui/main.qml."
+        "Reorganize collection by application and function; moved from kde/share/kwin/scripts/gentoo-focus-border/contents/ui/main.qml.",
+        "Use functional runtime/package names and update dependent references; retain content and required notices."
       ],
       "sha256": "f654f529829b3ee7694907232975f93de2f0ec7d0a449e38fbd7c5d6513b4f43",
-      "source": "/home/przvl/.local/share/kwin/scripts/gentoo-focus-border/contents/ui/main.qml"
+      "source": "/home/przvl/.local/share/kwin/scripts/gentoo-focus-border/contents/ui/main.qml",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "previous_captures": [
+        {
+          "path": "desktop/kde/share/kwin/scripts/gentoo-focus-border/contents/ui/main.qml",
+          "commit": null,
+          "source_sha256": "f654f529829b3ee7694907232975f93de2f0ec7d0a449e38fbd7c5d6513b4f43",
+          "changes": [
+            "Reorganize collection by application and function; moved from kde/share/kwin/scripts/gentoo-focus-border/contents/ui/main.qml."
+          ],
+          "sha256": "f654f529829b3ee7694907232975f93de2f0ec7d0a449e38fbd7c5d6513b4f43",
+          "source": "/home/przvl/.local/share/kwin/scripts/gentoo-focus-border/contents/ui/main.qml"
+        }
+      ]
     },
     {
-      "path": "desktop/kde/share/kwin/scripts/gentoo-focus-border/metadata.json",
+      "path": "desktop/kde/share/kwin/scripts/kde-focus-border/metadata.json",
       "commit": null,
       "source_sha256": "db17d5fa28bf8f28e4ef7713dfb4ce31c074991a3deebca0255c77fb40be9fc2",
       "changes": [
-        "Reorganize collection by application and function; moved from kde/share/kwin/scripts/gentoo-focus-border/metadata.json."
+        "Reorganize collection by application and function; moved from kde/share/kwin/scripts/gentoo-focus-border/metadata.json.",
+        "Use functional runtime/package names and update dependent references; retain content and required notices."
       ],
-      "sha256": "db17d5fa28bf8f28e4ef7713dfb4ce31c074991a3deebca0255c77fb40be9fc2",
-      "source": "/home/przvl/.local/share/kwin/scripts/gentoo-focus-border/metadata.json"
+      "sha256": "cfe4886063977fec53b4f0f876d3b3d808e92a8c501dbd9af490090794db67f9",
+      "source": "/home/przvl/.local/share/kwin/scripts/gentoo-focus-border/metadata.json",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "previous_captures": [
+        {
+          "path": "desktop/kde/share/kwin/scripts/gentoo-focus-border/metadata.json",
+          "commit": null,
+          "source_sha256": "db17d5fa28bf8f28e4ef7713dfb4ce31c074991a3deebca0255c77fb40be9fc2",
+          "changes": [
+            "Reorganize collection by application and function; moved from kde/share/kwin/scripts/gentoo-focus-border/metadata.json."
+          ],
+          "sha256": "db17d5fa28bf8f28e4ef7713dfb4ce31c074991a3deebca0255c77fb40be9fc2",
+          "source": "/home/przvl/.local/share/kwin/scripts/gentoo-focus-border/metadata.json"
+        }
+      ]
     },
     {
-      "path": "desktop/kde/share/kwin/scripts/gentoo-screenshot/contents/code/main.js",
+      "path": "desktop/kde/share/kwin/scripts/kde-screenshot/contents/code/main.js",
       "commit": null,
       "source_sha256": "a6fdab5ea1e508475c8da14806a6f3b3b4afdc9166bede94b95d8408aefec894",
       "changes": [
-        "Reorganize collection by application and function; moved from kde/share/kwin/scripts/gentoo-screenshot/contents/code/main.js."
+        "Reorganize collection by application and function; moved from kde/share/kwin/scripts/gentoo-screenshot/contents/code/main.js.",
+        "Use functional runtime/package names and update dependent references; retain content and required notices."
       ],
-      "sha256": "a6fdab5ea1e508475c8da14806a6f3b3b4afdc9166bede94b95d8408aefec894",
-      "source": "/home/przvl/.local/share/kwin/scripts/gentoo-screenshot/contents/code/main.js"
+      "sha256": "4f65e74b2dcbd46030087b261c6e304360b1db0de022220fd9fe066ea8dde303",
+      "source": "/home/przvl/.local/share/kwin/scripts/gentoo-screenshot/contents/code/main.js",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "previous_captures": [
+        {
+          "path": "desktop/kde/share/kwin/scripts/gentoo-screenshot/contents/code/main.js",
+          "commit": null,
+          "source_sha256": "a6fdab5ea1e508475c8da14806a6f3b3b4afdc9166bede94b95d8408aefec894",
+          "changes": [
+            "Reorganize collection by application and function; moved from kde/share/kwin/scripts/gentoo-screenshot/contents/code/main.js."
+          ],
+          "sha256": "a6fdab5ea1e508475c8da14806a6f3b3b4afdc9166bede94b95d8408aefec894",
+          "source": "/home/przvl/.local/share/kwin/scripts/gentoo-screenshot/contents/code/main.js"
+        }
+      ]
     },
     {
-      "path": "desktop/kde/share/kwin/scripts/gentoo-screenshot/metadata.json",
+      "path": "desktop/kde/share/kwin/scripts/kde-screenshot/metadata.json",
       "commit": null,
       "source_sha256": "74d3eebc5311ec1657514210906e96652063217b5dc02589423587c721b0bcda",
       "changes": [
-        "Reorganize collection by application and function; moved from kde/share/kwin/scripts/gentoo-screenshot/metadata.json."
+        "Reorganize collection by application and function; moved from kde/share/kwin/scripts/gentoo-screenshot/metadata.json.",
+        "Use functional runtime/package names and update dependent references; retain content and required notices."
       ],
-      "sha256": "74d3eebc5311ec1657514210906e96652063217b5dc02589423587c721b0bcda",
-      "source": "/home/przvl/.local/share/kwin/scripts/gentoo-screenshot/metadata.json"
+      "sha256": "158d311e9e3a21091eb99f09ad0e13eec4a61fd35f90fc44a914378513235e7a",
+      "source": "/home/przvl/.local/share/kwin/scripts/gentoo-screenshot/metadata.json",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "previous_captures": [
+        {
+          "path": "desktop/kde/share/kwin/scripts/gentoo-screenshot/metadata.json",
+          "commit": null,
+          "source_sha256": "74d3eebc5311ec1657514210906e96652063217b5dc02589423587c721b0bcda",
+          "changes": [
+            "Reorganize collection by application and function; moved from kde/share/kwin/scripts/gentoo-screenshot/metadata.json."
+          ],
+          "sha256": "74d3eebc5311ec1657514210906e96652063217b5dc02589423587c721b0bcda",
+          "source": "/home/przvl/.local/share/kwin/scripts/gentoo-screenshot/metadata.json"
+        }
+      ]
     },
     {
-      "path": "desktop/kde/share/kwin/scripts/gentoo-tiling/contents/code/main.js",
+      "path": "desktop/kde/share/kwin/scripts/kde-tiling/contents/code/main.js",
       "commit": null,
       "source_sha256": "202ee27cbd26a643cd0c55737b7137ff863dbf4acd7c5bbf9e9975517d822958",
       "changes": [
-        "Reorganize collection by application and function; moved from kde/share/kwin/scripts/gentoo-tiling/contents/code/main.js."
+        "Reorganize collection by application and function; moved from kde/share/kwin/scripts/gentoo-tiling/contents/code/main.js.",
+        "Use functional runtime/package names and update dependent references; retain content and required notices."
       ],
-      "sha256": "202ee27cbd26a643cd0c55737b7137ff863dbf4acd7c5bbf9e9975517d822958",
-      "source": "/home/przvl/.local/share/kwin/scripts/gentoo-tiling/contents/code/main.js"
+      "sha256": "3258f964570698520cd7d0061a20985cd65a94d813e5449df40b02430d960541",
+      "source": "/home/przvl/.local/share/kwin/scripts/gentoo-tiling/contents/code/main.js",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "previous_captures": [
+        {
+          "path": "desktop/kde/share/kwin/scripts/gentoo-tiling/contents/code/main.js",
+          "commit": null,
+          "source_sha256": "202ee27cbd26a643cd0c55737b7137ff863dbf4acd7c5bbf9e9975517d822958",
+          "changes": [
+            "Reorganize collection by application and function; moved from kde/share/kwin/scripts/gentoo-tiling/contents/code/main.js."
+          ],
+          "sha256": "202ee27cbd26a643cd0c55737b7137ff863dbf4acd7c5bbf9e9975517d822958",
+          "source": "/home/przvl/.local/share/kwin/scripts/gentoo-tiling/contents/code/main.js"
+        }
+      ]
     },
     {
-      "path": "desktop/kde/share/kwin/scripts/gentoo-tiling/metadata.json",
+      "path": "desktop/kde/share/kwin/scripts/kde-tiling/metadata.json",
       "commit": null,
       "source_sha256": "51b3c16bd13360c513e28f4f7e399a770a75b975347179413d84336a1d94034e",
       "changes": [
-        "Reorganize collection by application and function; moved from kde/share/kwin/scripts/gentoo-tiling/metadata.json."
+        "Reorganize collection by application and function; moved from kde/share/kwin/scripts/gentoo-tiling/metadata.json.",
+        "Use functional runtime/package names and update dependent references; retain content and required notices."
       ],
-      "sha256": "51b3c16bd13360c513e28f4f7e399a770a75b975347179413d84336a1d94034e",
-      "source": "/home/przvl/.local/share/kwin/scripts/gentoo-tiling/metadata.json"
+      "sha256": "069ca91f62b8d421502d9390f753e3317b80be9fd6cb149ccc104360ed4cc996",
+      "source": "/home/przvl/.local/share/kwin/scripts/gentoo-tiling/metadata.json",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "previous_captures": [
+        {
+          "path": "desktop/kde/share/kwin/scripts/gentoo-tiling/metadata.json",
+          "commit": null,
+          "source_sha256": "51b3c16bd13360c513e28f4f7e399a770a75b975347179413d84336a1d94034e",
+          "changes": [
+            "Reorganize collection by application and function; moved from kde/share/kwin/scripts/gentoo-tiling/metadata.json."
+          ],
+          "sha256": "51b3c16bd13360c513e28f4f7e399a770a75b975347179413d84336a1d94034e",
+          "source": "/home/przvl/.local/share/kwin/scripts/gentoo-tiling/metadata.json"
+        }
+      ]
     },
     {
-      "path": "desktop/kde/share/plasma/desktoptheme/gentoo-transparent/metadata.json",
+      "path": "desktop/kde/share/plasma/desktoptheme/panel-transparent/metadata.json",
       "commit": null,
       "source_sha256": "bcca8d8a4cdd9a18c863e77cc41fbe99b5048f3007676faa85c3672dc708c85a",
       "changes": [
-        "Reorganize collection by application and function; moved from kde/share/plasma/desktoptheme/gentoo-transparent/metadata.json."
+        "Reorganize collection by application and function; moved from kde/share/plasma/desktoptheme/gentoo-transparent/metadata.json.",
+        "Use functional runtime/package names and update dependent references; retain content and required notices."
       ],
-      "sha256": "bcca8d8a4cdd9a18c863e77cc41fbe99b5048f3007676faa85c3672dc708c85a",
-      "source": "/home/przvl/.local/share/plasma/desktoptheme/gentoo-transparent/metadata.json"
+      "sha256": "9b572df55b3cb1047b516f87728d9fb1b1e82c090bc7c2509fbd11baa9a46b7b",
+      "source": "/home/przvl/.local/share/plasma/desktoptheme/gentoo-transparent/metadata.json",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "previous_captures": [
+        {
+          "path": "desktop/kde/share/plasma/desktoptheme/gentoo-transparent/metadata.json",
+          "commit": null,
+          "source_sha256": "bcca8d8a4cdd9a18c863e77cc41fbe99b5048f3007676faa85c3672dc708c85a",
+          "changes": [
+            "Reorganize collection by application and function; moved from kde/share/plasma/desktoptheme/gentoo-transparent/metadata.json."
+          ],
+          "sha256": "bcca8d8a4cdd9a18c863e77cc41fbe99b5048f3007676faa85c3672dc708c85a",
+          "source": "/home/przvl/.local/share/plasma/desktoptheme/gentoo-transparent/metadata.json"
+        }
+      ]
     },
     {
-      "path": "desktop/kde/share/plasma/desktoptheme/gentoo-transparent/opaque/widgets/panel-background.svg",
+      "path": "desktop/kde/share/plasma/desktoptheme/panel-transparent/opaque/widgets/panel-background.svg",
       "commit": null,
       "source_sha256": "2e38bd37219e349e3e82ad2972d0b4ddbe13f66f1b75272bb8c7f1959424d8de",
       "changes": [
-        "Reorganize collection by application and function; moved from kde/share/plasma/desktoptheme/gentoo-transparent/opaque/widgets/panel-background.svg."
+        "Reorganize collection by application and function; moved from kde/share/plasma/desktoptheme/gentoo-transparent/opaque/widgets/panel-background.svg.",
+        "Use functional runtime/package names and update dependent references; retain content and required notices."
       ],
       "sha256": "2e38bd37219e349e3e82ad2972d0b4ddbe13f66f1b75272bb8c7f1959424d8de",
-      "source": "/home/przvl/.local/share/plasma/desktoptheme/gentoo-transparent/opaque/widgets/panel-background.svg"
+      "source": "/home/przvl/.local/share/plasma/desktoptheme/gentoo-transparent/opaque/widgets/panel-background.svg",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "previous_captures": [
+        {
+          "path": "desktop/kde/share/plasma/desktoptheme/gentoo-transparent/opaque/widgets/panel-background.svg",
+          "commit": null,
+          "source_sha256": "2e38bd37219e349e3e82ad2972d0b4ddbe13f66f1b75272bb8c7f1959424d8de",
+          "changes": [
+            "Reorganize collection by application and function; moved from kde/share/plasma/desktoptheme/gentoo-transparent/opaque/widgets/panel-background.svg."
+          ],
+          "sha256": "2e38bd37219e349e3e82ad2972d0b4ddbe13f66f1b75272bb8c7f1959424d8de",
+          "source": "/home/przvl/.local/share/plasma/desktoptheme/gentoo-transparent/opaque/widgets/panel-background.svg"
+        }
+      ]
     },
     {
-      "path": "desktop/kde/share/plasma/desktoptheme/gentoo-transparent/plasmarc",
+      "path": "desktop/kde/share/plasma/desktoptheme/panel-transparent/plasmarc",
       "commit": null,
       "source_sha256": "0cb5406b4853cec2d4d8787fbfd471edfe3701c91d502521a01e729da3adf235",
       "changes": [
-        "Reorganize collection by application and function; moved from kde/share/plasma/desktoptheme/gentoo-transparent/plasmarc."
+        "Reorganize collection by application and function; moved from kde/share/plasma/desktoptheme/gentoo-transparent/plasmarc.",
+        "Use functional runtime/package names and update dependent references; retain content and required notices."
       ],
       "sha256": "0cb5406b4853cec2d4d8787fbfd471edfe3701c91d502521a01e729da3adf235",
-      "source": "/home/przvl/.local/share/plasma/desktoptheme/gentoo-transparent/plasmarc"
+      "source": "/home/przvl/.local/share/plasma/desktoptheme/gentoo-transparent/plasmarc",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "previous_captures": [
+        {
+          "path": "desktop/kde/share/plasma/desktoptheme/gentoo-transparent/plasmarc",
+          "commit": null,
+          "source_sha256": "0cb5406b4853cec2d4d8787fbfd471edfe3701c91d502521a01e729da3adf235",
+          "changes": [
+            "Reorganize collection by application and function; moved from kde/share/plasma/desktoptheme/gentoo-transparent/plasmarc."
+          ],
+          "sha256": "0cb5406b4853cec2d4d8787fbfd471edfe3701c91d502521a01e729da3adf235",
+          "source": "/home/przvl/.local/share/plasma/desktoptheme/gentoo-transparent/plasmarc"
+        }
+      ]
     },
     {
-      "path": "desktop/kde/share/plasma/desktoptheme/gentoo-transparent/translucent/widgets/panel-background.svg",
+      "path": "desktop/kde/share/plasma/desktoptheme/panel-transparent/translucent/widgets/panel-background.svg",
       "commit": null,
       "source_sha256": "2e38bd37219e349e3e82ad2972d0b4ddbe13f66f1b75272bb8c7f1959424d8de",
       "changes": [
-        "Reorganize collection by application and function; moved from kde/share/plasma/desktoptheme/gentoo-transparent/translucent/widgets/panel-background.svg."
+        "Reorganize collection by application and function; moved from kde/share/plasma/desktoptheme/gentoo-transparent/translucent/widgets/panel-background.svg.",
+        "Use functional runtime/package names and update dependent references; retain content and required notices."
       ],
       "sha256": "2e38bd37219e349e3e82ad2972d0b4ddbe13f66f1b75272bb8c7f1959424d8de",
-      "source": "/home/przvl/.local/share/plasma/desktoptheme/gentoo-transparent/translucent/widgets/panel-background.svg"
+      "source": "/home/przvl/.local/share/plasma/desktoptheme/gentoo-transparent/translucent/widgets/panel-background.svg",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "previous_captures": [
+        {
+          "path": "desktop/kde/share/plasma/desktoptheme/gentoo-transparent/translucent/widgets/panel-background.svg",
+          "commit": null,
+          "source_sha256": "2e38bd37219e349e3e82ad2972d0b4ddbe13f66f1b75272bb8c7f1959424d8de",
+          "changes": [
+            "Reorganize collection by application and function; moved from kde/share/plasma/desktoptheme/gentoo-transparent/translucent/widgets/panel-background.svg."
+          ],
+          "sha256": "2e38bd37219e349e3e82ad2972d0b4ddbe13f66f1b75272bb8c7f1959424d8de",
+          "source": "/home/przvl/.local/share/plasma/desktoptheme/gentoo-transparent/translucent/widgets/panel-background.svg"
+        }
+      ]
     },
     {
-      "path": "desktop/kde/share/plasma/desktoptheme/gentoo-transparent/widgets/panel-background.svg",
+      "path": "desktop/kde/share/plasma/desktoptheme/panel-transparent/widgets/panel-background.svg",
       "commit": null,
       "source_sha256": "2e38bd37219e349e3e82ad2972d0b4ddbe13f66f1b75272bb8c7f1959424d8de",
       "changes": [
-        "Reorganize collection by application and function; moved from kde/share/plasma/desktoptheme/gentoo-transparent/widgets/panel-background.svg."
+        "Reorganize collection by application and function; moved from kde/share/plasma/desktoptheme/gentoo-transparent/widgets/panel-background.svg.",
+        "Use functional runtime/package names and update dependent references; retain content and required notices."
       ],
       "sha256": "2e38bd37219e349e3e82ad2972d0b4ddbe13f66f1b75272bb8c7f1959424d8de",
-      "source": "/home/przvl/.local/share/plasma/desktoptheme/gentoo-transparent/widgets/panel-background.svg"
+      "source": "/home/przvl/.local/share/plasma/desktoptheme/gentoo-transparent/widgets/panel-background.svg",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "previous_captures": [
+        {
+          "path": "desktop/kde/share/plasma/desktoptheme/gentoo-transparent/widgets/panel-background.svg",
+          "commit": null,
+          "source_sha256": "2e38bd37219e349e3e82ad2972d0b4ddbe13f66f1b75272bb8c7f1959424d8de",
+          "changes": [
+            "Reorganize collection by application and function; moved from kde/share/plasma/desktoptheme/gentoo-transparent/widgets/panel-background.svg."
+          ],
+          "sha256": "2e38bd37219e349e3e82ad2972d0b4ddbe13f66f1b75272bb8c7f1959424d8de",
+          "source": "/home/przvl/.local/share/plasma/desktoptheme/gentoo-transparent/widgets/panel-background.svg"
+        }
+      ]
     },
     {
-      "path": "desktop/kde/share/plasma/plasmoids/local.gentoo.cpu/contents/ui/main.qml",
+      "path": "desktop/kde/share/plasma/plasmoids/local.plasma.cpu/contents/ui/main.qml",
       "commit": null,
       "source_sha256": "3443c5ad572d68afd249339857e66a482a2c1df47c1edf846602ab5ced9db477",
       "changes": [
-        "Reorganize collection by application and function; moved from kde/share/plasma/plasmoids/local.gentoo.cpu/contents/ui/main.qml."
+        "Reorganize collection by application and function; moved from kde/share/plasma/plasmoids/local.gentoo.cpu/contents/ui/main.qml.",
+        "Use functional runtime/package names and update dependent references; retain content and required notices."
       ],
       "sha256": "3443c5ad572d68afd249339857e66a482a2c1df47c1edf846602ab5ced9db477",
-      "source": "/home/przvl/.local/share/plasma/plasmoids/local.gentoo.cpu/contents/ui/main.qml"
+      "source": "/home/przvl/.local/share/plasma/plasmoids/local.gentoo.cpu/contents/ui/main.qml",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "previous_captures": [
+        {
+          "path": "desktop/kde/share/plasma/plasmoids/local.gentoo.cpu/contents/ui/main.qml",
+          "commit": null,
+          "source_sha256": "3443c5ad572d68afd249339857e66a482a2c1df47c1edf846602ab5ced9db477",
+          "changes": [
+            "Reorganize collection by application and function; moved from kde/share/plasma/plasmoids/local.gentoo.cpu/contents/ui/main.qml."
+          ],
+          "sha256": "3443c5ad572d68afd249339857e66a482a2c1df47c1edf846602ab5ced9db477",
+          "source": "/home/przvl/.local/share/plasma/plasmoids/local.gentoo.cpu/contents/ui/main.qml"
+        }
+      ]
     },
     {
-      "path": "desktop/kde/share/plasma/plasmoids/local.gentoo.cpu/metadata.json",
+      "path": "desktop/kde/share/plasma/plasmoids/local.plasma.cpu/metadata.json",
       "commit": null,
       "source_sha256": "c4644ab8bca504e54f58cb66c04856b9bd207e2d4ba4037bbc73d5c6a5f83ad5",
       "changes": [
-        "Reorganize collection by application and function; moved from kde/share/plasma/plasmoids/local.gentoo.cpu/metadata.json."
+        "Reorganize collection by application and function; moved from kde/share/plasma/plasmoids/local.gentoo.cpu/metadata.json.",
+        "Use functional runtime/package names and update dependent references; retain content and required notices."
       ],
-      "sha256": "c4644ab8bca504e54f58cb66c04856b9bd207e2d4ba4037bbc73d5c6a5f83ad5",
-      "source": "/home/przvl/.local/share/plasma/plasmoids/local.gentoo.cpu/metadata.json"
+      "sha256": "febcff9115427ec89ff6918e1c8448c8f7a222450c0e2a4360ec25816720e242",
+      "source": "/home/przvl/.local/share/plasma/plasmoids/local.gentoo.cpu/metadata.json",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "previous_captures": [
+        {
+          "path": "desktop/kde/share/plasma/plasmoids/local.gentoo.cpu/metadata.json",
+          "commit": null,
+          "source_sha256": "c4644ab8bca504e54f58cb66c04856b9bd207e2d4ba4037bbc73d5c6a5f83ad5",
+          "changes": [
+            "Reorganize collection by application and function; moved from kde/share/plasma/plasmoids/local.gentoo.cpu/metadata.json."
+          ],
+          "sha256": "c4644ab8bca504e54f58cb66c04856b9bd207e2d4ba4037bbc73d5c6a5f83ad5",
+          "source": "/home/przvl/.local/share/plasma/plasmoids/local.gentoo.cpu/metadata.json"
+        }
+      ]
     },
     {
-      "path": "desktop/kde/share/plasma/plasmoids/local.gentoo.ram/contents/ui/main.qml",
+      "path": "desktop/kde/share/plasma/plasmoids/local.plasma.ram/contents/ui/main.qml",
       "commit": null,
       "source_sha256": "e267c96b94b1e06249f47298a91db9f66848a5cb1864276667a21d37d1f7bda4",
       "changes": [
-        "Reorganize collection by application and function; moved from kde/share/plasma/plasmoids/local.gentoo.ram/contents/ui/main.qml."
+        "Reorganize collection by application and function; moved from kde/share/plasma/plasmoids/local.gentoo.ram/contents/ui/main.qml.",
+        "Use functional runtime/package names and update dependent references; retain content and required notices."
       ],
       "sha256": "e267c96b94b1e06249f47298a91db9f66848a5cb1864276667a21d37d1f7bda4",
-      "source": "/home/przvl/.local/share/plasma/plasmoids/local.gentoo.ram/contents/ui/main.qml"
+      "source": "/home/przvl/.local/share/plasma/plasmoids/local.gentoo.ram/contents/ui/main.qml",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "previous_captures": [
+        {
+          "path": "desktop/kde/share/plasma/plasmoids/local.gentoo.ram/contents/ui/main.qml",
+          "commit": null,
+          "source_sha256": "e267c96b94b1e06249f47298a91db9f66848a5cb1864276667a21d37d1f7bda4",
+          "changes": [
+            "Reorganize collection by application and function; moved from kde/share/plasma/plasmoids/local.gentoo.ram/contents/ui/main.qml."
+          ],
+          "sha256": "e267c96b94b1e06249f47298a91db9f66848a5cb1864276667a21d37d1f7bda4",
+          "source": "/home/przvl/.local/share/plasma/plasmoids/local.gentoo.ram/contents/ui/main.qml"
+        }
+      ]
     },
     {
-      "path": "desktop/kde/share/plasma/plasmoids/local.gentoo.ram/metadata.json",
+      "path": "desktop/kde/share/plasma/plasmoids/local.plasma.ram/metadata.json",
       "commit": null,
       "source_sha256": "f7fda94d712d34d9e7eb79038c54b02741e2d66322f773bbdcc1daf74394569c",
       "changes": [
-        "Reorganize collection by application and function; moved from kde/share/plasma/plasmoids/local.gentoo.ram/metadata.json."
+        "Reorganize collection by application and function; moved from kde/share/plasma/plasmoids/local.gentoo.ram/metadata.json.",
+        "Use functional runtime/package names and update dependent references; retain content and required notices."
       ],
-      "sha256": "f7fda94d712d34d9e7eb79038c54b02741e2d66322f773bbdcc1daf74394569c",
-      "source": "/home/przvl/.local/share/plasma/plasmoids/local.gentoo.ram/metadata.json"
+      "sha256": "4c6dcf556510ba267b5ac18eae0ed8041c081f512cc05199909fe8c1ba4bd9a4",
+      "source": "/home/przvl/.local/share/plasma/plasmoids/local.gentoo.ram/metadata.json",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "previous_captures": [
+        {
+          "path": "desktop/kde/share/plasma/plasmoids/local.gentoo.ram/metadata.json",
+          "commit": null,
+          "source_sha256": "f7fda94d712d34d9e7eb79038c54b02741e2d66322f773bbdcc1daf74394569c",
+          "changes": [
+            "Reorganize collection by application and function; moved from kde/share/plasma/plasmoids/local.gentoo.ram/metadata.json."
+          ],
+          "sha256": "f7fda94d712d34d9e7eb79038c54b02741e2d66322f773bbdcc1daf74394569c",
+          "source": "/home/przvl/.local/share/plasma/plasmoids/local.gentoo.ram/metadata.json"
+        }
+      ]
     },
     {
-      "path": "desktop/kde/share/icons/gentoo-rice.png",
-      "commit": null,
-      "source_sha256": "7664915763c56521d7eec32911500b3bc080bdaaac3c2a89d47cedaa1dfa1066",
-      "changes": [
-        "Reorganize collection by application and function; moved from kde/share/icons/gentoo-rice.png."
-      ],
-      "sha256": "7664915763c56521d7eec32911500b3bc080bdaaac3c2a89d47cedaa1dfa1066",
-      "source": "/home/przvl/.local/share/icons/gentoo-rice.png"
-    },
-    {
-      "path": "desktop/kde/share/dbus-1/services/org.przvl.Screenshot.service",
+      "path": "desktop/kde/share/dbus-1/services/org.local.Screenshot.service",
       "commit": null,
       "source_sha256": "ab1ede18282799253977b38245e9c8c9038d0aba486eea82b315aab94aa6b4c5",
       "changes": [
-        "Reorganize collection by application and function; moved from kde/share/dbus-1/services/org.przvl.Screenshot.service."
+        "Reorganize collection by application and function; moved from kde/share/dbus-1/services/org.przvl.Screenshot.service.",
+        "Use functional runtime/package names and update dependent references; retain content and required notices."
       ],
-      "sha256": "ab1ede18282799253977b38245e9c8c9038d0aba486eea82b315aab94aa6b4c5",
-      "source": "/home/przvl/.local/share/dbus-1/services/org.przvl.Screenshot.service"
+      "sha256": "8db3b2283c4868722df0d222b9040fc7d1cadab11a559c97849a931ce728f7c5",
+      "source": "/home/przvl/.local/share/dbus-1/services/org.przvl.Screenshot.service",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "previous_captures": [
+        {
+          "path": "desktop/kde/share/dbus-1/services/org.przvl.Screenshot.service",
+          "commit": null,
+          "source_sha256": "ab1ede18282799253977b38245e9c8c9038d0aba486eea82b315aab94aa6b4c5",
+          "changes": [
+            "Reorganize collection by application and function; moved from kde/share/dbus-1/services/org.przvl.Screenshot.service."
+          ],
+          "sha256": "ab1ede18282799253977b38245e9c8c9038d0aba486eea82b315aab94aa6b4c5",
+          "source": "/home/przvl/.local/share/dbus-1/services/org.przvl.Screenshot.service"
+        }
+      ]
     },
     {
       "path": "desktop/kde/bin/screenshot-region",
       "commit": null,
       "source_sha256": "259bba052f08aad7925a6a63e5136e4201a6572698ffca6a60def7ba5e5c661b",
       "changes": [
-        "Reorganize collection by application and function; moved from kde/bin/screenshot-region."
+        "Reorganize collection by application and function; moved from kde/bin/screenshot-region.",
+        "Call the one shared Flameshot environment wrapper for clipboard region selection."
       ],
-      "sha256": "259bba052f08aad7925a6a63e5136e4201a6572698ffca6a60def7ba5e5c661b",
-      "source": "/home/przvl/.local/bin/screenshot-region"
+      "sha256": "bdd6f31e4eb476ed6b3e6b4483acd1c8b2829e616828ccacc7693682a4b2d237",
+      "source": "/home/przvl/.local/bin/screenshot-region",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "previous_captures": [
+        {
+          "path": "desktop/kde/bin/screenshot-region",
+          "commit": null,
+          "source_sha256": "259bba052f08aad7925a6a63e5136e4201a6572698ffca6a60def7ba5e5c661b",
+          "changes": [
+            "Reorganize collection by application and function; moved from kde/bin/screenshot-region."
+          ],
+          "sha256": "259bba052f08aad7925a6a63e5136e4201a6572698ffca6a60def7ba5e5c661b",
+          "source": "/home/przvl/.local/bin/screenshot-region"
+        }
+      ]
     },
     {
       "path": "desktop/kde/bin/screenshot-shortcut-service",
@@ -634,10 +976,26 @@
       "source_sha256": "95e806aab1a1a599d1c3364478592471c5a05888e8c016a5ddac9403c2261949",
       "changes": [
         "Resolve screenshot-region relative to the target user home instead of /home/przvl.",
-        "Reorganize collection by application and function; moved from kde/bin/screenshot-shortcut-service."
+        "Reorganize collection by application and function; moved from kde/bin/screenshot-shortcut-service.",
+        "Use functional org.local.Screenshot bus/interface; retain dynamic target-home helper lookup."
       ],
-      "sha256": "6bc475d64f13e092e96b9d4f4b5b7df40b9192ea96056e4f6cf75d7151adb825",
-      "source": "/home/przvl/.local/bin/screenshot-shortcut-service"
+      "sha256": "a5da82aee46ecd2b7f6a2710bc5a7f9343cd3a98a68901b4fb8704588e03c6b4",
+      "source": "/home/przvl/.local/bin/screenshot-shortcut-service",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "previous_captures": [
+        {
+          "path": "desktop/kde/bin/screenshot-shortcut-service",
+          "commit": null,
+          "source_sha256": "95e806aab1a1a599d1c3364478592471c5a05888e8c016a5ddac9403c2261949",
+          "changes": [
+            "Resolve screenshot-region relative to the target user home instead of /home/przvl.",
+            "Reorganize collection by application and function; moved from kde/bin/screenshot-shortcut-service."
+          ],
+          "sha256": "6bc475d64f13e092e96b9d4f4b5b7df40b9192ea96056e4f6cf75d7151adb825",
+          "source": "/home/przvl/.local/bin/screenshot-shortcut-service"
+        }
+      ]
     },
     {
       "path": "desktop/kde/config/flameshot/flameshot.ini",
@@ -650,72 +1008,176 @@
       "source": "/home/przvl/.config/flameshot/flameshot.ini"
     },
     {
-      "path": "desktop/sddm/etc/sddm.conf.d/01gentoo.conf",
+      "path": "desktop/sddm/etc/sddm.conf.d/01-greeter.conf",
       "commit": null,
       "source_sha256": "9906c8724ad5a9f5c7fa3e3eacb28bfeb8e7caa100f3b59b577e37d5b1a20b2e",
       "changes": [
-        "Reorganize collection by application and function; moved from sddm/etc/sddm.conf.d/01gentoo.conf."
+        "Reorganize collection by application and function; moved from sddm/etc/sddm.conf.d/01gentoo.conf.",
+        "Use functional runtime/package names and update dependent references; retain content and required notices."
       ],
       "sha256": "9906c8724ad5a9f5c7fa3e3eacb28bfeb8e7caa100f3b59b577e37d5b1a20b2e",
-      "source": "/etc/sddm.conf.d/01gentoo.conf"
+      "source": "/etc/sddm.conf.d/01gentoo.conf",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "previous_captures": [
+        {
+          "path": "desktop/sddm/etc/sddm.conf.d/01gentoo.conf",
+          "commit": null,
+          "source_sha256": "9906c8724ad5a9f5c7fa3e3eacb28bfeb8e7caa100f3b59b577e37d5b1a20b2e",
+          "changes": [
+            "Reorganize collection by application and function; moved from sddm/etc/sddm.conf.d/01gentoo.conf."
+          ],
+          "sha256": "9906c8724ad5a9f5c7fa3e3eacb28bfeb8e7caa100f3b59b577e37d5b1a20b2e",
+          "source": "/etc/sddm.conf.d/01gentoo.conf"
+        }
+      ]
     },
     {
-      "path": "desktop/sddm/etc/sddm.conf.d/90-gentoo-minimal.conf",
+      "path": "desktop/sddm/etc/sddm.conf.d/90-sddm-minimal.conf",
       "commit": null,
       "source_sha256": "9a68e2f9d86980da95a5cd93709ec655fbc3c6848f40edf941f4edaba715f553",
       "changes": [
-        "Reorganize collection by application and function; moved from sddm/etc/sddm.conf.d/90-gentoo-minimal.conf."
+        "Reorganize collection by application and function; moved from sddm/etc/sddm.conf.d/90-gentoo-minimal.conf.",
+        "Use functional runtime/package names and update dependent references; retain content and required notices."
       ],
-      "sha256": "9a68e2f9d86980da95a5cd93709ec655fbc3c6848f40edf941f4edaba715f553",
-      "source": "/etc/sddm.conf.d/90-gentoo-minimal.conf"
+      "sha256": "fe97dcc9bf24b4e048ac6481f5a3d4ab67fc0ebed1db1d8bd06d9db79c64d5d5",
+      "source": "/etc/sddm.conf.d/90-gentoo-minimal.conf",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "previous_captures": [
+        {
+          "path": "desktop/sddm/etc/sddm.conf.d/90-gentoo-minimal.conf",
+          "commit": null,
+          "source_sha256": "9a68e2f9d86980da95a5cd93709ec655fbc3c6848f40edf941f4edaba715f553",
+          "changes": [
+            "Reorganize collection by application and function; moved from sddm/etc/sddm.conf.d/90-gentoo-minimal.conf."
+          ],
+          "sha256": "9a68e2f9d86980da95a5cd93709ec655fbc3c6848f40edf941f4edaba715f553",
+          "source": "/etc/sddm.conf.d/90-gentoo-minimal.conf"
+        }
+      ]
     },
     {
-      "path": "desktop/sddm/themes/gentoo-minimal/Main.qml",
+      "path": "desktop/sddm/themes/sddm-minimal/Main.qml",
       "commit": null,
       "source_sha256": "7d088fa55eafbdccd7fdeddfbc184175f67d7c00caadb0837dfb521b241b5d18",
       "changes": [
-        "Reorganize collection by application and function; moved from sddm/themes/gentoo-minimal/Main.qml."
+        "Reorganize collection by application and function; moved from sddm/themes/gentoo-minimal/Main.qml.",
+        "Use functional runtime/package names and update dependent references; retain content and required notices."
       ],
       "sha256": "7d088fa55eafbdccd7fdeddfbc184175f67d7c00caadb0837dfb521b241b5d18",
-      "source": "/usr/share/sddm/themes/gentoo-minimal/Main.qml"
+      "source": "/usr/share/sddm/themes/gentoo-minimal/Main.qml",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "previous_captures": [
+        {
+          "path": "desktop/sddm/themes/gentoo-minimal/Main.qml",
+          "commit": null,
+          "source_sha256": "7d088fa55eafbdccd7fdeddfbc184175f67d7c00caadb0837dfb521b241b5d18",
+          "changes": [
+            "Reorganize collection by application and function; moved from sddm/themes/gentoo-minimal/Main.qml."
+          ],
+          "sha256": "7d088fa55eafbdccd7fdeddfbc184175f67d7c00caadb0837dfb521b241b5d18",
+          "source": "/usr/share/sddm/themes/gentoo-minimal/Main.qml"
+        }
+      ]
     },
     {
-      "path": "desktop/sddm/themes/gentoo-minimal/metadata.desktop",
+      "path": "desktop/sddm/themes/sddm-minimal/metadata.desktop",
       "commit": null,
       "source_sha256": "387b8daf61b34e442281735caa68f05747e99ad227df06b33969797f51ab3f1f",
       "changes": [
-        "Reorganize collection by application and function; moved from sddm/themes/gentoo-minimal/metadata.desktop."
+        "Reorganize collection by application and function; moved from sddm/themes/gentoo-minimal/metadata.desktop.",
+        "Use functional runtime/package names and update dependent references; retain content and required notices."
       ],
-      "sha256": "387b8daf61b34e442281735caa68f05747e99ad227df06b33969797f51ab3f1f",
-      "source": "/usr/share/sddm/themes/gentoo-minimal/metadata.desktop"
+      "sha256": "f47b583e7627f7f9478311eacf3429e59a997d7cc37e9eb9d5fa1049b7131ed1",
+      "source": "/usr/share/sddm/themes/gentoo-minimal/metadata.desktop",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "previous_captures": [
+        {
+          "path": "desktop/sddm/themes/gentoo-minimal/metadata.desktop",
+          "commit": null,
+          "source_sha256": "387b8daf61b34e442281735caa68f05747e99ad227df06b33969797f51ab3f1f",
+          "changes": [
+            "Reorganize collection by application and function; moved from sddm/themes/gentoo-minimal/metadata.desktop."
+          ],
+          "sha256": "387b8daf61b34e442281735caa68f05747e99ad227df06b33969797f51ab3f1f",
+          "source": "/usr/share/sddm/themes/gentoo-minimal/metadata.desktop"
+        }
+      ]
     },
     {
-      "path": "desktop/sddm/themes/gentoo-minimal/theme.conf",
+      "path": "desktop/sddm/themes/sddm-minimal/theme.conf",
       "commit": null,
       "source_sha256": "a48ed5b00be15f61f8daf69b8c0a09ea4530111407d14f86905bd612ca71a375",
       "changes": [
-        "Reorganize collection by application and function; moved from sddm/themes/gentoo-minimal/theme.conf."
+        "Reorganize collection by application and function; moved from sddm/themes/gentoo-minimal/theme.conf.",
+        "Use functional runtime/package names and update dependent references; retain content and required notices."
       ],
       "sha256": "a48ed5b00be15f61f8daf69b8c0a09ea4530111407d14f86905bd612ca71a375",
-      "source": "/usr/share/sddm/themes/gentoo-minimal/theme.conf"
+      "source": "/usr/share/sddm/themes/gentoo-minimal/theme.conf",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "previous_captures": [
+        {
+          "path": "desktop/sddm/themes/gentoo-minimal/theme.conf",
+          "commit": null,
+          "source_sha256": "a48ed5b00be15f61f8daf69b8c0a09ea4530111407d14f86905bd612ca71a375",
+          "changes": [
+            "Reorganize collection by application and function; moved from sddm/themes/gentoo-minimal/theme.conf."
+          ],
+          "sha256": "a48ed5b00be15f61f8daf69b8c0a09ea4530111407d14f86905bd612ca71a375",
+          "source": "/usr/share/sddm/themes/gentoo-minimal/theme.conf"
+        }
+      ]
     },
     {
-      "path": "desktop/sddm/themes/gentoo-minimal/wallpaper.png",
+      "path": "desktop/sddm/themes/sddm-minimal/wallpaper.png",
       "commit": null,
       "source_sha256": "ba7eebcd6a38de15852bfae473c2cbc9d6b23b5b742e9a1590e8a28762e8f13e",
       "changes": [
-        "Reorganize collection by application and function; moved from sddm/themes/gentoo-minimal/wallpaper.png."
+        "Reorganize collection by application and function; moved from sddm/themes/gentoo-minimal/wallpaper.png.",
+        "Use functional runtime/package names and update dependent references; retain content and required notices."
       ],
       "sha256": "ba7eebcd6a38de15852bfae473c2cbc9d6b23b5b742e9a1590e8a28762e8f13e",
-      "source": "/usr/share/sddm/themes/gentoo-minimal/wallpaper.png"
+      "source": "/usr/share/sddm/themes/gentoo-minimal/wallpaper.png",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "previous_captures": [
+        {
+          "path": "desktop/sddm/themes/gentoo-minimal/wallpaper.png",
+          "commit": null,
+          "source_sha256": "ba7eebcd6a38de15852bfae473c2cbc9d6b23b5b742e9a1590e8a28762e8f13e",
+          "changes": [
+            "Reorganize collection by application and function; moved from sddm/themes/gentoo-minimal/wallpaper.png."
+          ],
+          "sha256": "ba7eebcd6a38de15852bfae473c2cbc9d6b23b5b742e9a1590e8a28762e8f13e",
+          "source": "/usr/share/sddm/themes/gentoo-minimal/wallpaper.png"
+        }
+      ]
     },
     {
-      "path": "hardware/keyboard/udev/hwdb.d/90-gentoo-external-keyboard.hwdb",
+      "path": "hardware/keyboard/udev/hwdb.d/90-external-keyboard.hwdb",
       "commit": null,
       "source_sha256": "e113b07bff14d1b363983cd1ea4fedbab7717f183572724728ff8b19556cb317",
-      "changes": [],
+      "changes": [
+        "Use functional runtime/package names and update dependent references; retain content and required notices."
+      ],
       "sha256": "e113b07bff14d1b363983cd1ea4fedbab7717f183572724728ff8b19556cb317",
-      "source": "/etc/udev/hwdb.d/90-gentoo-external-keyboard.hwdb"
+      "source": "/etc/udev/hwdb.d/90-gentoo-external-keyboard.hwdb",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "previous_captures": [
+        {
+          "path": "hardware/keyboard/udev/hwdb.d/90-gentoo-external-keyboard.hwdb",
+          "commit": null,
+          "source_sha256": "e113b07bff14d1b363983cd1ea4fedbab7717f183572724728ff8b19556cb317",
+          "changes": [],
+          "sha256": "e113b07bff14d1b363983cd1ea4fedbab7717f183572724728ff8b19556cb317",
+          "source": "/etc/udev/hwdb.d/90-gentoo-external-keyboard.hwdb"
+        }
+      ]
     },
     {
       "path": "hardware/monitor/kde/kwinoutputconfig.json",
@@ -983,14 +1445,16 @@
       "snapshot": "snapshot-01"
     },
     {
-      "path": "terminal/konsole/GentooClassic.profile",
-      "snapshot": "snapshot-07",
+      "path": "terminal/konsole/Classic.profile",
+      "snapshot": "collection-03",
       "captured": "2026-10-03",
       "commit": null,
       "source": "/home/przvl/.local/share/konsole/GentooClassic.profile",
       "source_sha256": "6c1399bd1498dbfd99113bdd21a0da8d064aeb767ac8a8f8b29726450e0c6adf",
-      "sha256": "6c1399bd1498dbfd99113bdd21a0da8d064aeb767ac8a8f8b29726450e0c6adf",
-      "changes": [],
+      "sha256": "dad6c0c1b4051be75f94a4230e5f6af86cab891f5466f05b7deba41718efa4d5",
+      "changes": [
+        "Use functional runtime/package names and update dependent references; retain content and required notices."
+      ],
       "previous_captures": [
         {
           "path": "terminal/konsole/GentooClassic.profile",
@@ -999,24 +1463,62 @@
           "changes": [],
           "sha256": "6995f9a6c6f03c8ba85fcd45a615f7fb7393bd473bde3edecda78f0795f60420",
           "source": "/home/przvl/.local/share/konsole/GentooClassic.profile"
+        },
+        {
+          "path": "terminal/konsole/GentooClassic.profile",
+          "snapshot": "snapshot-07",
+          "captured": "2026-10-03",
+          "commit": null,
+          "source": "/home/przvl/.local/share/konsole/GentooClassic.profile",
+          "source_sha256": "6c1399bd1498dbfd99113bdd21a0da8d064aeb767ac8a8f8b29726450e0c6adf",
+          "sha256": "6c1399bd1498dbfd99113bdd21a0da8d064aeb767ac8a8f8b29726450e0c6adf",
+          "changes": []
         }
       ]
     },
     {
-      "path": "terminal/konsole/GentooClassic.colorscheme",
+      "path": "terminal/konsole/Classic.colorscheme",
       "commit": null,
       "source_sha256": "31b5def0f5420a16a4b0b0219e8d81dac025457d95cd61fd25f192b282a0d552",
-      "changes": [],
-      "sha256": "31b5def0f5420a16a4b0b0219e8d81dac025457d95cd61fd25f192b282a0d552",
-      "source": "/home/przvl/.local/share/konsole/GentooClassic.colorscheme"
+      "changes": [
+        "Use functional runtime/package names and update dependent references; retain content and required notices."
+      ],
+      "sha256": "b9ff90f7ed48b646f0ea59272450e64b0acb4963a818e10265bb1578757a1eed",
+      "source": "/home/przvl/.local/share/konsole/GentooClassic.colorscheme",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "previous_captures": [
+        {
+          "path": "terminal/konsole/GentooClassic.colorscheme",
+          "commit": null,
+          "source_sha256": "31b5def0f5420a16a4b0b0219e8d81dac025457d95cd61fd25f192b282a0d552",
+          "changes": [],
+          "sha256": "31b5def0f5420a16a4b0b0219e8d81dac025457d95cd61fd25f192b282a0d552",
+          "source": "/home/przvl/.local/share/konsole/GentooClassic.colorscheme"
+        }
+      ]
     },
     {
       "path": "terminal/konsole/konsolerc",
       "commit": null,
       "source_sha256": "ce66f02e2b46ade8f194177142b8ad3dec5dd74cf2244a2ab9228c41c06341ea",
-      "changes": [],
-      "sha256": "ce66f02e2b46ade8f194177142b8ad3dec5dd74cf2244a2ab9228c41c06341ea",
-      "source": "/home/przvl/.config/konsolerc"
+      "changes": [
+        "Use functional runtime/package names and update dependent references; retain content and required notices."
+      ],
+      "sha256": "1138ed3fc9463aba7be223d69bc5b58ea3218c0a8ec26afb5b9ec4441639d70d",
+      "source": "/home/przvl/.config/konsolerc",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "previous_captures": [
+        {
+          "path": "terminal/konsole/konsolerc",
+          "commit": null,
+          "source_sha256": "ce66f02e2b46ade8f194177142b8ad3dec5dd74cf2244a2ab9228c41c06341ea",
+          "changes": [],
+          "sha256": "ce66f02e2b46ade8f194177142b8ad3dec5dd74cf2244a2ab9228c41c06341ea",
+          "source": "/home/przvl/.config/konsolerc"
+        }
+      ]
     },
     {
       "path": "terminal/st/config.h",
@@ -1060,9 +1562,23 @@
       "path": "terminal/neofetch/config.conf",
       "commit": null,
       "source_sha256": "2b16c1d7e3e6885cdf06ae2d9e70f56d9175b194d06c949503dfadda8e23b274",
-      "changes": [],
-      "sha256": "2b16c1d7e3e6885cdf06ae2d9e70f56d9175b194d06c949503dfadda8e23b274",
-      "source": "/home/przvl/.config/neofetch/config.conf"
+      "changes": [
+        "Capture built-in Arch logo/cyan palette and truthful OS detection; rename intermediate palette helper/comments by function."
+      ],
+      "sha256": "1b63f53701c7dac95ef48aee3aa987d0b5ee2df0971e75acbd83c7c613763b21",
+      "source": "/home/przvl/.config/neofetch/config.conf",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "previous_captures": [
+        {
+          "path": "terminal/neofetch/config.conf",
+          "commit": null,
+          "source_sha256": "2b16c1d7e3e6885cdf06ae2d9e70f56d9175b194d06c949503dfadda8e23b274",
+          "changes": [],
+          "sha256": "2b16c1d7e3e6885cdf06ae2d9e70f56d9175b194d06c949503dfadda8e23b274",
+          "source": "/home/przvl/.config/neofetch/config.conf"
+        }
+      ]
     },
     {
       "path": "terminal/tmux/tmux.conf",
@@ -1683,7 +2199,7 @@
     },
     {
       "path": "desktop/kde/README.md",
-      "snapshot": "snapshot-05",
+      "snapshot": "collection-03",
       "commit": null,
       "captured": "2026-10-03",
       "source_sha256": null,
@@ -1691,9 +2207,26 @@
         "Collection organization documentation.",
         "Update paths and documentation for desktop/shell organization and standalone Hyprland.",
         "Document captured KDE font defaults and JetBrainsMono Nerd Font dependency.",
-        "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation."
+        "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation.",
+        "Document reviewed deployment findings, preferences, dependencies and validation."
       ],
-      "sha256": "9409c198a50e40bbce8b7affad2972a811173e57af7abe45cec6160cd3976e0d"
+      "sha256": "c820fb7adf25dbac8531da52dee977b180c2871835acc58ec5b242c5d9d25b97",
+      "previous_captures": [
+        {
+          "path": "desktop/kde/README.md",
+          "snapshot": "snapshot-05",
+          "commit": null,
+          "captured": "2026-10-03",
+          "source_sha256": null,
+          "changes": [
+            "Collection organization documentation.",
+            "Update paths and documentation for desktop/shell organization and standalone Hyprland.",
+            "Document captured KDE font defaults and JetBrainsMono Nerd Font dependency.",
+            "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation."
+          ],
+          "sha256": "9409c198a50e40bbce8b7affad2972a811173e57af7abe45cec6160cd3976e0d"
+        }
+      ]
     },
     {
       "path": "desktop/niri/README.md",
@@ -1733,15 +2266,30 @@
     },
     {
       "path": "desktop/sddm/README.md",
-      "snapshot": "collection-01",
+      "snapshot": "collection-03",
       "commit": null,
-      "captured": "2026-10-01",
+      "captured": "2026-10-03",
       "source_sha256": null,
       "changes": [
         "Collection organization documentation.",
-        "Update paths and documentation for desktop/shell organization and standalone Hyprland."
+        "Update paths and documentation for desktop/shell organization and standalone Hyprland.",
+        "Document reviewed deployment findings, preferences, dependencies and validation."
       ],
-      "sha256": "979066d8768d618a11983d44ad7d0fc4576192594d3843de02f989e36c93efc7"
+      "sha256": "a855836baa4e73b5139ebb16c5e4d69bcee165b43d1de74abd55206d5bb07b0b",
+      "previous_captures": [
+        {
+          "path": "desktop/sddm/README.md",
+          "snapshot": "collection-01",
+          "commit": null,
+          "captured": "2026-10-01",
+          "source_sha256": null,
+          "changes": [
+            "Collection organization documentation.",
+            "Update paths and documentation for desktop/shell organization and standalone Hyprland."
+          ],
+          "sha256": "979066d8768d618a11983d44ad7d0fc4576192594d3843de02f989e36c93efc7"
+        }
+      ]
     },
     {
       "path": "hardware/hyprland/config/workstation/hyprland-display.lua",
@@ -1757,15 +2305,30 @@
     },
     {
       "path": "shell/bash/README.md",
-      "snapshot": "collection-01",
+      "snapshot": "collection-03",
       "commit": null,
-      "captured": "2026-10-01",
+      "captured": "2026-10-03",
       "source_sha256": null,
       "changes": [
         "Collection organization documentation.",
-        "Update paths and documentation for desktop/shell organization and standalone Hyprland."
+        "Update paths and documentation for desktop/shell organization and standalone Hyprland.",
+        "Document reviewed deployment findings, preferences, dependencies and validation."
       ],
-      "sha256": "f3e907ca7bfe4c6a7e2e35007a9c583f6df6423c54723ecf6fbf5c3a2bcf74b1"
+      "sha256": "0f64e05aa360c18e2e9abd460a3edfed4a1027ba94c76a1deb5dcf6a88a9b6ab",
+      "previous_captures": [
+        {
+          "path": "shell/bash/README.md",
+          "snapshot": "collection-01",
+          "commit": null,
+          "captured": "2026-10-01",
+          "source_sha256": null,
+          "changes": [
+            "Collection organization documentation.",
+            "Update paths and documentation for desktop/shell organization and standalone Hyprland."
+          ],
+          "sha256": "f3e907ca7bfe4c6a7e2e35007a9c583f6df6423c54723ecf6fbf5c3a2bcf74b1"
+        }
+      ]
     },
     {
       "path": "terminal/foot/foot.ini",
@@ -1806,20 +2369,35 @@
     },
     {
       "path": ".gitattributes",
-      "snapshot": "collection-02",
-      "captured": "2026-10-01",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
       "commit": null,
       "source_sha256": null,
       "source": "Collection platform integration derived from documented shared settings.",
       "changes": [
-        "Add narrow platform integration without duplicating application settings."
+        "Add narrow platform integration without duplicating application settings.",
+        "Update exact-snapshot whitespace exception to the renamed Classic color scheme."
       ],
-      "sha256": "f088b640e45a039e2ae0630da7809bce0c277c984d0955752a942c604bd06d85"
+      "sha256": "06aaf6637889cdaf14845842d7d797892ddd771c466417a51622d55f6963bf1a",
+      "previous_captures": [
+        {
+          "path": ".gitattributes",
+          "snapshot": "collection-02",
+          "captured": "2026-10-01",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection platform integration derived from documented shared settings.",
+          "changes": [
+            "Add narrow platform integration without duplicating application settings."
+          ],
+          "sha256": "f088b640e45a039e2ae0630da7809bce0c277c984d0955752a942c604bd06d85"
+        }
+      ]
     },
     {
       "path": "README.md",
-      "snapshot": "collection-02",
-      "captured": "2026-10-01",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
       "commit": null,
       "source_sha256": null,
       "source": "Collection platform integration derived from documented shared settings.",
@@ -1827,9 +2405,27 @@
         "Add narrow platform integration without duplicating application settings.",
         "Update shared/platform integration and associated documentation.",
         "Document local Firefox CSS and preferences capture (snapshot-06) on 2026-10-03, including destinations, dependencies and validation.",
-        "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation."
+        "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation.",
+        "Document reviewed deployment findings, preferences, dependencies and validation."
       ],
-      "sha256": "b434a6345498b52fbae9da24c9a0e081d1c125f4fb47880b84db9ad98a7a3323"
+      "sha256": "a9c8f873c2221b38b8e1b7f5d89c6a7792044807b98b6575a69f6fa3eabdff64",
+      "previous_captures": [
+        {
+          "path": "README.md",
+          "snapshot": "collection-02",
+          "captured": "2026-10-01",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection platform integration derived from documented shared settings.",
+          "changes": [
+            "Add narrow platform integration without duplicating application settings.",
+            "Update shared/platform integration and associated documentation.",
+            "Document local Firefox CSS and preferences capture (snapshot-06) on 2026-10-03, including destinations, dependencies and validation.",
+            "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation."
+          ],
+          "sha256": "b434a6345498b52fbae9da24c9a0e081d1c125f4fb47880b84db9ad98a7a3323"
+        }
+      ]
     },
     {
       "path": "AGENTS.md",
@@ -1846,15 +2442,30 @@
     },
     {
       "path": "keybinds/README.md",
-      "snapshot": "collection-02",
-      "captured": "2026-10-01",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
       "commit": null,
       "source_sha256": null,
       "source": "Collection platform integration derived from documented shared settings.",
       "changes": [
-        "Add narrow platform integration without duplicating application settings."
+        "Add narrow platform integration without duplicating application settings.",
+        "Document reviewed deployment findings, preferences, dependencies and validation."
       ],
-      "sha256": "a4596049c550d189e1b52f6daa0341d7f68c3aee6dd6ff26e7fb2520ab3c43da"
+      "sha256": "8b5ac93a3c2f70a59437ee83aafbb32a672c86fb86e703769d4f83d18104795b",
+      "previous_captures": [
+        {
+          "path": "keybinds/README.md",
+          "snapshot": "collection-02",
+          "captured": "2026-10-01",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection platform integration derived from documented shared settings.",
+          "changes": [
+            "Add narrow platform integration without duplicating application settings."
+          ],
+          "sha256": "a4596049c550d189e1b52f6daa0341d7f68c3aee6dd6ff26e7fb2520ab3c43da"
+        }
+      ]
     },
     {
       "path": "walls/README.md",
@@ -1882,8 +2493,8 @@
     },
     {
       "path": "terminal/README.md",
-      "snapshot": "collection-02",
-      "captured": "2026-10-01",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
       "commit": null,
       "source_sha256": null,
       "source": "Collection platform integration derived from documented shared settings.",
@@ -1891,27 +2502,61 @@
         "Add narrow platform integration without duplicating application settings.",
         "Update shared/platform integration and associated documentation.",
         "Correct Kitty source license reference after desktop directory reorganization.",
-        "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation."
+        "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation.",
+        "Document reviewed deployment findings, preferences, dependencies and validation."
       ],
-      "sha256": "00e07e08a761e2688399abe689bf4cbc9b45ca873538cf75d02244d1a12bf12f"
+      "sha256": "72463215034ebea580d18b88c29f479ee6c81c074fe7d20e712b48e714c196a6",
+      "previous_captures": [
+        {
+          "path": "terminal/README.md",
+          "snapshot": "collection-02",
+          "captured": "2026-10-01",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection platform integration derived from documented shared settings.",
+          "changes": [
+            "Add narrow platform integration without duplicating application settings.",
+            "Update shared/platform integration and associated documentation.",
+            "Correct Kitty source license reference after desktop directory reorganization.",
+            "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation."
+          ],
+          "sha256": "00e07e08a761e2688399abe689bf4cbc9b45ca873538cf75d02244d1a12bf12f"
+        }
+      ]
     },
     {
       "path": "docs/validation.md",
-      "snapshot": "collection-02",
-      "captured": "2026-10-01",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
       "commit": null,
       "source_sha256": null,
       "source": "Collection platform integration derived from documented shared settings.",
       "changes": [
         "Add narrow platform integration without duplicating application settings.",
-        "Update shared/platform integration and associated documentation."
+        "Update shared/platform integration and associated documentation.",
+        "Document reviewed deployment findings, preferences, dependencies and validation."
       ],
-      "sha256": "62f4536443b55190c2c58e12971f2821f7afbc873d5d97714e3d4aa314b3142f"
+      "sha256": "2f2966e2407e131c95b4734ee238fa278b48a7ab38dd1c17dd3f02efc7e7b48a",
+      "previous_captures": [
+        {
+          "path": "docs/validation.md",
+          "snapshot": "collection-02",
+          "captured": "2026-10-01",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection platform integration derived from documented shared settings.",
+          "changes": [
+            "Add narrow platform integration without duplicating application settings.",
+            "Update shared/platform integration and associated documentation."
+          ],
+          "sha256": "62f4536443b55190c2c58e12971f2821f7afbc873d5d97714e3d4aa314b3142f"
+        }
+      ]
     },
     {
       "path": "docs/sources.md",
-      "snapshot": "collection-02",
-      "captured": "2026-10-01",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
       "commit": null,
       "source_sha256": null,
       "source": "Collection platform integration derived from documented shared settings.",
@@ -1919,14 +2564,32 @@
         "Add narrow platform integration without duplicating application settings.",
         "Update shared/platform integration and associated documentation.",
         "Document local Firefox CSS and preferences capture (snapshot-06) on 2026-10-03, including destinations, dependencies and validation.",
-        "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation."
+        "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation.",
+        "Document reviewed deployment findings, preferences, dependencies and validation."
       ],
-      "sha256": "9a4ceb5785d11ac967d5d422918edb48969228b470551be2df5125b6922bd7cb"
+      "sha256": "a863bba1fde75f934f9a83feeba392c86a9a888be1dd912f84446aa8e0405bc8",
+      "previous_captures": [
+        {
+          "path": "docs/sources.md",
+          "snapshot": "collection-02",
+          "captured": "2026-10-01",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection platform integration derived from documented shared settings.",
+          "changes": [
+            "Add narrow platform integration without duplicating application settings.",
+            "Update shared/platform integration and associated documentation.",
+            "Document local Firefox CSS and preferences capture (snapshot-06) on 2026-10-03, including destinations, dependencies and validation.",
+            "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation."
+          ],
+          "sha256": "9a4ceb5785d11ac967d5d422918edb48969228b470551be2df5125b6922bd7cb"
+        }
+      ]
     },
     {
       "path": "docs/adapting.md",
-      "snapshot": "collection-02",
-      "captured": "2026-10-01",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
       "commit": null,
       "source_sha256": null,
       "source": "Collection platform integration derived from documented shared settings.",
@@ -1934,48 +2597,114 @@
         "Add narrow platform integration without duplicating application settings.",
         "Update shared/platform integration and associated documentation.",
         "Document local Firefox CSS and preferences capture (snapshot-06) on 2026-10-03, including destinations, dependencies and validation.",
-        "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation."
+        "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation.",
+        "Document reviewed deployment findings, preferences, dependencies and validation."
       ],
-      "sha256": "f6cb120fcfa82f833cf4817236e3ad52a8d3b9f69e759713196916e21616718d"
+      "sha256": "728c7cbf30d523a7d8f5fcce1fa20cb707629137fec94a68b90ca0454a6529f4",
+      "previous_captures": [
+        {
+          "path": "docs/adapting.md",
+          "snapshot": "collection-02",
+          "captured": "2026-10-01",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection platform integration derived from documented shared settings.",
+          "changes": [
+            "Add narrow platform integration without duplicating application settings.",
+            "Update shared/platform integration and associated documentation.",
+            "Document local Firefox CSS and preferences capture (snapshot-06) on 2026-10-03, including destinations, dependencies and validation.",
+            "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation."
+          ],
+          "sha256": "f6cb120fcfa82f833cf4817236e3ad52a8d3b9f69e759713196916e21616718d"
+        }
+      ]
     },
     {
       "path": "hardware/README.md",
-      "snapshot": "collection-02",
-      "captured": "2026-10-01",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
       "commit": null,
       "source_sha256": null,
       "source": "Collection platform integration derived from documented shared settings.",
       "changes": [
         "Add narrow platform integration without duplicating application settings.",
-        "Update shared/platform integration and associated documentation."
+        "Update shared/platform integration and associated documentation.",
+        "Document reviewed deployment findings, preferences, dependencies and validation."
       ],
-      "sha256": "3c3a140fdce3db143f3fbad7ccd0bb85de97be4293aafffaaeb0acd17c6dafc8"
+      "sha256": "b73e7fe3fb261c9da894c36635cc668e6db7bf9edaa2de6c3f37575c73803827",
+      "previous_captures": [
+        {
+          "path": "hardware/README.md",
+          "snapshot": "collection-02",
+          "captured": "2026-10-01",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection platform integration derived from documented shared settings.",
+          "changes": [
+            "Add narrow platform integration without duplicating application settings.",
+            "Update shared/platform integration and associated documentation."
+          ],
+          "sha256": "3c3a140fdce3db143f3fbad7ccd0bb85de97be4293aafffaaeb0acd17c6dafc8"
+        }
+      ]
     },
     {
       "path": "browser/README.md",
-      "snapshot": "collection-02",
-      "captured": "2026-10-01",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
       "commit": null,
       "source_sha256": null,
       "source": "Collection platform integration derived from documented shared settings.",
       "changes": [
         "Add narrow platform integration without duplicating application settings.",
-        "Document local Firefox CSS and preferences capture (snapshot-06) on 2026-10-03, including destinations, dependencies and validation."
+        "Document local Firefox CSS and preferences capture (snapshot-06) on 2026-10-03, including destinations, dependencies and validation.",
+        "Document reviewed deployment findings, preferences, dependencies and validation."
       ],
-      "sha256": "5b958c649763df719007f247926bfa620d2b03e0d691b4baa9b495f617c80351"
+      "sha256": "dd3f816529100d01f6c13c75931e05073f781acdeeba7b462943b6ef3bbe687f",
+      "previous_captures": [
+        {
+          "path": "browser/README.md",
+          "snapshot": "collection-02",
+          "captured": "2026-10-01",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection platform integration derived from documented shared settings.",
+          "changes": [
+            "Add narrow platform integration without duplicating application settings.",
+            "Document local Firefox CSS and preferences capture (snapshot-06) on 2026-10-03, including destinations, dependencies and validation."
+          ],
+          "sha256": "5b958c649763df719007f247926bfa620d2b03e0d691b4baa9b495f617c80351"
+        }
+      ]
     },
     {
       "path": "nvim/README.md",
-      "snapshot": "collection-02",
-      "captured": "2026-10-01",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
       "commit": null,
       "source_sha256": null,
       "source": "Collection platform integration derived from documented shared settings.",
       "changes": [
         "Add narrow platform integration without duplicating application settings.",
-        "Document the user-confirmed explorer refresh fix and its local interactive confirmation on 2026-10-01; no tests or CI added."
+        "Document the user-confirmed explorer refresh fix and its local interactive confirmation on 2026-10-01; no tests or CI added.",
+        "Document reviewed deployment findings, preferences, dependencies and validation."
       ],
-      "sha256": "26cb63a8a9ee5709bb75bfeabd70412c3a287a50df122632b5afabd39bc7ea47"
+      "sha256": "ea6bdc94a60c7d4d00329d649ec3a456f5cc382e6ee8a3c74e89de7fda911a09",
+      "previous_captures": [
+        {
+          "path": "nvim/README.md",
+          "snapshot": "collection-02",
+          "captured": "2026-10-01",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection platform integration derived from documented shared settings.",
+          "changes": [
+            "Add narrow platform integration without duplicating application settings.",
+            "Document the user-confirmed explorer refresh fix and its local interactive confirmation on 2026-10-01; no tests or CI added."
+          ],
+          "sha256": "26cb63a8a9ee5709bb75bfeabd70412c3a287a50df122632b5afabd39bc7ea47"
+        }
+      ]
     },
     {
       "path": "desktop/x11/README.md",
@@ -2151,15 +2880,30 @@
     },
     {
       "path": "hardware/keyboard/README.md",
-      "snapshot": "collection-02",
-      "captured": "2026-10-01",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
       "commit": null,
       "source_sha256": null,
       "source": "Collection platform integration derived from documented shared settings.",
       "changes": [
-        "Add narrow platform integration without duplicating application settings."
+        "Add narrow platform integration without duplicating application settings.",
+        "Document reviewed deployment findings, preferences, dependencies and validation."
       ],
-      "sha256": "956144f22e3eca2e0790dab509033d8d1d4b01665852d24779ed84568f02c7fc"
+      "sha256": "6f275567679c2f57a9fd7beedca6c64bc7f46a18ac75e61323ccab0f3aa679bd",
+      "previous_captures": [
+        {
+          "path": "hardware/keyboard/README.md",
+          "snapshot": "collection-02",
+          "captured": "2026-10-01",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection platform integration derived from documented shared settings.",
+          "changes": [
+            "Add narrow platform integration without duplicating application settings."
+          ],
+          "sha256": "956144f22e3eca2e0790dab509033d8d1d4b01665852d24779ed84568f02c7fc"
+        }
+      ]
     },
     {
       "path": "hardware/power/bin/battery-charge-limit",
@@ -2187,28 +2931,59 @@
     },
     {
       "path": "docs/platforms.md",
-      "snapshot": "collection-02",
-      "captured": "2026-10-01",
-      "commit": null,
-      "source_sha256": null,
-      "source": "Collection integration and documentation.",
-      "changes": [
-        "Document or adapt platform boundaries while sharing application settings."
-      ],
-      "sha256": "7e08c154f47972c3aef7d47d2c54c6b7222c803f57c3b8d3c6a1cd07c00814fd"
-    },
-    {
-      "path": "desktop/common/README.md",
-      "snapshot": "collection-02",
-      "captured": "2026-10-01",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
       "commit": null,
       "source_sha256": null,
       "source": "Collection integration and documentation.",
       "changes": [
         "Document or adapt platform boundaries while sharing application settings.",
-        "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation."
+        "Document reviewed deployment findings, preferences, dependencies and validation."
       ],
-      "sha256": "5ecb99e6ed162a8ff7258b72a0749a84aec244c2c8fa82a5d49d46d624e9a43c"
+      "sha256": "464facb9b3df9ca1784265dbc033d893507f09b0e4ffe68d645dcabc442ab3d5",
+      "previous_captures": [
+        {
+          "path": "docs/platforms.md",
+          "snapshot": "collection-02",
+          "captured": "2026-10-01",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection integration and documentation.",
+          "changes": [
+            "Document or adapt platform boundaries while sharing application settings."
+          ],
+          "sha256": "7e08c154f47972c3aef7d47d2c54c6b7222c803f57c3b8d3c6a1cd07c00814fd"
+        }
+      ]
+    },
+    {
+      "path": "desktop/common/README.md",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "commit": null,
+      "source_sha256": null,
+      "source": "Collection integration and documentation.",
+      "changes": [
+        "Document or adapt platform boundaries while sharing application settings.",
+        "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation.",
+        "Document reviewed deployment findings, preferences, dependencies and validation."
+      ],
+      "sha256": "c84e6009d5bb9eff3b5272f1512ed822185774eb862749999ec58a5b4d577439",
+      "previous_captures": [
+        {
+          "path": "desktop/common/README.md",
+          "snapshot": "collection-02",
+          "captured": "2026-10-01",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection integration and documentation.",
+          "changes": [
+            "Document or adapt platform boundaries while sharing application settings.",
+            "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation."
+          ],
+          "sha256": "5ecb99e6ed162a8ff7258b72a0749a84aec244c2c8fa82a5d49d46d624e9a43c"
+        }
+      ]
     },
     {
       "path": "desktop/common/bin/desktop-polkit-agent",
@@ -2275,15 +3050,30 @@
     },
     {
       "path": "hardware/power/README.md",
-      "snapshot": "collection-02",
-      "captured": "2026-10-01",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
       "commit": null,
       "source_sha256": null,
       "source": "Collection integration and documentation.",
       "changes": [
-        "Document or adapt platform boundaries while sharing application settings."
+        "Document or adapt platform boundaries while sharing application settings.",
+        "Document reviewed deployment findings, preferences, dependencies and validation."
       ],
-      "sha256": "1aa0f9c64568cd4b24d9cfec7ceac8c1a8ee257146ea37d59a280cecd3527335"
+      "sha256": "6e46de43bd23cffa0fffacd7e575f8231db7f8a839f28fac6c59155b4c7477e5",
+      "previous_captures": [
+        {
+          "path": "hardware/power/README.md",
+          "snapshot": "collection-02",
+          "captured": "2026-10-01",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection integration and documentation.",
+          "changes": [
+            "Document or adapt platform boundaries while sharing application settings."
+          ],
+          "sha256": "1aa0f9c64568cd4b24d9cfec7ceac8c1a8ee257146ea37d59a280cecd3527335"
+        }
+      ]
     },
     {
       "path": "terminal/tmux/README.md",
@@ -2323,25 +3113,40 @@
     },
     {
       "path": "browser/firefox/chrome/userChrome.css",
-      "snapshot": "snapshot-06",
+      "snapshot": "collection-03",
       "captured": "2026-10-03",
       "commit": null,
       "source_sha256": "8dab8666e987fb8f59ecd0edb6e35165434b504e571b053d05e11451b0bba6b0",
       "source": "/home/przvl/.config/mozilla/firefox/uck3f97t.default-release/chrome/userChrome.css",
-      "changes": [],
-      "sha256": "8dab8666e987fb8f59ecd0edb6e35165434b504e571b053d05e11451b0bba6b0"
+      "changes": [
+        "Append deliberate JetBrains browser UI font rule; preserve original appearance selectors."
+      ],
+      "sha256": "253229cc49ee5b2db74e0ade6da99c4b3ca665b937ce07c7b54edcac5a9c092f",
+      "previous_captures": [
+        {
+          "path": "browser/firefox/chrome/userChrome.css",
+          "snapshot": "snapshot-06",
+          "captured": "2026-10-03",
+          "commit": null,
+          "source_sha256": "8dab8666e987fb8f59ecd0edb6e35165434b504e571b053d05e11451b0bba6b0",
+          "source": "/home/przvl/.config/mozilla/firefox/uck3f97t.default-release/chrome/userChrome.css",
+          "changes": [],
+          "sha256": "8dab8666e987fb8f59ecd0edb6e35165434b504e571b053d05e11451b0bba6b0"
+        }
+      ]
     },
     {
       "path": "browser/firefox/user.js",
-      "snapshot": "snapshot-06",
+      "snapshot": "collection-03",
       "captured": "2026-10-03",
       "commit": null,
       "source_sha256": "67c760a876113ebb4418aad148ce59de2c3d153c29c71a54645538a9d20bc95e",
       "source": "/home/przvl/.config/mozilla/firefox/uck3f97t.default-release/user.js",
       "changes": [
-        "Append built-in theme, toolbar theme, vertical tabs and disabled new-tab-page preferences extracted from local prefs.js."
+        "Append built-in theme, toolbar theme, vertical tabs and disabled new-tab-page preferences extracted from local prefs.js.",
+        "Append deliberate JetBrains western/Unicode content-font preferences and document-font override from deployment findings."
       ],
-      "sha256": "d1499ba8bbabb23b9baf2e679e8fe51adaee8d1c56ad217d461c5ca9821635c4",
+      "sha256": "67d1276eef3f324ecc99deff297d610acdc429d2e5bb60d1761227453092857e",
       "derived_inputs": [
         {
           "source": "/home/przvl/.config/mozilla/firefox/uck3f97t.default-release/prefs.js",
@@ -2354,6 +3159,35 @@
           ],
           "changes": [
             "Extract only four appearance preferences; exclude the generated preferences file and all other values."
+          ]
+        }
+      ],
+      "previous_captures": [
+        {
+          "path": "browser/firefox/user.js",
+          "snapshot": "snapshot-06",
+          "captured": "2026-10-03",
+          "commit": null,
+          "source_sha256": "67c760a876113ebb4418aad148ce59de2c3d153c29c71a54645538a9d20bc95e",
+          "source": "/home/przvl/.config/mozilla/firefox/uck3f97t.default-release/user.js",
+          "changes": [
+            "Append built-in theme, toolbar theme, vertical tabs and disabled new-tab-page preferences extracted from local prefs.js."
+          ],
+          "sha256": "d1499ba8bbabb23b9baf2e679e8fe51adaee8d1c56ad217d461c5ca9821635c4",
+          "derived_inputs": [
+            {
+              "source": "/home/przvl/.config/mozilla/firefox/uck3f97t.default-release/prefs.js",
+              "source_sha256": "03eeafefbd453fed30f7eda3e8590d01960a4ec4db38a80b70490251e08ee218",
+              "preferences": [
+                "extensions.activeThemeID",
+                "browser.theme.toolbar-theme",
+                "sidebar.verticalTabs",
+                "browser.newtabpage.enabled"
+              ],
+              "changes": [
+                "Extract only four appearance preferences; exclude the generated preferences file and all other values."
+              ]
+            }
           ]
         }
       ]
@@ -2413,6 +3247,201 @@
       "changes": [
         "Extract fixed 22px Places icons and hidden menu bar; omit generated Version and ViewPropsTimestamp fields."
       ]
+    },
+    {
+      "path": "desktop/kde/activation.md",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "commit": null,
+      "source": "Collection adaptation of reviewed deployment findings (snapshot-08).",
+      "source_sha256": null,
+      "sha256": "a7eff5fa28b580419e745a809cd77f80727fffd4f65f192a6ee476d0ea749be5",
+      "changes": [
+        "Document preferences, dependencies, target adaptation and evidence."
+      ]
+    },
+    {
+      "path": "desktop/kde/bin/flameshot-session",
+      "snapshot": "snapshot-08",
+      "captured": "2026-10-03",
+      "commit": null,
+      "source": "/home/przvl/.local/bin/flameshot-session",
+      "source_sha256": "287c4c3ce907661697864f7fdbaa322091a092f6d50e4efe9bbceef00d80cd45",
+      "sha256": "287c4c3ce907661697864f7fdbaa322091a092f6d50e4efe9bbceef00d80cd45",
+      "changes": []
+    },
+    {
+      "path": "desktop/kde/share/dbus-1/services/org.flameshot.Flameshot.service",
+      "snapshot": "snapshot-08",
+      "captured": "2026-10-03",
+      "commit": null,
+      "source": "/home/przvl/.local/share/dbus-1/services/org.flameshot.Flameshot.service",
+      "source_sha256": "8b5f2940f8579f6970bcc3e09067703ca11ad35e7f8edcc4387877d872866201",
+      "sha256": "8b5f2940f8579f6970bcc3e09067703ca11ad35e7f8edcc4387877d872866201",
+      "changes": []
+    },
+    {
+      "path": "desktop/kde/share/icons/archlinux-launcher.svg",
+      "snapshot": "snapshot-08",
+      "captured": "2026-10-03",
+      "commit": null,
+      "source": "/home/przvl/.local/share/icons/archlinux-launcher.svg",
+      "source_sha256": "db71ef7ee868dc2127c936252f55691b0f7db0ac997737c356fc91d93fcb670f",
+      "sha256": "db71ef7ee868dc2127c936252f55691b0f7db0ac997737c356fc91d93fcb670f",
+      "changes": []
+    },
+    {
+      "path": "desktop/kde/share/icons/screenshot-crosshair/cursors/cross",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "commit": null,
+      "source": "Collection adaptation of reviewed deployment findings (snapshot-08).",
+      "source_sha256": null,
+      "sha256": "5cd8054740cc2fd9b2550da6761d877739e819dc5f9a14d6c5689b36ef97d4f7",
+      "changes": [
+        "Reference installed Adwaita crosshair or local alias; do not import system cursor binaries."
+      ],
+      "type": "symlink",
+      "target": "crosshair",
+      "hash_encoding": "SHA-256 of UTF-8 symlink target, without newline"
+    },
+    {
+      "path": "desktop/kde/share/icons/screenshot-crosshair/cursors/cross_reverse",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "commit": null,
+      "source": "Collection adaptation of reviewed deployment findings (snapshot-08).",
+      "source_sha256": null,
+      "sha256": "5cd8054740cc2fd9b2550da6761d877739e819dc5f9a14d6c5689b36ef97d4f7",
+      "changes": [
+        "Reference installed Adwaita crosshair or local alias; do not import system cursor binaries."
+      ],
+      "type": "symlink",
+      "target": "crosshair",
+      "hash_encoding": "SHA-256 of UTF-8 symlink target, without newline"
+    },
+    {
+      "path": "desktop/kde/share/icons/screenshot-crosshair/cursors/crosshair",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "commit": null,
+      "source": "Collection adaptation of reviewed deployment findings (snapshot-08).",
+      "source_sha256": null,
+      "sha256": "cbf9b378d14ad02ccaebaf84514b5765e53f9ac3790eb334fae67b731277fba9",
+      "changes": [
+        "Reference installed Adwaita crosshair or local alias; do not import system cursor binaries."
+      ],
+      "type": "symlink",
+      "target": "/usr/share/icons/Adwaita/cursors/crosshair",
+      "hash_encoding": "SHA-256 of UTF-8 symlink target, without newline"
+    },
+    {
+      "path": "desktop/kde/share/icons/screenshot-crosshair/cursors/diamond_cross",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "commit": null,
+      "source": "Collection adaptation of reviewed deployment findings (snapshot-08).",
+      "source_sha256": null,
+      "sha256": "5cd8054740cc2fd9b2550da6761d877739e819dc5f9a14d6c5689b36ef97d4f7",
+      "changes": [
+        "Reference installed Adwaita crosshair or local alias; do not import system cursor binaries."
+      ],
+      "type": "symlink",
+      "target": "crosshair",
+      "hash_encoding": "SHA-256 of UTF-8 symlink target, without newline"
+    },
+    {
+      "path": "desktop/kde/share/icons/screenshot-crosshair/cursors/tcross",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "commit": null,
+      "source": "Collection adaptation of reviewed deployment findings (snapshot-08).",
+      "source_sha256": null,
+      "sha256": "5cd8054740cc2fd9b2550da6761d877739e819dc5f9a14d6c5689b36ef97d4f7",
+      "changes": [
+        "Reference installed Adwaita crosshair or local alias; do not import system cursor binaries."
+      ],
+      "type": "symlink",
+      "target": "crosshair",
+      "hash_encoding": "SHA-256 of UTF-8 symlink target, without newline"
+    },
+    {
+      "path": "desktop/kde/share/icons/screenshot-crosshair/index.theme",
+      "snapshot": "snapshot-08",
+      "captured": "2026-10-03",
+      "commit": null,
+      "source": "/home/przvl/.local/share/icons/screenshot-crosshair/index.theme",
+      "source_sha256": "b81b2c879ad1353aa22d7a56b632cb21555d2dd522adb105fa094f784c9cbaa2",
+      "sha256": "b81b2c879ad1353aa22d7a56b632cb21555d2dd522adb105fa094f784c9cbaa2",
+      "changes": []
+    },
+    {
+      "path": "docs/preferences.md",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "commit": null,
+      "source": "Collection adaptation of reviewed deployment findings (snapshot-08).",
+      "source_sha256": null,
+      "sha256": "d9c3b186968cdaebca935b400c578f2b1ba826dd68ea93cff698a334d61d95eb",
+      "changes": [
+        "Document preferences, dependencies, target adaptation and evidence."
+      ]
+    },
+    {
+      "path": "docs/rollback.md",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "commit": null,
+      "source": "Collection adaptation of reviewed deployment findings (snapshot-08).",
+      "source_sha256": null,
+      "sha256": "1e50b650fec8408b5fc4953b2821048ca5b866f89076c2b1c102ff6497fd2867",
+      "changes": [
+        "Document preferences, dependencies, target adaptation and evidence."
+      ]
+    },
+    {
+      "path": "hardware/audio/README.md",
+      "snapshot": "collection-03",
+      "captured": "2026-10-03",
+      "commit": null,
+      "source": "Collection adaptation of reviewed deployment findings (snapshot-08).",
+      "source_sha256": null,
+      "sha256": "262cd44b6d818a07f7a233d91ae9ca7ed3429954ba95346b78a457fa09bc5b51",
+      "changes": [
+        "Document preferences, dependencies, target adaptation and evidence."
+      ]
+    },
+    {
+      "path": "hardware/keyboard/bin/external-keyboard-remap",
+      "snapshot": "snapshot-08",
+      "captured": "2026-10-03",
+      "commit": null,
+      "source": "/usr/local/libexec/external-keyboard-remap",
+      "source_sha256": "0ee9e80c0e88e6d38c2edec5583ab13e1b1d929e9b30c9abf986e4376c6bc226",
+      "sha256": "4403f64f724de8f4ab676e5697aca38b26400517a012b7c712bb4a81310801a8",
+      "changes": [
+        "Format the reviewed duplicate-HID adapter; name ioctl constants, specify struct byte layout, guard execution, reject malformed paths, zero matches and truncated enumeration."
+      ]
+    },
+    {
+      "path": "hardware/keyboard/udev/rules.d/90-external-keyboard.rules",
+      "snapshot": "snapshot-08",
+      "captured": "2026-10-03",
+      "commit": null,
+      "source": "/etc/udev/rules.d/90-external-keyboard.rules",
+      "source_sha256": "61acff9a8804bbe5a11d79631a20077d7cc703d105ad5fc36183fe7f0d744f7b",
+      "sha256": "61acff9a8804bbe5a11d79631a20077d7cc703d105ad5fc36183fe7f0d744f7b",
+      "changes": []
+    },
+    {
+      "path": "hardware/power/activation/dinit/battery-charge-limit",
+      "snapshot": "snapshot-08",
+      "captured": "2026-10-03",
+      "commit": null,
+      "source": "/etc/dinit.d/battery-charge-limit",
+      "source_sha256": "300d604eec69817f5d2a793af45b0ae7c5832ca9f42c1339d7b7ad391b070379",
+      "sha256": "300d604eec69817f5d2a793af45b0ae7c5832ca9f42c1339d7b7ad391b070379",
+      "changes": []
     }
   ]
 }

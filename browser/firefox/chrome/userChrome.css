@@ -50,3 +50,8 @@
     max-width: 50px !important;
   }
 }
+
+/* Later preference: use the installed family throughout browser text. */
+:root, :root * {
+  font-family: "JetBrainsMono Nerd Font", monospace !important;
+}

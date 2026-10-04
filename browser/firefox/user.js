@@ -65,3 +65,13 @@ user_pref("extensions.activeThemeID", "default-theme@mozilla.org");
 user_pref("browser.theme.toolbar-theme", 0);
 user_pref("sidebar.verticalTabs", true);
 user_pref("browser.newtabpage.enabled", false);
+
+// Later preference: override document fonts; this can change site layout.
+user_pref("font.default.x-western", "sans-serif");
+user_pref("font.name.serif.x-western", "JetBrainsMono Nerd Font");
+user_pref("font.name.sans-serif.x-western", "JetBrainsMono Nerd Font");
+user_pref("font.name.monospace.x-western", "JetBrainsMono Nerd Font Mono");
+user_pref("font.name.serif.x-unicode", "JetBrainsMono Nerd Font");
+user_pref("font.name.sans-serif.x-unicode", "JetBrainsMono Nerd Font");
+user_pref("font.name.monospace.x-unicode", "JetBrainsMono Nerd Font Mono");
+user_pref("browser.display.use_document_fonts", 0);

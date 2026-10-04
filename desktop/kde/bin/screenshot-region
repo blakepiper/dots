@@ -1,4 +1,3 @@
 #!/bin/sh
 set -eu
-export QT_QPA_PLATFORM=wayland
-exec /usr/bin/flameshot gui --clipboard --accept-on-select
+exec "$HOME/.local/bin/flameshot-session" gui --clipboard --accept-on-select

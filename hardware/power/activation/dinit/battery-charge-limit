@@ -1,0 +1,5 @@
+type = scripted
+command = /usr/local/bin/battery-charge-limit 80
+depends-on = udevd
+depends-on = local.target
+before = login.target

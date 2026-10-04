@@ -1,0 +1,75 @@
+#!/usr/bin/python3
+"""Apply hwdb modifiers to duplicate HID usages on USB 1fc9:e8c7 (Linux x86_64)."""
+import errno
+import fcntl
+import os
+from pathlib import Path
+import re
+import struct
+import subprocess
+import sys
+
+# Linux input_keymap_entry: flags, len, index, keycode, scancode[32].
+ENTRY = struct.Struct('=BBHI32s')
+EVIOCGKEYCODE_V2 = 0x80284504
+EVIOCSKEYCODE_V2 = 0x40284504
+INPUT_KEYMAP_BY_INDEX = 1
+
+
+def main():
+    if len(sys.argv) != 2:
+        raise SystemExit('Usage: external-keyboard-remap /dev/input/eventN')
+    device = Path(sys.argv[1])
+    if device.parent != Path('/dev/input') or not re.fullmatch(r'event\d+', device.name):
+        raise SystemExit('Invalid input device')
+    modalias = (Path('/sys/class/input') / device.name / 'device/modalias').read_text().strip()
+    if not modalias.startswith('input:b0003v1FC9pE8C7'):
+        raise SystemExit('Device does not match the external keyboard')
+    properties = dict(os.environ)
+    if not any(key.startswith('KEYBOARD_KEY_') for key in properties):
+        result = subprocess.run(
+            ['/usr/bin/udevadm', 'hwdb', '--test=evdev:' + modalias],
+            check=True, capture_output=True, text=True,
+        )
+        properties.update(dict(
+            line.strip().split('=', 1) for line in result.stdout.splitlines() if '=' in line
+        ))
+    keycodes = {'leftalt': 56, 'rightalt': 100, 'leftmeta': 125, 'rightmeta': 126}
+    mapping = {
+        int(key.removeprefix('KEYBOARD_KEY_'), 16): keycodes[value]
+        for key, value in properties.items()
+        if key.startswith('KEYBOARD_KEY_') and value in keycodes
+    }
+    if not mapping:
+        raise SystemExit('No modifier hwdb properties found')
+    changed = matched = 0
+    with device.open('rb', buffering=0) as stream:
+        for index in range(1024):
+            data = bytearray(ENTRY.pack(INPUT_KEYMAP_BY_INDEX, 4, index, 0, b''))
+            try:
+                fcntl.ioctl(stream, EVIOCGKEYCODE_V2, data, True)
+            except OSError as exc:
+                if exc.errno == errno.EINVAL:
+                    break
+                raise
+            flags, length, slot, key, scan = ENTRY.unpack(data)
+            code = int.from_bytes(scan[:length], 'little')
+            if code not in mapping:
+                continue
+            matched += 1
+            if key != mapping[code]:
+                data[:8] = struct.pack('=BBHI', INPUT_KEYMAP_BY_INDEX, length, slot, mapping[code])
+                fcntl.ioctl(stream, EVIOCSKEYCODE_V2, data, True)
+                changed += 1
+            fcntl.ioctl(stream, EVIOCGKEYCODE_V2, data, True)
+            if ENTRY.unpack(data)[3] != mapping[code]:
+                raise SystemExit('Input mapping verification failed')
+        else:
+            raise SystemExit('Input keymap enumeration exceeded the adapter limit')
+    if not matched:
+        raise SystemExit('No matching modifier entries on this interface')
+    print(f'{device.name}: {matched} modifier entries verified; {changed} changed')
+
+
+if __name__ == '__main__':
+    main()

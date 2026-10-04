@@ -27,3 +27,5 @@ Snapshot `snapshot-07`, captured 2026-10-03 from local files; no source commit i
 | `desktop/common/config/fontconfig/fonts.conf` | `432e2ec71bccf2e27889eb1511763ede5b93a8d7b4df65874e84449163d7ff68` |
 
 GTK settings parsed as INI and Fontconfig XML parsed with xmllint. The existing local aliases resolve to the requested font families with `fc-match`. No GTK or Fontconfig settings were activated from the collection.
+
+`collection-03`, 2026-10-03, documents the distinction between installed fonts, saved files and the affected live application. Align the target GTK settings service's font/monospace choices when authorized, then inspect application rendering; `fc-match` alone cannot prove a live Plasma, Konsole or browser choice. Keep GTK and Fontconfig single shared sources and application-specific overrides with their applications. Dependencies and success criteria are in [validation](../../docs/validation.md); documentation provenance is in [sources.json](../../docs/sources.json).

@@ -44,21 +44,21 @@ Expose=Ctrl+F9\tMeta+F9,Ctrl+F9\tMeta+F9,Toggle Present Windows (Current desktop
 ExposeAll=Launch (C)\tCtrl+F10\tMeta+F10,Launch (C)\tCtrl+F10\tMeta+F10,Toggle Present Windows (All desktops)
 ExposeClass=Ctrl+F7\tMeta+F7,Ctrl+F7\tMeta+F7,Toggle Present Windows (Window class)
 ExposeClassCurrentDesktop=none,none,Toggle Present Windows (Window class on current desktop)
-Gentoo Cycle layout=Meta+N,none,Cycle layout
-Gentoo Focus Down=Meta+Down,none,Focus Down
-Gentoo Focus Left=Meta+Left,none,Focus Left
-Gentoo Focus Right=Meta+Right,none,Focus Right
-Gentoo Focus Up=Meta+Up,none,Focus Up
-Gentoo Grow first split=Meta+=,none,Grow first split
-Gentoo Master and stack=Meta+C,none,Master and stack
-Gentoo Recursive splits=Meta+R,none,Recursive splits
-Gentoo Screenshot region=Meta+Shift+S,none,Select a region and copy to clipboard
-Gentoo Shrink first split=Meta+-,none,Shrink first split
-Gentoo Swap Down=Meta+Shift+Down,none,Swap Down
-Gentoo Swap Left=Meta+Shift+Left,none,Swap Left
-Gentoo Swap Right=Meta+Shift+Right,none,Swap Right
-Gentoo Swap Up=Meta+Shift+Up,none,Swap Up
-Gentoo Toggle floating=Meta+P,none,Toggle floating
+KDE Cycle layout=Meta+N,none,Cycle layout
+KDE Focus Down=Meta+Down,none,Focus Down
+KDE Focus Left=Meta+Left,none,Focus Left
+KDE Focus Right=Meta+Right,none,Focus Right
+KDE Focus Up=Meta+Up,none,Focus Up
+KDE Grow first split=Meta+=,none,Grow first split
+KDE Master and stack=Meta+C,none,Master and stack
+KDE Recursive splits=Meta+R,none,Recursive splits
+KDE Screenshot region=Meta+Shift+S,none,Select a region and copy to clipboard
+KDE Shrink first split=Meta+-,none,Shrink first split
+KDE Swap Down=Meta+Shift+Down,none,Swap Down
+KDE Swap Left=Meta+Shift+Left,none,Swap Left
+KDE Swap Right=Meta+Shift+Right,none,Swap Right
+KDE Swap Up=Meta+Shift+Up,none,Swap Up
+KDE Toggle floating=Meta+P,none,Toggle floating
 Grid View=Meta+G,Meta+G,Toggle Grid View
 Increase Opacity=none,none,Increase Opacity of Active Window by 5%
 Kill Window=Meta+Ctrl+Esc,Meta+Ctrl+Esc,Kill Window
@@ -282,7 +282,7 @@ switch to next activity=none,none,Switch to Next Activity
 switch to previous activity=none,none,Switch to Previous Activity
 toggle do not disturb=none,none,Toggle do not disturb
 
-[services][firefox-bin.desktop]
+[services][firefox.desktop]
 _launch=Meta+B
 
 [services][org.kde.dolphin.desktop]

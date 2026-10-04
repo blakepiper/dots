@@ -1,0 +1,4 @@
+[Icon Theme]
+Name=Screenshot crosshair
+Comment=Standard crosshair for Flameshot, with other cursors inherited from Breeze
+Inherits=breeze_cursors

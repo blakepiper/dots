@@ -9,3 +9,5 @@ The loader checks `BLESH_INIT` first when set, then `~/.local/share/blesh/ble.sh
 The fragment also adds `~/.local/bin` to PATH and sets the captured Konsole prompt. Use the target's actual Bash executable in each emulator: the included Konsole and Kitty configs use `/bin/bash`, st uses its Bash wrapper, and the Foot config selects `/bin/bash`. The st package rcfile reads `~/.bashrc` first and has the same ble.sh path fallback.
 
 Open a new terminal after setup and check `echo "$BASH_VERSION"` and `echo "$BLE_VERSION"`; both should have values. Noninteractive commands should remain quiet and should not load ble.sh.
+
+`collection-03`, 2026-10-03, preserves this loader unchanged and records the deployment's verified Bash 5.3.20 and ble.sh 0.4.0-devel4+d81fd54 as observations, not pinned requirements. Build/install ble.sh intentionally; a plausible startup file without the runtime is incomplete. Use fresh interactive and quiet noninteractive checks from [validation](../../docs/validation.md). Documentation provenance is in [sources.json](../../docs/sources.json).

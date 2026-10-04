@@ -1,3 +1,0 @@
-[D-BUS Service]
-Name=org.przvl.Screenshot
-Exec=/home/przvl/.local/bin/screenshot-shortcut-service

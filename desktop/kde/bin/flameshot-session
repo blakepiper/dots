@@ -1,0 +1,9 @@
+#!/bin/sh
+set -eu
+# One environment for both the CLI and the D-Bus activated renderer.
+export QT_QPA_PLATFORM=wayland
+export QT_QPA_PLATFORMTHEME=generic
+export QT_WAYLAND_DISABLED_INTERFACES=wp_cursor_shape_manager_v1
+export XCURSOR_THEME=screenshot-crosshair
+export XCURSOR_SIZE="${XCURSOR_SIZE:-24}"
+exec /usr/bin/flameshot "$@"

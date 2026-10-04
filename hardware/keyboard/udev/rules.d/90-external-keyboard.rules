@@ -1,0 +1,2 @@
+# Apply hwdb modifiers to duplicate HID usages on this keyboard only.
+ACTION=="add|change", SUBSYSTEM=="input", KERNEL=="event*", ENV{ID_INPUT_KEYBOARD}=="1", ENV{ID_VENDOR_ID}=="1fc9", ENV{ID_MODEL_ID}=="e8c7", RUN+="/usr/local/libexec/external-keyboard-remap /dev/input/%k"

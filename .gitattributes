@@ -4,5 +4,5 @@
 desktop/kde/config/kxkbrc -whitespace
 desktop/kde/config/plasmanotifyrc -whitespace
 desktop/kde/config/plasmarc -whitespace
-terminal/konsole/GentooClassic.colorscheme -whitespace
+terminal/konsole/Classic.colorscheme -whitespace
 terminal/konsole/konsolerc -whitespace

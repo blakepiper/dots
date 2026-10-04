@@ -7,7 +7,7 @@ ConfigVersion=1
 ColorScheme=
 
 [Desktop Entry]
-DefaultProfile=GentooClassic.profile
+DefaultProfile=Classic.profile
 
 [MainWindow]
 MenuBar=Disabled

@@ -18,7 +18,7 @@ plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
 [Containments][21][Wallpaper][org.kde.image][General]
-Image=/home/przvl/Pictures/cityview.webp
+Image=file:///home/przvl/Pictures/cityview.webp
 SlidePaths=/usr/share/wallpapers/
 
 [Containments][22]
@@ -40,14 +40,16 @@ popupWidth=685
 
 [Containments][22][Applets][23][Configuration][General]
 favoritesPortedToKAstats=true
-icon=/home/przvl/.local/share/icons/gentoo-rice.png
+icon=/home/przvl/.local/share/icons/archlinux-launcher.svg
 
 [Containments][22][Applets][24]
 immutability=1
 plugin=org.kde.plasma.pager
 
 [Containments][22][Applets][24][Configuration][General]
-displayedText=1
+displayedText=0
+showWindowIcons=false
+showWindowOutlines=false
 
 [Containments][22][Applets][26]
 immutability=1
@@ -134,7 +136,7 @@ use24hFormat=2
 
 [Containments][22][Applets][42]
 immutability=1
-plugin=local.gentoo.ram
+plugin=local.plasma.ram
 
 [Containments][22][Applets][43]
 immutability=1
@@ -149,7 +151,7 @@ showPercentage=true
 
 [Containments][22][Applets][44]
 immutability=1
-plugin=local.gentoo.cpu
+plugin=local.plasma.cpu
 
 [Containments][22][Applets][45]
 immutability=1
@@ -171,7 +173,7 @@ plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
 [Containments][46][Wallpaper][org.kde.image][General]
-Image=/home/przvl/Pictures/cityview.webp
+Image=file:///home/przvl/Pictures/cityview.webp
 
 [ScreenMapping]
 itemsOnDisabledScreens=

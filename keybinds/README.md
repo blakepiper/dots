@@ -37,9 +37,9 @@ This table records the shared intent and current implementations. A dash means t
 | Media play/next/previous | Media controls | Plasma media | playerctl |
 | Brightness keys | Adjust panel brightness | PowerDevil | brightnessctl via helper / directly |
 
-The current KDE snapshot also preserves standard shortcuts such as Alt+Tab, Super+W overview, Super+G grid, and Super+T tile editor. It does not yet implement all of the portable vocabulary. When adapting KDE, decide whether to replace Super+D and the Ctrl+arrow desktop-navigation chords, and increase its desktop count before assigning 6–9.
+The current KDE snapshot also preserves standard shortcuts such as Alt+Tab, Super+W overview, Super+G grid, and Super+T tile editor. The 2026-10-03 preference keeps these KDE differences: Super+D peeks at the desktop, Ctrl+arrow chords navigate desktops/move windows, and only 1–5 select desktops. 6–9 remain task-manager assignments even though the captured panel has no task manager. Print/Alt+Print remain unassigned. Disabling the top-left hover edge leaves keyboard Overview/Grid available.
 
-Implementations: [KDE assignments](../desktop/kde/config/kglobalshortcutsrc) plus [custom tiling](../desktop/kde/share/kwin/scripts/gentoo-tiling/contents/code/main.js), [OXWM Lua](../desktop/oxwm/config.lua), and [Hyprland Lua](../desktop/hyprland/config/hypr/hyprland.lua). KDE shortcut values include current/default/description fields; a default chord is not necessarily the active chord.
+Implementations: [KDE assignments](../desktop/kde/config/kglobalshortcutsrc) plus [custom tiling](../desktop/kde/share/kwin/scripts/kde-tiling/contents/code/main.js), [OXWM Lua](../desktop/oxwm/config.lua), and [Hyprland Lua](../desktop/hyprland/config/hypr/hyprland.lua). KDE shortcut values include current/default/description fields; a default chord is not necessarily the active chord.
 
 Application-specific bindings belong with the app. Neovim uses LazyVim defaults plus the collected plugin options; `nvimide` changes layout rather than defining a new keybinding layer. The tmux fragment enables mouse support and otherwise retains tmux defaults.
 
@@ -73,3 +73,5 @@ Niri's columns make the following differences intentional; use this table when a
 | Super+, / Super+. | Consume or expel a window left / right |
 
 Arrow navigation is spatial here, unlike the stack-order bindings in the other collected tiling configs. Workspace moves transfer a column rather than a single window. Super+C and Super+Shift+Q are not assigned in the Niri snapshot.
+
+`collection-03`, 2026-10-03: final KDE intent and functional shortcut IDs are documented here; executable bindings stay with KDE. Validate device mapping, action presence, registration, dispatch and resulting behavior separately, especially Super+B and Super+Shift+S. `_launch` is a real launcher action, not metadata. See [KDE activation](../desktop/kde/activation.md) and [source records](../docs/sources.json).

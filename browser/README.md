@@ -22,9 +22,17 @@ Review `policies.json` before merging into the target distribution's enterprise 
 
 Snapshot `snapshot-06`, captured 2026-10-03 from the local machine; source commit unavailable (`null`). The collection base commit and full source/current hashes are recorded in [`docs/sources.json`](../docs/sources.json).
 
-| File | Captured edit | SHA-256 of collection file |
+| File | Original capture edit (later font changes below) | Current SHA-256 |
 | --- | --- | --- |
-| `firefox/chrome/userChrome.css` | Copied unchanged, including comments. | `8dab8666e987fb8f59ecd0edb6e35165434b504e571b053d05e11451b0bba6b0` |
-| `firefox/user.js` | Preserve the reviewed local file; append four appearance preferences extracted from `prefs.js`. The full generated `prefs.js` is excluded. | `d1499ba8bbabb23b9baf2e679e8fe51adaee8d1c56ad217d461c5ca9821635c4` |
+| `firefox/chrome/userChrome.css` | Copied unchanged, including comments. | `253229cc49ee5b2db74e0ade6da99c4b3ca665b937ce07c7b54edcac5a9c092f` |
+| `firefox/user.js` | Preserve the reviewed local file; append four appearance preferences extracted from `prefs.js`. The full generated `prefs.js` is excluded. | `67d1276eef3f324ecc99deff297d610acdc429d2e5bb60d1761227453092857e` |
 
 Validation: the new `user.js` parses with Node and was evaluated with a stub `user_pref` to verify literal values and unique keys; source/current hashes and JSON source records were checked. The stylesheet was compared byte-for-byte with the local source. No Firefox runtime or visual check was performed and no machine settings were activated.
+
+## Later font and policy maintenance preference
+
+`collection-03`, 2026-10-03, adds the deployment's explicit JetBrains UI CSS and western/Unicode content font families. `browser.display.use_document_fonts=0` deliberately overrides site fonts and can change layout; this was a later preference, not part of the original `snapshot-06` capture. Install both Nerd Font families; verify the UI computed family and actual rendered page font in a restarted or separate test instance. Existing browser windows require restart.
+
+Discover the installation-wide policy destination. The observed Artix package used `/usr/lib/firefox/distribution/policies.json` rather than the captured `/opt` path. Check `about:policies` for acceptance and verify forced extensions actually installed. If the package does not protect that file and an authorized deployment chooses pacman protection, merge the exact relative `NoUpgrade = usr/lib/firefox/distribution/policies.json` entry after backup. This creates ownership of update review: inspect `.pacnew` policies and current schema/extensions after package updates rather than assuming compatibility forever. The repo contains no pacman configuration or browser profile tree.
+
+Report-derived changes and previous capture hashes are preserved in [sources.json](../docs/sources.json). JavaScript parsing does not establish Firefox UI or policy behavior; follow [validation](../docs/validation.md).

@@ -1,0 +1,1 @@
+{"KPlugin":{"Id":"kde-screenshot","Name":"KDE region screenshot","Version":"1.0","Description":"Select and copy with Flameshot"},"KPackageStructure":"KWin/Script","X-Plasma-API":"javascript","X-Plasma-MainScript":"code/main.js"}

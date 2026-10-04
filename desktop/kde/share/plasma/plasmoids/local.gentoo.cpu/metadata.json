@@ -1,1 +1,0 @@
-{"KPlugin": {"Id": "local.gentoo.cpu", "Name": "CPU text", "Description": "CPU usage as plain yellow text", "Version": "1.0", "License": "MIT", "Icon": "cpu", "Category": "System Information"}, "KPackageStructure": "Plasma/Applet", "X-Plasma-API-Minimum-Version": "6.0"}
