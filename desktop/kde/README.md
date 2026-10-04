@@ -50,3 +50,13 @@ Install under the target user’s `~/.local/share/plasma/desktoptheme/panel-blac
 | --- | --- |
 | `desktop/kde/share/plasma/desktoptheme/panel-black/metadata.json` | `ab206c2151b6435b356c988251b9fef9f4a4cf2667613092434a986df8756a6b` |
 | `desktop/kde/share/plasma/desktoptheme/panel-black/widgets/panel-background.svg` (also identical in `opaque/` and `translucent/`) | `6637e3db857b7b2326c7a296017bac949d208bc548a3b9f44edadb19c0ca864c` |
+
+## Standalone Super preference
+
+`snapshot-11`, 2026-10-04, carries the user-requested preference that pressing Super alone does not open the KDE application menu. In `config/kglobalshortcutsrc`, the active `plasmashell` application launcher shortcut is `Alt+F1`; the default field still records KDE's `Meta`/`Alt+F1` defaults. Super+Space continues to launch KRunner. Only this reviewed assignment was copied from the live file, preserving the collection's other adapted shortcuts and functional action IDs.
+
+Observed KWin version: 6.7.5. No local source commit is available; the source hash, prior capture and collection hash are recorded in [sources.json](../../docs/sources.json). Live KGlobalAccel and saved-config readback confirmed Alt+F1 as the sole launcher shortcut before collection maintenance. INI, JSON and manifest hashes were checked; no desktop settings were activated during this collection update.
+
+| Collection file | SHA-256 |
+| --- | --- |
+| `desktop/kde/config/kglobalshortcutsrc` | `6663bf08257153259cba678928c1724400baafb8231d6281a00eadf378dee629` |

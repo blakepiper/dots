@@ -184,6 +184,16 @@
       "base_commit": "c5049f17b550d396b6e5e376b22c5f612d885f13",
       "description": "Capture user-confirmed removal of the hostname prefix from the Konsole Bash prompt in the shared shell fragment.",
       "validation": "Bash syntax, interactive prompt value, quiet noninteractive sourcing and manifest hashes checked without activating live shell settings."
+    },
+    "snapshot-11": {
+      "captured": "2026-10-04",
+      "commit": null,
+      "base_commit": "46e1f6a6576d4e6dae4af6e40230558f9ebb8eb4",
+      "description": "Capture the preference that pressing Super alone does not open the KDE application menu; retain Alt+F1.",
+      "versions": {
+        "kwin": "6.7.5"
+      },
+      "validation": "Live KGlobalAccel readback and saved local configuration contain only Alt+F1 for the application launcher. Collection INI, JSON and manifest hashes checked without activating desktop settings during collection maintenance."
     }
   },
   "files": [
@@ -411,15 +421,15 @@
     {
       "path": "desktop/kde/config/kglobalshortcutsrc",
       "commit": null,
-      "source_sha256": "3136f1e07ce76d59d543d755de3a8a38f609278b731798c50a03a8c8727d19a8",
+      "source_sha256": "dbff374484971989241d1bfc815f28d789386b8b006a0950616ad7103f267934",
       "changes": [
-        "Reorganize collection by application and function; moved from kde/config/kglobalshortcutsrc.",
-        "Update custom action IDs with script registrations and select firefox.desktop as an adaptable package example; preserve KDE chord differences."
+        "Capture only the application launcher assignment from the live local file; retain the previously adapted collection assignments and functional action IDs.",
+        "Remove standalone Meta from the active application launcher shortcut, retaining Alt+F1 and the KDE default/description fields."
       ],
-      "sha256": "60f08e57899e72fa3ffff2ace76840627f078453d5e0545d3a2cd0869db3b25f",
+      "sha256": "6663bf08257153259cba678928c1724400baafb8231d6281a00eadf378dee629",
       "source": "/home/przvl/.config/kglobalshortcutsrc",
-      "snapshot": "collection-03",
-      "captured": "2026-10-03",
+      "snapshot": "snapshot-11",
+      "captured": "2026-10-04",
       "previous_captures": [
         {
           "path": "desktop/kde/config/kglobalshortcutsrc",
@@ -430,6 +440,19 @@
           ],
           "sha256": "3136f1e07ce76d59d543d755de3a8a38f609278b731798c50a03a8c8727d19a8",
           "source": "/home/przvl/.config/kglobalshortcutsrc"
+        },
+        {
+          "path": "desktop/kde/config/kglobalshortcutsrc",
+          "commit": null,
+          "source_sha256": "3136f1e07ce76d59d543d755de3a8a38f609278b731798c50a03a8c8727d19a8",
+          "changes": [
+            "Reorganize collection by application and function; moved from kde/config/kglobalshortcutsrc.",
+            "Update custom action IDs with script registrations and select firefox.desktop as an adaptable package example; preserve KDE chord differences."
+          ],
+          "sha256": "60f08e57899e72fa3ffff2ace76840627f078453d5e0545d3a2cd0869db3b25f",
+          "source": "/home/przvl/.config/kglobalshortcutsrc",
+          "snapshot": "collection-03",
+          "captured": "2026-10-03"
         }
       ]
     },
@@ -2309,14 +2332,14 @@
     },
     {
       "path": "desktop/kde/README.md",
-      "snapshot": "snapshot-09",
+      "snapshot": "snapshot-11",
       "commit": null,
-      "captured": "2026-10-03",
+      "captured": "2026-10-04",
       "source_sha256": null,
       "changes": [
-        "Document the user-confirmed solid black topbar preference, functional panel-black theme, deployment mapping and validation."
+        "Document the preference that Super alone does not open the KDE application menu; retain Alt+F1 and Super+Space for launchers."
       ],
-      "sha256": "96f78e16f2453bea80ecd703e42fa35ab442a7f53781c5ac9d1c725880aa663b",
+      "sha256": "70c05e54cf99a121c785439c5caf6dbf54e7fdcd6416e9f5001f5389c4e96acc",
       "previous_captures": [
         {
           "path": "desktop/kde/README.md",
@@ -2346,9 +2369,21 @@
             "Document reviewed deployment findings, preferences, dependencies and validation."
           ],
           "sha256": "c820fb7adf25dbac8531da52dee977b180c2871835acc58ec5b242c5d9d25b97"
+        },
+        {
+          "path": "desktop/kde/README.md",
+          "snapshot": "snapshot-09",
+          "commit": null,
+          "captured": "2026-10-03",
+          "source_sha256": null,
+          "changes": [
+            "Document the user-confirmed solid black topbar preference, functional panel-black theme, deployment mapping and validation."
+          ],
+          "sha256": "96f78e16f2453bea80ecd703e42fa35ab442a7f53781c5ac9d1c725880aa663b",
+          "source": "Collection documentation of user-confirmed topbar preference (snapshot-09)."
         }
       ],
-      "source": "Collection documentation of user-confirmed topbar preference (snapshot-09)."
+      "source": "Collection documentation of the standalone Super preference (snapshot-11)."
     },
     {
       "path": "desktop/niri/README.md",
@@ -2576,16 +2611,15 @@
     },
     {
       "path": "keybinds/README.md",
-      "snapshot": "collection-03",
-      "captured": "2026-10-03",
+      "snapshot": "snapshot-11",
+      "captured": "2026-10-04",
       "commit": null,
       "source_sha256": null,
-      "source": "Collection platform integration derived from documented shared settings.",
+      "source": "Collection documentation of the standalone Super preference (snapshot-11).",
       "changes": [
-        "Add narrow platform integration without duplicating application settings.",
-        "Document reviewed deployment findings, preferences, dependencies and validation."
+        "Document the preference that Super alone does not open the KDE application menu; retain Alt+F1 and Super+Space for launchers."
       ],
-      "sha256": "8b5ac93a3c2f70a59437ee83aafbb32a672c86fb86e703769d4f83d18104795b",
+      "sha256": "25cfc4942dacaa314506e777f46d9348928981084c7432c7a418df3885e61c7f",
       "previous_captures": [
         {
           "path": "keybinds/README.md",
@@ -2598,6 +2632,19 @@
             "Add narrow platform integration without duplicating application settings."
           ],
           "sha256": "a4596049c550d189e1b52f6daa0341d7f68c3aee6dd6ff26e7fb2520ab3c43da"
+        },
+        {
+          "path": "keybinds/README.md",
+          "snapshot": "collection-03",
+          "captured": "2026-10-03",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection platform integration derived from documented shared settings.",
+          "changes": [
+            "Add narrow platform integration without duplicating application settings.",
+            "Document reviewed deployment findings, preferences, dependencies and validation."
+          ],
+          "sha256": "8b5ac93a3c2f70a59437ee83aafbb32a672c86fb86e703769d4f83d18104795b"
         }
       ]
     },
@@ -2689,15 +2736,15 @@
     },
     {
       "path": "docs/sources.md",
-      "snapshot": "snapshot-10",
-      "captured": "2026-10-03",
+      "snapshot": "snapshot-11",
+      "captured": "2026-10-04",
       "commit": null,
       "source_sha256": null,
-      "source": "Collection documentation of user-confirmed Bash prompt preference (snapshot-10).",
+      "source": "Collection documentation of the standalone Super preference (snapshot-11).",
       "changes": [
-        "Document the Bash prompt without a hostname prefix, shared configuration location, activation and validation."
+        "Document the preference that Super alone does not open the KDE application menu; retain Alt+F1 and Super+Space for launchers."
       ],
-      "sha256": "8c00093407c17e48b674e4fc660c975fc5133623b4c0c40b9cb6ceedd8c0d025",
+      "sha256": "3239e78cd907595dcc8af4a5ebebd1dec394ae04692d551fdefa8b44d1dd5622",
       "previous_captures": [
         {
           "path": "docs/sources.md",
@@ -2741,6 +2788,18 @@
             "Document the user-confirmed solid black topbar preference, functional panel-black theme, deployment mapping and validation."
           ],
           "sha256": "87e283e112880e4bf68937ef7d41a577d9021c589bc332f59a9e7c6cd9849047"
+        },
+        {
+          "path": "docs/sources.md",
+          "snapshot": "snapshot-10",
+          "captured": "2026-10-03",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection documentation of user-confirmed Bash prompt preference (snapshot-10).",
+          "changes": [
+            "Document the Bash prompt without a hostname prefix, shared configuration location, activation and validation."
+          ],
+          "sha256": "8c00093407c17e48b674e4fc660c975fc5133623b4c0c40b9cb6ceedd8c0d025"
         }
       ]
     },

@@ -6,6 +6,7 @@ This table records the shared intent and current implementations. A dash means t
 
 | Chord | Preferred action | KDE snapshot | OXWM / Hyprland snapshots |
 | --- | --- | --- | --- |
+| Super alone | No action | Application menu disabled | — |
 | Super+Enter | Terminal | Konsole | st / Foot |
 | Super+Space | App launcher | KRunner | dmenu / Fuzzel |
 | Super+D | Alternate launcher | Peek at desktop | App launcher |
@@ -38,6 +39,8 @@ This table records the shared intent and current implementations. A dash means t
 | Brightness keys | Adjust panel brightness | PowerDevil | brightnessctl via helper / directly |
 
 The current KDE snapshot also preserves standard shortcuts such as Alt+Tab, Super+W overview, Super+G grid, and Super+T tile editor. The 2026-10-03 preference keeps these KDE differences: Super+D peeks at the desktop, Ctrl+arrow chords navigate desktops/move windows, and only 1–5 select desktops. 6–9 remain task-manager assignments even though the captured panel has no task manager. Print/Alt+Print remain unassigned. Disabling the top-left hover edge leaves keyboard Overview/Grid available.
+
+The 2026-10-04 preference disables the KDE application menu on Super alone. Alt+F1 still opens that menu; Super+Space still launches KRunner.
 
 Implementations: [KDE assignments](../desktop/kde/config/kglobalshortcutsrc) plus [custom tiling](../desktop/kde/share/kwin/scripts/kde-tiling/contents/code/main.js), [OXWM Lua](../desktop/oxwm/config.lua), and [Hyprland Lua](../desktop/hyprland/config/hypr/hyprland.lua). KDE shortcut values include current/default/description fields; a default chord is not necessarily the active chord.
 

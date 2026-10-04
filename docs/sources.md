@@ -13,6 +13,7 @@ Collected on 2026-10-01 from the current machine and four source snapshots. Orig
 | snapshot-07 | Local Konsole font, Plasma launcher/display refresh, GTK/Fontconfig and Dolphin settings, captured 2026-10-03 |
 | snapshot-09 | User-confirmed solid black KDE topbar theme and preference, captured 2026-10-03 |
 | snapshot-10 | User-confirmed Bash prompt without a hostname prefix, captured 2026-10-03 |
+| snapshot-11 | KDE application menu disabled on Super alone, retaining Alt+F1, captured 2026-10-04 |
 
 Names in the collection describe the application, platform or function. Hyprland's helper and service names use `workstation`; Niri helpers use `desktop` for cache and application identifiers. The st shell wrapper is `st-shell`. Alternate X11 hardware files use `x11` names. References and dependent command paths were updated together.
 
