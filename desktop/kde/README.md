@@ -82,3 +82,13 @@ Only the tray's `General` settings were copied from the live configuration. The 
 | Collection file | SHA-256 |
 | --- | --- |
 | `desktop/kde/config/plasma-org.kde.plasma.desktop-appletsrc` | `26fa6b0c23be951022c68eed387cba5977a572c2ec6cf91b9d8e4a4d4e72de84` |
+
+## Firefox private-window shortcut
+
+`snapshot-16`, 2026-10-04, adds `new-private-window=Meta+Shift+B` under `[services][firefox.desktop]` in `config/kglobalshortcutsrc`. Super+Shift+B opens a Firefox private browsing window; Super+B remains the normal browser launcher. Only this reviewed assignment was merged from the live file, retaining the collection's other shortcuts and functional action IDs.
+
+The installed Firefox desktop entry must provide the `new-private-window` action; adapt `firefox.desktop` if the target uses another desktop-file ID. The observed entry executes Firefox with `--private-window`. KGlobalAccel reported no conflict and read back the assigned chord; dispatching the action opened a window showing Firefox's private-browsing page. Physical keyboard activation was not simulated. INI, JSON and capture hashes were checked without reactivating desktop settings during collection maintenance. Source and previous capture hashes are in [sources.json](../../docs/sources.json).
+
+| Collection file | SHA-256 |
+| --- | --- |
+| `desktop/kde/config/kglobalshortcutsrc` | `be2caafce59d33f67aa094b8b675b829bfc1660703db728d4a15e95511368c99` |

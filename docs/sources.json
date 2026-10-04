@@ -264,6 +264,13 @@
         ]
       },
       "validation": "All source images decoded and were reviewed in a contact sheet. SHA-256 and auto-oriented decoded RGBA pixel comparisons found three duplicates; new files were copied unchanged. Image copy hashes, collection uniqueness, existing Firefox preference/opacity synchronization, JSON and refreshed documentation hashes verified without activating browser, desktop or wallpaper settings."
+    },
+    "snapshot-16": {
+      "captured": "2026-10-04",
+      "commit": null,
+      "base_commit": "c687dc41479c92eb9a82dba97fc5ed7b82ee11f8",
+      "description": "Capture Super+Shift+B for the Firefox private-window desktop action on KDE, retaining Super+B for normal browsing.",
+      "validation": "INI, JSON, selected live/collection assignment parity and updated manifest hashes checked. Earlier live KGlobalAccel conflict/readback checks and action-dispatch screenshot confirmed a private Firefox window. Physical keyboard activation was not simulated; no desktop settings were activated during this collection update."
     }
   },
   "files": [
@@ -491,14 +498,13 @@
     {
       "path": "desktop/kde/config/kglobalshortcutsrc",
       "commit": null,
-      "source_sha256": "dbff374484971989241d1bfc815f28d789386b8b006a0950616ad7103f267934",
+      "source_sha256": "d2d22be979d5807b42bb9bd1e7ff2468f3f138ce9d4d901d952e7f4f315f1088",
       "changes": [
-        "Capture only the application launcher assignment from the live local file; retain the previously adapted collection assignments and functional action IDs.",
-        "Remove standalone Meta from the active application launcher shortcut, retaining Alt+F1 and the KDE default/description fields."
+        "Merge only new-private-window=Meta+Shift+B under the Firefox desktop service; retain Super+B and other adapted collection assignments."
       ],
-      "sha256": "6663bf08257153259cba678928c1724400baafb8231d6281a00eadf378dee629",
+      "sha256": "be2caafce59d33f67aa094b8b675b829bfc1660703db728d4a15e95511368c99",
       "source": "/home/przvl/.config/kglobalshortcutsrc",
-      "snapshot": "snapshot-11",
+      "snapshot": "snapshot-16",
       "captured": "2026-10-04",
       "previous_captures": [
         {
@@ -523,6 +529,19 @@
           "source": "/home/przvl/.config/kglobalshortcutsrc",
           "snapshot": "collection-03",
           "captured": "2026-10-03"
+        },
+        {
+          "path": "desktop/kde/config/kglobalshortcutsrc",
+          "commit": null,
+          "source_sha256": "dbff374484971989241d1bfc815f28d789386b8b006a0950616ad7103f267934",
+          "changes": [
+            "Capture only the application launcher assignment from the live local file; retain the previously adapted collection assignments and functional action IDs.",
+            "Remove standalone Meta from the active application launcher shortcut, retaining Alt+F1 and the KDE default/description fields."
+          ],
+          "sha256": "6663bf08257153259cba678928c1724400baafb8231d6281a00eadf378dee629",
+          "source": "/home/przvl/.config/kglobalshortcutsrc",
+          "snapshot": "snapshot-11",
+          "captured": "2026-10-04"
         }
       ]
     },
@@ -2415,14 +2434,14 @@
     },
     {
       "path": "desktop/kde/README.md",
-      "snapshot": "snapshot-14",
+      "snapshot": "snapshot-16",
       "commit": null,
       "captured": "2026-10-04",
       "source_sha256": null,
       "changes": [
-        "Document the restored fully opaque Firefox exception, retained 30% transparency elsewhere, precedence, capture hash and validation."
+        "Document the private Firefox shortcut, target desktop-action dependency, capture hash and validation."
       ],
-      "sha256": "2356bd65cff4d2be15d1b84438c99fb420b9e8546907c3dfeb682a21b0d5fdfb",
+      "sha256": "f4a7346f3cbacf70a948d2ef715d93b9b2672200819581e41bd4587ff4757e0a",
       "previous_captures": [
         {
           "path": "desktop/kde/README.md",
@@ -2500,9 +2519,21 @@
           ],
           "sha256": "2a4a6f3ad2258f4ab111c30b96638bab993e4a226494882bec6aba460733306b",
           "source": "Collection documentation of the window opacity and topbar tray preferences (snapshot-13)."
+        },
+        {
+          "path": "desktop/kde/README.md",
+          "snapshot": "snapshot-14",
+          "commit": null,
+          "captured": "2026-10-04",
+          "source_sha256": null,
+          "changes": [
+            "Document the restored fully opaque Firefox exception, retained 30% transparency elsewhere, precedence, capture hash and validation."
+          ],
+          "sha256": "2356bd65cff4d2be15d1b84438c99fb420b9e8546907c3dfeb682a21b0d5fdfb",
+          "source": "Collection documentation of Firefox image compatibility and opacity preferences (snapshot-14)."
         }
       ],
-      "source": "Collection documentation of Firefox image compatibility and opacity preferences (snapshot-14)."
+      "source": "Collection documentation of the Firefox private-window shortcut (snapshot-16)."
     },
     {
       "path": "desktop/niri/README.md",
@@ -2730,15 +2761,15 @@
     },
     {
       "path": "keybinds/README.md",
-      "snapshot": "snapshot-11",
+      "snapshot": "snapshot-16",
       "captured": "2026-10-04",
       "commit": null,
       "source_sha256": null,
-      "source": "Collection documentation of the standalone Super preference (snapshot-11).",
+      "source": "Collection documentation of the Firefox private-window shortcut (snapshot-16).",
       "changes": [
-        "Document the preference that Super alone does not open the KDE application menu; retain Alt+F1 and Super+Space for launchers."
+        "Record Super+Shift+B private-browser intent and the KDE implementation; distinguish dispatch verification from physical keyboard testing."
       ],
-      "sha256": "25cfc4942dacaa314506e777f46d9348928981084c7432c7a418df3885e61c7f",
+      "sha256": "f9e6720e2d63e28fedf3f00aa75ac09494b796caf52b245a978ef36b7077ab80",
       "previous_captures": [
         {
           "path": "keybinds/README.md",
@@ -2764,6 +2795,18 @@
             "Document reviewed deployment findings, preferences, dependencies and validation."
           ],
           "sha256": "8b5ac93a3c2f70a59437ee83aafbb32a672c86fb86e703769d4f83d18104795b"
+        },
+        {
+          "path": "keybinds/README.md",
+          "snapshot": "snapshot-11",
+          "captured": "2026-10-04",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection documentation of the standalone Super preference (snapshot-11).",
+          "changes": [
+            "Document the preference that Super alone does not open the KDE application menu; retain Alt+F1 and Super+Space for launchers."
+          ],
+          "sha256": "25cfc4942dacaa314506e777f46d9348928981084c7432c7a418df3885e61c7f"
         }
       ]
     },
@@ -2869,15 +2912,15 @@
     },
     {
       "path": "docs/sources.md",
-      "snapshot": "snapshot-15",
+      "snapshot": "snapshot-16",
       "captured": "2026-10-04",
       "commit": null,
       "source_sha256": null,
-      "source": "Collection documentation of the confirmed Firefox image fix and Pictures refresh (snapshot-15).",
+      "source": "Collection documentation of the Firefox private-window shortcut (snapshot-16).",
       "changes": [
-        "Record snapshot-15 Firefox image confirmation and deduplicated Pictures collection with provenance and validation."
+        "Record snapshot-16 private-window shortcut provenance, selected-assignment merge and validation."
       ],
-      "sha256": "d95165c9be56dae0fc201ae849fe8514d10f6a80936386d3e91a7ec997cc5b4f",
+      "sha256": "26c357f14991bc225d0adb953b9795458be0ce7417599ba4512e784fa389be59",
       "previous_captures": [
         {
           "path": "docs/sources.md",
@@ -2981,6 +3024,18 @@
             "Record snapshot-14 Firefox image compatibility and opacity preferences, source provenance, validation and pending browser activation/upload confirmation."
           ],
           "sha256": "6c61c4b2f99276d889c28c754d83804497fb3ed3884f555510e94efb0335a261"
+        },
+        {
+          "path": "docs/sources.md",
+          "snapshot": "snapshot-15",
+          "captured": "2026-10-04",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection documentation of the confirmed Firefox image fix and Pictures refresh (snapshot-15).",
+          "changes": [
+            "Record snapshot-15 Firefox image confirmation and deduplicated Pictures collection with provenance and validation."
+          ],
+          "sha256": "d95165c9be56dae0fc201ae849fe8514d10f6a80936386d3e91a7ec997cc5b4f"
         }
       ]
     },

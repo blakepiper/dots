@@ -11,6 +11,7 @@ This table records the shared intent and current implementations. A dash means t
 | Super+Space | App launcher | KRunner | dmenu / Fuzzel |
 | Super+D | Alternate launcher | Peek at desktop | App launcher |
 | Super+B | Browser | Firefox | Firefox |
+| Super+Shift+B | Private browser window | Firefox private window | — |
 | Super+F | File manager | Dolphin | Xfe |
 | Super+V | Clipboard history | Plasma clipboard | X11 text history / Cliphist |
 | Super+L | Lock session | KDE locker | xss-lock/i3lock / Hyprlock |
@@ -41,6 +42,8 @@ This table records the shared intent and current implementations. A dash means t
 The current KDE snapshot also preserves standard shortcuts such as Alt+Tab, Super+W overview, Super+G grid, and Super+T tile editor. The 2026-10-03 preference keeps these KDE differences: Super+D peeks at the desktop, Ctrl+arrow chords navigate desktops/move windows, and only 1–5 select desktops. 6–9 remain task-manager assignments even though the captured panel has no task manager. Print/Alt+Print remain unassigned. Disabling the top-left hover edge leaves keyboard Overview/Grid available.
 
 The 2026-10-04 preference disables the KDE application menu on Super alone. Alt+F1 still opens that menu; Super+Space still launches KRunner.
+
+`snapshot-16`, 2026-10-04, adds Super+Shift+B for Firefox's built-in `new-private-window` desktop action on KDE; Super+B retains the normal `_launch` action. The chord was unassigned before registration. KGlobalAccel readback and saved settings confirmed the binding, and invoking the action opened a visibly private Firefox window. Physical keyboard activation remains a separate check; this collection update did not activate desktop settings.
 
 Implementations: [KDE assignments](../desktop/kde/config/kglobalshortcutsrc) plus [custom tiling](../desktop/kde/share/kwin/scripts/kde-tiling/contents/code/main.js), [OXWM Lua](../desktop/oxwm/config.lua), and [Hyprland Lua](../desktop/hyprland/config/hypr/hyprland.lua). KDE shortcut values include current/default/description fields; a default chord is not necessarily the active chord.
 
