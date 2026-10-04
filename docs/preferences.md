@@ -12,7 +12,7 @@ These choices were clarified during the 2026-10-03 KDE deployment. They describe
 | Input | Natural scrolling on mouse and touchpad, including every supported interface of composite devices. External Command position emits Super; built-in Win remains Super. Device mapping stays scoped to the keyboard. |
 | Wallpaper | `cityview.webp` for desktop and lock screen. SDDM keeps its independent theme background. |
 | Fonts | Install JetBrainsMono Nerd Font systemwide, including its Mono family. General text uses the regular family; fixed-width text uses Mono. |
-| Terminal | Bash with ble.sh; Konsole Classic, Mono 9 pt, captured colors, hidden menu and New Tab / Split View / Copy / Paste / Find toolbars. |
+| Terminal | Bash with ble.sh; Konsole Bash prompt shows the current directory and `$` (`#` for root), without a hostname prefix. Konsole Classic, Mono 9 pt, captured colors, hidden menu and New Tab / Split View / Copy / Paste / Find toolbars. |
 | Browser | Captured Firefox UI/privacy/policies/extensions, plus the later explicit JetBrains UI and document-font preference. `browser.display.use_document_fonts=0` overrides site fonts and can change layout. |
 | Screenshot | Super+Shift+S selects a region and copies it; standard plus crosshair for Flameshot only, with the global Breeze cursor retained. |
 | System information | Built-in Arch Linux ASCII logo and cyan/blue headings and palette replacements in neofetch; OS field continues to report the actual distribution. |

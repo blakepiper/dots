@@ -4,7 +4,7 @@ if [[ $- != *i* ]]; then
 fi
 export PATH="$HOME/.local/bin:$PATH"
 if [[ -n ${KONSOLE_VERSION:-} ]]; then
-    PS1='\[\e[1;31m\]\h\[\e[0m\] \[\e[1;34m\]\w\[\e[0m\] \$ '
+    PS1='\[\e[1;34m\]\w\[\e[0m\] \$ '
 fi
 
 # ble.sh is part of the preferred setup. Load it once in interactive terminals.

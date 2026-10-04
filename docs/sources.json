@@ -177,6 +177,13 @@
         "live": "plasma-black selected through plasma-apply-desktoptheme; user confirmed the appearance.",
         "collection": "JSON, INI, SVG surface opacity, geometry, source hashes and references checked without activating machine settings."
       }
+    },
+    "snapshot-10": {
+      "captured": "2026-10-03",
+      "commit": null,
+      "base_commit": "c5049f17b550d396b6e5e376b22c5f612d885f13",
+      "description": "Capture user-confirmed removal of the hostname prefix from the Konsole Bash prompt in the shared shell fragment.",
+      "validation": "Bash syntax, interactive prompt value, quiet noninteractive sourcing and manifest hashes checked without activating live shell settings."
     }
   },
   "files": [
@@ -1694,15 +1701,31 @@
     {
       "path": "shell/bash/bashrc",
       "commit": null,
-      "source_sha256": "c5cc789c75bc3994e14f733a63df434b2a1c4150b959a7d19ffaaab2915867b0",
-      "sha256": "3dd2ce8011f8491928b96eec6f14a86834b5f37257c969bc31a7a45c21e17763",
+      "source_sha256": "86520026564f67665d2ef7525d538814a6ebfb950f938a42a831df62ce3f0820",
+      "sha256": "dea658aa47fc32a6154636c1e27d903d41b381ae77996dad5bd766a5b661f46b",
       "changes": [
-        "Extract interactive settings; omit duplicate absolute Codex PATH and distro boilerplate.",
-        "Move shared terminal shell configuration under terminal/bash; require Bash with ble.sh as the documented setup.",
-        "Standardize Bash and interactive ble.sh initialization across terminal choices.",
-        "Reorganize collection by application and function; moved from terminal/bash/bashrc."
+        "Extract shared interactive settings from the local .bashrc; omit absolute installer PATH and machine boilerplate.",
+        "Remove the hostname and its red styling from the Konsole Bash PS1; retain the blue current directory and standard prompt symbol.",
+        "Preserve the existing shared PATH and ble.sh initialization."
       ],
-      "source": "/home/przvl/.bashrc"
+      "source": "/home/przvl/.bashrc",
+      "snapshot": "snapshot-10",
+      "captured": "2026-10-03",
+      "previous_captures": [
+        {
+          "path": "shell/bash/bashrc",
+          "commit": null,
+          "source_sha256": "c5cc789c75bc3994e14f733a63df434b2a1c4150b959a7d19ffaaab2915867b0",
+          "sha256": "3dd2ce8011f8491928b96eec6f14a86834b5f37257c969bc31a7a45c21e17763",
+          "changes": [
+            "Extract interactive settings; omit duplicate absolute Codex PATH and distro boilerplate.",
+            "Move shared terminal shell configuration under terminal/bash; require Bash with ble.sh as the documented setup.",
+            "Standardize Bash and interactive ble.sh initialization across terminal choices.",
+            "Reorganize collection by application and function; moved from terminal/bash/bashrc."
+          ],
+          "source": "/home/przvl/.bashrc"
+        }
+      ]
     },
     {
       "path": "hardware/x11/config/workstation/display.conf",
@@ -2404,16 +2427,14 @@
     },
     {
       "path": "shell/bash/README.md",
-      "snapshot": "collection-03",
+      "snapshot": "snapshot-10",
       "commit": null,
       "captured": "2026-10-03",
       "source_sha256": null,
       "changes": [
-        "Collection organization documentation.",
-        "Update paths and documentation for desktop/shell organization and standalone Hyprland.",
-        "Document reviewed deployment findings, preferences, dependencies and validation."
+        "Document the Bash prompt without a hostname prefix, shared configuration location, activation and validation."
       ],
-      "sha256": "0f64e05aa360c18e2e9abd460a3edfed4a1027ba94c76a1deb5dcf6a88a9b6ab",
+      "sha256": "9bcbd78254d58865a197c6c3a545706efbf17a32291a0c1a9f16290d959f8024",
       "previous_captures": [
         {
           "path": "shell/bash/README.md",
@@ -2426,8 +2447,22 @@
             "Update paths and documentation for desktop/shell organization and standalone Hyprland."
           ],
           "sha256": "f3e907ca7bfe4c6a7e2e35007a9c583f6df6423c54723ecf6fbf5c3a2bcf74b1"
+        },
+        {
+          "path": "shell/bash/README.md",
+          "snapshot": "collection-03",
+          "commit": null,
+          "captured": "2026-10-03",
+          "source_sha256": null,
+          "changes": [
+            "Collection organization documentation.",
+            "Update paths and documentation for desktop/shell organization and standalone Hyprland.",
+            "Document reviewed deployment findings, preferences, dependencies and validation."
+          ],
+          "sha256": "0f64e05aa360c18e2e9abd460a3edfed4a1027ba94c76a1deb5dcf6a88a9b6ab"
         }
-      ]
+      ],
+      "source": "Collection documentation of user-confirmed Bash prompt preference (snapshot-10)."
     },
     {
       "path": "terminal/foot/foot.ini",
@@ -2654,15 +2689,15 @@
     },
     {
       "path": "docs/sources.md",
-      "snapshot": "snapshot-09",
+      "snapshot": "snapshot-10",
       "captured": "2026-10-03",
       "commit": null,
       "source_sha256": null,
-      "source": "Collection documentation of user-confirmed topbar preference (snapshot-09).",
+      "source": "Collection documentation of user-confirmed Bash prompt preference (snapshot-10).",
       "changes": [
-        "Document the user-confirmed solid black topbar preference, functional panel-black theme, deployment mapping and validation."
+        "Document the Bash prompt without a hostname prefix, shared configuration location, activation and validation."
       ],
-      "sha256": "87e283e112880e4bf68937ef7d41a577d9021c589bc332f59a9e7c6cd9849047",
+      "sha256": "8c00093407c17e48b674e4fc660c975fc5133623b4c0c40b9cb6ceedd8c0d025",
       "previous_captures": [
         {
           "path": "docs/sources.md",
@@ -2694,6 +2729,18 @@
             "Document reviewed deployment findings, preferences, dependencies and validation."
           ],
           "sha256": "a863bba1fde75f934f9a83feeba392c86a9a888be1dd912f84446aa8e0405bc8"
+        },
+        {
+          "path": "docs/sources.md",
+          "snapshot": "snapshot-09",
+          "captured": "2026-10-03",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection documentation of user-confirmed topbar preference (snapshot-09).",
+          "changes": [
+            "Document the user-confirmed solid black topbar preference, functional panel-black theme, deployment mapping and validation."
+          ],
+          "sha256": "87e283e112880e4bf68937ef7d41a577d9021c589bc332f59a9e7c6cd9849047"
         }
       ]
     },
@@ -3502,14 +3549,14 @@
     },
     {
       "path": "docs/preferences.md",
-      "snapshot": "snapshot-09",
+      "snapshot": "snapshot-10",
       "captured": "2026-10-03",
       "commit": null,
-      "source": "Collection documentation of user-confirmed topbar preference (snapshot-09).",
+      "source": "Collection documentation of user-confirmed Bash prompt preference (snapshot-10).",
       "source_sha256": null,
-      "sha256": "4f04a273d323e4526b90129529cfa50c9795b0dbd82b829c411a24542a9b464e",
+      "sha256": "e69eb6fd300c30bd956bf8a2e0e3fe87069bf589ee9259bc88ee912da339a922",
       "changes": [
-        "Document the user-confirmed solid black topbar preference, functional panel-black theme, deployment mapping and validation."
+        "Document the Bash prompt without a hostname prefix, shared configuration location, activation and validation."
       ],
       "previous_captures": [
         {
@@ -3522,6 +3569,18 @@
           "sha256": "d9c3b186968cdaebca935b400c578f2b1ba826dd68ea93cff698a334d61d95eb",
           "changes": [
             "Document preferences, dependencies, target adaptation and evidence."
+          ]
+        },
+        {
+          "path": "docs/preferences.md",
+          "snapshot": "snapshot-09",
+          "captured": "2026-10-03",
+          "commit": null,
+          "source": "Collection documentation of user-confirmed topbar preference (snapshot-09).",
+          "source_sha256": null,
+          "sha256": "4f04a273d323e4526b90129529cfa50c9795b0dbd82b829c411a24542a9b464e",
+          "changes": [
+            "Document the user-confirmed solid black topbar preference, functional panel-black theme, deployment mapping and validation."
           ]
         }
       ]
