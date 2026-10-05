@@ -1,5 +1,5 @@
 -- Minimal black theme shared by nvim and nvimide.
--- st 0.9.3 supplies the background, foreground, cursor and terminal palette.
+-- st 0.9.3 supplies the background, foreground, cursor and base terminal palette.
 -- Keep chrome grayscale, with terminal-inspired syntax colors and muted
 -- semantic accents for diagnostics, diffs and Git state.
 
@@ -48,12 +48,13 @@ local semantic = {
   bright_magenta = "#af87af",
 }
 
--- Exact st 0.9.3 ANSI colors, independent of editor highlights.
+-- st 0.9.3 ANSI colors, with lighter blues for readable terminal prompts.
+-- Independent of editor highlights.
 local ansi = {
   "#000000", "#cd0000", "#00cd00", "#cdcd00",
-  "#0000ee", "#cd00cd", "#00cdcd", "#e5e5e5",
+  "#82b4ff", "#cd00cd", "#00cdcd", "#e5e5e5",
   "#7f7f7f", "#ff0000", "#00ff00", "#ffff00",
-  "#5c5cff", "#ff00ff", "#00ffff", "#ffffff",
+  "#a6c8ff", "#ff00ff", "#00ffff", "#ffffff",
 }
 
 vim.cmd("highlight clear")

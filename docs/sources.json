@@ -271,6 +271,13 @@
       "base_commit": "c687dc41479c92eb9a82dba97fc5ed7b82ee11f8",
       "description": "Capture Super+Shift+B for the Firefox private-window desktop action on KDE, retaining Super+B for normal browsing.",
       "validation": "INI, JSON, selected live/collection assignment parity and updated manifest hashes checked. Earlier live KGlobalAccel conflict/readback checks and action-dispatch screenshot confirmed a private Firefox window. Physical keyboard activation was not simulated; no desktop settings were activated during this collection update."
+    },
+    "snapshot-17": {
+      "captured": "2026-10-05",
+      "commit": null,
+      "base_commit": "72838e7b6efc2547cffa3349bd3ac9972613e86b",
+      "description": "Capture lighter normal and bright ANSI blues for readable Neovim embedded terminal prompts.",
+      "validation": "Headless Neovim loaded the captured theme and verified ANSI blue values. Live/captured theme parity, JSON, updated manifest hashes and Git whitespace checked. Existing terminal appearance was not visually verified."
     }
   },
   "files": [
@@ -328,10 +335,24 @@
     {
       "path": "nvim/config/colors/minimal.lua",
       "commit": null,
-      "source_sha256": "e8e2e4bb83288e55c61114e8d9106ffa3963747475ccdee90d61518cc8afadef",
-      "changes": [],
-      "sha256": "e8e2e4bb83288e55c61114e8d9106ffa3963747475ccdee90d61518cc8afadef",
-      "source": "/home/przvl/.config/nvim/colors/minimal.lua"
+      "source_sha256": "94fd957e5e39d3dbc96606c644deb4137a16c1d48ddd891fdbc25f5213666828",
+      "changes": [
+        "Refresh the local theme capture with lighter normal and bright ANSI blue values and explanatory comments."
+      ],
+      "sha256": "94fd957e5e39d3dbc96606c644deb4137a16c1d48ddd891fdbc25f5213666828",
+      "source": "/home/przvl/.config/nvim/colors/minimal.lua",
+      "previous_captures": [
+        {
+          "path": "nvim/config/colors/minimal.lua",
+          "commit": null,
+          "source_sha256": "e8e2e4bb83288e55c61114e8d9106ffa3963747475ccdee90d61518cc8afadef",
+          "changes": [],
+          "sha256": "e8e2e4bb83288e55c61114e8d9106ffa3963747475ccdee90d61518cc8afadef",
+          "source": "/home/przvl/.config/nvim/colors/minimal.lua"
+        }
+      ],
+      "snapshot": "snapshot-17",
+      "captured": "2026-10-05"
     },
     {
       "path": "nvim/config/init.lua",
@@ -3156,17 +3177,18 @@
     },
     {
       "path": "nvim/README.md",
-      "snapshot": "collection-03",
-      "captured": "2026-10-03",
+      "snapshot": "snapshot-17",
+      "captured": "2026-10-05",
       "commit": null,
       "source_sha256": null,
       "source": "Collection platform integration derived from documented shared settings.",
       "changes": [
         "Add narrow platform integration without duplicating application settings.",
         "Document the user-confirmed explorer refresh fix and its local interactive confirmation on 2026-10-01; no tests or CI added.",
-        "Document reviewed deployment findings, preferences, dependencies and validation."
+        "Document reviewed deployment findings, preferences, dependencies and validation.",
+        "Document the lighter embedded terminal blues, restart requirement and headless validation."
       ],
-      "sha256": "ea6bdc94a60c7d4d00329d649ec3a456f5cc382e6ee8a3c74e89de7fda911a09",
+      "sha256": "55afe91119e8f60f92a8d7baf72b883595f19bad8df8c8c0a5bc483f8303ca0d",
       "previous_captures": [
         {
           "path": "nvim/README.md",
@@ -3180,6 +3202,20 @@
             "Document the user-confirmed explorer refresh fix and its local interactive confirmation on 2026-10-01; no tests or CI added."
           ],
           "sha256": "26cb63a8a9ee5709bb75bfeabd70412c3a287a50df122632b5afabd39bc7ea47"
+        },
+        {
+          "path": "nvim/README.md",
+          "snapshot": "collection-03",
+          "captured": "2026-10-03",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection platform integration derived from documented shared settings.",
+          "changes": [
+            "Add narrow platform integration without duplicating application settings.",
+            "Document the user-confirmed explorer refresh fix and its local interactive confirmation on 2026-10-01; no tests or CI added.",
+            "Document reviewed deployment findings, preferences, dependencies and validation."
+          ],
+          "sha256": "ea6bdc94a60c7d4d00329d649ec3a456f5cc382e6ee8a3c74e89de7fda911a09"
         }
       ]
     },
