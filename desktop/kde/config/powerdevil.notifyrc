@@ -1,0 +1,5 @@
+[Event/pluggedin]
+Action=None
+
+[Event/unplugged]
+Action=None

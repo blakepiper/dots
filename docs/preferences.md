@@ -17,5 +17,6 @@ These choices were clarified during the 2026-10-03 KDE deployment. They describe
 | Screenshot | Super+Shift+S selects a region and copies it; standard plus crosshair for Flameshot only, with the global Breeze cursor retained. |
 | System information | Built-in Arch Linux ASCII logo and cyan/blue headings and palette replacements in neofetch; OS field continues to report the actual distribution. |
 | Charging | 80% maximum where supported, now and through boot/device changes. A clamp prevents further charging; it does not actively discharge a battery above 80%. |
+| Dock sounds | Quiet connection and disconnection: disable device/display added/removed sounds and power-source connected/disconnected sounds. Retain device/display popups and other event settings. Captured 2026-10-07 as `snapshot-19`; see [KDE notification overrides](../desktop/kde/README.md#quiet-dock-notifications). |
 
 Use the [preflight and validation guide](validation.md), [KDE activation notes](../desktop/kde/activation.md), and [rollback guide](rollback.md) when adopting these choices. A saved setting is not behavioral verification. Older modules may retain different fonts, desktop counts or mappings; those snapshots are alternatives, not promises of parity.

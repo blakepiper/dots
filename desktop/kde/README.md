@@ -92,3 +92,21 @@ The installed Firefox desktop entry must provide the `new-private-window` action
 | Collection file | SHA-256 |
 | --- | --- |
 | `desktop/kde/config/kglobalshortcutsrc` | `be2caafce59d33f67aa094b8b675b829bfc1660703db728d4a15e95511368c99` |
+
+## Quiet dock notifications
+
+`snapshot-19`, captured 2026-10-07, records the preference for quiet dock connection and disconnection. `config/plasma_workspace.notifyrc` sets `Action=Popup` for `deviceAdded` and `deviceRemoved`, retaining device/display popups while disabling their sounds. `config/powerdevil.notifyrc` sets `Action=None` for `pluggedin` and `unplugged`, disabling the power-source sounds. Other events, including low-battery alerts, continue to inherit the target's existing settings.
+
+Merge these overrides into the matching filenames under the target user's `~/.config/`, preserving unrelated event groups. They apply to all USB/display and power-source changes. The event IDs and reload mechanism were checked against Plasma/PowerDevil 6.7.5 and KNotifications 6.30.0; verify them on other versions. During an authorized deployment, reload the affected notification caches after saving:
+
+```sh
+dbus-send --session --type=signal /Config org.kde.knotification.reparseConfiguration string:plasma_workspace
+dbus-send --session --type=signal /Config org.kde.knotification.reparseConfiguration string:powerdevil
+```
+
+The user authorized the live preference change before this capture. KConfig readback confirmed all four actions, and both reload signals were sent. Physical dock reconnection and audible verification were not performed. The two files are captured unchanged; INI, live/collection parity, JSON, manifest hashes and Git whitespace were checked. Source hashes, versions and the collection base commit are recorded in [sources.json](../../docs/sources.json).
+
+| Collection file | SHA-256 |
+| --- | --- |
+| `desktop/kde/config/plasma_workspace.notifyrc` | `29a027ba969c68246202404d204faac120098b94cbcf62692572c95d606915a6` |
+| `desktop/kde/config/powerdevil.notifyrc` | `5371d67c7403e3a906570e6d0c9f24b42d041bce2a1afad829c3e230b46a0c54` |
