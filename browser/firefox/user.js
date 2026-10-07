@@ -1,6 +1,15 @@
+// Saved Firefox toolbar layout for vertical tabs.
+user_pref("browser.uiCustomization.navBarWhenVerticalTabs", "[\"reset-pbm-toolbar-button\",\"back-button\",\"forward-button\",\"urlbar-container\",\"stop-reload-button\",\"vertical-spacer\",\"smartwindow-group-tabs-button\",\"ai-window-toggle\",\"unified-extensions-button\"]");
+user_pref("browser.uiCustomization.horizontalTabstrip", "[\"tabbrowser-tabs\",\"customizableui-special-spring1\",\"smartwindow-group-tabs-button\",\"ai-window-toggle\"]");
+user_pref("browser.uiCustomization.state", "{\"placements\":{\"widget-overflow-fixed-list\":[],\"unified-extensions-area\":[\"addon_darkreader_org-browser-action\",\"enhancerforyoutube_maximerf_addons_mozilla_org-browser-action\",\"ublock0_raymondhill_net-browser-action\"],\"nav-bar\":[\"reset-pbm-toolbar-button\",\"back-button\",\"forward-button\",\"urlbar-container\",\"stop-reload-button\",\"vertical-spacer\",\"smartwindow-group-tabs-button\",\"ai-window-toggle\",\"unified-extensions-button\"],\"toolbar-menubar\":[\"menubar-items\"],\"TabsToolbar\":[],\"vertical-tabs\":[\"tabbrowser-tabs\"],\"PersonalToolbar\":[\"import-button\",\"personal-bookmarks\"]},\"seen\":[\"addon_darkreader_org-browser-action\",\"enhancerforyoutube_maximerf_addons_mozilla_org-browser-action\",\"ublock0_raymondhill_net-browser-action\",\"reset-pbm-toolbar-button\",\"developer-button\",\"screenshot-button\"],\"dirtyAreaCache\":[\"nav-bar\",\"TabsToolbar\",\"vertical-tabs\",\"PersonalToolbar\",\"unified-extensions-area\",\"toolbar-menubar\"],\"currentVersion\":26,\"newElementCount\":1}");
 
 // Load custom styling for the Firefox browser interface.
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+
+// Native two-finger touchpad swipes navigate browser history under X11.
+user_pref("widget.disable-swipe-tracker", false);
+user_pref("browser.gesture.swipe.left", "Browser:BackOrBackDuplicate");
+user_pref("browser.gesture.swipe.right", "Browser:ForwardOrForwardDuplicate");
 
 // Privacy: strict tracking protection, no usage uploads or remote search suggestions,
 // and HTTPS-Only in all windows. Applied whenever Firefox starts.

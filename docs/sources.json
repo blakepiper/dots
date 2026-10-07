@@ -278,6 +278,16 @@
       "base_commit": "72838e7b6efc2547cffa3349bd3ac9972613e86b",
       "description": "Capture lighter normal and bright ANSI blues for readable Neovim embedded terminal prompts.",
       "validation": "Headless Neovim loaded the captured theme and verified ANSI blue values. Live/captured theme parity, JSON, updated manifest hashes and Git whitespace checked. Existing terminal appearance was not visually verified."
+    },
+    "snapshot-18": {
+      "captured": "2026-10-07",
+      "commit": null,
+      "base_commit": "b766a10de1db5048327e12e5df911f6ff0766edf",
+      "description": "Capture the local Firefox toolbar layout, button positioning and native two-finger history swipe preferences.",
+      "versions": {
+        "firefox": "157.0"
+      },
+      "validation": "JavaScript syntax, unique literal preferences, serialized toolbar-layout consistency, normalized live/collection parity, JSON, refreshed file hashes and Git whitespace checked. No browser restart, visual or physical swipe check, or desktop activation was performed."
     }
   },
   "files": [
@@ -2933,15 +2943,15 @@
     },
     {
       "path": "docs/sources.md",
-      "snapshot": "snapshot-16",
-      "captured": "2026-10-04",
+      "snapshot": "snapshot-18",
+      "captured": "2026-10-07",
       "commit": null,
       "source_sha256": null,
-      "source": "Collection documentation of the Firefox private-window shortcut (snapshot-16).",
+      "source": "Collection documentation of Firefox toolbar layout and swipe preferences (snapshot-18).",
       "changes": [
-        "Record snapshot-16 private-window shortcut provenance, selected-assignment merge and validation."
+        "Record snapshot-18 toolbar and swipe capture provenance, functional naming adaptations and validation."
       ],
-      "sha256": "26c357f14991bc225d0adb953b9795458be0ce7417599ba4512e784fa389be59",
+      "sha256": "df971fb702439fb13308c67287db6de72ee4521cce0dbcaf0028fbaeaf5f062c",
       "previous_captures": [
         {
           "path": "docs/sources.md",
@@ -3057,6 +3067,18 @@
             "Record snapshot-15 Firefox image confirmation and deduplicated Pictures collection with provenance and validation."
           ],
           "sha256": "d95165c9be56dae0fc201ae849fe8514d10f6a80936386d3e91a7ec997cc5b4f"
+        },
+        {
+          "path": "docs/sources.md",
+          "snapshot": "snapshot-16",
+          "captured": "2026-10-04",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection documentation of the Firefox private-window shortcut (snapshot-16).",
+          "changes": [
+            "Record snapshot-16 private-window shortcut provenance, selected-assignment merge and validation."
+          ],
+          "sha256": "26c357f14991bc225d0adb953b9795458be0ce7417599ba4512e784fa389be59"
         }
       ]
     },
@@ -3124,15 +3146,15 @@
     },
     {
       "path": "browser/README.md",
-      "snapshot": "snapshot-15",
-      "captured": "2026-10-04",
+      "snapshot": "snapshot-18",
+      "captured": "2026-10-07",
       "commit": null,
       "source_sha256": null,
-      "source": "Collection documentation of the confirmed Firefox image fix and Pictures refresh (snapshot-15).",
+      "source": "Collection documentation of Firefox toolbar layout and swipe preferences (snapshot-18).",
       "changes": [
-        "Record the user-confirmed success of the Firefox image fix following snapshot-14."
+        "Document the current local profile, toolbar/button behavior, extension and widget dependencies, startup layout persistence, X11 swipe settings, capture hashes and validation."
       ],
-      "sha256": "66c87089ab181dfc504b98a4d6a3c074fe7073ea789d34b2c6db66ef7aea08f6",
+      "sha256": "36b8788711d7ce9a8ba4e43f1e6da100d11ff1e7b17c82ea954649ebc21ff717",
       "previous_captures": [
         {
           "path": "browser/README.md",
@@ -3172,6 +3194,18 @@
             "Document explicit Resist Fingerprinting disablement, isolated canvas reproduction, active-profile adaptation and required browser restart."
           ],
           "sha256": "59aadf0aafa210777647d8c1e15a62de8e40733a9199264a074bcdcd2c202654"
+        },
+        {
+          "path": "browser/README.md",
+          "snapshot": "snapshot-15",
+          "captured": "2026-10-04",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection documentation of the confirmed Firefox image fix and Pictures refresh (snapshot-15).",
+          "changes": [
+            "Record the user-confirmed success of the Firefox image fix following snapshot-14."
+          ],
+          "sha256": "66c87089ab181dfc504b98a4d6a3c074fe7073ea789d34b2c6db66ef7aea08f6"
         }
       ]
     },
@@ -3626,15 +3660,16 @@
     },
     {
       "path": "browser/firefox/chrome/userChrome.css",
-      "snapshot": "collection-03",
-      "captured": "2026-10-03",
+      "snapshot": "snapshot-18",
+      "captured": "2026-10-07",
       "commit": null,
-      "source_sha256": "8dab8666e987fb8f59ecd0edb6e35165434b504e571b053d05e11451b0bba6b0",
-      "source": "/home/przvl/.config/mozilla/firefox/uck3f97t.default-release/chrome/userChrome.css",
+      "source_sha256": "f6bb446a245aa60dbfc76b95ee986d982b48ffa0114e6bbbda39b5e3f5f11011",
+      "source": "/home/przvl/.config/mozilla/firefox/cworvt8v.default-release/chrome/userChrome.css",
       "changes": [
-        "Append deliberate JetBrains browser UI font rule; preserve original appearance selectors."
+        "Capture the local hidden extra tab controls and pinned uBlock icon, plus menu/extensions positioning with Customize-mode and toolbar-overflow handling; retain existing appearance rules.",
+        "Rename custom CSS variables from the source-project prefix to the functional Firefox prefix in definitions and references."
       ],
-      "sha256": "253229cc49ee5b2db74e0ade6da99c4b3ca665b937ce07c7b54edcac5a9c092f",
+      "sha256": "0ee5fe0eab0df0ed92e02c780916c5c3749af34550baab28f372c46d0464a9cf",
       "previous_captures": [
         {
           "path": "browser/firefox/chrome/userChrome.css",
@@ -3645,20 +3680,33 @@
           "source": "/home/przvl/.config/mozilla/firefox/uck3f97t.default-release/chrome/userChrome.css",
           "changes": [],
           "sha256": "8dab8666e987fb8f59ecd0edb6e35165434b504e571b053d05e11451b0bba6b0"
+        },
+        {
+          "path": "browser/firefox/chrome/userChrome.css",
+          "snapshot": "collection-03",
+          "captured": "2026-10-03",
+          "commit": null,
+          "source_sha256": "8dab8666e987fb8f59ecd0edb6e35165434b504e571b053d05e11451b0bba6b0",
+          "source": "/home/przvl/.config/mozilla/firefox/uck3f97t.default-release/chrome/userChrome.css",
+          "changes": [
+            "Append deliberate JetBrains browser UI font rule; preserve original appearance selectors."
+          ],
+          "sha256": "253229cc49ee5b2db74e0ade6da99c4b3ca665b937ce07c7b54edcac5a9c092f"
         }
       ]
     },
     {
       "path": "browser/firefox/user.js",
-      "snapshot": "snapshot-14",
-      "captured": "2026-10-04",
+      "snapshot": "snapshot-18",
+      "captured": "2026-10-07",
       "commit": null,
-      "source_sha256": "0ebec7de1ea7f004abe64cbe78d06344ca867e9724bd4100260049a10cce0357",
+      "source_sha256": "d16110b89b3d3e3f69f85b65c822bfe55f7c28e4e77e56743ba4d9613c373db1",
       "source": "/home/przvl/.config/mozilla/firefox/cworvt8v.default-release/user.js",
       "changes": [
-        "Merge only the live Resist Fingerprinting changes into the existing collection: set privacy.resistFingerprinting and privacy.resistFingerprinting.pbMode to false and update the adjacent comments; retain other collection preferences."
+        "Capture three saved browser.uiCustomization toolbar-layout preferences and the swipe tracker/left/right history preferences; retain all existing preference values.",
+        "Replace the source-project toolbar comment with a functional Firefox description."
       ],
-      "sha256": "a7123db09232ae572e8dfed868e0d9825fcf70f4ea8e556dcccf7861f85452dd",
+      "sha256": "6662f9dcf6411f99aea1efad89fe8824f1f329a96fd44302733bd74bca6038b8",
       "previous_captures": [
         {
           "path": "browser/firefox/user.js",
@@ -3714,6 +3762,18 @@
               ]
             }
           ]
+        },
+        {
+          "path": "browser/firefox/user.js",
+          "snapshot": "snapshot-14",
+          "captured": "2026-10-04",
+          "commit": null,
+          "source_sha256": "0ebec7de1ea7f004abe64cbe78d06344ca867e9724bd4100260049a10cce0357",
+          "source": "/home/przvl/.config/mozilla/firefox/cworvt8v.default-release/user.js",
+          "changes": [
+            "Merge only the live Resist Fingerprinting changes into the existing collection: set privacy.resistFingerprinting and privacy.resistFingerprinting.pbMode to false and update the adjacent comments; retain other collection preferences."
+          ],
+          "sha256": "a7123db09232ae572e8dfed868e0d9825fcf70f4ea8e556dcccf7861f85452dd"
         }
       ]
     },
