@@ -301,6 +301,13 @@
       },
       "live_change": "User-authorized live change before capture. Both override files were previously absent. KConfig readback confirmed all four actions; configuration-reload signals were sent for plasma_workspace and powerdevil.",
       "validation": "INI, exact live/collection parity, JSON, updated manifest hashes and Git whitespace checked. Physical dock reconnection and audible verification were not performed."
+    },
+    "snapshot-20": {
+      "captured": "2026-10-16",
+      "commit": null,
+      "base_commit": "8c093204a487dce68e79f6db507da69c1d214106",
+      "description": "Capture the selected local sunset wallpaper without image edits.",
+      "validation": "Image visually reviewed; PNG signature and chunk CRCs, exact source/copy SHA-256, absence of byte duplicates, JSON and Git whitespace checked. No wallpaper or desktop settings activated."
     }
   },
   "files": [
@@ -2868,15 +2875,15 @@
     },
     {
       "path": "walls/README.md",
-      "snapshot": "snapshot-15",
-      "captured": "2026-10-04",
+      "snapshot": "snapshot-20",
+      "captured": "2026-10-16",
       "commit": null,
       "source_sha256": null,
-      "source": "Collection documentation of the confirmed Firefox image fix and Pictures refresh (snapshot-15).",
+      "source": "Collection documentation of local wallpaper capture (snapshot-20).",
       "changes": [
-        "Document the Pictures refresh, unchanged image capture, duplicate checks, skipped matches, target path adaptation and validation; correct the existing Niri license reference."
+        "Document the sunset image source, capture date, unavailable source commit, unchanged bytes, dimensions, SHA-256, review and target path adaptation; update the collection count."
       ],
-      "sha256": "b27f6cb36783c7d63e2cbbbe777ce34a3224a0a7609af88800ad5e42e8c9b1da",
+      "sha256": "ad6bf25e4ebb39c2c0966dd2756c52f9ab530f2c3acf1f727c5c431da8045970",
       "previous_captures": [
         {
           "path": "walls/README.md",
@@ -2889,6 +2896,18 @@
             "Add narrow platform integration without duplicating application settings."
           ],
           "sha256": "e2a2da057e731e5c9516c452c141c159bfb7beaf116202948ea447151d81b036"
+        },
+        {
+          "path": "walls/README.md",
+          "snapshot": "snapshot-15",
+          "captured": "2026-10-04",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection documentation of the confirmed Firefox image fix and Pictures refresh (snapshot-15).",
+          "changes": [
+            "Document the Pictures refresh, unchanged image capture, duplicate checks, skipped matches, target path adaptation and validation; correct the existing Niri license reference."
+          ],
+          "sha256": "b27f6cb36783c7d63e2cbbbe777ce34a3224a0a7609af88800ad5e42e8c9b1da"
         }
       ]
     },
@@ -4391,6 +4410,17 @@
       "source": "/home/przvl/.config/powerdevil.notifyrc",
       "source_sha256": "5371d67c7403e3a906570e6d0c9f24b42d041bce2a1afad829c3e230b46a0c54",
       "sha256": "5371d67c7403e3a906570e6d0c9f24b42d041bce2a1afad829c3e230b46a0c54",
+      "changes": []
+    },
+    {
+      "path": "walls/tukeesunset.png",
+      "snapshot": "snapshot-20",
+      "captured": "2026-10-16",
+      "commit": null,
+      "source": "/home/przvl/Pictures/tukeesunset.png",
+      "source_sha256": "01ec02242c7149678e7e19b6f3199803711db86a307ec156993ba8dec791c439",
+      "sha256": "01ec02242c7149678e7e19b6f3199803711db86a307ec156993ba8dec791c439",
+      "dimensions": "1672x941",
       "changes": []
     }
   ]

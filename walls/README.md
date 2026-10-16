@@ -10,4 +10,10 @@ These are original captured files, with hashes in `../docs/sources.json`. Wallpa
 
 `snapshot-15`, captured 2026-10-04, reviews all 23 images in the current account's `/home/przvl/Pictures/` and adds 20 new images here, preserving their filenames and original bytes. The account path is a source reference; adapt it to the target user. File SHA-256 and auto-oriented decoded-pixel comparisons avoid duplicates regardless of filename. `cityview.webp`, `mountain.png` and `sunset.png` are exact matches for existing collection files and were skipped. Distinct artwork variants remain separate images.
 
-All images decoded successfully and were reviewed as a contact sheet before copying. Source paths, capture date, dimensions and source/collection hashes are recorded in [sources.json](../docs/sources.json), along with the skipped duplicate mappings. The collection now contains 25 images. No wallpaper or desktop settings were activated; choose an image and adapt the target desktop's references separately. Wallpaper-specific authorship and license information remain unestablished.
+All images decoded successfully and were reviewed as a contact sheet before copying. Source paths, capture date, dimensions and source/collection hashes are recorded in [sources.json](../docs/sources.json), along with the skipped duplicate mappings. This refresh brought the collection to 25 images. No wallpaper or desktop settings were activated; choose an image and adapt the target desktop's references separately. Wallpaper-specific authorship and license information remain unestablished.
+
+## Sunset image capture
+
+`snapshot-20`, captured 2026-10-16, adds `tukeesunset.png` from `/home/przvl/Pictures/tukeesunset.png` as an unchanged 1672x941 PNG. The source is a local image with no capture commit available. It was visually reviewed, its PNG chunk checksums were verified, and no existing collection file had the same bytes. No image edits were made. Source and collection SHA-256: `01ec02242c7149678e7e19b6f3199803711db86a307ec156993ba8dec791c439`.
+
+The collection now contains 26 images. The account path identifies the capture source; adapt it to the target user and choose the wallpaper destination separately. Wallpaper-specific authorship and license information remain unestablished.
