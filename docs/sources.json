@@ -308,6 +308,13 @@
       "base_commit": "8c093204a487dce68e79f6db507da69c1d214106",
       "description": "Capture the selected local sunset wallpaper without image edits.",
       "validation": "Image visually reviewed; PNG signature and chunk CRCs, exact source/copy SHA-256, absence of byte duplicates, JSON and Git whitespace checked. No wallpaper or desktop settings activated."
+    },
+    "snapshot-21": {
+      "captured": "2026-10-17",
+      "commit": null,
+      "base_commit": "5795245d57721e2e506d7932d556e98eb9a5c8a4",
+      "description": "Capture the selected local blue and sunset Nix mountain wallpapers without image edits.",
+      "validation": "Images decoded with feh and visually reviewed; PNG signatures and chunk CRCs, exact source/copy SHA-256, absence of byte duplicates, JSON and Git whitespace checked."
     }
   },
   "files": [
@@ -4421,6 +4428,28 @@
       "source_sha256": "01ec02242c7149678e7e19b6f3199803711db86a307ec156993ba8dec791c439",
       "sha256": "01ec02242c7149678e7e19b6f3199803711db86a307ec156993ba8dec791c439",
       "dimensions": "1672x941",
+      "changes": []
+    },
+    {
+      "path": "walls/nix-blue-mountain.png",
+      "snapshot": "snapshot-21",
+      "captured": "2026-10-17",
+      "commit": null,
+      "source": "/home/przvl/Downloads/nix-blue-mountain.png",
+      "source_sha256": "1e42d2fd395c8f52b4826f4dd79ae2b55c5683fb64783a67f62406c6971ed243",
+      "sha256": "1e42d2fd395c8f52b4826f4dd79ae2b55c5683fb64783a67f62406c6971ed243",
+      "dimensions": "1684x934",
+      "changes": []
+    },
+    {
+      "path": "walls/nix-sunset-mountain-paint.png",
+      "snapshot": "snapshot-21",
+      "captured": "2026-10-17",
+      "commit": null,
+      "source": "/home/przvl/Downloads/nix-sunset-mountain-paint.png",
+      "source_sha256": "da2eeb02461f4a1f2d40b6e0e353023daeb8354a2a9fd8bff694dd31ef6d8243",
+      "sha256": "da2eeb02461f4a1f2d40b6e0e353023daeb8354a2a9fd8bff694dd31ef6d8243",
+      "dimensions": "1685x934",
       "changes": []
     }
   ]

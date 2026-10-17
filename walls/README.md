@@ -17,3 +17,9 @@ All images decoded successfully and were reviewed as a contact sheet before copy
 `snapshot-20`, captured 2026-10-16, adds `tukeesunset.png` from `/home/przvl/Pictures/tukeesunset.png` as an unchanged 1672x941 PNG. The source is a local image with no capture commit available. It was visually reviewed, its PNG chunk checksums were verified, and no existing collection file had the same bytes. No image edits were made. Source and collection SHA-256: `01ec02242c7149678e7e19b6f3199803711db86a307ec156993ba8dec791c439`.
 
 The collection now contains 26 images. The account path identifies the capture source; adapt it to the target user and choose the wallpaper destination separately. Wallpaper-specific authorship and license information remain unestablished.
+
+## Nix mountain image capture
+
+`snapshot-21`, captured 2026-10-17, adds `nix-blue-mountain.png` (1684x934) and `nix-sunset-mountain-paint.png` (1685x934) from `/home/przvl/Downloads/`, preserving their filenames and original bytes. These local files have no capture commit available. Both images decoded successfully and were visually reviewed; PNG chunk checksums, exact source/collection SHA-256 and absence of byte duplicates were verified. Hashes and source paths are recorded in [sources.json](../docs/sources.json). No image edits were made.
+
+The collection now contains 28 images. The account path identifies the capture source; adapt it to the target user and choose the wallpaper destination separately. Wallpaper-specific authorship and license information remain unestablished.
