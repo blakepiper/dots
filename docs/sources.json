@@ -315,6 +315,12 @@
       "base_commit": "5795245d57721e2e506d7932d556e98eb9a5c8a4",
       "description": "Capture the selected local blue and sunset Nix mountain wallpapers without image edits.",
       "validation": "Images decoded with feh and visually reviewed; PNG signatures and chunk CRCs, exact source/copy SHA-256, absence of byte duplicates, JSON and Git whitespace checked."
+    },
+    "snapshot-22": {
+      "captured": "2026-11-02",
+      "commit": null,
+      "description": "Capture the selected local clearing wallpaper without image edits.",
+      "validation": "Image decoded with feh and visually reviewed; exact source/copy SHA-256, JSON and Git whitespace checked."
     }
   },
   "files": [
@@ -4450,6 +4456,16 @@
       "source_sha256": "da2eeb02461f4a1f2d40b6e0e353023daeb8354a2a9fd8bff694dd31ef6d8243",
       "sha256": "da2eeb02461f4a1f2d40b6e0e353023daeb8354a2a9fd8bff694dd31ef6d8243",
       "dimensions": "1685x934",
+      "changes": []
+    },
+    {
+      "path": "walls/clearing.jpg",
+      "snapshot": "snapshot-22",
+      "captured": "2026-11-02",
+      "commit": null,
+      "source": "/home/przvl/Pictures/clearing.jpg",
+      "source_sha256": "607041ae1fc2c0798002ed9bb126fe26bf04c861738a3323fdb524f3ca851d77",
+      "sha256": "607041ae1fc2c0798002ed9bb126fe26bf04c861738a3323fdb524f3ca851d77",
       "changes": []
     }
   ]

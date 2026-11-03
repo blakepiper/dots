@@ -23,3 +23,9 @@ The collection now contains 26 images. The account path identifies the capture s
 `snapshot-21`, captured 2026-10-17, adds `nix-blue-mountain.png` (1684x934) and `nix-sunset-mountain-paint.png` (1685x934) from `/home/przvl/Downloads/`, preserving their filenames and original bytes. These local files have no capture commit available. Both images decoded successfully and were visually reviewed; PNG chunk checksums, exact source/collection SHA-256 and absence of byte duplicates were verified. Hashes and source paths are recorded in [sources.json](../docs/sources.json). No image edits were made.
 
 The collection now contains 28 images. The account path identifies the capture source; adapt it to the target user and choose the wallpaper destination separately. Wallpaper-specific authorship and license information remain unestablished.
+
+## Clearing image capture
+
+`snapshot-22`, captured 2026-11-02, adds `clearing.jpg` from `/home/przvl/Pictures/clearing.jpg`, preserving the original bytes. This local file has no capture commit available. The image decoded successfully with feh and was visually reviewed. No image edits were made. Source and collection SHA-256: `607041ae1fc2c0798002ed9bb126fe26bf04c861738a3323fdb524f3ca851d77`. Metadata is recorded in [sources.json](../docs/sources.json).
+
+The account path identifies the capture source; adapt it to the target user and choose the wallpaper destination separately. Wallpaper-specific authorship and license information remain unestablished.
