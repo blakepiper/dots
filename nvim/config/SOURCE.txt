@@ -1,4 +1,8 @@
-Snapshot: local Neovim configuration, 2026-10-01.
-Dependencies: Mason-managed language servers and formatters.
+Snapshot: snapshot-25, reviewed workstation Neovim configuration, 2026-11-04.
+Source commit: caa52d034a0ac04360c9776fe9d5c046f69068cb.
+Shared config files match the source byte-for-byte; SOURCE.txt is collection metadata.
+Portable default: Mason-managed language servers and formatters.
+Optional Nix tool adapter: ../platform/nix/tools.nix (relative to this config directory).
 LuaRocks integration is disabled; no configured plugins require it.
+Plugin checkouts and generated tools are excluded.
 Capture hashes and edits are recorded in docs/sources.json at the repository root.

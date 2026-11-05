@@ -85,8 +85,11 @@ local function start()
         },
       })
 
-      if count == 2 then
-        vim.api.nvim_chan_send(vim.b[terminal.buf].terminal_job_id, "neofetch\n")
+      if count == 2 and vim.env.NVIM_IDE_FETCH then
+        vim.api.nvim_chan_send(
+          vim.b[terminal.buf].terminal_job_id,
+          vim.fn.shellescape(vim.env.NVIM_IDE_FETCH) .. "\n"
+        )
       end
     end
 

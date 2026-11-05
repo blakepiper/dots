@@ -417,6 +417,101 @@
         "Document privileged AutoConfig and separate compositor integration; do not activate browser or desktop settings."
       ],
       "validation": "Validated 65 unique literal preferences, evaluated Nix toolbar parity, exact policy bytes, normalized CSS/extension parity, JSON, Nix syntax and hashes. JavaScript parser check unavailable: Node absent and Nix fetch stalled. No Firefox or compositor runtime activation."
+    },
+    "snapshot-25": {
+      "captured": "2026-11-04",
+      "commit": "caa52d034a0ac04360c9776fe9d5c046f69068cb",
+      "base_commit": "0361fb15eca77b85af6535ce009d80225e2b0493",
+      "description": "Align shared Neovim/nvimide with authoritative workstation configuration; make neofetch machine details and distro logo runtime-detected.",
+      "derived_inputs": [
+        {
+          "path": "home/przvl/programs/neovim.nix",
+          "commit": "caa52d034a0ac04360c9776fe9d5c046f69068cb",
+          "source_sha256": "394efe6ed8f0b658a4d8a6e14ec74042bbdc488754a65020ab3f629d08648660"
+        },
+        {
+          "path": "home/przvl/programs/neofetch.nix",
+          "commit": "caa52d034a0ac04360c9776fe9d5c046f69068cb",
+          "source_sha256": "270c9c8e0755f5d830d7bd9a3e8fdc8c572f256bdab8f86c44442f1cad20b9db"
+        },
+        {
+          "path": "home/przvl/config/neofetch/config.conf",
+          "commit": "caa52d034a0ac04360c9776fe9d5c046f69068cb",
+          "source_sha256": "8f4066d39b87cbab27f2b4d98de50b04963c0087acc389568b4c90373b56005f"
+        },
+        {
+          "path": "home/przvl/config/nvim/init.lua",
+          "commit": "caa52d034a0ac04360c9776fe9d5c046f69068cb",
+          "source_sha256": "a1ccbd95d2622155ea092db554b6cebbc6174282de82c6d3ac8fdfc039a7e020"
+        },
+        {
+          "path": "home/przvl/config/nvim/lazyvim.json",
+          "commit": "caa52d034a0ac04360c9776fe9d5c046f69068cb",
+          "source_sha256": "16a90464cce57de314247213e1dbe97edfb07f7aae5b23860e964507d766a517"
+        },
+        {
+          "path": "home/przvl/config/nvim/.neoconf.json",
+          "commit": "caa52d034a0ac04360c9776fe9d5c046f69068cb",
+          "source_sha256": "1819a5b64b71521f214b374bdb3b4dd7531a2b91b881c0803e0029811da7f3e4"
+        },
+        {
+          "path": "home/przvl/config/nvim/lazy-lock.json",
+          "commit": "caa52d034a0ac04360c9776fe9d5c046f69068cb",
+          "source_sha256": "3b943d844a1855fc2c16658bc445dd6023876923d8bcdebc8b4018e90a430d5f"
+        },
+        {
+          "path": "home/przvl/config/nvim/stylua.toml",
+          "commit": "caa52d034a0ac04360c9776fe9d5c046f69068cb",
+          "source_sha256": "b45819d91dbd677859da156bd6c2856ab61d5aac944a4b56f3e75fb35e2eb476"
+        },
+        {
+          "path": "home/przvl/config/nvim/colors/minimal.lua",
+          "commit": "caa52d034a0ac04360c9776fe9d5c046f69068cb",
+          "source_sha256": "9c1cd04caeb821e1fdd3debdf9357fe4e747b8b86cb63e560aeb996c39216522"
+        },
+        {
+          "path": "home/przvl/config/nvim/lua/plugins/completion.lua",
+          "commit": "caa52d034a0ac04360c9776fe9d5c046f69068cb",
+          "source_sha256": "71993c7adbc658ec3a87e37478c9b228553e6519ac102e1fd49c4bf6d662a2f2"
+        },
+        {
+          "path": "home/przvl/config/nvim/lua/plugins/theme.lua",
+          "commit": "caa52d034a0ac04360c9776fe9d5c046f69068cb",
+          "source_sha256": "41b6aaaf01d433f08136c78dcb68fa0886abbdff5a8ea9fdd8287f2d00e7cb62"
+        },
+        {
+          "path": "home/przvl/config/nvim/lua/plugins/snacks.lua",
+          "commit": "caa52d034a0ac04360c9776fe9d5c046f69068cb",
+          "source_sha256": "6d144f4a8a802c63cf03a51b4af0323a72a9dba95980b225c85ac6818ff74213"
+        },
+        {
+          "path": "home/przvl/config/nvim/lua/config/treesitter.lua",
+          "commit": "caa52d034a0ac04360c9776fe9d5c046f69068cb",
+          "source_sha256": "e2d745a2dc9983bb6707cb645720e4de8dfb0c99851169037311538877a21c9e"
+        },
+        {
+          "path": "home/przvl/config/nvim/lua/config/options.lua",
+          "commit": "caa52d034a0ac04360c9776fe9d5c046f69068cb",
+          "source_sha256": "f186491f8f014e7a9cd29a6e4b7d11992ef53507831317a5c50e2fd83003564d"
+        },
+        {
+          "path": "home/przvl/config/nvim/lua/config/ide.lua",
+          "commit": "caa52d034a0ac04360c9776fe9d5c046f69068cb",
+          "source_sha256": "3af77bc947df25e39728e6d8300de44a5a348a86f6be12fefc4a2d87efa6986c"
+        },
+        {
+          "path": "home/przvl/config/nvim/lua/config/lazy.lua",
+          "commit": "caa52d034a0ac04360c9776fe9d5c046f69068cb",
+          "source_sha256": "3cccb98b1c873734ae2a55d39fe11e5c90a52e34149a2b3df0c0251403875b04"
+        }
+      ],
+      "changes": [
+        "Copy shared Neovim configuration unchanged, rename gentoo.lua to completion.lua and retain plugin lock.",
+        "Use the source IDE fetch hook with a portable launcher default and caller executable override.",
+        "Isolate generated Nix language-server/formatter setup in an optional Home Manager adapter.",
+        "Replace fixed distro logo and host GPU/battery placeholders with runtime detection."
+      ],
+      "validation": "Lua parsing/options, JSON, shell syntax/ShellCheck, Nix parsing, shared source parity, launcher arguments/overrides, local neofetch distro/logo detection and hashes; no interactive plugin/layout activation."
     }
   },
   "files": [
@@ -462,24 +557,38 @@
     },
     {
       "path": "nvim/config/SOURCE.txt",
+      "snapshot": "snapshot-25",
+      "captured": "2026-11-04",
       "commit": null,
-      "source_sha256": "90fa0f5ec1b2ac33546add14acbe7d20ae4e4b614d33cbd25c7a6a22152dd1d5",
+      "source": "Collection-authored Neovim/neofetch documentation.",
+      "source_sha256": null,
+      "sha256": "3fed371530cefc878c4621a774d3419363239bcd5308f59df0b18e30cdb5d3e6",
       "changes": [
-        "Remove source-project branding; update comments and dependent identifiers/paths together.",
-        "Clarify functional comments and snapshot metadata."
+        "Adapt source startup/tool boundary or runtime system detection as described in the module README and snapshot-25."
       ],
-      "sha256": "ab08a26f29781ea98dba172b3ecf9ee47b929078aaacc669c7967b7937b96ede",
-      "source": "/home/przvl/.config/nvim/SOURCE.txt"
+      "previous_captures": [
+        {
+          "path": "nvim/config/SOURCE.txt",
+          "commit": null,
+          "source_sha256": "90fa0f5ec1b2ac33546add14acbe7d20ae4e4b614d33cbd25c7a6a22152dd1d5",
+          "changes": [
+            "Remove source-project branding; update comments and dependent identifiers/paths together.",
+            "Clarify functional comments and snapshot metadata."
+          ],
+          "sha256": "ab08a26f29781ea98dba172b3ecf9ee47b929078aaacc669c7967b7937b96ede",
+          "source": "/home/przvl/.config/nvim/SOURCE.txt"
+        }
+      ]
     },
     {
       "path": "nvim/config/colors/minimal.lua",
-      "commit": null,
-      "source_sha256": "94fd957e5e39d3dbc96606c644deb4137a16c1d48ddd891fdbc25f5213666828",
-      "changes": [
-        "Refresh the local theme capture with lighter normal and bright ANSI blue values and explanatory comments."
-      ],
-      "sha256": "94fd957e5e39d3dbc96606c644deb4137a16c1d48ddd891fdbc25f5213666828",
-      "source": "/home/przvl/.config/nvim/colors/minimal.lua",
+      "snapshot": "snapshot-25",
+      "captured": "2026-11-04",
+      "commit": "caa52d034a0ac04360c9776fe9d5c046f69068cb",
+      "source": "home/przvl/config/nvim/colors/minimal.lua",
+      "source_sha256": "9c1cd04caeb821e1fdd3debdf9357fe4e747b8b86cb63e560aeb996c39216522",
+      "sha256": "9c1cd04caeb821e1fdd3debdf9357fe4e747b8b86cb63e560aeb996c39216522",
+      "changes": [],
       "previous_captures": [
         {
           "path": "nvim/config/colors/minimal.lua",
@@ -488,10 +597,20 @@
           "changes": [],
           "sha256": "e8e2e4bb83288e55c61114e8d9106ffa3963747475ccdee90d61518cc8afadef",
           "source": "/home/przvl/.config/nvim/colors/minimal.lua"
+        },
+        {
+          "path": "nvim/config/colors/minimal.lua",
+          "commit": null,
+          "source_sha256": "94fd957e5e39d3dbc96606c644deb4137a16c1d48ddd891fdbc25f5213666828",
+          "changes": [
+            "Refresh the local theme capture with lighter normal and bright ANSI blue values and explanatory comments."
+          ],
+          "sha256": "94fd957e5e39d3dbc96606c644deb4137a16c1d48ddd891fdbc25f5213666828",
+          "source": "/home/przvl/.config/nvim/colors/minimal.lua",
+          "snapshot": "snapshot-17",
+          "captured": "2026-10-05"
         }
-      ],
-      "snapshot": "snapshot-17",
-      "captured": "2026-10-05"
+      ]
     },
     {
       "path": "nvim/config/init.lua",
@@ -519,13 +638,25 @@
     },
     {
       "path": "nvim/config/lua/config/ide.lua",
-      "commit": null,
-      "source_sha256": "aaac23a100f7cf29c9b9535409d34c623938fc4714ad37a1244c1e4de713c0bc",
-      "changes": [
-        "Copy user-confirmed local fix on 2026-10-01: reuse the explorer, wait for initial search before opening terminals, and serialize overlapping finder/matcher refreshes to prevent duplicate folder entries. No additional validation performed at user request."
-      ],
-      "sha256": "266157e60bf4720ca0cd0c8493efce0d9db265fb82fd3414737e2780fac652ee",
-      "source": "/home/przvl/.config/nvim/lua/config/ide.lua"
+      "snapshot": "snapshot-25",
+      "captured": "2026-11-04",
+      "commit": "caa52d034a0ac04360c9776fe9d5c046f69068cb",
+      "source": "home/przvl/config/nvim/lua/config/ide.lua",
+      "source_sha256": "3af77bc947df25e39728e6d8300de44a5a348a86f6be12fefc4a2d87efa6986c",
+      "sha256": "3af77bc947df25e39728e6d8300de44a5a348a86f6be12fefc4a2d87efa6986c",
+      "changes": [],
+      "previous_captures": [
+        {
+          "path": "nvim/config/lua/config/ide.lua",
+          "commit": null,
+          "source_sha256": "aaac23a100f7cf29c9b9535409d34c623938fc4714ad37a1244c1e4de713c0bc",
+          "changes": [
+            "Copy user-confirmed local fix on 2026-10-01: reuse the explorer, wait for initial search before opening terminals, and serialize overlapping finder/matcher refreshes to prevent duplicate folder entries. No additional validation performed at user request."
+          ],
+          "sha256": "266157e60bf4720ca0cd0c8493efce0d9db265fb82fd3414737e2780fac652ee",
+          "source": "/home/przvl/.config/nvim/lua/config/ide.lua"
+        }
+      ]
     },
     {
       "path": "nvim/config/lua/config/lazy.lua",
@@ -540,11 +671,23 @@
     },
     {
       "path": "nvim/config/lua/config/options.lua",
-      "commit": null,
-      "source_sha256": "1632ba001a2138f48e035405d44422a9b46a404fed4df3e0965a30a7d1d4e2d7",
+      "snapshot": "snapshot-25",
+      "captured": "2026-11-04",
+      "commit": "caa52d034a0ac04360c9776fe9d5c046f69068cb",
+      "source": "home/przvl/config/nvim/lua/config/options.lua",
+      "source_sha256": "f186491f8f014e7a9cd29a6e4b7d11992ef53507831317a5c50e2fd83003564d",
+      "sha256": "f186491f8f014e7a9cd29a6e4b7d11992ef53507831317a5c50e2fd83003564d",
       "changes": [],
-      "sha256": "1632ba001a2138f48e035405d44422a9b46a404fed4df3e0965a30a7d1d4e2d7",
-      "source": "/home/przvl/.config/nvim/lua/config/options.lua"
+      "previous_captures": [
+        {
+          "path": "nvim/config/lua/config/options.lua",
+          "commit": null,
+          "source_sha256": "1632ba001a2138f48e035405d44422a9b46a404fed4df3e0965a30a7d1d4e2d7",
+          "changes": [],
+          "sha256": "1632ba001a2138f48e035405d44422a9b46a404fed4df3e0965a30a7d1d4e2d7",
+          "source": "/home/przvl/.config/nvim/lua/config/options.lua"
+        }
+      ]
     },
     {
       "path": "nvim/config/lua/config/treesitter.lua",
@@ -558,12 +701,26 @@
       "source": "/home/przvl/.config/nvim/lua/config/treesitter.lua"
     },
     {
-      "path": "nvim/config/lua/plugins/gentoo.lua",
-      "commit": null,
-      "source_sha256": "b6763386efbbf7eb268bc18e1410338e570855a12dfda1325200249597fcc7b4",
-      "changes": [],
-      "sha256": "b6763386efbbf7eb268bc18e1410338e570855a12dfda1325200249597fcc7b4",
-      "source": "/home/przvl/.config/nvim/lua/plugins/gentoo.lua"
+      "path": "nvim/config/lua/plugins/completion.lua",
+      "snapshot": "snapshot-25",
+      "captured": "2026-11-04",
+      "commit": "caa52d034a0ac04360c9776fe9d5c046f69068cb",
+      "source": "home/przvl/config/nvim/lua/plugins/completion.lua",
+      "source_sha256": "71993c7adbc658ec3a87e37478c9b228553e6519ac102e1fd49c4bf6d662a2f2",
+      "sha256": "71993c7adbc658ec3a87e37478c9b228553e6519ac102e1fd49c4bf6d662a2f2",
+      "changes": [
+        "Rename completion override from gentoo.lua to completion.lua; remove platform-specific comment."
+      ],
+      "previous_captures": [
+        {
+          "path": "nvim/config/lua/plugins/gentoo.lua",
+          "commit": null,
+          "source_sha256": "b6763386efbbf7eb268bc18e1410338e570855a12dfda1325200249597fcc7b4",
+          "changes": [],
+          "sha256": "b6763386efbbf7eb268bc18e1410338e570855a12dfda1325200249597fcc7b4",
+          "source": "/home/przvl/.config/nvim/lua/plugins/gentoo.lua"
+        }
+      ]
     },
     {
       "path": "nvim/config/lua/plugins/snacks.lua",
@@ -591,11 +748,25 @@
     },
     {
       "path": "nvim/bin/nvimide",
-      "commit": null,
-      "source_sha256": "55c70350b2597d755a07a363e9e79aab922d5f06369aaa9dd1dbfdb12329a185",
-      "changes": [],
-      "sha256": "55c70350b2597d755a07a363e9e79aab922d5f06369aaa9dd1dbfdb12329a185",
-      "source": "/home/przvl/.local/bin/nvimide"
+      "snapshot": "snapshot-25",
+      "captured": "2026-11-04",
+      "commit": "caa52d034a0ac04360c9776fe9d5c046f69068cb",
+      "source": "home/przvl/programs/neovim.nix",
+      "source_sha256": "394efe6ed8f0b658a4d8a6e14ec74042bbdc488754a65020ab3f629d08648660",
+      "sha256": "eeddcf5b04e18e2a2629c3e91d500eece39bcd07a3031c225ea02d4cf2c26669",
+      "changes": [
+        "Adapt source startup/tool boundary or runtime system detection as described in the module README and snapshot-25."
+      ],
+      "previous_captures": [
+        {
+          "path": "nvim/bin/nvimide",
+          "commit": null,
+          "source_sha256": "55c70350b2597d755a07a363e9e79aab922d5f06369aaa9dd1dbfdb12329a185",
+          "changes": [],
+          "sha256": "55c70350b2597d755a07a363e9e79aab922d5f06369aaa9dd1dbfdb12329a185",
+          "source": "/home/przvl/.local/bin/nvimide"
+        }
+      ]
     },
     {
       "path": "desktop/kde/config/kwinrc",
@@ -1939,15 +2110,15 @@
     },
     {
       "path": "terminal/neofetch/config.conf",
-      "commit": null,
-      "source_sha256": "2b16c1d7e3e6885cdf06ae2d9e70f56d9175b194d06c949503dfadda8e23b274",
+      "snapshot": "snapshot-25",
+      "captured": "2026-11-04",
+      "commit": "caa52d034a0ac04360c9776fe9d5c046f69068cb",
+      "source": "home/przvl/config/neofetch/config.conf",
+      "source_sha256": "8f4066d39b87cbab27f2b4d98de50b04963c0087acc389568b4c90373b56005f",
+      "sha256": "966063a4e951b33a0763f6cfe4074ebea7b3912c1e0d4574b3afe2e34a2a70d3",
       "changes": [
-        "Capture built-in Arch logo/cyan palette and truthful OS detection; rename intermediate palette helper/comments by function."
+        "Adapt source startup/tool boundary or runtime system detection as described in the module README and snapshot-25."
       ],
-      "sha256": "1b63f53701c7dac95ef48aee3aa987d0b5ee2df0971e75acbd83c7c613763b21",
-      "source": "/home/przvl/.config/neofetch/config.conf",
-      "snapshot": "collection-03",
-      "captured": "2026-10-03",
       "previous_captures": [
         {
           "path": "terminal/neofetch/config.conf",
@@ -1956,6 +2127,18 @@
           "changes": [],
           "sha256": "2b16c1d7e3e6885cdf06ae2d9e70f56d9175b194d06c949503dfadda8e23b274",
           "source": "/home/przvl/.config/neofetch/config.conf"
+        },
+        {
+          "path": "terminal/neofetch/config.conf",
+          "commit": null,
+          "source_sha256": "2b16c1d7e3e6885cdf06ae2d9e70f56d9175b194d06c949503dfadda8e23b274",
+          "changes": [
+            "Capture built-in Arch logo/cyan palette and truthful OS detection; rename intermediate palette helper/comments by function."
+          ],
+          "sha256": "1b63f53701c7dac95ef48aee3aa987d0b5ee2df0971e75acbd83c7c613763b21",
+          "source": "/home/przvl/.config/neofetch/config.conf",
+          "snapshot": "collection-03",
+          "captured": "2026-10-03"
         }
       ]
     },
@@ -3084,19 +3267,15 @@
     },
     {
       "path": "terminal/README.md",
-      "snapshot": "collection-03",
-      "captured": "2026-10-03",
+      "snapshot": "snapshot-25",
+      "captured": "2026-11-04",
       "commit": null,
+      "source": "Collection-authored Neovim/neofetch documentation.",
       "source_sha256": null,
-      "source": "Collection platform integration derived from documented shared settings.",
+      "sha256": "8d5314a778ab135979ddd6f056b838b91b0ac21f03027b588050f009748a70df",
       "changes": [
-        "Add narrow platform integration without duplicating application settings.",
-        "Update shared/platform integration and associated documentation.",
-        "Correct Kitty source license reference after desktop directory reorganization.",
-        "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation.",
-        "Document reviewed deployment findings, preferences, dependencies and validation."
+        "Adapt source startup/tool boundary or runtime system detection as described in the module README and snapshot-25."
       ],
-      "sha256": "72463215034ebea580d18b88c29f479ee6c81c074fe7d20e712b48e714c196a6",
       "previous_captures": [
         {
           "path": "terminal/README.md",
@@ -3112,6 +3291,22 @@
             "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation."
           ],
           "sha256": "00e07e08a761e2688399abe689bf4cbc9b45ca873538cf75d02244d1a12bf12f"
+        },
+        {
+          "path": "terminal/README.md",
+          "snapshot": "collection-03",
+          "captured": "2026-10-03",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection platform integration derived from documented shared settings.",
+          "changes": [
+            "Add narrow platform integration without duplicating application settings.",
+            "Update shared/platform integration and associated documentation.",
+            "Correct Kitty source license reference after desktop directory reorganization.",
+            "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation.",
+            "Document reviewed deployment findings, preferences, dependencies and validation."
+          ],
+          "sha256": "72463215034ebea580d18b88c29f479ee6c81c074fe7d20e712b48e714c196a6"
         }
       ]
     },
@@ -3146,14 +3341,14 @@
     },
     {
       "path": "docs/sources.md",
-      "snapshot": "snapshot-24",
+      "snapshot": "snapshot-25",
       "captured": "2026-11-04",
       "commit": null,
-      "source": "Collection-authored Firefox adaptation documentation.",
+      "source": "Collection-authored Neovim/neofetch documentation.",
       "source_sha256": null,
-      "sha256": "5f9fc7a3aac269b13203c864759356372ccaf6f299883dd6744d5783981a3ea7",
+      "sha256": "86eba5724ee6206cea533d80e4ff86e864aece33e25a2433657e3c3a6bf82644",
       "changes": [
-        "Adapt reviewed Firefox configuration as described in snapshot-24 and the browser/extension READMEs."
+        "Adapt source startup/tool boundary or runtime system detection as described in the module README and snapshot-25."
       ],
       "previous_captures": [
         {
@@ -3318,6 +3513,18 @@
           "changes": [
             "Add or document minimal XFCE keybindings, manual TTY startup and optional console greeter; see module README and snapshot derived_inputs."
           ]
+        },
+        {
+          "path": "docs/sources.md",
+          "snapshot": "snapshot-24",
+          "captured": "2026-11-04",
+          "commit": null,
+          "source": "Collection-authored Firefox adaptation documentation.",
+          "source_sha256": null,
+          "sha256": "5f9fc7a3aac269b13203c864759356372ccaf6f299883dd6744d5783981a3ea7",
+          "changes": [
+            "Adapt reviewed Firefox configuration as described in snapshot-24 and the browser/extension READMEs."
+          ]
         }
       ]
     },
@@ -3462,18 +3669,15 @@
     },
     {
       "path": "nvim/README.md",
-      "snapshot": "snapshot-17",
-      "captured": "2026-10-05",
+      "snapshot": "snapshot-25",
+      "captured": "2026-11-04",
       "commit": null,
+      "source": "Collection-authored Neovim/neofetch documentation.",
       "source_sha256": null,
-      "source": "Collection platform integration derived from documented shared settings.",
+      "sha256": "dfe706fab73455e460bae0336d89eb5d60cf0022c0b23ed860f1db88d012545e",
       "changes": [
-        "Add narrow platform integration without duplicating application settings.",
-        "Document the user-confirmed explorer refresh fix and its local interactive confirmation on 2026-10-01; no tests or CI added.",
-        "Document reviewed deployment findings, preferences, dependencies and validation.",
-        "Document the lighter embedded terminal blues, restart requirement and headless validation."
+        "Adapt source startup/tool boundary or runtime system detection as described in the module README and snapshot-25."
       ],
-      "sha256": "55afe91119e8f60f92a8d7baf72b883595f19bad8df8c8c0a5bc483f8303ca0d",
       "previous_captures": [
         {
           "path": "nvim/README.md",
@@ -3501,6 +3705,21 @@
             "Document reviewed deployment findings, preferences, dependencies and validation."
           ],
           "sha256": "ea6bdc94a60c7d4d00329d649ec3a456f5cc382e6ee8a3c74e89de7fda911a09"
+        },
+        {
+          "path": "nvim/README.md",
+          "snapshot": "snapshot-17",
+          "captured": "2026-10-05",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection platform integration derived from documented shared settings.",
+          "changes": [
+            "Add narrow platform integration without duplicating application settings.",
+            "Document the user-confirmed explorer refresh fix and its local interactive confirmation on 2026-10-01; no tests or CI added.",
+            "Document reviewed deployment findings, preferences, dependencies and validation.",
+            "Document the lighter embedded terminal blues, restart requirement and headless validation."
+          ],
+          "sha256": "55afe91119e8f60f92a8d7baf72b883595f19bad8df8c8c0a5bc483f8303ca0d"
         }
       ]
     },
@@ -4804,6 +5023,18 @@
       "sha256": "7bd9cd4152f6fadaf564b285114dd16b0eabe07259822b61e0146cd46108fa7e",
       "changes": [
         "Adapt reviewed Firefox configuration as described in snapshot-24 and the browser/extension READMEs."
+      ]
+    },
+    {
+      "path": "nvim/platform/nix/tools.nix",
+      "snapshot": "snapshot-25",
+      "captured": "2026-11-04",
+      "commit": "caa52d034a0ac04360c9776fe9d5c046f69068cb",
+      "source": "home/przvl/programs/neovim.nix",
+      "source_sha256": "394efe6ed8f0b658a4d8a6e14ec74042bbdc488754a65020ab3f629d08648660",
+      "sha256": "2fc263a3e55a335c019f6fea0c08b990cfc5c289ddd6cb0db637a09fb900e767",
+      "changes": [
+        "Adapt source startup/tool boundary or runtime system detection as described in the module README and snapshot-25."
       ]
     }
   ]

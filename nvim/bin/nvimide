@@ -6,4 +6,6 @@ if [ "$#" -gt 0 ] && [ -d "$1" ]; then
     shift
 fi
 export NVIM_IDE=1
+# Use the target machine's executable; allow an explicit executable-path override.
+export NVIM_IDE_FETCH="${NVIM_IDE_FETCH:-neofetch}"
 exec nvim "$@"
