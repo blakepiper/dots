@@ -1,6 +1,6 @@
 # XFCE
 
-Minimal X11 session and preferred shortcuts for XFCE 4.18/4.20 with Xfwm4. Panel, theme, wallpaper, compositor and hardware settings retain the distribution defaults. This module is independent of the other desktops and their helpers.
+Minimal X11 session and preferred shortcuts for XFCE 4.18/4.20 with Xfwm4. Panel, theme, wallpaper, compositor and hardware settings retain the distribution defaults. The optional [Picom module](../picom/README.md) captures preferred transparency and video/game exceptions; adopting it requires choosing Picom instead of Xfwm4 compositing. This module is independent of the other desktops and their helpers.
 
 ## Files and dependencies
 

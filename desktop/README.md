@@ -2,6 +2,7 @@
 
 - [KDE](kde/README.md): Plasma settings, KWin scripts and panel assets.
 - [OXWM](oxwm/README.md): window manager configuration, helpers and source patches.
+- [Picom](picom/README.md): shared X11 transparency rules, video/game exceptions and opaque mode.
 - [X11](x11/README.md): supporting session, compositor, clipboard and lock helpers used by OXWM.
 - [Hyprland](hyprland/README.md): Lua config and shared helpers with systemd/portable session backends.
 - [Niri](niri/README.md): scrolling desktop, bar and session helpers.

@@ -512,6 +512,42 @@
         "Replace fixed distro logo and host GPU/battery placeholders with runtime detection."
       ],
       "validation": "Lua parsing/options, JSON, shell syntax/ShellCheck, Nix parsing, shared source parity, launcher arguments/overrides, local neofetch distro/logo detection and hashes; no interactive plugin/layout activation."
+    },
+    "snapshot-26": {
+      "captured": "2026-11-04",
+      "commit": "caa52d034a0ac04360c9776fe9d5c046f69068cb",
+      "base_commit": "e0332de774b0f42a691e70afe3b82271210f6be9",
+      "description": "Standalone shared Picom transparency rules and opaque config rendering; no settings menu or service controller.",
+      "derived_inputs": [
+        {
+          "source": "X11 compositor template",
+          "commit": "caa52d034a0ac04360c9776fe9d5c046f69068cb",
+          "source_sha256": "4872014f290b955e72adf8203cddb8652cc203f35f77112ef8ea1bb56fc3dc63"
+        },
+        {
+          "source": "Desktop transparency rendering and restart integration",
+          "commit": "caa52d034a0ac04360c9776fe9d5c046f69068cb",
+          "source_sha256": "b6c40399da3d2076655e26bd8077627aa80d48c696eb9ce26d428325bdd2aac0"
+        },
+        {
+          "source": "X11 locker compositor lifecycle",
+          "commit": "caa52d034a0ac04360c9776fe9d5c046f69068cb",
+          "source_sha256": "d4ed51c55fe196cb8af99a95b58b80462430f42c058148fdff3069fb85b00abd"
+        },
+        {
+          "source": "X11 user compositor service",
+          "commit": "caa52d034a0ac04360c9776fe9d5c046f69068cb",
+          "source_sha256": "8fdad72a1ce0cda5e4cb4f93fbb376b7a13e07a61e58ca5d5e6cb05dac3c9f44"
+        }
+      ],
+      "changes": [
+        "Move canonical config from desktop/x11 to desktop/picom without duplicating shared application settings.",
+        "Preserve 80% unfocused/85% focused opacity and fully opaque Firefox-video/Steam-game rules.",
+        "Adapt title marker to match the collected Firefox extension and rename opaque override slot.",
+        "Add a Python stdout renderer for default or opaque mode; omit settings UI, saved preferences and service control.",
+        "Document target compositor and locker lifecycle dependencies."
+      ],
+      "validation": "Python syntax, transparent/opaque rendering, malformed-template rejection, normalized source parity, Firefox marker parity, Picom 13 diagnostics for template/both modes on isolated Xvfb, JSON/hashes and whitespace; live video/game/locker behavior untested."
     }
   },
   "files": [
@@ -1971,12 +2007,27 @@
       "snapshot": "snapshot-01"
     },
     {
-      "path": "desktop/x11/config/picom/picom.conf",
-      "commit": "d3d9c7c75c476ef8d1f16b0ab13b4838a0007e35",
-      "source_sha256": "20f53e7f415ddddae06808253d5a4216d2efb9c01fb00d50d9b5a3d7191e14c7",
-      "changes": [],
-      "sha256": "20f53e7f415ddddae06808253d5a4216d2efb9c01fb00d50d9b5a3d7191e14c7",
-      "snapshot": "snapshot-01"
+      "path": "desktop/picom/config/picom/picom.conf",
+      "snapshot": "snapshot-26",
+      "captured": "2026-11-04",
+      "commit": "caa52d034a0ac04360c9776fe9d5c046f69068cb",
+      "source": "Reviewed X11 compositor template.",
+      "source_sha256": "4872014f290b955e72adf8203cddb8652cc203f35f77112ef8ea1bb56fc3dc63",
+      "sha256": "a6d04400050f4102e7833b3c2ac6bf9d977706e297f4eb8581c95b537f133eb4",
+      "changes": [
+        "Capture preferred compositor rules, adapt functional names and document dependencies; see snapshot-26 and the Picom README.",
+        "Replace previous opaque-only template and move to desktop/picom as the shared canonical copy."
+      ],
+      "previous_captures": [
+        {
+          "path": "desktop/x11/config/picom/picom.conf",
+          "commit": "d3d9c7c75c476ef8d1f16b0ab13b4838a0007e35",
+          "source_sha256": "20f53e7f415ddddae06808253d5a4216d2efb9c01fb00d50d9b5a3d7191e14c7",
+          "changes": [],
+          "sha256": "20f53e7f415ddddae06808253d5a4216d2efb9c01fb00d50d9b5a3d7191e14c7",
+          "snapshot": "snapshot-01"
+        }
+      ]
     },
     {
       "path": "desktop/x11/config/gammastep/config.ini",
@@ -3030,14 +3081,14 @@
     },
     {
       "path": "desktop/README.md",
-      "snapshot": "snapshot-23",
+      "snapshot": "snapshot-26",
       "captured": "2026-11-04",
       "commit": null,
-      "source": "Collection-authored XFCE/login example and documentation based on reviewed snapshot-23 inputs.",
+      "source": "Collection-authored Picom renderer or integration documentation.",
       "source_sha256": null,
-      "sha256": "b9dcd3d4493a7bf957bcc40d9564e27449f90a7f6d032310cb473a93b1690c3b",
+      "sha256": "5db119dbb2412203b168741e10a61f394da958aa71e38a35c7f23673b4852a3d",
       "changes": [
-        "Add or document minimal XFCE keybindings, manual TTY startup and optional console greeter; see module README and snapshot derived_inputs."
+        "Capture preferred compositor rules, adapt functional names and document dependencies; see snapshot-26 and the Picom README."
       ],
       "previous_captures": [
         {
@@ -3052,6 +3103,18 @@
             "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation."
           ],
           "sha256": "6db1964cbba0e1bdc51c7a02d409fa682d05705296cc0527df44314caf25d32c"
+        },
+        {
+          "path": "desktop/README.md",
+          "snapshot": "snapshot-23",
+          "captured": "2026-11-04",
+          "commit": null,
+          "source": "Collection-authored XFCE/login example and documentation based on reviewed snapshot-23 inputs.",
+          "source_sha256": null,
+          "sha256": "b9dcd3d4493a7bf957bcc40d9564e27449f90a7f6d032310cb473a93b1690c3b",
+          "changes": [
+            "Add or document minimal XFCE keybindings, manual TTY startup and optional console greeter; see module README and snapshot derived_inputs."
+          ]
         }
       ]
     },
@@ -3096,14 +3159,14 @@
     },
     {
       "path": "README.md",
-      "snapshot": "snapshot-23",
+      "snapshot": "snapshot-26",
       "captured": "2026-11-04",
       "commit": null,
-      "source": "Collection-authored XFCE/login example and documentation based on reviewed snapshot-23 inputs.",
+      "source": "Collection-authored Picom renderer or integration documentation.",
       "source_sha256": null,
-      "sha256": "161b6a83c6bf6431c84c9064683387bb8c9b9d495b755d937c43e7745cd26eb9",
+      "sha256": "00116a29b8ff4cc18e98176ca99668345aa7286394323fd5a1e42c0053f53aa9",
       "changes": [
-        "Add or document minimal XFCE keybindings, manual TTY startup and optional console greeter; see module README and snapshot derived_inputs."
+        "Capture preferred compositor rules, adapt functional names and document dependencies; see snapshot-26 and the Picom README."
       ],
       "previous_captures": [
         {
@@ -3136,6 +3199,18 @@
             "Document reviewed deployment findings, preferences, dependencies and validation."
           ],
           "sha256": "a9c8f873c2221b38b8e1b7f5d89c6a7792044807b98b6575a69f6fa3eabdff64"
+        },
+        {
+          "path": "README.md",
+          "snapshot": "snapshot-23",
+          "captured": "2026-11-04",
+          "commit": null,
+          "source": "Collection-authored XFCE/login example and documentation based on reviewed snapshot-23 inputs.",
+          "source_sha256": null,
+          "sha256": "161b6a83c6bf6431c84c9064683387bb8c9b9d495b755d937c43e7745cd26eb9",
+          "changes": [
+            "Add or document minimal XFCE keybindings, manual TTY startup and optional console greeter; see module README and snapshot derived_inputs."
+          ]
         }
       ]
     },
@@ -3341,14 +3416,14 @@
     },
     {
       "path": "docs/sources.md",
-      "snapshot": "snapshot-25",
+      "snapshot": "snapshot-26",
       "captured": "2026-11-04",
       "commit": null,
-      "source": "Collection-authored Neovim/neofetch documentation.",
+      "source": "Collection-authored Picom renderer or integration documentation.",
       "source_sha256": null,
-      "sha256": "86eba5724ee6206cea533d80e4ff86e864aece33e25a2433657e3c3a6bf82644",
+      "sha256": "9b01e30348217a5fe26d0102e6974c80138473eba10d44b159f15b5ef352fea1",
       "changes": [
-        "Adapt source startup/tool boundary or runtime system detection as described in the module README and snapshot-25."
+        "Capture preferred compositor rules, adapt functional names and document dependencies; see snapshot-26 and the Picom README."
       ],
       "previous_captures": [
         {
@@ -3524,6 +3599,18 @@
           "sha256": "5f9fc7a3aac269b13203c864759356372ccaf6f299883dd6744d5783981a3ea7",
           "changes": [
             "Adapt reviewed Firefox configuration as described in snapshot-24 and the browser/extension READMEs."
+          ]
+        },
+        {
+          "path": "docs/sources.md",
+          "snapshot": "snapshot-25",
+          "captured": "2026-11-04",
+          "commit": null,
+          "source": "Collection-authored Neovim/neofetch documentation.",
+          "source_sha256": null,
+          "sha256": "86eba5724ee6206cea533d80e4ff86e864aece33e25a2433657e3c3a6bf82644",
+          "changes": [
+            "Adapt source startup/tool boundary or runtime system detection as described in the module README and snapshot-25."
           ]
         }
       ]
@@ -3725,16 +3812,30 @@
     },
     {
       "path": "desktop/x11/README.md",
-      "snapshot": "collection-02",
-      "captured": "2026-10-01",
+      "snapshot": "snapshot-26",
+      "captured": "2026-11-04",
       "commit": null,
+      "source": "Collection-authored Picom renderer or integration documentation.",
       "source_sha256": null,
-      "source": "Collection platform integration derived from documented shared settings.",
+      "sha256": "557ed4dc92700dbef0e2b817eaea6caf8d582953d45d59609e1b8cca3e1c9bcf",
       "changes": [
-        "Add narrow platform integration without duplicating application settings.",
-        "Update shared/platform integration and associated documentation."
+        "Capture preferred compositor rules, adapt functional names and document dependencies; see snapshot-26 and the Picom README."
       ],
-      "sha256": "50bb0da2527aa9e56131b7d1e29d912ba58c44a655522c357e985de4cbf5b2e2"
+      "previous_captures": [
+        {
+          "path": "desktop/x11/README.md",
+          "snapshot": "collection-02",
+          "captured": "2026-10-01",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection platform integration derived from documented shared settings.",
+          "changes": [
+            "Add narrow platform integration without duplicating application settings.",
+            "Update shared/platform integration and associated documentation."
+          ],
+          "sha256": "50bb0da2527aa9e56131b7d1e29d912ba58c44a655522c357e985de4cbf5b2e2"
+        }
+      ]
     },
     {
       "path": "desktop/common/bin/desktop-power",
@@ -4883,14 +4984,28 @@
     },
     {
       "path": "desktop/xfce/README.md",
-      "snapshot": "snapshot-23",
+      "snapshot": "snapshot-26",
       "captured": "2026-11-04",
       "commit": null,
-      "source": "Collection-authored XFCE/login example and documentation based on reviewed snapshot-23 inputs.",
+      "source": "Collection-authored Picom renderer or integration documentation.",
       "source_sha256": null,
-      "sha256": "b2d308826b4077ae55fae66950fa7658579a94dfa6f5af081ad5a04cad03dad3",
+      "sha256": "7c560d11fa3f1c6ad12078668b565de6cfd443d7c5b17cd22cc6527a291f7b30",
       "changes": [
-        "Add or document minimal XFCE keybindings, manual TTY startup and optional console greeter; see module README and snapshot derived_inputs."
+        "Capture preferred compositor rules, adapt functional names and document dependencies; see snapshot-26 and the Picom README."
+      ],
+      "previous_captures": [
+        {
+          "path": "desktop/xfce/README.md",
+          "snapshot": "snapshot-23",
+          "captured": "2026-11-04",
+          "commit": null,
+          "source": "Collection-authored XFCE/login example and documentation based on reviewed snapshot-23 inputs.",
+          "source_sha256": null,
+          "sha256": "b2d308826b4077ae55fae66950fa7658579a94dfa6f5af081ad5a04cad03dad3",
+          "changes": [
+            "Add or document minimal XFCE keybindings, manual TTY startup and optional console greeter; see module README and snapshot derived_inputs."
+          ]
+        }
       ]
     },
     {
@@ -4955,14 +5070,28 @@
     },
     {
       "path": "browser/firefox/video-opacity/README.md",
-      "snapshot": "snapshot-24",
+      "snapshot": "snapshot-26",
       "captured": "2026-11-04",
       "commit": null,
-      "source": "Collection-authored Firefox adaptation documentation.",
+      "source": "Collection-authored Picom renderer or integration documentation.",
       "source_sha256": null,
-      "sha256": "77715c45bb32899df29fb23bf6b667a1e013edee3cec07f580f7797e00173ed6",
+      "sha256": "ad715bebba2b198f69d42af9d2a2f9e66f335c3fbd40079f8d9cffe5eae292d7",
       "changes": [
-        "Adapt reviewed Firefox configuration as described in snapshot-24 and the browser/extension READMEs."
+        "Capture preferred compositor rules, adapt functional names and document dependencies; see snapshot-26 and the Picom README."
+      ],
+      "previous_captures": [
+        {
+          "path": "browser/firefox/video-opacity/README.md",
+          "snapshot": "snapshot-24",
+          "captured": "2026-11-04",
+          "commit": null,
+          "source": "Collection-authored Firefox adaptation documentation.",
+          "source_sha256": null,
+          "sha256": "77715c45bb32899df29fb23bf6b667a1e013edee3cec07f580f7797e00173ed6",
+          "changes": [
+            "Adapt reviewed Firefox configuration as described in snapshot-24 and the browser/extension READMEs."
+          ]
+        }
       ]
     },
     {
@@ -5035,6 +5164,30 @@
       "sha256": "2fc263a3e55a335c019f6fea0c08b990cfc5c289ddd6cb0db637a09fb900e767",
       "changes": [
         "Adapt source startup/tool boundary or runtime system detection as described in the module README and snapshot-25."
+      ]
+    },
+    {
+      "path": "desktop/picom/README.md",
+      "snapshot": "snapshot-26",
+      "captured": "2026-11-04",
+      "commit": null,
+      "source": "Collection-authored Picom renderer or integration documentation.",
+      "source_sha256": null,
+      "sha256": "bdbd1b21e7c50fcb4973178e7b100370625ce12c09bdc162380ab421a4da3ae3",
+      "changes": [
+        "Capture preferred compositor rules, adapt functional names and document dependencies; see snapshot-26 and the Picom README."
+      ]
+    },
+    {
+      "path": "desktop/picom/bin/picom-config",
+      "snapshot": "snapshot-26",
+      "captured": "2026-11-04",
+      "commit": null,
+      "source": "Collection-authored Picom renderer or integration documentation.",
+      "source_sha256": null,
+      "sha256": "80498d3b88b84620f0d2942be3246f4d82d0ae5dab2adbbf9c423f42b584fcfc",
+      "changes": [
+        "Capture preferred compositor rules, adapt functional names and document dependencies; see snapshot-26 and the Picom README."
       ]
     }
   ]

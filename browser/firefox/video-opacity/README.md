@@ -24,16 +24,8 @@ in pkgs.firefox.override {
 
 Resolve paths relative to this directory. On other packages, adapt the distribution's AutoConfig support, replace both template placeholders, and keep the installed extension immutable and outside the profile. The extension ID is `video-opacity@firefox.local`; changing it creates a distinct extension identity. Do not load the bootstrap as a normal profile preference file.
 
-For an existing Picom configuration using the modern `rules` syntax, merge this after any general transparency rules:
+The [shared Picom module](../../../desktop/picom/README.md) contains the matching video rule, 80% unfocused/85% focused transparency, the Steam-game exception and an opaque-mode renderer. Use that single template rather than maintaining a second browser-specific compositor config. Its video rule matches `class_g = 'firefox'` and the `[firefox-video] ` title prefix.
 
-```conf
-{
-  match = "class_g = 'firefox' && name ^= '[firefox-video] '";
-  opacity = 1.0;
-  opacity-override = true;
-}
-```
-
-The source's general Picom settings use 80% opacity for unfocused windows and 85% for focused windows; this exception makes playing-video Firefox windows fully opaque. This browser module does not change those desktop settings. The collected `desktop/x11` profile keeps all windows opaque, while XFCE normally uses Xfwm4's compositor, so the marker alone has no visible effect there. Choose the target compositor integration explicitly; do not run Picom alongside another compositor. KDE's collected Firefox opacity rule is independent.
+XFCE normally uses Xfwm4's compositor, so the marker alone has no visible effect there. Choose the target compositor integration explicitly; do not run Picom alongside another compositor. KDE's collected Firefox opacity rule is independent. The module documents source locker stop/restore behavior separately; this browser extension does not manage locking.
 
 JSON syntax, matching internal identifiers and normalized source parity were checked. Node was unavailable and obtaining it through Nix stalled, so JavaScript parser checks were not completed. No extension installation, Firefox restart, AutoConfig loading or compositor behavior was tested during collection maintenance.

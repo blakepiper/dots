@@ -18,6 +18,7 @@ Personal configuration raw material for people and agents to inspect, borrow, an
 | [terminal](terminal/README.md) | Konsole, Kitty, Foot, st customization, tmux and neofetch |
 | [shell](shell/README.md) | Shared Bash startup with ble.sh |
 | [desktop/common](desktop/common/README.md) | Shared GTK/Fontconfig settings, power-command profiles and polkit helper |
+| [picom](desktop/picom/README.md) | X11 transparency, Firefox video/Steam exceptions and opaque-mode rendering |
 | [desktop/x11](desktop/x11/README.md) | Session, compositor, clipboard, screenshots, locking, and control menu |
 | [browser](browser/README.md) | Firefox interface styling, profile preferences, and policy reference |
 

@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+"""Render the shared Picom template without changing session or user settings."""
+import argparse
+import os
+from pathlib import Path
+import sys
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--opaque", action="store_true", help="make every window opaque")
+    parser.add_argument("--config", type=Path, help="explicit Picom template path")
+    args = parser.parse_args()
+    config_home = Path(os.environ.get("XDG_CONFIG_HOME") or Path.home() / ".config")
+    checkout_template = Path(__file__).resolve().parent.parent / "config/picom/picom.conf"
+    template = args.config or (
+        checkout_template if checkout_template.is_file() else config_home / "picom/picom.conf"
+    )
+    marker = "# @picom-opacity-override@"
+    try:
+        text = template.read_text()
+        if text.count(marker) != 1:
+            raise ValueError("Picom template must contain exactly one opacity override slot")
+        replacement = ", { opacity = 1.0; opacity-override = true; }" if args.opaque else ""
+        sys.stdout.write(text.replace(marker, replacement))
+    except (OSError, ValueError) as error:
+        parser.exit(1, f"picom-config: {error}\n")
+
+
+if __name__ == "__main__":
+    main()
