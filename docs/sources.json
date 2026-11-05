@@ -548,6 +548,12 @@
         "Document target compositor and locker lifecycle dependencies."
       ],
       "validation": "Python syntax, transparent/opaque rendering, malformed-template rejection, normalized source parity, Firefox marker parity, Picom 13 diagnostics for template/both modes on isolated Xvfb, JSON/hashes and whitespace; live video/game/locker behavior untested."
+    },
+    "snapshot-27": {
+      "captured": "2026-11-04",
+      "commit": null,
+      "description": "Capture the selected local red city-view wallpaper without image edits.",
+      "validation": "Image decoded and visually reviewed; exact source/copy SHA-256, JSON and Git whitespace checked."
     }
   },
   "files": [
@@ -5189,6 +5195,16 @@
       "changes": [
         "Capture preferred compositor rules, adapt functional names and document dependencies; see snapshot-26 and the Picom README."
       ]
+    },
+    {
+      "path": "walls/cityviewred.png",
+      "snapshot": "snapshot-27",
+      "captured": "2026-11-04",
+      "commit": null,
+      "source": "/home/przvl/Pictures/cityviewred.png",
+      "source_sha256": "f44bf5f9a24a1431b3fbb25e06010b6256a1f771f8aa10f90bcf43eef5c7ae4d",
+      "sha256": "f44bf5f9a24a1431b3fbb25e06010b6256a1f771f8aa10f90bcf43eef5c7ae4d",
+      "changes": []
     }
   ]
 }

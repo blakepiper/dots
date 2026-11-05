@@ -29,3 +29,9 @@ The collection now contains 28 images. The account path identifies the capture s
 `snapshot-22`, captured 2026-11-02, adds `clearing.jpg` from `/home/przvl/Pictures/clearing.jpg`, preserving the original bytes. This local file has no capture commit available. The image decoded successfully with feh and was visually reviewed. No image edits were made. Source and collection SHA-256: `607041ae1fc2c0798002ed9bb126fe26bf04c861738a3323fdb524f3ca851d77`. Metadata is recorded in [sources.json](../docs/sources.json).
 
 The account path identifies the capture source; adapt it to the target user and choose the wallpaper destination separately. Wallpaper-specific authorship and license information remain unestablished.
+
+## Red city-view image capture
+
+`snapshot-27`, captured 2026-11-04, adds `cityviewred.png` from `/home/przvl/Pictures/cityviewred.png`, preserving the original bytes. This local file has no capture commit available. The image decoded successfully and was visually reviewed. No image edits were made. Source and collection SHA-256: `f44bf5f9a24a1431b3fbb25e06010b6256a1f771f8aa10f90bcf43eef5c7ae4d`. Metadata is recorded in [sources.json](../docs/sources.json).
+
+The account path identifies the capture source; adapt it to the target user and choose the wallpaper destination separately. Wallpaper-specific authorship and license information remain unestablished.
