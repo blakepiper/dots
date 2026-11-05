@@ -81,3 +81,26 @@ Niri's columns make the following differences intentional; use this table when a
 Arrow navigation is spatial here, unlike the stack-order bindings in the other collected tiling configs. Workspace moves transfer a column rather than a single window. Super+C and Super+Shift+Q are not assigned in the Niri snapshot.
 
 `collection-03`, 2026-10-03: final KDE intent and functional shortcut IDs are documented here; executable bindings stay with KDE. Validate device mapping, action presence, registration, dispatch and resulting behavior separately, especially Super+B and Super+Shift+S. `_launch` is a real launcher action, not metadata. See [KDE activation](../desktop/kde/activation.md) and [source records](../docs/sources.json).
+
+## XFCE differences
+
+[XFCE shortcuts](../desktop/xfce/config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml), `snapshot-23`, 2026-11-04, keep Super as the desktop modifier and use native XFCE applications with Xfwm4. The custom sets replace distribution shortcuts. These differences apply to the shared table above:
+
+| Chord | XFCE action |
+| --- | --- |
+| Super+Enter | xfce4-terminal |
+| Super+Space / Super+D | Collapsed Appfinder launcher |
+| Super+B / Super+Shift+B | Firefox / private Firefox window |
+| Super+F / Super+S | Thunar / XFCE Settings |
+| Super+V / Super+L | Clipman popup / xflock4 |
+| Super+Q / Super+Shift+F | Close / fullscreen |
+| Super+Shift+Q | Request XFCE logout |
+| Super+Shift+Space | XFCE session/power dialog |
+| Super+Shift+S / Print / Alt+Print | Region / full / active-window screenshot to clipboard; no automatic file save |
+| Super+Left or Up / Right or Down | Cycle windows backward / forward (switcher order, not spatial focus) |
+| Super+number / Super+Shift+number | Select workspace / send window there, 1–5; shifted symbols assume a US layout |
+| Super+Tab | Previous numbered workspace |
+| Super+Ctrl+Shift+arrows | Move window to the monitor in that direction (spatial, unlike OXWM monitor order) |
+| Audio / media / brightness keys | wpctl / playerctl / brightnessctl; dependencies and permissions required |
+
+Alt+Tab, Alt+Shift+Tab and Alt+F4 retain window cycling and close. Super alone is unassigned. Floating/tiling-layout controls (Super+P/C/R/N and split/master-count chords), Super+Shift+arrows for stack swaps and Super+Ctrl+arrows for monitor focus remain unassigned because stock Xfwm4 does not supply the collected tiling behavior. Locking needs a configured locker; clipboard commands need Clipman running. The [XFCE README](../desktop/xfce/README.md) records startup, package assumptions and untested target behavior.

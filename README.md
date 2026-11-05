@@ -7,6 +7,8 @@ Personal configuration raw material for people and agents to inspect, borrow, an
 | [walls](walls/README.md) | Cityview, sunset, horizon, and night wallpapers |
 | [nvim](nvim/README.md) | Current LazyVim config, plugin lock, minimal theme, and `nvimide` |
 | [kde](desktop/kde/README.md) | Plasma/KWin and Dolphin settings, custom tiling and focus border, panel widgets, screenshot integration |
+| [xfce](desktop/xfce/README.md) | Minimal XFCE shortcuts, five workspaces and manual TTY startup |
+| [greetd](desktop/greetd/README.md) | Optional tuigreet login into the startx session |
 | [sddm](desktop/sddm/README.md) | Current greeter config and custom minimal theme |
 | [oxwm](desktop/oxwm/README.md) | Lua config, status helpers, and three source patches |
 | [hyprland](desktop/hyprland/README.md) | Lua config, shared helpers and systemd/portable session backends |

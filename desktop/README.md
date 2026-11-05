@@ -5,6 +5,8 @@
 - [X11](x11/README.md): supporting session, compositor, clipboard and lock helpers used by OXWM.
 - [Hyprland](hyprland/README.md): Lua config and shared helpers with systemd/portable session backends.
 - [Niri](niri/README.md): scrolling desktop, bar and session helpers.
+- [XFCE](xfce/README.md): minimal native shortcuts, five workspaces and manual startx.
+- [greetd/tuigreet](greetd/README.md): optional console login into the selected startx session.
 - [SDDM](sddm/README.md): login greeter settings and theme.
 
 Device settings live under [hardware](../hardware/README.md), terminal emulators under [terminal](../terminal/README.md), and Bash under [shell](../shell/README.md). Each desktop documents its sibling dependencies.

@@ -11,6 +11,10 @@
       "Value": true
     },
     "ExtensionSettings": {
+      "{9b84b6b4-07c4-4b4b-ba21-394d86f6e9ee}": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/file/3954735/black21-3.0.2.xpi",
+        "installation_mode": "normal_installed"
+      },
       "addon@darkreader.org": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/darkreader/latest.xpi",
         "installation_mode": "force_installed",
@@ -27,6 +31,10 @@
         "private_browsing": true
       }
     },
+    "SearchEngines": {
+      "Default": "DuckDuckGo",
+      "DefaultPrivate": "DuckDuckGo"
+    },
     "FirefoxHome": {
       "SponsoredStories": false,
       "SponsoredTopSites": false,
@@ -36,6 +44,10 @@
       "SponsoredSuggestions": false
     },
     "Preferences": {
+      "browser.ipProtection.enabled": {
+        "Status": "locked",
+        "Value": true
+      },
       "privacy.globalprivacycontrol.enabled": {
         "Status": "user",
         "Value": true

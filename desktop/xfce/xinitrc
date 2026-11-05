@@ -1,0 +1,6 @@
+#!/bin/sh
+# Selected explicitly with startx; do not launch X from a shell login hook.
+export PATH="$HOME/.local/bin:$PATH"
+export XDG_CURRENT_DESKTOP=XFCE
+export XDG_SESSION_TYPE=x11
+exec startxfce4

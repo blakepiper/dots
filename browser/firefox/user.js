@@ -1,7 +1,7 @@
 // Saved Firefox toolbar layout for vertical tabs.
-user_pref("browser.uiCustomization.navBarWhenVerticalTabs", "[\"reset-pbm-toolbar-button\",\"back-button\",\"forward-button\",\"urlbar-container\",\"stop-reload-button\",\"vertical-spacer\",\"smartwindow-group-tabs-button\",\"ai-window-toggle\",\"unified-extensions-button\"]");
+user_pref("browser.uiCustomization.navBarWhenVerticalTabs", "[\"reset-pbm-toolbar-button\",\"back-button\",\"forward-button\",\"urlbar-container\",\"stop-reload-button\",\"ipprotection-button\",\"vertical-spacer\",\"smartwindow-group-tabs-button\",\"ai-window-toggle\",\"unified-extensions-button\"]");
 user_pref("browser.uiCustomization.horizontalTabstrip", "[\"tabbrowser-tabs\",\"customizableui-special-spring1\",\"smartwindow-group-tabs-button\",\"ai-window-toggle\"]");
-user_pref("browser.uiCustomization.state", "{\"placements\":{\"widget-overflow-fixed-list\":[],\"unified-extensions-area\":[\"addon_darkreader_org-browser-action\",\"enhancerforyoutube_maximerf_addons_mozilla_org-browser-action\",\"ublock0_raymondhill_net-browser-action\"],\"nav-bar\":[\"reset-pbm-toolbar-button\",\"back-button\",\"forward-button\",\"urlbar-container\",\"stop-reload-button\",\"vertical-spacer\",\"smartwindow-group-tabs-button\",\"ai-window-toggle\",\"unified-extensions-button\"],\"toolbar-menubar\":[\"menubar-items\"],\"TabsToolbar\":[],\"vertical-tabs\":[\"tabbrowser-tabs\"],\"PersonalToolbar\":[\"import-button\",\"personal-bookmarks\"]},\"seen\":[\"addon_darkreader_org-browser-action\",\"enhancerforyoutube_maximerf_addons_mozilla_org-browser-action\",\"ublock0_raymondhill_net-browser-action\",\"reset-pbm-toolbar-button\",\"developer-button\",\"screenshot-button\"],\"dirtyAreaCache\":[\"nav-bar\",\"TabsToolbar\",\"vertical-tabs\",\"PersonalToolbar\",\"unified-extensions-area\",\"toolbar-menubar\"],\"currentVersion\":26,\"newElementCount\":1}");
+user_pref("browser.uiCustomization.state", "{\"placements\":{\"widget-overflow-fixed-list\":[],\"unified-extensions-area\":[\"addon_darkreader_org-browser-action\",\"enhancerforyoutube_maximerf_addons_mozilla_org-browser-action\",\"ublock0_raymondhill_net-browser-action\"],\"nav-bar\":[\"reset-pbm-toolbar-button\",\"back-button\",\"forward-button\",\"urlbar-container\",\"stop-reload-button\",\"ipprotection-button\",\"vertical-spacer\",\"smartwindow-group-tabs-button\",\"ai-window-toggle\",\"unified-extensions-button\"],\"toolbar-menubar\":[\"menubar-items\"],\"TabsToolbar\":[],\"vertical-tabs\":[\"tabbrowser-tabs\"],\"PersonalToolbar\":[\"import-button\",\"personal-bookmarks\"]},\"seen\":[\"addon_darkreader_org-browser-action\",\"enhancerforyoutube_maximerf_addons_mozilla_org-browser-action\",\"ublock0_raymondhill_net-browser-action\",\"reset-pbm-toolbar-button\",\"developer-button\",\"screenshot-button\",\"ipprotection-button\"],\"dirtyAreaCache\":[\"nav-bar\",\"TabsToolbar\",\"vertical-tabs\",\"PersonalToolbar\",\"unified-extensions-area\",\"toolbar-menubar\"],\"currentVersion\":26,\"newElementCount\":1}");
 
 // Load custom styling for the Firefox browser interface.
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
@@ -71,8 +71,9 @@ user_pref("pdfjs.forcePageColors", true);
 user_pref("pdfjs.pageColorsBackground", "#181818");
 user_pref("pdfjs.pageColorsForeground", "#eeeeee");
 
+// Select Black by XI, installed through the shared extension policy.
+user_pref("extensions.activeThemeID", "{9b84b6b4-07c4-4b4b-ba21-394d86f6e9ee}");
 // Appearance settings extracted from the local saved preferences.
-user_pref("extensions.activeThemeID", "default-theme@mozilla.org");
 user_pref("browser.theme.toolbar-theme", 0);
 user_pref("sidebar.verticalTabs", true);
 user_pref("browser.newtabpage.enabled", false);
