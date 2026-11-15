@@ -554,6 +554,12 @@
       "commit": null,
       "description": "Capture the selected local red city-view wallpaper without image edits.",
       "validation": "Image decoded and visually reviewed; exact source/copy SHA-256, JSON and Git whitespace checked."
+    },
+    "snapshot-28": {
+      "captured": "2026-11-15",
+      "commit": null,
+      "description": "Capture the selected local Snow Leopard wallpaper without image edits.",
+      "validation": "PNG signature and chunk CRCs, exact source/copy SHA-256, JSON and Git whitespace checked. No desktop settings activated."
     }
   },
   "files": [
@@ -5204,6 +5210,16 @@
       "source": "/home/przvl/Pictures/cityviewred.png",
       "source_sha256": "f44bf5f9a24a1431b3fbb25e06010b6256a1f771f8aa10f90bcf43eef5c7ae4d",
       "sha256": "f44bf5f9a24a1431b3fbb25e06010b6256a1f771f8aa10f90bcf43eef5c7ae4d",
+      "changes": []
+    },
+    {
+      "path": "walls/snowleopard.png",
+      "snapshot": "snapshot-28",
+      "captured": "2026-11-15",
+      "commit": null,
+      "source": "/home/przvl/Pictures/snowleopard.png",
+      "source_sha256": "33e09bf8cce1c5a565d4e474632d5c26e1c7825247e0aae52f2e13f33b16a906",
+      "sha256": "33e09bf8cce1c5a565d4e474632d5c26e1c7825247e0aae52f2e13f33b16a906",
       "changes": []
     }
   ]

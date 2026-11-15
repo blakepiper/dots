@@ -35,3 +35,7 @@ The account path identifies the capture source; adapt it to the target user and 
 `snapshot-27`, captured 2026-11-04, adds `cityviewred.png` from `/home/przvl/Pictures/cityviewred.png`, preserving the original bytes. This local file has no capture commit available. The image decoded successfully and was visually reviewed. No image edits were made. Source and collection SHA-256: `f44bf5f9a24a1431b3fbb25e06010b6256a1f771f8aa10f90bcf43eef5c7ae4d`. Metadata is recorded in [sources.json](../docs/sources.json).
 
 The account path identifies the capture source; adapt it to the target user and choose the wallpaper destination separately. Wallpaper-specific authorship and license information remain unestablished.
+
+## Snow Leopard image capture
+
+`snapshot-28`, captured 2026-11-15, adds `snowleopard.png` from `/home/przvl/Pictures/snowleopard.png` as an unchanged 5120×3200 PNG. No capture commit is available. PNG chunk checksums and matching source/collection hashes were verified. No image edits or desktop activation were performed. SHA-256: `33e09bf8cce1c5a565d4e474632d5c26e1c7825247e0aae52f2e13f33b16a906`. Metadata is recorded in [sources.json](../docs/sources.json). The account path identifies the capture source; adapt it to the target user. Wallpaper-specific authorship and license information remain unestablished.
