@@ -11,13 +11,20 @@ case ${1:-} in
         ;;
     start)
         dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY HYPRLAND_INSTANCE_SIGNATURE \
-            XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP XDG_SESSION_TYPE PATH TERMINAL MOZ_ENABLE_WAYLAND
+            XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP XDG_SESSION_TYPE PATH TERMINAL MOZ_ENABLE_WAYLAND \
+            XDG_CONFIG_HOME FONTCONFIG_FILE HYPRLAND_APP_FONTCONFIG_FILE HYPRLAND_SESSION_BACKEND HYPRLAND_WALLPAPER
         systemctl --user start "$target"
         ;;
     stop)
         systemctl --user stop "$target" "${portals[@]}" || true
         systemctl --user unset-environment DISPLAY WAYLAND_DISPLAY HYPRLAND_INSTANCE_SIGNATURE \
-            XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP XDG_SESSION_TYPE TERMINAL MOZ_ENABLE_WAYLAND || true
+            XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP XDG_SESSION_TYPE TERMINAL MOZ_ENABLE_WAYLAND \
+            HYPRLAND_SESSION_BACKEND HYPRLAND_APP_FONTCONFIG_FILE || true
+        if [[ -n ${HYPRLAND_APP_FONTCONFIG_FILE:-} ]]; then
+            systemctl --user set-environment "FONTCONFIG_FILE=$HYPRLAND_APP_FONTCONFIG_FILE" || true
+        else
+            systemctl --user unset-environment FONTCONFIG_FILE || true
+        fi
         ;;
     *) exit 2 ;;
 esac

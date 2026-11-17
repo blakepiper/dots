@@ -10,7 +10,7 @@
 | `reference/x11/` | Alternate combined hardware helper, shell settings and input rules | X11 implementation for comparison |
 | [Power](power/README.md) | Shared 80% battery threshold helper; OpenRC/systemd/dinit boot and udev activation | Hardware exposing `charge_control_end_threshold` |
 
-Keep device facts independent from desktop appearance. The primary X11 example mirrors at 60/120 Hz; the Hyprland example uses 60 Hz; KDE stores its own scale and modes. Choose a target policy rather than starting multiple display managers/helpers.
+Keep device facts independent from desktop appearance. The primary X11 example mirrors at 60/120 Hz. Hyprland prefers the external monitor's native mode while docked and restores automatic scale on the laptop panel when undocked. KDE stores its own scale and modes. Select the display policy for the session you use.
 
 Device IDs, connector names, rates and panel modes need checking on the destination machine. XInput product IDs use decimal pairs; hwdb/keyd use hexadecimal USB IDs. The alternate helper reads `~/.config/x11/hardware.conf` and uses its paired input/udev rules; it is not intended to run alongside the primary X11 hotplug helper.
 

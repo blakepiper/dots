@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -euo pipefail
+export FONTCONFIG_FILE=${HYPRLAND_APP_FONTCONFIG_FILE:-/etc/fonts/fonts.conf}
+exec quickshell --no-duplicate --path "${XDG_CONFIG_HOME:-$HOME/.config}/quickshell/shell.qml" "$@"

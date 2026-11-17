@@ -3,7 +3,7 @@ Description=Hyprland idle
 PartOf=workstation-hyprland-session.target
 ConditionEnvironment=WAYLAND_DISPLAY
 [Service]
-ExecStart=/usr/bin/env hypridle
+ExecStart=/usr/bin/env workstation-hyprland-idle
 Restart=on-failure
 RestartSec=2
 [Install]

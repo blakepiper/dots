@@ -1,12 +1,21 @@
-# Hyprland session alternatives
+# Hyprland session backends
 
-The [shared config and helpers](../README.md) are used by both alternatives. Choose the backend with `HYPRLAND_SESSION_BACKEND=systemd` or `portable` in the session environment. The default is `portable`. Copy the chosen backend directory to `~/.config/hypr/session/<backend>/`; the scripts honor `XDG_CONFIG_HOME`.
+Use `HYPRLAND_SESSION_BACKEND=systemd hyprland-session` for the systemd setup, or `hyprland-session` for direct supervision with the default portable backend. Run it from a login shell outside a desktop. The wrapper selects the optional Tamsyn Fontconfig file, starts Hyprland with its watchdog when available and cleans up the chosen backend after the compositor exits.
 
-Launch the shared `hyprland-session` command from a login with no running desktop. It starts Hyprland, forwards termination signals, and invokes backend cleanup after the compositor exits. The shared Lua startup hook calls `workstation-hyprland-session`, which selects the same backend.
+Copy the selected backend directory into `~/.config/hypr/session/<backend>/` and put the [Hyprland helpers](../bin/) on PATH. The Lua startup hook invokes `workstation-hyprland-session`, which uses the same backend. Both backends need the login's private `XDG_RUNTIME_DIR` and D-Bus session. They start Quickshell, wallpaper and Hypridle, with Hyprsunset and the Settings watcher when their tools are available.
 
-- **systemd:** put `systemd/user/*` in `~/.config/systemd/user/` and reload the user manager when adopting them. The target starts the four services without enabling them individually. Units restart failed helpers and scope them to the target. The backend imports D-Bus/user-manager environment and restarts portal services around the session.
-- **portable:** `portable/backend.sh` starts Waybar, swaybg, clipboard capture and Hypridle directly. It tracks child processes, observes the compositor's IPC lifetime and terminates children when the session ends. flock prevents duplicate supervisors. Failed helpers are not restarted automatically. The login must provide a private `XDG_RUNTIME_DIR` and user D-Bus. D-Bus activation/platform services must provide portals; this backend does not stop or restart an externally managed portal daemon.
+## systemd
 
-Both retain the same Hypridle lock-before-sleep settings. Those require a compatible logind/elogind and PAM setup on the target. No init-independent suspend implementation is implied. Choose the shared [power profile](../../common/README.md) separately from session supervision.
+Copy `systemd/user/*` into `~/.config/systemd/user/` and reload with `systemctl --user daemon-reload` when adopting the config. The startup hook imports the display, compositor and application environment and starts `workstation-hyprland-session.target`. The target groups the units and stops them together. Services restart on failure. The wrapper also clears the session environment and stops the per-user portal processes around session changes so they can reactivate with the appropriate display.
 
-These are alternatives, not services to run together. Added 2026-10-01; source records describe the captured systemd units and subsequent portable implementation. No backend was activated or validated during collection maintenance.
+The Hyprsunset unit applies the saved night light setting after starting. The Settings watcher restores saved display, input and appearance choices and responds to compositor events. The idle unit uses the Settings runtime to apply any saved display idle timeout, with the shared `hypridle.conf` otherwise. Hypridle requests Hyprlock directly before suspend so the user service can lock the compositor from its own process context. The lock key and power menu also need `loginctl`, Hyprlock's PAM setup, and the [shared systemd power profile](../../common/README.md).
+
+The older clipboard capture unit is available as an option. Install `wl-clipboard` and Cliphist and use `systemctl --user add-wants workstation-hyprland-session.target workstation-hyprland-clipboard.service` to attach it to the target. The matching popup helper uses Fuzzel. Add a binding if you want it exposed.
+
+## Portable
+
+The Bash supervisor tracks the same child commands, holds a session lock and cleans up after the compositor's IPC connection disappears. It uses `flock` and polls `hyprctl`. For restart-on-failure and GUI-managed service control, use the systemd backend. D-Bus activation or the platform's service manager supplies the portal daemons. Select the power-command profile for the target separately. [Power profile selection](../../common/README.md)
+
+Both backends use `HYPRLAND_WALLPAPER` for a custom absolute wallpaper path. Local `~/Pictures/horizon.png` is the example default and a missing image gives a solid background. General-purpose font and application configs also work with other sessions. [Horizon wallpaper](../../../walls/horizon.png)
+
+Snapshot `snapshot-29`, 2026-11-17, retains both existing supervision backends and adapts the captured Quickshell, Hypridle and Hyprsunset startup to them. [Source records](../../../docs/sources.json)

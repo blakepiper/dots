@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -euo pipefail
+launcher=$(readlink -f -- "${BASH_SOURCE[0]}")
+settings_dir=${DESKTOP_SETTINGS_DIR:-${launcher%/*}/../settings}
+if [[ ! -f $settings_dir/main.py ]]; then
+    settings_dir=${DESKTOP_SETTINGS_DIR:-${XDG_CONFIG_HOME:-$HOME/.config}/hypr/desktop-settings}
+fi
+if [[ ! -f $settings_dir/main.py ]]; then
+    echo "Desktop Settings source is missing at $settings_dir." >&2
+    exit 1
+fi
+if [[ -v HYPRLAND_APP_FONTCONFIG_FILE ]]; then
+    export FONTCONFIG_FILE=$HYPRLAND_APP_FONTCONFIG_FILE
+fi
+export PYTHONDONTWRITEBYTECODE=1
+exec python3 "$settings_dir/main.py" "$@"

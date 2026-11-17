@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -euo pipefail
+if command -v desktop-settings-apply >/dev/null; then
+    exec desktop-settings-apply idle
+fi
+exec hypridle

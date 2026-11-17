@@ -1,0 +1,7 @@
+width=560
+height=460
+location=center
+matching=fuzzy
+insensitive=true
+image_size=32
+gtk_dark=true

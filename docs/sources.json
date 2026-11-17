@@ -560,6 +560,140 @@
       "commit": null,
       "description": "Capture the selected local Snow Leopard wallpaper without image edits.",
       "validation": "PNG signature and chunk CRCs, exact source/copy SHA-256, JSON and Git whitespace checked. No desktop settings activated."
+    },
+    "snapshot-29": {
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "base_commit": "a0fd559d3e1250f146f12a665ac7e95a10a02993",
+      "description": "Capture the Hyprland Lua session, Quickshell, Wofi, Ghostty and the GTK Desktop Settings app.",
+      "versions": {
+        "hyprland": "0.57.2",
+        "quickshell": "0.3.2",
+        "qt": "6.12",
+        "ghostty": "1.4.0",
+        "hyprglass_revision": "dc00c628623e5e504b363e26dd489ee766d2fa12"
+      },
+      "source_path_notation": "A wildcard represents the original settings package prefix.",
+      "derived_inputs": [
+        {
+          "path": "home/przvl/environments/hyprland.nix",
+          "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+          "source_sha256": "2d1b56fe4fb371b745f3b8880378d84aa6dc179d8b9f6ef017c411f65042e599"
+        },
+        {
+          "path": "home/przvl/programs/settings.nix",
+          "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+          "source_sha256": "654388c1e13400d62042a51467136f6d700b3323e8fa59e7d2fe9a18b67b616b"
+        },
+        {
+          "path": "modules/desktop/hyprland.nix",
+          "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+          "source_sha256": "4cff9d7d0af0fbb94e11ceb0d07818765fefa18d77f5bd5ba3ab82ac30ea7284"
+        },
+        {
+          "path": "packaging/hyprglass/default.nix",
+          "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+          "source_sha256": "5481aa74e962ce798122d39ab5cc3363c92798d7673501e365c0396c735a267d"
+        },
+        {
+          "path": "packaging/ghostty/default.nix",
+          "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+          "source_sha256": "83e0b6af7c28820c7f7ddf95acbfc4f08ff6736a3b73f675a5be1b45de989f6e"
+        },
+        {
+          "path": "home/przvl/config/ghostty/glass.conf",
+          "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+          "source_sha256": "ab9bcb03a316c7ab34ba8a4f0bbc24d64fd8164d26ee8f59be5f77063c4c0bab"
+        },
+        {
+          "path": "home/przvl/config/ghostty/iglass-LICENSE",
+          "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+          "source_sha256": "ce989a4f81fd5a0b5e813fd43f67ce9bc42a249ed11b291ad36c106f9f172863"
+        },
+        {
+          "path": "home/przvl/config/hyprland-monitors.lua",
+          "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+          "source_sha256": "01b33fce2d1951053862a26006bf26fc685c32d75a58a17e84fc7483be30e224"
+        },
+        {
+          "path": "home/przvl/config/quickshell/shell.qml",
+          "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+          "source_sha256": "a573b5367eb58fcf227be139840b78f55cb0a2605913f73b29a9be81bd95f96b"
+        },
+        {
+          "path": "home/przvl/config/quickshell/status.sh",
+          "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+          "source_sha256": "6347015fe3079adb307545828e0d411fff349f7c0bb14d5fdaecd5906c0b4e03"
+        },
+        {
+          "path": "home/przvl/config/quickshell/system-info.py",
+          "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+          "source_sha256": "ad982f5581a75e56f3ee6b1598de346857f5ff0232d4d4ec4c3195e817d2f0dd"
+        },
+        {
+          "path": "home/przvl/config/wofi-glass.css",
+          "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+          "source_sha256": "a9762d05f0dd6fcb9d4a36787f8767a7756ae1983e00c1a957a9deb998b89881"
+        },
+        {
+          "path": "home/przvl/programs/terminal.nix",
+          "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+          "source_sha256": "962df8616e87b97a95ca15c10d89dccdd62d0b3ddc77556abc1516cefef26dba"
+        },
+        {
+          "path": "hosts/zen/display.nix",
+          "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+          "source_sha256": "a5dd0007caf6e49bf27d43c072d9bc33ebbf51c886e4054a4b705f3becc325b0"
+        },
+        {
+          "path": "packaging/*-settings/default.nix",
+          "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+          "source_sha256": "6f1a594f15950480a43ffff700d24a7c29a8bfba8420ad73bb36f751d70972b4"
+        },
+        {
+          "path": "packaging/*-settings/src/core.py",
+          "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+          "source_sha256": "33ed7067bfe8a336809654ab2f8a7c03409b1e189506ff3ca592db81b5cfe069"
+        },
+        {
+          "path": "packaging/*-settings/src/demo.py",
+          "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+          "source_sha256": "253e1d4b23eb52a51c5e4a447fe1bdc79541de881606c35cdae9d7f43f8262d4"
+        },
+        {
+          "path": "packaging/*-settings/src/hyprland.css",
+          "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+          "source_sha256": "2adbc1a6467ba55b7eb1a3001ee2f2e1dd18ba1c00001955fe764e4773265f12"
+        },
+        {
+          "path": "packaging/*-settings/src/main.py",
+          "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+          "source_sha256": "8389ddf709cc6126035b659e2965d23809588ccbdd26c984d885038a315abad6"
+        },
+        {
+          "path": "packaging/*-settings/src/radios.py",
+          "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+          "source_sha256": "06a571928ec5831797c5144061c446c61f9bbae1af1761f8a503f5224a5906e6"
+        },
+        {
+          "path": "packaging/*-settings/src/style.css",
+          "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+          "source_sha256": "b8d2763624d2382027f835ca6e487da010c13bcbe3a0bea00ba1ae19fc6cec33"
+        },
+        {
+          "path": "packaging/*-settings/src/ui.py",
+          "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+          "source_sha256": "5d6c0d16d55e55d94bde6daf973cd2f65d6a4708331b01b11b0c838893e2a298"
+        }
+      ],
+      "changes": [
+        "Extract plain Lua, QML, GTK/Python, shell and application settings with local XDG paths and commands resolved through PATH.",
+        "Retain both session backends and scope the Settings watcher, Night Light and optional ABI-matched HyprGlass to Hyprland.",
+        "Discover optional hardware and radio/power providers at runtime. Keep connectors and wallpapers local to the target.",
+        "Translate display and input controls to Hyprland IPC and share saved power and Night Light settings with Quickshell.",
+        "Reuse the existing Firefox video marker and shared power integration. Preserve earlier app configs and the Ghostty overlay license notice."
+      ],
+      "validation": "Validation covered Bash and ShellCheck, Lua, Python, QML syntax, Fontconfig, Ghostty, systemd unit parsing, JSON and source hashes. In an isolated Wayland session, Hyprland reported 58 shortcut descriptions and verified display preview, persistence and mirror reversal on virtual outputs. Quickshell and Desktop Settings loaded against the isolated compositor. Simulated GTK and process checks covered all eight Settings pages and preference recovery. Physical hotplug, lock, suspend, audio, radio and HyprGlass rendering remain target-machine checks."
     }
   },
   "files": [
@@ -2598,30 +2732,58 @@
     },
     {
       "path": "desktop/hyprland/README.md",
-      "snapshot": "snapshot-02",
-      "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
-      "captured": "2026-10-01",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": null,
+      "source": "Collection-authored integration or documentation.",
       "source_sha256": null,
+      "sha256": "ce4670f33f69cf6c5d193fccbeaaee4df00386519795733e227dac58afa4622b",
       "changes": [
-        "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies.",
-        "Update paths and documentation for desktop/shell organization and standalone Hyprland.",
-        "Update shared/platform integration and associated documentation."
+        "Document adoption paths, dependencies, session behavior and retained optional older helpers."
       ],
-      "sha256": "2bef80e51ab8029492747d8c8ea001f343354e10235e01c7e464f00bef019c69",
-      "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+      "previous_captures": [
+        {
+          "path": "desktop/hyprland/README.md",
+          "snapshot": "snapshot-02",
+          "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+          "captured": "2026-10-01",
+          "source_sha256": null,
+          "changes": [
+            "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies.",
+            "Update paths and documentation for desktop/shell organization and standalone Hyprland.",
+            "Update shared/platform integration and associated documentation."
+          ],
+          "sha256": "2bef80e51ab8029492747d8c8ea001f343354e10235e01c7e464f00bef019c69",
+          "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+        }
+      ]
     },
     {
       "path": "desktop/hyprland/bin/hyprland-session",
-      "snapshot": "snapshot-02",
-      "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
-      "captured": "2026-10-01",
-      "source_sha256": null,
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "home/przvl/environments/hyprland.nix",
+      "source_sha256": "2d1b56fe4fb371b745f3b8880378d84aa6dc179d8b9f6ef017c411f65042e599",
+      "sha256": "6a3fcc9463f4ead2ce1c8301c0436d03ddb2dabdb9d22d29415bd6935ffce55f",
       "changes": [
-        "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies.",
-        "Separate platform integration from shared behavior; retain documented alternatives."
+        "Adapt the TTY launcher to the existing session backend selector, watchdog launcher and scoped Fontconfig environment."
       ],
-      "sha256": "ee8b7e0545ed94f1881b5c8087115d68ff6fa0014742cd3b21f8f910e8d8e187",
-      "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+      "previous_captures": [
+        {
+          "path": "desktop/hyprland/bin/hyprland-session",
+          "snapshot": "snapshot-02",
+          "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+          "captured": "2026-10-01",
+          "source_sha256": null,
+          "changes": [
+            "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies.",
+            "Separate platform integration from shared behavior; retain documented alternatives."
+          ],
+          "sha256": "ee8b7e0545ed94f1881b5c8087115d68ff6fa0014742cd3b21f8f910e8d8e187",
+          "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+        }
+      ]
     },
     {
       "path": "desktop/hyprland/bin/workstation-hyprland-clipboard",
@@ -2637,28 +2799,56 @@
     },
     {
       "path": "desktop/hyprland/bin/workstation-hyprland-control",
-      "snapshot": "snapshot-02",
-      "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
-      "captured": "2026-10-01",
-      "source_sha256": null,
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "home/przvl/environments/hyprland.nix",
+      "source_sha256": "2d1b56fe4fb371b745f3b8880378d84aa6dc179d8b9f6ef017c411f65042e599",
+      "sha256": "18421df6231ef453e153774cc4b67d40b9f1dc5622134af928bb688c2a766988",
       "changes": [
-        "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies.",
-        "Separate platform integration from shared behavior; retain documented alternatives."
+        "Use Wofi and logind locking and retain the shared desktop-power command for power operations."
       ],
-      "sha256": "9f33acad206c7c495475b173e880ae33ecc8b80b9381a55138c5b839e1b431b4",
-      "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+      "previous_captures": [
+        {
+          "path": "desktop/hyprland/bin/workstation-hyprland-control",
+          "snapshot": "snapshot-02",
+          "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+          "captured": "2026-10-01",
+          "source_sha256": null,
+          "changes": [
+            "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies.",
+            "Separate platform integration from shared behavior; retain documented alternatives."
+          ],
+          "sha256": "9f33acad206c7c495475b173e880ae33ecc8b80b9381a55138c5b839e1b431b4",
+          "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+        }
+      ]
     },
     {
       "path": "desktop/hyprland/bin/workstation-hyprland-lock",
-      "snapshot": "snapshot-02",
-      "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
-      "captured": "2026-10-01",
-      "source_sha256": null,
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "home/przvl/environments/hyprland.nix",
+      "source_sha256": "2d1b56fe4fb371b745f3b8880378d84aa6dc179d8b9f6ef017c411f65042e599",
+      "sha256": "0845e3a120f4b276b6d6b21def89095824d4e8b9892086fa92bd7d9b40541762",
       "changes": [
-        "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies."
+        "Pass the captured immediate-render Hyprlock flags through the existing instance guard."
       ],
-      "sha256": "fc847d87c04776b39980cf5dc51fb944f15c569d2a292ffa6e0850da256e97c2",
-      "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+      "previous_captures": [
+        {
+          "path": "desktop/hyprland/bin/workstation-hyprland-lock",
+          "snapshot": "snapshot-02",
+          "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+          "captured": "2026-10-01",
+          "source_sha256": null,
+          "changes": [
+            "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies."
+          ],
+          "sha256": "fc847d87c04776b39980cf5dc51fb944f15c569d2a292ffa6e0850da256e97c2",
+          "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+        }
+      ]
     },
     {
       "path": "desktop/hyprland/bin/workstation-hyprland-screenshot",
@@ -2735,15 +2925,31 @@
     },
     {
       "path": "desktop/hyprland/config/hypr/hyprland.lua",
-      "snapshot": "snapshot-02",
-      "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
-      "captured": "2026-10-01",
-      "source_sha256": null,
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "home/przvl/environments/hyprland.nix",
+      "source_sha256": "2d1b56fe4fb371b745f3b8880378d84aa6dc179d8b9f6ef017c411f65042e599",
+      "sha256": "e21be2c87174b47c9648ecd8bb615d34d7155ae7f34413a646670d9a3a2f7431",
       "changes": [
-        "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies."
+        "Extract Lua from generated session configuration and resolve application commands through PATH.",
+        "Make HyprGlass optional, use functional IDs and match the existing Firefox video title marker.",
+        "Read optional local display policy, preserve source dwindle and bindings, and add shortcut descriptions."
       ],
-      "sha256": "e1e5e0d91704edd466803b005864eb401896cde5dee2024d50c8b596589af1f3",
-      "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+      "previous_captures": [
+        {
+          "path": "desktop/hyprland/config/hypr/hyprland.lua",
+          "snapshot": "snapshot-02",
+          "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+          "captured": "2026-10-01",
+          "source_sha256": null,
+          "changes": [
+            "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies."
+          ],
+          "sha256": "e1e5e0d91704edd466803b005864eb401896cde5dee2024d50c8b596589af1f3",
+          "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+        }
+      ]
     },
     {
       "path": "desktop/hyprland/config/hypr/hyprlock.conf",
@@ -2759,17 +2965,31 @@
     },
     {
       "path": "desktop/hyprland/session/systemd/user/workstation-hyprland-bar.service",
-      "snapshot": "snapshot-02",
-      "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
-      "captured": "2026-10-01",
-      "source_sha256": null,
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "home/przvl/environments/hyprland.nix",
+      "source_sha256": "2d1b56fe4fb371b745f3b8880378d84aa6dc179d8b9f6ef017c411f65042e599",
+      "sha256": "ccf2f4303c90203fb06b20ef68c077d1259e13f6b0d5da7b0730bfc282af27c8",
       "changes": [
-        "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies.",
-        "Isolate platform integration; moved from desktop/hyprland/config/systemd/user/workstation-hyprland-bar.service.",
-        "Update shared/platform integration and associated documentation."
+        "Launch the Quickshell bar through the shared helper."
       ],
-      "sha256": "ffcdad2164219f06f697befaaaeab48cdf25ace982abbbd7fc7eeaef65f70577",
-      "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+      "previous_captures": [
+        {
+          "path": "desktop/hyprland/session/systemd/user/workstation-hyprland-bar.service",
+          "snapshot": "snapshot-02",
+          "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+          "captured": "2026-10-01",
+          "source_sha256": null,
+          "changes": [
+            "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies.",
+            "Isolate platform integration; moved from desktop/hyprland/config/systemd/user/workstation-hyprland-bar.service.",
+            "Update shared/platform integration and associated documentation."
+          ],
+          "sha256": "ffcdad2164219f06f697befaaaeab48cdf25ace982abbbd7fc7eeaef65f70577",
+          "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+        }
+      ]
     },
     {
       "path": "desktop/hyprland/session/systemd/user/workstation-hyprland-clipboard.service",
@@ -2787,44 +3007,86 @@
     },
     {
       "path": "desktop/hyprland/session/systemd/user/workstation-hyprland-idle.service",
-      "snapshot": "snapshot-02",
-      "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
-      "captured": "2026-10-01",
-      "source_sha256": null,
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "home/przvl/environments/hyprland.nix",
+      "source_sha256": "2d1b56fe4fb371b745f3b8880378d84aa6dc179d8b9f6ef017c411f65042e599",
+      "sha256": "b9769ef02ef6d9289fba96002bf7bc349e0c0889330991e2eba126360ed923ed",
       "changes": [
-        "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies.",
-        "Isolate platform integration; moved from desktop/hyprland/config/systemd/user/workstation-hyprland-idle.service.",
-        "Update shared/platform integration and associated documentation."
+        "Launch Hypridle through the shared settings-aware helper."
       ],
-      "sha256": "e794efa0609ddeddbff32ed92ea403ef2f8e9dd9e64e40e16d4fe71e1f052879",
-      "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+      "previous_captures": [
+        {
+          "path": "desktop/hyprland/session/systemd/user/workstation-hyprland-idle.service",
+          "snapshot": "snapshot-02",
+          "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+          "captured": "2026-10-01",
+          "source_sha256": null,
+          "changes": [
+            "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies.",
+            "Isolate platform integration; moved from desktop/hyprland/config/systemd/user/workstation-hyprland-idle.service.",
+            "Update shared/platform integration and associated documentation."
+          ],
+          "sha256": "e794efa0609ddeddbff32ed92ea403ef2f8e9dd9e64e40e16d4fe71e1f052879",
+          "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+        }
+      ]
     },
     {
       "path": "desktop/hyprland/session/systemd/user/workstation-hyprland-session.target",
-      "snapshot": "snapshot-02",
-      "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
-      "captured": "2026-10-01",
-      "source_sha256": null,
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "home/przvl/environments/hyprland.nix",
+      "source_sha256": "2d1b56fe4fb371b745f3b8880378d84aa6dc179d8b9f6ef017c411f65042e599",
+      "sha256": "1d90b755ebef68c13d00c80daa5dc706286b25f708f81855fe7937b75756d2b7",
       "changes": [
-        "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies.",
-        "Isolate platform integration; moved from desktop/hyprland/config/systemd/user/workstation-hyprland-session.target."
+        "Group the captured bar, wallpaper, idle, Night Light and Settings units in the existing session target."
       ],
-      "sha256": "225e5e90d2e0293391abc3c02b3fc7e53868a0debda48df4660e814702f37428",
-      "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+      "previous_captures": [
+        {
+          "path": "desktop/hyprland/session/systemd/user/workstation-hyprland-session.target",
+          "snapshot": "snapshot-02",
+          "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+          "captured": "2026-10-01",
+          "source_sha256": null,
+          "changes": [
+            "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies.",
+            "Isolate platform integration; moved from desktop/hyprland/config/systemd/user/workstation-hyprland-session.target."
+          ],
+          "sha256": "225e5e90d2e0293391abc3c02b3fc7e53868a0debda48df4660e814702f37428",
+          "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+        }
+      ]
     },
     {
       "path": "desktop/hyprland/session/systemd/user/workstation-hyprland-wallpaper.service",
-      "snapshot": "snapshot-02",
-      "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
-      "captured": "2026-10-01",
-      "source_sha256": null,
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "home/przvl/environments/hyprland.nix",
+      "source_sha256": "2d1b56fe4fb371b745f3b8880378d84aa6dc179d8b9f6ef017c411f65042e599",
+      "sha256": "c284eb15c2c0a630f89efa936f333df6b5b6abd3af6612316d04e831fb05a06c",
       "changes": [
-        "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies.",
-        "Isolate platform integration; moved from desktop/hyprland/config/systemd/user/workstation-hyprland-wallpaper.service.",
-        "Update shared/platform integration and associated documentation."
+        "Resolve the existing wallpaper helper through the imported session PATH."
       ],
-      "sha256": "cdb88876f3a25c04faf4e226f7187d930ae751e48656513ea3d9cd43fe93229c",
-      "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+      "previous_captures": [
+        {
+          "path": "desktop/hyprland/session/systemd/user/workstation-hyprland-wallpaper.service",
+          "snapshot": "snapshot-02",
+          "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+          "captured": "2026-10-01",
+          "source_sha256": null,
+          "changes": [
+            "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies.",
+            "Isolate platform integration; moved from desktop/hyprland/config/systemd/user/workstation-hyprland-wallpaper.service.",
+            "Update shared/platform integration and associated documentation."
+          ],
+          "sha256": "cdb88876f3a25c04faf4e226f7187d930ae751e48656513ea3d9cd43fe93229c",
+          "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+        }
+      ]
     },
     {
       "path": "desktop/hyprland/config/waybar/config.json",
@@ -3030,15 +3292,29 @@
     },
     {
       "path": "hardware/hyprland/config/workstation/hyprland-display.lua",
-      "snapshot": "snapshot-02",
-      "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
-      "captured": "2026-10-01",
-      "source_sha256": null,
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "hosts/zen/display.nix",
+      "source_sha256": "a5dd0007caf6e49bf27d43c072d9bc33ebbf51c886e4054a4b705f3becc325b0",
+      "sha256": "cfbfb017a9bb68de02e29fe35484c5e24004d8220e942af54083bf021659c3c5",
       "changes": [
-        "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies."
+        "Offer the internal connector as an editable hardware example with automatic scale and preferred modes."
       ],
-      "sha256": "f110c13ea2f6253adb50c903029f5193ed89e1cf55e8d383fff54ff245475a1c",
-      "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+      "previous_captures": [
+        {
+          "path": "hardware/hyprland/config/workstation/hyprland-display.lua",
+          "snapshot": "snapshot-02",
+          "commit": "acc6c9fb162299e46ebf4f277d7853c4cfaacaa6",
+          "captured": "2026-10-01",
+          "source_sha256": null,
+          "changes": [
+            "Derived from captured Hyprland Lua/Nix settings as ordinary config, scripts or user services; remove Nix dependencies."
+          ],
+          "sha256": "f110c13ea2f6253adb50c903029f5193ed89e1cf55e8d383fff54ff245475a1c",
+          "source": "snapshot-02: captured Hyprland settings; original input records retained under snapshots.snapshot-02.derived_inputs"
+        }
+      ]
     },
     {
       "path": "shell/bash/README.md",
@@ -3093,14 +3369,14 @@
     },
     {
       "path": "desktop/README.md",
-      "snapshot": "snapshot-26",
-      "captured": "2026-11-04",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
       "commit": null,
-      "source": "Collection-authored Picom renderer or integration documentation.",
+      "source": "Collection-authored integration or documentation.",
       "source_sha256": null,
-      "sha256": "5db119dbb2412203b168741e10a61f394da958aa71e38a35c7f23673b4852a3d",
+      "sha256": "1b8340919341e250fcdebd927b7ffa7bacb30f46acaf56e13fe666f9446cb1bc",
       "changes": [
-        "Capture preferred compositor rules, adapt functional names and document dependencies; see snapshot-26 and the Picom README."
+        "Link the Quickshell session and the shared bar and settings controls."
       ],
       "previous_captures": [
         {
@@ -3126,6 +3402,18 @@
           "sha256": "b9dcd3d4493a7bf957bcc40d9564e27449f90a7f6d032310cb473a93b1690c3b",
           "changes": [
             "Add or document minimal XFCE keybindings, manual TTY startup and optional console greeter; see module README and snapshot derived_inputs."
+          ]
+        },
+        {
+          "path": "desktop/README.md",
+          "snapshot": "snapshot-26",
+          "captured": "2026-11-04",
+          "commit": null,
+          "source": "Collection-authored Picom renderer or integration documentation.",
+          "source_sha256": null,
+          "sha256": "5db119dbb2412203b168741e10a61f394da958aa71e38a35c7f23673b4852a3d",
+          "changes": [
+            "Capture preferred compositor rules, adapt functional names and document dependencies; see snapshot-26 and the Picom README."
           ]
         }
       ]
@@ -3171,14 +3459,14 @@
     },
     {
       "path": "README.md",
-      "snapshot": "snapshot-26",
-      "captured": "2026-11-04",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
       "commit": null,
-      "source": "Collection-authored Picom renderer or integration documentation.",
+      "source": "Collection-authored integration or documentation.",
       "source_sha256": null,
-      "sha256": "00116a29b8ff4cc18e98176ca99668345aa7286394323fd5a1e42c0053f53aa9",
+      "sha256": "0243c08cd2d06d887246ac9bfe371eca09bd61678328620ab2ad3468e27031dc",
       "changes": [
-        "Capture preferred compositor rules, adapt functional names and document dependencies; see snapshot-26 and the Picom README."
+        "Index the Hyprland session, Desktop Settings and Ghostty capture."
       ],
       "previous_captures": [
         {
@@ -3223,6 +3511,18 @@
           "changes": [
             "Add or document minimal XFCE keybindings, manual TTY startup and optional console greeter; see module README and snapshot derived_inputs."
           ]
+        },
+        {
+          "path": "README.md",
+          "snapshot": "snapshot-26",
+          "captured": "2026-11-04",
+          "commit": null,
+          "source": "Collection-authored Picom renderer or integration documentation.",
+          "source_sha256": null,
+          "sha256": "00116a29b8ff4cc18e98176ca99668345aa7286394323fd5a1e42c0053f53aa9",
+          "changes": [
+            "Capture preferred compositor rules, adapt functional names and document dependencies; see snapshot-26 and the Picom README."
+          ]
         }
       ]
     },
@@ -3241,14 +3541,14 @@
     },
     {
       "path": "keybinds/README.md",
-      "snapshot": "snapshot-23",
-      "captured": "2026-11-04",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
       "commit": null,
-      "source": "Collection-authored XFCE/login example and documentation based on reviewed snapshot-23 inputs.",
+      "source": "Collection-authored integration or documentation.",
       "source_sha256": null,
-      "sha256": "46946e691d8468b701e0ada81b9b1a3b6f7fc61026469f82550121670571bba9",
+      "sha256": "6b714db1372af553f5b13d1026e360cbba45a4108c8842b945b14677b102a7c2",
       "changes": [
-        "Add or document minimal XFCE keybindings, manual TTY startup and optional console greeter; see module README and snapshot derived_inputs."
+        "Give Hyprland a distinct binding column with the imported commands and action differences."
       ],
       "previous_captures": [
         {
@@ -3299,6 +3599,18 @@
             "Record Super+Shift+B private-browser intent and the KDE implementation; distinguish dispatch verification from physical keyboard testing."
           ],
           "sha256": "f9e6720e2d63e28fedf3f00aa75ac09494b796caf52b245a978ef36b7077ab80"
+        },
+        {
+          "path": "keybinds/README.md",
+          "snapshot": "snapshot-23",
+          "captured": "2026-11-04",
+          "commit": null,
+          "source": "Collection-authored XFCE/login example and documentation based on reviewed snapshot-23 inputs.",
+          "source_sha256": null,
+          "sha256": "46946e691d8468b701e0ada81b9b1a3b6f7fc61026469f82550121670571bba9",
+          "changes": [
+            "Add or document minimal XFCE keybindings, manual TTY startup and optional console greeter; see module README and snapshot derived_inputs."
+          ]
         }
       ]
     },
@@ -3354,14 +3666,14 @@
     },
     {
       "path": "terminal/README.md",
-      "snapshot": "snapshot-25",
-      "captured": "2026-11-04",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
       "commit": null,
-      "source": "Collection-authored Neovim/neofetch documentation.",
+      "source": "Collection-authored integration or documentation.",
       "source_sha256": null,
-      "sha256": "8d5314a778ab135979ddd6f056b838b91b0ac21f03027b588050f009748a70df",
+      "sha256": "feb043b4d2034fbf5af92bf65500cea08d881b2c4fc304a0ea6111f43c8045fe",
       "changes": [
-        "Adapt source startup/tool boundary or runtime system detection as described in the module README and snapshot-25."
+        "Link the reusable Ghostty config and Hyprland overlay."
       ],
       "previous_captures": [
         {
@@ -3394,6 +3706,18 @@
             "Document reviewed deployment findings, preferences, dependencies and validation."
           ],
           "sha256": "72463215034ebea580d18b88c29f479ee6c81c074fe7d20e712b48e714c196a6"
+        },
+        {
+          "path": "terminal/README.md",
+          "snapshot": "snapshot-25",
+          "captured": "2026-11-04",
+          "commit": null,
+          "source": "Collection-authored Neovim/neofetch documentation.",
+          "source_sha256": null,
+          "sha256": "8d5314a778ab135979ddd6f056b838b91b0ac21f03027b588050f009748a70df",
+          "changes": [
+            "Adapt source startup/tool boundary or runtime system detection as described in the module README and snapshot-25."
+          ]
         }
       ]
     },
@@ -3428,14 +3752,14 @@
     },
     {
       "path": "docs/sources.md",
-      "snapshot": "snapshot-26",
-      "captured": "2026-11-04",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
       "commit": null,
-      "source": "Collection-authored Picom renderer or integration documentation.",
+      "source": "Collection-authored integration or documentation.",
       "source_sha256": null,
-      "sha256": "9b01e30348217a5fe26d0102e6974c80138473eba10d44b159f15b5ef352fea1",
+      "sha256": "58943c2ce4b4c9d2acebc5233e4e92f9fde51deaae10f71629097bb6017ae719",
       "changes": [
-        "Capture preferred compositor rules, adapt functional names and document dependencies; see snapshot-26 and the Picom README."
+        "Summarize the capture, provenance and verification."
       ],
       "previous_captures": [
         {
@@ -3624,24 +3948,32 @@
           "changes": [
             "Adapt source startup/tool boundary or runtime system detection as described in the module README and snapshot-25."
           ]
+        },
+        {
+          "path": "docs/sources.md",
+          "snapshot": "snapshot-26",
+          "captured": "2026-11-04",
+          "commit": null,
+          "source": "Collection-authored Picom renderer or integration documentation.",
+          "source_sha256": null,
+          "sha256": "9b01e30348217a5fe26d0102e6974c80138473eba10d44b159f15b5ef352fea1",
+          "changes": [
+            "Capture preferred compositor rules, adapt functional names and document dependencies; see snapshot-26 and the Picom README."
+          ]
         }
       ]
     },
     {
       "path": "docs/adapting.md",
-      "snapshot": "collection-03",
-      "captured": "2026-10-03",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
       "commit": null,
+      "source": "Collection-authored integration or documentation.",
       "source_sha256": null,
-      "source": "Collection platform integration derived from documented shared settings.",
+      "sha256": "440d1984ee75acd5caf04ac11985a9703fb87f2359bda80c02c5b1b6c8fee1b4",
       "changes": [
-        "Add narrow platform integration without duplicating application settings.",
-        "Update shared/platform integration and associated documentation.",
-        "Document local Firefox CSS and preferences capture (snapshot-06) on 2026-10-03, including destinations, dependencies and validation.",
-        "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation.",
-        "Document reviewed deployment findings, preferences, dependencies and validation."
+        "Document Hyprland Fontconfig, lock, optional glass and compositor compatibility."
       ],
-      "sha256": "728c7cbf30d523a7d8f5fcce1fa20cb707629137fec94a68b90ca0454a6529f4",
       "previous_captures": [
         {
           "path": "docs/adapting.md",
@@ -3657,22 +3989,36 @@
             "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation."
           ],
           "sha256": "f6cb120fcfa82f833cf4817236e3ad52a8d3b9f69e759713196916e21616718d"
+        },
+        {
+          "path": "docs/adapting.md",
+          "snapshot": "collection-03",
+          "captured": "2026-10-03",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection platform integration derived from documented shared settings.",
+          "changes": [
+            "Add narrow platform integration without duplicating application settings.",
+            "Update shared/platform integration and associated documentation.",
+            "Document local Firefox CSS and preferences capture (snapshot-06) on 2026-10-03, including destinations, dependencies and validation.",
+            "Document local desktop appearance capture (snapshot-07) on 2026-10-03, its destinations, dependencies, hashes and validation.",
+            "Document reviewed deployment findings, preferences, dependencies and validation."
+          ],
+          "sha256": "728c7cbf30d523a7d8f5fcce1fa20cb707629137fec94a68b90ca0454a6529f4"
         }
       ]
     },
     {
       "path": "hardware/README.md",
-      "snapshot": "collection-03",
-      "captured": "2026-10-03",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
       "commit": null,
+      "source": "Collection-authored integration or documentation.",
       "source_sha256": null,
-      "source": "Collection platform integration derived from documented shared settings.",
+      "sha256": "4f24f8f013fd6b06606fe1df2ce08e290c820df457edcceae1ca91c8d28b2358",
       "changes": [
-        "Add narrow platform integration without duplicating application settings.",
-        "Update shared/platform integration and associated documentation.",
-        "Document reviewed deployment findings, preferences, dependencies and validation."
+        "Describe preferred external mode and automatic internal scaling."
       ],
-      "sha256": "b73e7fe3fb261c9da894c36635cc668e6db7bf9edaa2de6c3f37575c73803827",
       "previous_captures": [
         {
           "path": "hardware/README.md",
@@ -3686,6 +4032,20 @@
             "Update shared/platform integration and associated documentation."
           ],
           "sha256": "3c3a140fdce3db143f3fbad7ccd0bb85de97be4293aafffaaeb0acd17c6dafc8"
+        },
+        {
+          "path": "hardware/README.md",
+          "snapshot": "collection-03",
+          "captured": "2026-10-03",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection platform integration derived from documented shared settings.",
+          "changes": [
+            "Add narrow platform integration without duplicating application settings.",
+            "Update shared/platform integration and associated documentation.",
+            "Document reviewed deployment findings, preferences, dependencies and validation."
+          ],
+          "sha256": "b73e7fe3fb261c9da894c36635cc668e6db7bf9edaa2de6c3f37575c73803827"
         }
       ]
     },
@@ -3899,27 +4259,55 @@
     },
     {
       "path": "desktop/hyprland/session/systemd/backend.sh",
-      "snapshot": "collection-02",
-      "captured": "2026-10-01",
-      "commit": null,
-      "source_sha256": null,
-      "source": "Collection platform integration derived from documented shared settings.",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "home/przvl/environments/hyprland.nix",
+      "source_sha256": "2d1b56fe4fb371b745f3b8880378d84aa6dc179d8b9f6ef017c411f65042e599",
+      "sha256": "6c35872d464bf5db2dd536814fe3e0b69406a795874b8c30294b60bd3b5d434f",
       "changes": [
-        "Add narrow platform integration without duplicating application settings."
+        "Import the Hyprland session environment for user services and restore the prior font selection on exit."
       ],
-      "sha256": "84b1c8d98ca2cf3c91d7403a672b71e6be4682ae972ac493d9eafd195e792bb2"
+      "previous_captures": [
+        {
+          "path": "desktop/hyprland/session/systemd/backend.sh",
+          "snapshot": "collection-02",
+          "captured": "2026-10-01",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection platform integration derived from documented shared settings.",
+          "changes": [
+            "Add narrow platform integration without duplicating application settings."
+          ],
+          "sha256": "84b1c8d98ca2cf3c91d7403a672b71e6be4682ae972ac493d9eafd195e792bb2"
+        }
+      ]
     },
     {
       "path": "desktop/hyprland/session/portable/backend.sh",
-      "snapshot": "collection-02",
-      "captured": "2026-10-01",
-      "commit": null,
-      "source_sha256": null,
-      "source": "Collection platform integration derived from documented shared settings.",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "home/przvl/environments/hyprland.nix",
+      "source_sha256": "2d1b56fe4fb371b745f3b8880378d84aa6dc179d8b9f6ef017c411f65042e599",
+      "sha256": "7e7a4ebd677112df4b45342998e84c732ab54de7c4edeb90f54742bc20fbec89",
       "changes": [
-        "Add narrow platform integration without duplicating application settings."
+        "Supervise Quickshell, wallpaper, idle, Night Light and the Settings watcher in the portable session."
       ],
-      "sha256": "4d6f1a4e3d48f66611705e132d04b142c44736516a3e19ac4ba5b0b18d2d7ae2"
+      "previous_captures": [
+        {
+          "path": "desktop/hyprland/session/portable/backend.sh",
+          "snapshot": "collection-02",
+          "captured": "2026-10-01",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection platform integration derived from documented shared settings.",
+          "changes": [
+            "Add narrow platform integration without duplicating application settings."
+          ],
+          "sha256": "4d6f1a4e3d48f66611705e132d04b142c44736516a3e19ac4ba5b0b18d2d7ae2"
+        }
+      ]
     },
     {
       "path": "desktop/x11/session/privileged/x11-session.conf",
@@ -3998,28 +4386,41 @@
     },
     {
       "path": "hardware/dock/README.md",
-      "snapshot": "collection-02",
-      "captured": "2026-10-01",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
       "commit": null,
+      "source": "Collection-authored integration or documentation.",
       "source_sha256": null,
-      "source": "Collection platform integration derived from documented shared settings.",
+      "sha256": "0f6183a326f4c2f8deb494f847da4198d5cd9b03a3afc5c713c7b68baa09019c",
       "changes": [
-        "Add narrow platform integration without duplicating application settings."
+        "Link the optional primary connector and native mirror policy."
       ],
-      "sha256": "bba59a1bc1e7363ce41b282d66587901c90e84530a6f7dd03e0017140df2e6bd"
+      "previous_captures": [
+        {
+          "path": "hardware/dock/README.md",
+          "snapshot": "collection-02",
+          "captured": "2026-10-01",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection platform integration derived from documented shared settings.",
+          "changes": [
+            "Add narrow platform integration without duplicating application settings."
+          ],
+          "sha256": "bba59a1bc1e7363ce41b282d66587901c90e84530a6f7dd03e0017140df2e6bd"
+        }
+      ]
     },
     {
       "path": "hardware/keyboard/README.md",
-      "snapshot": "collection-03",
-      "captured": "2026-10-03",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
       "commit": null,
+      "source": "Collection-authored integration or documentation.",
       "source_sha256": null,
-      "source": "Collection platform integration derived from documented shared settings.",
+      "sha256": "0e9faa560d2c3cd63494ceacfe53514ba673ef82bea8bbd24ae171e4b17a9435",
       "changes": [
-        "Add narrow platform integration without duplicating application settings.",
-        "Document reviewed deployment findings, preferences, dependencies and validation."
+        "Document optional device-specific remapping independently of the desktop capture."
       ],
-      "sha256": "6f275567679c2f57a9fd7beedca6c64bc7f46a18ac75e61323ccab0f3aa679bd",
       "previous_captures": [
         {
           "path": "hardware/keyboard/README.md",
@@ -4032,6 +4433,19 @@
             "Add narrow platform integration without duplicating application settings."
           ],
           "sha256": "956144f22e3eca2e0790dab509033d8d1d4b01665852d24779ed84568f02c7fc"
+        },
+        {
+          "path": "hardware/keyboard/README.md",
+          "snapshot": "collection-03",
+          "captured": "2026-10-03",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection platform integration derived from documented shared settings.",
+          "changes": [
+            "Add narrow platform integration without duplicating application settings.",
+            "Document reviewed deployment findings, preferences, dependencies and validation."
+          ],
+          "sha256": "6f275567679c2f57a9fd7beedca6c64bc7f46a18ac75e61323ccab0f3aa679bd"
         }
       ]
     },
@@ -4061,16 +4475,15 @@
     },
     {
       "path": "docs/platforms.md",
-      "snapshot": "collection-03",
-      "captured": "2026-10-03",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
       "commit": null,
+      "source": "Collection-authored integration or documentation.",
       "source_sha256": null,
-      "source": "Collection integration and documentation.",
+      "sha256": "e425a9a35163522fbc12cf974dfe82af1214ddae9c36cd27650d1877b0e7daac",
       "changes": [
-        "Document or adapt platform boundaries while sharing application settings.",
-        "Document reviewed deployment findings, preferences, dependencies and validation."
+        "Update the session backend and capability integration entries."
       ],
-      "sha256": "464facb9b3df9ca1784265dbc033d893507f09b0e4ffe68d645dcabc442ab3d5",
       "previous_captures": [
         {
           "path": "docs/platforms.md",
@@ -4083,6 +4496,19 @@
             "Document or adapt platform boundaries while sharing application settings."
           ],
           "sha256": "7e08c154f47972c3aef7d47d2c54c6b7222c803f57c3b8d3c6a1cd07c00814fd"
+        },
+        {
+          "path": "docs/platforms.md",
+          "snapshot": "collection-03",
+          "captured": "2026-10-03",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection integration and documentation.",
+          "changes": [
+            "Document or adapt platform boundaries while sharing application settings.",
+            "Document reviewed deployment findings, preferences, dependencies and validation."
+          ],
+          "sha256": "464facb9b3df9ca1784265dbc033d893507f09b0e4ffe68d645dcabc442ab3d5"
         }
       ]
     },
@@ -4129,15 +4555,29 @@
     },
     {
       "path": "desktop/hyprland/session/README.md",
-      "snapshot": "collection-02",
-      "captured": "2026-10-01",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
       "commit": null,
+      "source": "Collection-authored integration or documentation.",
       "source_sha256": null,
-      "source": "Collection integration and documentation.",
+      "sha256": "0727dbeec8afc39d050053f72dbec139942b0926618cb929d369fce7898f7d8c",
       "changes": [
-        "Document or adapt platform boundaries while sharing application settings."
+        "Document shared session commands, systemd user units and existing portable supervision."
       ],
-      "sha256": "12d8f3789770e82f505548415550e737912fb15cb08e3d0eb409634ed6ae5e1a"
+      "previous_captures": [
+        {
+          "path": "desktop/hyprland/session/README.md",
+          "snapshot": "collection-02",
+          "captured": "2026-10-01",
+          "commit": null,
+          "source_sha256": null,
+          "source": "Collection integration and documentation.",
+          "changes": [
+            "Document or adapt platform boundaries while sharing application settings."
+          ],
+          "sha256": "12d8f3789770e82f505548415550e737912fb15cb08e3d0eb409634ed6ae5e1a"
+        }
+      ]
     },
     {
       "path": "desktop/x11/session/README.md",
@@ -5220,6 +5660,362 @@
       "source": "/home/przvl/Pictures/snowleopard.png",
       "source_sha256": "33e09bf8cce1c5a565d4e474632d5c26e1c7825247e0aae52f2e13f33b16a906",
       "sha256": "33e09bf8cce1c5a565d4e474632d5c26e1c7825247e0aae52f2e13f33b16a906",
+      "changes": []
+    },
+    {
+      "path": "desktop/hyprland/bin/desktop-settings",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "packaging/*-settings/default.nix",
+      "source_sha256": "6f1a594f15950480a43ffff700d24a7c29a8bfba8420ad73bb36f751d70972b4",
+      "sha256": "9c1392c112f29df30d02e48a89f0e6a0869714f808c41852e7deec2f474c3cff",
+      "changes": [
+        "Resolve the app code and the target Python interpreter from user paths."
+      ]
+    },
+    {
+      "path": "desktop/hyprland/bin/desktop-settings-apply",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "packaging/*-settings/default.nix",
+      "source_sha256": "6f1a594f15950480a43ffff700d24a7c29a8bfba8420ad73bb36f751d70972b4",
+      "sha256": "e640029a7c8f1c9eadc9d92e585be9209b8941c22d6d836c0bf6b347fc48bebd",
+      "changes": [
+        "Expose the shared runtime commands through the same app entry point."
+      ]
+    },
+    {
+      "path": "desktop/hyprland/bin/workstation-hyprland-bar",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "home/przvl/environments/hyprland.nix",
+      "source_sha256": "2d1b56fe4fb371b745f3b8880378d84aa6dc179d8b9f6ef017c411f65042e599",
+      "sha256": "85f111db27f34a51f0cee3608a672472f7798991c1352d6bb9a0fe617caeba96",
+      "changes": [
+        "Start Quickshell with its local QML config, avoid duplicate instances and select the application Fontconfig environment."
+      ]
+    },
+    {
+      "path": "desktop/hyprland/bin/workstation-hyprland-idle",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": null,
+      "source": "Collection-authored integration or documentation.",
+      "source_sha256": null,
+      "sha256": "e03e34b73ed6463a07e785a019e69628e1e9a774730a73b00efd6ff3704add0c",
+      "changes": [
+        "Use the Settings-managed Hypridle config when the runtime is available and launch Hypridle directly otherwise."
+      ]
+    },
+    {
+      "path": "desktop/hyprland/bin/workstation-hyprland-terminal",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "home/przvl/environments/hyprland.nix",
+      "source_sha256": "2d1b56fe4fb371b745f3b8880378d84aa6dc179d8b9f6ef017c411f65042e599",
+      "sha256": "f14168dee985fe8278ee3c3a6d3e9c603e697b22bdaf9efb641e03867fc3010a",
+      "changes": [
+        "Resolve Ghostty from PATH with a functional app ID, an XDG-local glass overlay and optional Terminus sizing."
+      ]
+    },
+    {
+      "path": "desktop/hyprland/config/hypr/fontconfig.conf",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "home/przvl/environments/hyprland.nix",
+      "source_sha256": "2d1b56fe4fb371b745f3b8880378d84aa6dc179d8b9f6ef017c411f65042e599",
+      "sha256": "c08f8ddeee1c78cf28d3743b1f894244f1dc24a243737eadcaafb28570b1e580",
+      "changes": [
+        "Extract the Tamsyn Bold session override and use the installed Fontconfig font search paths."
+      ]
+    },
+    {
+      "path": "desktop/hyprland/config/hypr/hyprsunset.conf",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "home/przvl/programs/settings.nix",
+      "source_sha256": "654388c1e13400d62042a51467136f6d700b3323e8fa59e7d2fe9a18b67b616b",
+      "sha256": "e418839c60468cc10e8c090af8beeb4ed5def66bf333a14b630716c69abfffa8",
+      "changes": [
+        "Extract the generated identity profile. The Settings runtime restores saved warmth."
+      ]
+    },
+    {
+      "path": "desktop/hyprland/config/hypr/monitors.lua",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "home/przvl/config/hyprland-monitors.lua",
+      "source_sha256": "01b33fce2d1951053862a26006bf26fc685c32d75a58a17e84fc7483be30e224",
+      "sha256": "56663fff7f2850cd36ca7c3f8d4611fbfe0a7de6396505acef59dd0545347a69",
+      "changes": [
+        "Take the internal connector as an argument and preserve native external-source mirroring.",
+        "Guard config verification and pause automatic mirroring during explicit Settings arrangements."
+      ]
+    },
+    {
+      "path": "desktop/hyprland/config/quickshell/shell.qml",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "home/przvl/config/quickshell/shell.qml",
+      "source_sha256": "a573b5367eb58fcf227be139840b78f55cb0a2605913f73b29a9be81bd95f96b",
+      "sha256": "9412192e735ca3db7589be92e00262fb470d09f1d716343166b2b11f582d7079",
+      "changes": [
+        "Resolve local helpers and Settings runtime commands at run time. Discover battery, backlight, night light and power-profile capabilities.",
+        "Use functional layer namespaces and a general workspace icon. Retain the workspace, clock/calendar and system-control panes."
+      ]
+    },
+    {
+      "path": "desktop/hyprland/config/quickshell/status.sh",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "home/przvl/config/quickshell/status.sh",
+      "source_sha256": "6347015fe3079adb307545828e0d411fff349f7c0bb14d5fdaecd5906c0b4e03",
+      "sha256": "1d6430a1f9cadd637dcba4462e212566847f3834ace1bde9ef8a6fbe6a98fbe4",
+      "changes": [
+        "Expose optional tool availability to the QML controls alongside the captured battery/backlight readings."
+      ]
+    },
+    {
+      "path": "desktop/hyprland/config/quickshell/system-info.py",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "home/przvl/config/quickshell/system-info.py",
+      "source_sha256": "ad982f5581a75e56f3ee6b1598de346857f5ff0232d4d4ec4c3195e817d2f0dd",
+      "sha256": "c197517d019cea8de524a49f3b7adb7d791c0791ccb7a6807535f736293bc915",
+      "changes": [
+        "Discover an optional NVIDIA command on PATH when an explicit command is absent."
+      ]
+    },
+    {
+      "path": "desktop/hyprland/config/wofi/config",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "home/przvl/environments/hyprland.nix",
+      "source_sha256": "2d1b56fe4fb371b745f3b8880378d84aa6dc179d8b9f6ef017c411f65042e599",
+      "sha256": "72717b55f170e6a45cc016a00391afd5f831e708e24861c687024f017ae9bcac",
+      "changes": [
+        "Extract the generated Wofi launcher options."
+      ]
+    },
+    {
+      "path": "desktop/hyprland/config/wofi/style.css",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "home/przvl/config/wofi-glass.css",
+      "source_sha256": "a9762d05f0dd6fcb9d4a36787f8767a7756ae1983e00c1a957a9deb998b89881",
+      "sha256": "a9762d05f0dd6fcb9d4a36787f8767a7756ae1983e00c1a957a9deb998b89881",
+      "changes": []
+    },
+    {
+      "path": "desktop/hyprland/session/systemd/user/workstation-hyprland-nightlight.service",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "home/przvl/programs/settings.nix",
+      "source_sha256": "654388c1e13400d62042a51467136f6d700b3323e8fa59e7d2fe9a18b67b616b",
+      "sha256": "dff4c087d92bef137ccb2d34d19cb218796a9031183f0a926d764819ec8f84d7",
+      "changes": [
+        "Scope Hyprsunset to the Hyprland session target and restore saved Night Light after the daemon starts."
+      ]
+    },
+    {
+      "path": "desktop/hyprland/session/systemd/user/workstation-hyprland-settings.service",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": null,
+      "source": "Collection-authored integration or documentation.",
+      "source_sha256": null,
+      "sha256": "cf23c3a25e5f1dd87bd590225740b51514b23e354aac945d6f36d34d3ecdbe20",
+      "changes": [
+        "Supervise the Settings session watcher when the desktop runtime is installed."
+      ]
+    },
+    {
+      "path": "desktop/hyprland/settings/README.md",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": null,
+      "source": "Collection-authored integration or documentation.",
+      "source_sha256": null,
+      "sha256": "f0619a303776858e1ddf6e7d11732fe2084758e9da8ee1da7ff9095ae3a4874f",
+      "changes": [
+        "Document Settings dependencies, runtime controls, hardware options and validation."
+      ]
+    },
+    {
+      "path": "desktop/hyprland/settings/applications/org.local.DesktopSettings.desktop",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "packaging/*-settings/default.nix",
+      "source_sha256": "6f1a594f15950480a43ffff700d24a7c29a8bfba8420ad73bb36f751d70972b4",
+      "sha256": "1429ba9d711f23152fdd226dd24e2e9a9ccf20d02fcc40769390c0309973187c",
+      "changes": [
+        "Extract the desktop entry with the functional Desktop Settings identity and PATH command."
+      ]
+    },
+    {
+      "path": "desktop/hyprland/settings/core.py",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "packaging/*-settings/src/core.py",
+      "source_sha256": "33ed7067bfe8a336809654ab2f8a7c03409b1e189506ff3ca592db81b5cfe069",
+      "sha256": "88acbab70d7577d0bf7dcc166b05dbaede816ad33ffe1d138375b2c16d8887d7",
+      "changes": [
+        "Adapt preferences, shared power/audio/system operations and test-tone generation to target paths and runtime discovery."
+      ]
+    },
+    {
+      "path": "desktop/hyprland/settings/demo.py",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "packaging/*-settings/src/demo.py",
+      "source_sha256": "253e1d4b23eb52a51c5e4a447fe1bdc79541de881606c35cdae9d7f43f8262d4",
+      "sha256": "32221a59785875c4858e7f4dff3fd76cb3935281bba76af3a7b73194cbf16575",
+      "changes": [
+        "Adapt the simulated devices, desktop labels and commands to the Hyprland controls."
+      ]
+    },
+    {
+      "path": "desktop/hyprland/settings/hyprland.css",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "packaging/*-settings/src/hyprland.css",
+      "source_sha256": "2adbc1a6467ba55b7eb1a3001ee2f2e1dd18ba1c00001955fe764e4773265f12",
+      "sha256": "061a967eadb874b0f8555e948ca39ea08a550b85ec961d84e91c6d8fad645e20",
+      "changes": [
+        "Adapt the glass stylesheet selectors to the settings app identity."
+      ]
+    },
+    {
+      "path": "desktop/hyprland/settings/hyprland.py",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "packaging/*-settings/src/core.py",
+      "source_sha256": "33ed7067bfe8a336809654ab2f8a7c03409b1e189506ff3ca592db81b5cfe069",
+      "sha256": "cee5cb840d71569f0019ec46d48ce0c102b7ddf9fde9e77ac4ec57e23f99cd4a",
+      "changes": [
+        "Translate display preview and restoration, Night Light, input, lock and session logic to Hyprland IPC.",
+        "Restore saved values on startup and relevant compositor events."
+      ]
+    },
+    {
+      "path": "desktop/hyprland/settings/idle.py",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "packaging/*-settings/src/core.py",
+      "source_sha256": "33ed7067bfe8a336809654ab2f8a7c03409b1e189506ff3ca592db81b5cfe069",
+      "sha256": "ce5d8ddd9ad00fef43e95535253cfb7b15e9b80d4076b71b5d0dc0757c673afb",
+      "changes": [
+        "Derive native Hypridle timeout handling and monitor the saved screen-off choice."
+      ]
+    },
+    {
+      "path": "desktop/hyprland/settings/main.py",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "packaging/*-settings/src/main.py",
+      "source_sha256": "8389ddf709cc6126035b659e2965d23809588ccbdd26c984d885038a315abad6",
+      "sha256": "fe7ba2b41832455165664752e16c2046935a2136ebe8a4edbec6229457c167fe",
+      "changes": [
+        "Use a shared desktop and CLI entry point with functional runtime commands and preview mode."
+      ]
+    },
+    {
+      "path": "desktop/hyprland/settings/radios.py",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "packaging/*-settings/src/radios.py",
+      "source_sha256": "06a571928ec5831797c5144061c446c61f9bbae1af1761f8a503f5224a5906e6",
+      "sha256": "0a211bff76d4eb02c6ac467b97be040b66226adcea88fd1840510c44c4be2740",
+      "changes": [
+        "Adjust functional identifiers for NetworkManager and BlueZ controls."
+      ]
+    },
+    {
+      "path": "desktop/hyprland/settings/style.css",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "packaging/*-settings/src/style.css",
+      "source_sha256": "b8d2763624d2382027f835ca6e487da010c13bcbe3a0bea00ba1ae19fc6cec33",
+      "sha256": "b8d2763624d2382027f835ca6e487da010c13bcbe3a0bea00ba1ae19fc6cec33",
+      "changes": []
+    },
+    {
+      "path": "desktop/hyprland/settings/ui.py",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "packaging/*-settings/src/ui.py",
+      "source_sha256": "5d6c0d16d55e55d94bde6daf973cd2f65d6a4708331b01b11b0c838893e2a298",
+      "sha256": "73c30fa297b017f049b912ab345ec5366753641973d52dca6412849a2888fd3c",
+      "changes": [
+        "Retain all eight GTK pages and captured styling. Connect controls to native Hyprland and target service capabilities.",
+        "Read the active compositor shortcut map and use a functional desktop identity."
+      ]
+    },
+    {
+      "path": "terminal/ghostty/README.md",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": null,
+      "source": "Collection-authored integration or documentation.",
+      "source_sha256": null,
+      "sha256": "97c5b7e01d5c0fb1bef07cb372644f21ae259b551423639aaf255196c4dc0bdb",
+      "changes": [
+        "Describe application configuration, launcher, font and license paths."
+      ]
+    },
+    {
+      "path": "terminal/ghostty/config/config",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "home/przvl/programs/terminal.nix",
+      "source_sha256": "962df8616e87b97a95ca15c10d89dccdd62d0b3ddc77556abc1516cefef26dba",
+      "sha256": "3729c25a828754c1ed1054b2696bc322c4e807075e3820409fb338980b39cf68",
+      "changes": [
+        "Extract portable Bash, colors, fonts and terminal behavior from the shared Ghostty settings."
+      ]
+    },
+    {
+      "path": "terminal/ghostty/config/glass.conf",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "home/przvl/config/ghostty/glass.conf",
+      "source_sha256": "ab9bcb03a316c7ab34ba8a4f0bbc24d64fd8164d26ee8f59be5f77063c4c0bab",
+      "sha256": "ab9bcb03a316c7ab34ba8a4f0bbc24d64fd8164d26ee8f59be5f77063c4c0bab",
+      "changes": []
+    },
+    {
+      "path": "terminal/ghostty/iglass-LICENSE",
+      "snapshot": "snapshot-29",
+      "captured": "2026-11-17",
+      "commit": "3df1b4e5ce9c2959a776b2c9421c5e5396bb0c00",
+      "source": "home/przvl/config/ghostty/iglass-LICENSE",
+      "source_sha256": "ce989a4f81fd5a0b5e813fd43f67ce9bc42a249ed11b291ad36c106f9f172863",
+      "sha256": "ce989a4f81fd5a0b5e813fd43f67ce9bc42a249ed11b291ad36c106f9f172863",
       "changes": []
     }
   ]

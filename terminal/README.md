@@ -10,6 +10,8 @@ Use **Bash with ble.sh in every terminal**. Install ble.sh on each adopting mach
 
 [Foot settings](foot/foot.ini) map to `~/.config/foot/foot.ini` and select Bash, JetBrainsMono Nerd Font and an opaque dark palette. [Kitty config](kitty/kitty.conf) uses JetBrainsMono Nerd Font, Seafoam Dusk colors, translucent backgrounds, and copy/paste/Shift+Enter bindings. It maps to `~/.config/kitty/kitty.conf`; its source license is preserved at [desktop/niri/LICENSE](../desktop/niri/LICENSE).
 
+[Ghostty](ghostty/README.md) has shared Tokyo Night settings and a small glass overlay for Hyprland's Super+Enter launcher.
+
 Konsole's profile was refreshed from the local machine in `snapshot-07` on 2026-10-03, with Konsole 26.04.3. That capture was unchanged; the collection-03 naming refinement retains the `/bin/bash` command, and requires the JetBrainsMono Nerd Font Mono family. No source commit is available; the source path, hashes, prior capture and collection base commit are in [sources.json](../docs/sources.json). The profile parsed as INI; no terminal settings were activated.
 
 | Collection file (after collection-03) | SHA-256 |

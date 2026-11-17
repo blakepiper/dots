@@ -4,7 +4,8 @@ The collection organizes shared settings by application or function. Alternative
 
 | Boundary | Shared material | Alternatives |
 | --- | --- | --- |
-| [Hyprland session](../desktop/hyprland/session/README.md) | Lua, bar, wallpaper, clipboard, lock and control helpers | systemd user services or portable process supervisor |
+| [Hyprland session](../desktop/hyprland/session/README.md) | Lua, Quickshell, Wofi, wallpaper and lock helpers | systemd user services or portable process supervisor |
+| [Hyprland settings](../desktop/hyprland/settings/README.md) | GTK settings and the bar's Night Light and power-profile commands | Hardware and system service availability determine which controls work |
 | [Niri Awake](../desktop/niri/session/README.md) | KDL, bar UI, idle guards and application startup | systemd-inhibit service or directly supervised elogind-inhibit |
 | [Desktop power](../desktop/common/README.md) | Control menus call `desktop-power` | systemctl, elogind loginctl, or adapted direct commands |
 | [X11 locker](../desktop/x11/session/README.md) | Session and lock scripts | PATH-resolved i3lock or captured privileged-program path |

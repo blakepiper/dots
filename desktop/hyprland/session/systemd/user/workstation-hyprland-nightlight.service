@@ -1,0 +1,13 @@
+[Unit]
+Description=Hyprland night light
+PartOf=workstation-hyprland-session.target
+ConditionEnvironment=WAYLAND_DISPLAY
+ConditionEnvironment=HYPRLAND_INSTANCE_SIGNATURE
+
+[Service]
+Type=exec
+ExecCondition=/usr/bin/env sh -c 'command -v hyprsunset >/dev/null'
+ExecStart=/usr/bin/env hyprsunset
+ExecStartPost=/usr/bin/env sh -c 'if command -v desktop-settings-apply >/dev/null; then exec desktop-settings-apply apply-hyprland-nightlight; fi'
+Restart=on-failure
+RestartSec=2

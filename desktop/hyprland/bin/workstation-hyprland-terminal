@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -euo pipefail
+export FONTCONFIG_FILE=${HYPRLAND_APP_FONTCONFIG_FILE:-/etc/fonts/fonts.conf}
+export BROWSER=${BROWSER:-firefox}
+font=()
+if [[ -n ${HYPRLAND_TERMINAL_FONT_SIZE:-} ]]; then
+    font=(--font-family="Terminus (TTF)" --font-style=Bold --font-size="$HYPRLAND_TERMINAL_FONT_SIZE")
+fi
+exec ghostty --gtk-single-instance=false --quit-after-last-window-closed=true \
+    --class=org.local.GhosttyGlass \
+    --config-file="${XDG_CONFIG_HOME:-$HOME/.config}/ghostty/glass.conf" \
+    "${font[@]}" "$@"

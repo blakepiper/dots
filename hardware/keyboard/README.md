@@ -4,7 +4,7 @@ Current machine: `udev/hwdb.d/90-external-keyboard.hwdb` maps left/right Alt to 
 
 Alternative X11 implementation: `../x11/bin/workstation-keyboards` selects matching physical slave keyboards by XInput product ID `8137, 59591` and applies `altwin:swap_alt_win`. It reads `~/.config/workstation/keyboard.conf` and is rerun by the X11 hotplug helper. Example settings are under `../x11/config/workstation/`.
 
-Alternative Wayland implementation: `../../desktop/hyprland/config/hypr/hyprland.lua` selects `gaming-keyboard` and `gaming-keyboard-1` devices. These names are compositor-specific.
+The [Hyprland capture](../../desktop/hyprland/README.md) can use the device-scoped hwdb mapping above. Hyprland also supports a per-device XKB override using names obtained from `hyprctl devices`.
 
 Choose one remapping layer for this device. The desired semantic key is Super; the physical Command/Alt legends differ between keyboards. The x11 reference also documents the same device. Do not apply this quirk globally to other keyboards.
 

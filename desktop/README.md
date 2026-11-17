@@ -4,7 +4,7 @@
 - [OXWM](oxwm/README.md): window manager configuration, helpers and source patches.
 - [Picom](picom/README.md): shared X11 transparency rules, video/game exceptions and opaque mode.
 - [X11](x11/README.md): supporting session, compositor, clipboard and lock helpers used by OXWM.
-- [Hyprland](hyprland/README.md): Lua config and shared helpers with systemd/portable session backends.
+- [Hyprland](hyprland/README.md) includes Lua configuration, the Quickshell bar, Wofi and systemd/portable session backends. Its [GTK settings app](hyprland/settings/README.md) shares saved Night Light and power-profile choices with the bar.
 - [Niri](niri/README.md): scrolling desktop, bar and session helpers.
 - [XFCE](xfce/README.md): minimal native shortcuts, five workspaces and manual startx.
 - [greetd/tuigreet](greetd/README.md): optional console login into the selected startx session.

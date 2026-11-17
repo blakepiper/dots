@@ -1,19 +1,36 @@
 # Hyprland
 
-Plain Lua configuration and Bash helpers with systemd or portable session supervision. No Nix, Home Manager, flake, generated substitutions, or patched Waybar is required. Derived on 2026-10-01 from snapshot-02; capture commit and file hashes are recorded in [sources](../../docs/sources.json).
+This is the Lua session with Quickshell's workspace, calendar and system-control panes, Wofi launchers, and GTK Desktop Settings. It uses commands on PATH and works with either of the [session backends](session/README.md).
 
-The Lua config retains the captured Hyprland 0.56 Lua API: install a compatible compositor. It provides nine numbered workspaces, master/dwindle layouts, stack navigation, opaque colors, two-pixel borders and no animations, rounding, blur or shadows. See [keybindings](../../keybinds/README.md).
+| Source | Destination or use |
+| --- | --- |
+| `config/hypr/` | Merge into `~/.config/hypr/` for the compositor, fonts, locker, idle handling and night light. |
+| `config/quickshell/` | Merge into `~/.config/quickshell/`, keeping `shell.qml` and its samplers together. |
+| `config/wofi/` | Merge into `~/.config/wofi/` for both menus. |
+| `bin/` | Put the selected commands on PATH, typically in `~/.local/bin/`. |
+| [Ghostty](../../terminal/ghostty/README.md) | Merge the shared configuration and Hyprland overlay into `~/.config/ghostty/`. |
+| [Desktop Settings](settings/README.md) | Keep its GTK app and runtime helpers available for Super+S and the bar. |
 
-Merge `config/hypr/`, `config/fuzzel/`, and `config/waybar/` into their corresponding directories under `~/.config/`. Put the chosen `bin/` helpers on PATH, normally in `~/.local/bin/`. Foot settings live in [terminal/foot](../../terminal/foot/foot.ini) and map to `~/.config/foot/foot.ini`; use [Bash with ble.sh](../../shell/bash/README.md).
+The launchers and config paths honor `XDG_CONFIG_HOME`. Hyprland 0.57.2 and Quickshell 0.3.2 with Qt 6.12 supplied the capture. Install a Hyprland release with the 0.57 Lua API and a Quickshell build with Hyprland, PipeWire and Wayland integration. The bar uses Terminus (TTF) and JetBrainsMono Nerd Font. The `hypr/fontconfig.conf` file selects Tamsyn Bold for general session apps. Install Tamsyn separately and start via `hyprland-session` to select it only for this session.
 
-The Lua config reads `~/.config/workstation/hyprland-display.lua` (honoring `XDG_CONFIG_HOME`). Copy and adapt the [hardware example](../../hardware/hyprland/config/workstation/hyprland-display.lua): `eDP-1`, scale 1.8 and 1920×1080 at 60 Hz describe the captured panel/dock policy. External connectors are discovered dynamically and mirrored; undocking restores the internal preferred mode. Keyboard device names and the WhiteSur cursor theme also need adapting. Choose one keyboard remapping layer.
+### Shortcuts and panels
 
-Choose a [session backend](session/README.md): the systemd variant preserves the captured user-service behavior; the portable variant supervises the same helpers directly. The shared `hyprland-session` wrapper and Lua config work with either. D-Bus remains a dependency. The portable backend is the default. Power menus require `desktop-power` from [desktop/common](../common/README.md) and a selected power-command profile.
+- **Super+Space** and **Super+D** open Wofi's application search with icons. **Super+Shift+Space** opens Wofi's lock, suspend, reboot, logout, display-off and power-off menu. Confirmations protect log out, reboot and power off. Select the shared power helper and profile for the target login. [Power profiles](../common/README.md)
+- **Super+S** opens Desktop Settings. Quickshell and the app share the power-mode and night light controls. Start the systemd backend for supervised Settings, Hypridle and Hyprsunset processes. [Session backends](session/README.md)
+- **Super+Enter** opens the glass Ghostty terminal. Firefox, Thunar and optional Steam have their own shortcuts. **Super+Shift+S** captures a region and **Print** captures the full screen. Both write a PNG to `~/Pictures/Screenshots` and copy it. [Shortcut details](../../keybinds/README.md)
 
-Services start Waybar, text clipboard capture, swaybg and Hypridle. The wallpaper helper uses `~/Pictures/horizon.png`, or `HYPRLAND_WALLPAPER` when set in the user service environment; a missing image gives a solid background. [Horizon](../../walls/horizon.png) is included. Hypridle requests locking before suspend without timed idle listeners. The lock helper shares one Hyprlock instance through flock. The target system must supply Hyprlock's PAM integration.
+The panel uses PipeWire/WirePlumber for volume, `brightnessctl` and `/sys/class/backlight` for backlight, Linux sysfs for battery, and the Settings runtime for power mode and night light. Hardware controls appear when their dependencies are present. The system-info menu starts its Python sampler while open. Linux GPU data sources vary with the driver, and `nvidia-smi` is optional. The workspace badge uses a general grid icon.
 
-Dependencies: Hyprland with the captured Lua API, Foot, Bash, Fuzzel, Firefox, Xfe, WirePlumber/wpctl, playerctl, brightnessctl, Waybar, Hyprlock, Hypridle, swaybg, wl-clipboard, Cliphist, grim, slurp, jq, D-Bus, util-linux/flock, GNU coreutils and JetBrainsMono Nerd Font. Portal integration needs xdg-desktop-portal and an appropriate Hyprland/GTK backend. Applications and helper commands resolve through PATH instead of package-store paths. The systemd backend additionally requires a systemd user manager; the portable backend uses Bash/flock process supervision.
+The compositor uses dwindle splits, rounded corners, 85% active and 80% inactive opacity, and natural scrolling. To get the captured glass effect, build HyprGlass against the exact installed Hyprland and export `HYPRGLASS_PLUGIN` as the absolute `.so` path before launch. The capture used revision `dc00c628623e5e504b363e26dd489ee766d2fa12` from the 0.57 release line. The configured materials target Ghostty, Desktop Settings, Wofi and the three Quickshell panes. Built-in layer blur and translucent backgrounds work with the default compositor alone. [HyprGlass build instructions](https://github.com/hyprnux/hyprglass/blob/main/README.md)
 
-Waybar uses nine ordinary custom workspace buttons with Lua dispatcher commands and active-workspace polling. This replaces the captured build-time Waybar patch. Screenshots support region/full/window capture, save under `~/Pictures/Screenshots`, and copy the PNG. The control menu offers lock, suspend, logout, display power and system power actions.
+The settings and terminal wrappers use their own background alpha. Steam game windows stay opaque. To enable Firefox video opacity matching, use the collected extension that sets the `[firefox-video] ` title marker. [Firefox video opacity](../../browser/firefox/video-opacity/README.md)
 
-These configs share destination names with other desktops' Fuzzel, Waybar and locker examples. Choose or merge those application settings deliberately. No installer is included and no settings were activated. Validation was skipped for these conversions at the user's request.
+### Target hardware and session dependencies
+
+For a laptop with automatic dock mirroring, copy the optional [monitor example](../../hardware/hyprland/config/workstation/hyprland-display.lua) into `~/.config/workstation/hyprland-display.lua` and set `primary_output` to the internal connector. The policy prefers a connected external output as the mirror source, keeps each output's preferred mode and restores automatic scale on the internal panel when undocked. Desktop Settings can apply an explicit arrangement. With no monitor file, Hyprland chooses the default monitor configuration.
+
+The lock and brightness helpers depend on Hyprlock with PAM, Hypridle and logind-compatible session locking, and writable backlight access through the distro's normal seat/device policy. The other helpers use Bash, swaybg, grim, slurp, wl-clipboard, util-linux/flock and GNU coreutils. The extra `--window` screenshot mode and the earlier Waybar workspace helper use `jq`. Audio and media shortcuts use `wpctl` and `playerctl`. For screen sharing and file dialogs, supply D-Bus, xdg-desktop-portal and the relevant Hyprland/GTK portals. Settings has its own radio, privilege and service dependencies.
+
+The earlier Fuzzel and Waybar configs and the Cliphist helpers remain as reference alternatives. To use them, select the earlier assets and adapt the relevant launcher binding or session bar command. For clipboard history, start the text capture worker and add a binding to `workstation-hyprland-clipboard`. [Session alternatives](session/README.md)
+
+Snapshot `snapshot-29`, 2026-11-17, captures the Lua config, Quickshell and samplers, Wofi themes, session font and the Ghostty overlay. The adaptation replaces generated substitutions with PATH, Linux capability discovery, optional display data and session-owned services. The lock theme, wallpaper helper, extended screenshot helper and alternate app examples are from the earlier collection. [Source records](../../docs/sources.json)

@@ -3,7 +3,8 @@ set -euo pipefail
 export PATH="$HOME/.local/bin:$PATH"
 export HYPRLAND_SESSION_BACKEND=${HYPRLAND_SESSION_BACKEND:-portable}
 case $HYPRLAND_SESSION_BACKEND in systemd|portable) ;; *) echo 'Choose systemd or portable for HYPRLAND_SESSION_BACKEND.' >&2; exit 2 ;; esac
-backend="${XDG_CONFIG_HOME:-$HOME/.config}/hypr/session/$HYPRLAND_SESSION_BACKEND/backend.sh"
+export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-$HOME/.config}
+backend="$XDG_CONFIG_HOME/hypr/session/$HYPRLAND_SESSION_BACKEND/backend.sh"
 if [[ -n ${DISPLAY:-} || -n ${WAYLAND_DISPLAY:-} ]]; then
     echo 'Exit the current desktop before starting Hyprland.' >&2
     exit 1
@@ -11,13 +12,23 @@ fi
 [[ -r $backend ]] || { echo "Missing session backend: $backend" >&2; exit 1; }
 bash "$backend" prepare
 export XDG_CURRENT_DESKTOP=Hyprland XDG_SESSION_DESKTOP=Hyprland XDG_SESSION_TYPE=wayland
-export TERMINAL=foot MOZ_ENABLE_WAYLAND=1
+export TERMINAL=workstation-hyprland-terminal MOZ_ENABLE_WAYLAND=1
+export HYPRLAND_APP_FONTCONFIG_FILE=${FONTCONFIG_FILE:-/etc/fonts/fonts.conf}
+if [[ -r "$XDG_CONFIG_HOME/hypr/fontconfig.conf" ]]; then
+    export FONTCONFIG_FILE="$XDG_CONFIG_HOME/hypr/fontconfig.conf"
+fi
+# Called by the EXIT trap.
+# shellcheck disable=SC2329
 cleanup() {
     bash "$backend" stop || true
-    dbus-update-activation-environment DISPLAY= WAYLAND_DISPLAY= HYPRLAND_INSTANCE_SIGNATURE= XDG_CURRENT_DESKTOP= XDG_SESSION_DESKTOP= XDG_SESSION_TYPE= TERMINAL= MOZ_ENABLE_WAYLAND= || true
+    dbus-update-activation-environment DISPLAY= WAYLAND_DISPLAY= HYPRLAND_INSTANCE_SIGNATURE= \
+        XDG_CURRENT_DESKTOP= XDG_SESSION_DESKTOP= XDG_SESSION_TYPE= TERMINAL= MOZ_ENABLE_WAYLAND= \
+        HYPRLAND_SESSION_BACKEND= HYPRLAND_APP_FONTCONFIG_FILE= "FONTCONFIG_FILE=$HYPRLAND_APP_FONTCONFIG_FILE" || true
 }
-trap cleanup EXIT
-Hyprland --config "${XDG_CONFIG_HOME:-$HOME/.config}/hypr/hyprland.lua" "$@" &
+trap 'cleanup' EXIT
+compositor_command=(Hyprland)
+if command -v start-hyprland >/dev/null; then compositor_command=(start-hyprland --); fi
+"${compositor_command[@]}" --config "$XDG_CONFIG_HOME/hypr/hyprland.lua" "$@" &
 compositor=$!
 trap 'kill -TERM "$compositor" 2>/dev/null || true' HUP INT TERM
 status=0

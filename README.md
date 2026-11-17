@@ -11,20 +11,21 @@ Personal configuration raw material for people and agents to inspect, borrow, an
 | [greetd](desktop/greetd/README.md) | Optional tuigreet login into the startx session |
 | [sddm](desktop/sddm/README.md) | Current greeter config and custom minimal theme |
 | [oxwm](desktop/oxwm/README.md) | Lua config, status helpers, and three source patches |
-| [hyprland](desktop/hyprland/README.md) | Lua config, shared helpers and systemd/portable session backends |
+| [hyprland](desktop/hyprland/README.md) | Hyprland Lua, Quickshell, Wofi, optional HyprGlass and systemd/portable session backends |
+| [desktop settings](desktop/hyprland/settings/README.md) | GTK controls for the Hyprland session, shared with the Quickshell power and Night Light controls |
 | [niri](desktop/niri/README.md) | KDL config, Waybar, launcher, notifications, locking and session helpers |
 | [hardware](hardware/README.md) | LG display snapshot, external keyboard mapping, dock hotplug behavior, pointer and battery settings |
 | [keybinds](keybinds/README.md) | Preferred keyboard vocabulary and actual differences between desktops |
-| [terminal](terminal/README.md) | Konsole, Kitty, Foot, st customization, tmux and neofetch |
+| [terminal](terminal/README.md) | Konsole, Ghostty, Kitty, Foot, st customization, tmux and neofetch |
 | [shell](shell/README.md) | Shared Bash startup with ble.sh |
 | [desktop/common](desktop/common/README.md) | Shared GTK/Fontconfig settings, power-command profiles and polkit helper |
 | [picom](desktop/picom/README.md) | X11 transparency, Firefox video/Steam exceptions and opaque-mode rendering |
 | [desktop/x11](desktop/x11/README.md) | Session, compositor, clipboard, screenshots, locking, and control menu |
 | [browser](browser/README.md) | Firefox interface styling, profile preferences, and policy reference |
 
-Start with [keybinds](keybinds/README.md) for behavior, then the application or desktop you want. Hardware choices are independent of desktop preferences. Desktop sessions and the greeter live under `desktop/`; terminal emulators live under `terminal/`, and interactive Bash under `shell/`. Hyprland uses plain configs and scripts. See [desktop composition](desktop/README.md) for dependencies and overlapping helper names.
+Start with [keybinds](keybinds/README.md) for behavior, then the application or desktop you want. Hardware choices are independent of desktop preferences. Desktop sessions and the greeter live under `desktop/`; terminal emulators live under `terminal/`, and interactive Bash under `shell/`. The Hyprland configuration, Quickshell bar and settings app use distro-independent paths. See [desktop composition](desktop/README.md) for dependencies and overlapping helper names.
 
-Captured 2026-10-01. KDE/SDDM/Neovim material reflects the local machine. These are different snapshots, so differences in fonts, workspaces, repeat rates, and display scaling are deliberate records of the source environments.
+The initial collection dates to 2026-10-01. The 2026-11-17 Hyprland refresh is `snapshot-29`. Differences in fonts, workspaces, repeat rates and display scaling reflect the individual snapshots.
 
 [Adaptation notes](docs/adapting.md) explain machine-specific paths and IDs. [Source records](docs/sources.md) record snapshot commits, local paths and known edits; [sources.json](docs/sources.json) gives per-file hashes. [Repository conventions](AGENTS.md) guide future collection work.
 

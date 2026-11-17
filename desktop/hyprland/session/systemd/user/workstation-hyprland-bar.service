@@ -1,9 +1,9 @@
 [Unit]
-Description=Hyprland bar
+Description=Hyprland Quickshell bar
 PartOf=workstation-hyprland-session.target
 ConditionEnvironment=WAYLAND_DISPLAY
 [Service]
-ExecStart=/usr/bin/env waybar
+ExecStart=/usr/bin/env workstation-hyprland-bar
 Restart=on-failure
 RestartSec=2
 [Install]
