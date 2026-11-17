@@ -39,3 +39,9 @@ The account path identifies the capture source; adapt it to the target user and 
 ## Snow Leopard image capture
 
 `snapshot-28`, captured 2026-11-15, adds `snowleopard.png` from `/home/przvl/Pictures/snowleopard.png` as an unchanged 5120×3200 PNG. No capture commit is available. PNG chunk checksums and matching source/collection hashes were verified. No image edits or desktop activation were performed. SHA-256: `33e09bf8cce1c5a565d4e474632d5c26e1c7825247e0aae52f2e13f33b16a906`. Metadata is recorded in [sources.json](../docs/sources.json). The account path identifies the capture source; adapt it to the target user. Wallpaper-specific authorship and license information remain unestablished.
+
+## Aerial and pink wallpaper capture
+
+`snapshot-30`, captured 2026-11-17, adds `aerial.jpg` (4500×2527), `pink.jpg` (3888×2592), and `aerial_mod.png` (1673×940) from `/home/przvl/Pictures/`, preserving the original bytes. These local files have no capture commit available. All three images decoded successfully and were visually reviewed; source and collection SHA-256 hashes match, and no existing wallpaper has the same auto-oriented decoded pixels. No image edits or desktop activation were made. Hashes and source paths are recorded in [sources.json](../docs/sources.json): `aerial.jpg` `2b2c30176946df644f7a3a498829e7b5286cd73a9947ea83dd531c03f4a168ad`, `pink.jpg` `cc5991770217e240ff5dec955a4dd4d95d60431c51b3c1af7d0448a70a6b4bc1`, and `aerial_mod.png` `7288a919fc6086d20e847a8d1610eb5900f61915c933ed57385b1535ed9579e1`.
+
+The account path identifies the capture source; adapt it to the target user. Wallpaper-specific authorship and license information remain unestablished.

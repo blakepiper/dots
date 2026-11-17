@@ -694,6 +694,12 @@
         "Reuse the existing Firefox video marker and shared power integration. Preserve earlier app configs and the Ghostty overlay license notice."
       ],
       "validation": "Validation covered Bash and ShellCheck, Lua, Python, QML syntax, Fontconfig, Ghostty, systemd unit parsing, JSON and source hashes. In an isolated Wayland session, Hyprland reported 58 shortcut descriptions and verified display preview, persistence and mirror reversal on virtual outputs. Quickshell and Desktop Settings loaded against the isolated compositor. Simulated GTK and process checks covered all eight Settings pages and preference recovery. Physical hotplug, lock, suspend, audio, radio and HyprGlass rendering remain target-machine checks."
+    },
+    "snapshot-30": {
+      "captured": "2026-11-17",
+      "commit": null,
+      "description": "Capture the selected local aerial and pink wallpapers without image edits.",
+      "validation": "All three images decoded and were visually reviewed; exact source/copy SHA-256 and absence of byte and auto-oriented decoded-pixel duplicates verified. No desktop settings activated."
     }
   },
   "files": [
@@ -6016,6 +6022,36 @@
       "source": "home/przvl/config/ghostty/iglass-LICENSE",
       "source_sha256": "ce989a4f81fd5a0b5e813fd43f67ce9bc42a249ed11b291ad36c106f9f172863",
       "sha256": "ce989a4f81fd5a0b5e813fd43f67ce9bc42a249ed11b291ad36c106f9f172863",
+      "changes": []
+    },
+    {
+      "path": "walls/aerial.jpg",
+      "snapshot": "snapshot-30",
+      "captured": "2026-11-17",
+      "commit": null,
+      "source": "/home/przvl/Pictures/aerial.jpg",
+      "source_sha256": "2b2c30176946df644f7a3a498829e7b5286cd73a9947ea83dd531c03f4a168ad",
+      "sha256": "2b2c30176946df644f7a3a498829e7b5286cd73a9947ea83dd531c03f4a168ad",
+      "changes": []
+    },
+    {
+      "path": "walls/pink.jpg",
+      "snapshot": "snapshot-30",
+      "captured": "2026-11-17",
+      "commit": null,
+      "source": "/home/przvl/Pictures/pink.jpg",
+      "source_sha256": "cc5991770217e240ff5dec955a4dd4d95d60431c51b3c1af7d0448a70a6b4bc1",
+      "sha256": "cc5991770217e240ff5dec955a4dd4d95d60431c51b3c1af7d0448a70a6b4bc1",
+      "changes": []
+    },
+    {
+      "path": "walls/aerial_mod.png",
+      "snapshot": "snapshot-30",
+      "captured": "2026-11-17",
+      "commit": null,
+      "source": "/home/przvl/Pictures/aerial_mod.png",
+      "source_sha256": "7288a919fc6086d20e847a8d1610eb5900f61915c933ed57385b1535ed9579e1",
+      "sha256": "7288a919fc6086d20e847a8d1610eb5900f61915c933ed57385b1535ed9579e1",
       "changes": []
     }
   ]
