@@ -12,6 +12,16 @@ Use **Bash with ble.sh in every terminal**. Install ble.sh on each adopting mach
 
 [Ghostty](ghostty/README.md) has shared Tokyo Night settings and a small glass overlay for Hyprland's Super+Enter launcher.
 
+## Starship
+
+[starship.toml](starship.toml) maps to `~/.config/starship.toml` (or `$XDG_CONFIG_HOME/starship.toml`). It builds an Arch/Tokyo Night prompt with the current directory, Git branch and status, command duration, and success/error symbols. The Arch glyph needs a terminal font that supports it; font choice belongs to the terminal configuration.
+
+`snapshot-31`, captured 2026-11-17, carries the current prompt configuration from source commit `9f42496a7a6d633cee92ebbb178f3c2a87dbe066`, including its OS segment and balanced glyph padding. TOML parsing and source/copy hashes were checked; no prompt settings were activated.
+
+| Collection file | SHA-256 |
+| --- | --- |
+| `terminal/starship.toml` | `2ed064dff3e32b81a1d585c7601c2c784ef251634f4d606269aa034cccc158a5` |
+
 Konsole's profile was refreshed from the local machine in `snapshot-07` on 2026-10-03, with Konsole 26.04.3. That capture was unchanged; the collection-03 naming refinement retains the `/bin/bash` command, and requires the JetBrainsMono Nerd Font Mono family. No source commit is available; the source path, hashes, prior capture and collection base commit are in [sources.json](../docs/sources.json). The profile parsed as INI; no terminal settings were activated.
 
 | Collection file (after collection-03) | SHA-256 |

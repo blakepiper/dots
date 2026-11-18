@@ -16,7 +16,7 @@ Personal configuration raw material for people and agents to inspect, borrow, an
 | [niri](desktop/niri/README.md) | KDL config, Waybar, launcher, notifications, locking and session helpers |
 | [hardware](hardware/README.md) | LG display snapshot, external keyboard mapping, dock hotplug behavior, pointer and battery settings |
 | [keybinds](keybinds/README.md) | Preferred keyboard vocabulary and actual differences between desktops |
-| [terminal](terminal/README.md) | Konsole, Ghostty, Kitty, Foot, st customization, tmux and neofetch |
+| [terminal](terminal/README.md) | Starship prompt, Konsole, Ghostty, Kitty, Foot, st customization, tmux and neofetch |
 | [shell](shell/README.md) | Shared Bash startup with ble.sh |
 | [desktop/common](desktop/common/README.md) | Shared GTK/Fontconfig settings, power-command profiles and polkit helper |
 | [picom](desktop/picom/README.md) | X11 transparency, Firefox video/Steam exceptions and opaque-mode rendering |

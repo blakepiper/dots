@@ -22,6 +22,7 @@ The initial collection dates to 2026-10-01. Snapshot IDs in [sources.json](sourc
 | snapshot-18 | Local Firefox toolbar layout, button positioning and two-finger history swipe preferences, captured 2026-10-07 |
 | snapshot-19 | KDE device/display and power-source connection sounds disabled, captured 2026-10-07 |
 | snapshot-29 | Hyprland Lua, Quickshell, Wofi, Ghostty and native GTK Desktop Settings, captured 2026-11-17 |
+| snapshot-31 | Current Starship command prompt, captured 2026-11-17 |
 
 Names in the collection describe the application, platform or function. Hyprland's helper and service names use `workstation`; Niri helpers use `desktop` for cache and application identifiers. The st shell wrapper is `st-shell`. Alternate X11 hardware files use `x11` names. References and dependent command paths were updated together.
 

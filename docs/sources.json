@@ -700,6 +700,12 @@
       "commit": null,
       "description": "Capture the selected local aerial and pink wallpapers without image edits.",
       "validation": "All three images decoded and were visually reviewed; exact source/copy SHA-256 and absence of byte and auto-oriented decoded-pixel duplicates verified. No desktop settings activated."
+    },
+    "snapshot-31": {
+      "captured": "2026-11-17",
+      "commit": "9f42496a7a6d633cee92ebbb178f3c2a87dbe066",
+      "description": "Capture the current Starship command prompt configuration with its Arch OS segment and balanced glyph padding.",
+      "validation": "TOML parsed with Python tomllib; source and collection SHA-256 hashes match. No prompt settings activated."
     }
   },
   "files": [
@@ -6053,6 +6059,18 @@
       "source_sha256": "7288a919fc6086d20e847a8d1610eb5900f61915c933ed57385b1535ed9579e1",
       "sha256": "7288a919fc6086d20e847a8d1610eb5900f61915c933ed57385b1535ed9579e1",
       "changes": []
+    },
+    {
+      "path": "terminal/starship.toml",
+      "snapshot": "snapshot-31",
+      "captured": "2026-11-17",
+      "commit": "9f42496a7a6d633cee92ebbb178f3c2a87dbe066",
+      "source": "config/starship.toml",
+      "source_sha256": "2ed064dff3e32b81a1d585c7601c2c784ef251634f4d606269aa034cccc158a5",
+      "sha256": "2ed064dff3e32b81a1d585c7601c2c784ef251634f4d606269aa034cccc158a5",
+      "changes": [
+        "Capture the Arch/Tokyo Night prompt with OS, directory and Git status segments, command duration, and success/error symbols."
+      ]
     }
   ]
 }
